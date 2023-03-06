@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  totalHealth: 5
+  maxHealth: 5
   healthBarSlider: {fileID: 1938577152}
   healthBarCount: {fileID: 1409481410}
 --- !u!4 &159575355
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  totalHealth: 5
+  maxHealth: 5
   healthBarSlider: {fileID: 602203778}
   healthBarCount: {fileID: 1599192442}
 --- !u!1 &582341250
@@ -2131,8 +2131,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820488977}
-  - component: {fileID: 820488975}
   - component: {fileID: 820488978}
+  - component: {fileID: 820488975}
   - component: {fileID: 820488976}
   m_Layer: 0
   m_Name: CombatManager
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  totalHealth: 5
+  maxHealth: 5
   healthBarSlider: {fileID: 1779273239}
   healthBarCount: {fileID: 317055801}
 --- !u!4 &976132620
@@ -5022,7 +5022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  totalHealth: 5
+  maxHealth: 5
   healthBarSlider: {fileID: 1832174314}
   healthBarCount: {fileID: 185445075}
 --- !u!4 &1568862900
@@ -5624,7 +5624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  totalHealth: 5
+  maxHealth: 5
   healthBarSlider: {fileID: 1339493778}
   healthBarCount: {fileID: 705403457}
 --- !u!4 &1808374189
@@ -6576,7 +6576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  totalHealth: 5
+  maxHealth: 5
   healthBarSlider: {fileID: 1769105344}
   healthBarCount: {fileID: 2137986991}
 --- !u!4 &2008207427
