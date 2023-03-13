@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 503778817911035720}
   - component: {fileID: 7532221669421356960}
   - component: {fileID: 542752997638678295}
-  - component: {fileID: 2253048644417260177}
+  - component: {fileID: 325446105280442551}
   m_Layer: 0
   m_Name: Island
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2253048644417260177
+--- !u!114 &325446105280442551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4831487422004311699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce55b5c6a2a14fd42a1e9bb00e12d495, type: 3}
+  m_Script: {fileID: 11500000, guid: 51bdc1a200465864b9df1a64ed877349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  childrens: []
+  parent: {fileID: 0}
+  children: []
+  TypeOfIsland: 0
+  depth: 0
