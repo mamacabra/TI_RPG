@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class CombatFSM : MonoBehaviour
+public class CombatState : MonoBehaviour
 {
     private ICombatState state;
-    public static CombatFSM Instance; 
+    public static CombatState Instance;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class CombatFSM : MonoBehaviour
         ICombatState newState = new PlayerTurnState();
         SetState(newState);
     }
-    
+
     public void SetEnemyTurnState()
     {
         ICombatState newState = new EnemyTurnState();

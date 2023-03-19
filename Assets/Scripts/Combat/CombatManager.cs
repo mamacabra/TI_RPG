@@ -2,12 +2,12 @@
 using UnityEngine;
 
 public class CombatManager : MonoBehaviour
-{    
+{
     public static CombatManager Instance;
-    
-    [SerializeField] private Character[] playerParty;
-    [SerializeField] private Character[] enemyParty;
-    
+
+    public Character[] characters;
+    public Character[] enemies;
+
     private void Awake()
     {
         if (Instance) Destroy(gameObject);
@@ -16,18 +16,18 @@ public class CombatManager : MonoBehaviour
 
     public void CheckWinner()
     {
-        int deadCharacters = playerParty.Count(player => player.isDead);
-        int deadEnemies = enemyParty.Count(enemy => enemy.isDead);
-        
-        if (deadCharacters == playerParty.Length)
+        int deadCharacters = characters.Count(player => player.isDead);
+        int deadEnemies = enemies.Count(enemy => enemy.isDead);
+
+        if (deadCharacters == characters.Length)
         {
             ICombatState newState = new DefeatState();
-            CombatFSM.Instance.SetState(newState);
+            CombatState.Instance.SetState(newState);
         }
-        else if (deadEnemies == enemyParty.Length)
+        else if (deadEnemies == enemies.Length)
         {
             ICombatState newState = new VictoryState();
-            CombatFSM.Instance.SetState(newState);
+            CombatState.Instance.SetState(newState);
         }
     }
 }

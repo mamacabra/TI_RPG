@@ -3,7 +3,7 @@
 
 public class PlayerTurnState : ICombatState
 {
-    private CombatFSM fsm;
+    private CombatState _state;
     
     public void Enter()
     {

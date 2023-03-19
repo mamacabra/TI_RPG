@@ -1,7 +1,7 @@
-﻿namespace Combat.Deck
+﻿public struct Card
 {
-    public class Card
-    {
-        
-    }
+    public string Name { get; set; }
+    public int Cost { get; set; }
+    public int Damage { get; set; }
+    public int Heal { get; set; }
 }

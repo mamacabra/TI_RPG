@@ -12,6 +12,9 @@ public class HudController : MonoBehaviour
     [SerializeField] private GameObject victoryModal;
     [SerializeField] private GameObject defeatModal;
 
+    [Header("Other Panels")]
+    [SerializeField] private GameObject playerCards;
+
     private void Awake()
     {
         if (Instance) Destroy(gameObject);
@@ -25,12 +28,15 @@ public class HudController : MonoBehaviour
 
         victoryModal.SetActive(false);
         defeatModal.SetActive(false);
+
+        playerCards.SetActive(false);
     }
 
     public void ShowPlayerHUD()
     {
         HiddenAllPanels();
         playerHUD.SetActive(true);
+        playerCards.SetActive(true);
     }
 
     public void ShowEnemyHUD()
