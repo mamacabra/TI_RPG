@@ -10,12 +10,15 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance => instance ? instance : FindObjectOfType<MapManager>();
 
     public event Action CanClick;
-    public event Action ShowPanel;
+    public event Action<bool> ShowPanel;
+    public event Action<bool> ShowCombatPanel;
+    public event Action ShowEndGamePanel;
 
     public int ShipIndex = 0;
     [SerializeField] MapNodeTest lastMp;
     [SerializeField] private GameObject map;
 
+    public bool EndGame;
     public bool CheckIndex(GameObject island)
     {
         ShipIndex++;
@@ -39,7 +42,6 @@ public class MapManager : MonoBehaviour
 
             if (countChildrensAndParents >= 1)
             {
-                Debug.Log("oi");
                 lastMp = island.GetComponent<MapNodeTest>();
                 return true;
             }
@@ -54,24 +56,46 @@ public class MapManager : MonoBehaviour
         if (lastMp.typeOfIsland == TypeOfIsland.StoreOrForge || lastMp.typeOfIsland == TypeOfIsland.Camp)
         {
             Time.timeScale = 0;
-            ShowPanel?.Invoke();
+            ShowPanel?.Invoke(true);
         }
-        else
+        else if(lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
-            map.SetActive(false);
+            //map.SetActive(false);
+            ShowCombatPanel?.Invoke(true);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
+        }
+        else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
+        {
+            EndGame = true;
+            ShowCombatPanel?.Invoke(true);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
         }
     }
 
     public void OnCanClick()
     {
-        CanClick?.Invoke();
         Time.timeScale = 1;
+        ShowPanel?.Invoke(false);
+        ShowCombatPanel?.Invoke(false);
+        CanClick?.Invoke();
     }
 
     public void UnloadScenes()
     {
         AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync ("SampleCombat");
-        map.SetActive(true);
+        if (EndGame)
+        {
+            Time.timeScale = 0;
+            ShowEndGamePanel?.Invoke();
+            return;
+        }
+        OnCanClick();       
+        //map.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("SampleMap");
+        Time.timeScale = 1;
     }
 }

@@ -29,7 +29,11 @@ public class ShipDeslocation : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
             {
                 bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
-                if(!canNavegate) return;
+                if (!canNavegate)
+                {
+                    CanClick();                 
+                    return;
+                }
                 Navegate(raycastHit.collider.gameObject.transform.position);
             }
         }
@@ -38,6 +42,7 @@ public class ShipDeslocation : MonoBehaviour
 
     void Navegate(Vector3 pos)
     {
+        Debug.Log("a");
         transform.DOMove(pos, 2).OnComplete(CheckInsland);
     }
 

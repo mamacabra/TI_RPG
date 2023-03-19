@@ -28,14 +28,14 @@ public class MapNodeTest : MonoBehaviour
     private TextMeshPro textTypeOfIsland;
     
     private LineRenderer lineRenderer1, lineRenderer2;
-    private void Start()
+
+    private void Awake()
     {
         if (typeOfIsland == TypeOfIsland.Store_Forge_Camp)
         {
             int r = Random.Range(3, 5);
             typeOfIsland = (TypeOfIsland) r;
         }
-
         textTypeOfIsland = transform.GetChild(2).GetComponent<TextMeshPro>();
         textTypeOfIsland.text = typeOfIsland.ToString();
         
@@ -43,7 +43,6 @@ public class MapNodeTest : MonoBehaviour
         lineRenderer2 = transform.GetChild(1).GetComponent<LineRenderer>();
         Line();
     }
-    
     void Line()
     {
         if (childrens.Count < 1)
