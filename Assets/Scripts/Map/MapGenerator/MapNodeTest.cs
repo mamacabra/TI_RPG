@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -23,6 +24,8 @@ public class MapNodeTest : MonoBehaviour
 
     public TypeOfIsland typeOfIsland;
     [SerializeField] int depth;
+
+    private TextMeshPro textTypeOfIsland;
     
     private LineRenderer lineRenderer1, lineRenderer2;
     private void Start()
@@ -33,6 +36,9 @@ public class MapNodeTest : MonoBehaviour
             typeOfIsland = (TypeOfIsland) r;
         }
 
+        textTypeOfIsland = transform.GetChild(2).GetComponent<TextMeshPro>();
+        textTypeOfIsland.text = typeOfIsland.ToString();
+        
         lineRenderer1 = transform.GetChild(0).GetComponent<LineRenderer>();
         lineRenderer2 = transform.GetChild(1).GetComponent<LineRenderer>();
         Line();
@@ -62,13 +68,13 @@ public class MapNodeTest : MonoBehaviour
     {
         get
         {
-            MapNodeTest node = parent[0];
+            /*MapNodeTest node = parent[0];
 
             while (node!=null)
             {
                 depth++;
                 node = node.parent[0];
-            }
+            }*/
 
             return depth;
         }
