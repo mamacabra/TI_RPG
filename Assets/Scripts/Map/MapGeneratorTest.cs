@@ -90,7 +90,7 @@ public class MapGeneratorTest : MonoBehaviour
             }
 
             if (n == lastNode)
-                n.TypeOfIsland = TypeOfIsland.Final;
+                n.typeOfIsland = TypeOfIsland.Final;
         }
     }
     
@@ -107,7 +107,7 @@ public class MapGeneratorTest : MonoBehaviour
         GameObject go = Instantiate(island, Vector3.zero, Quaternion.identity, parent == null ? transform : parent.transform);
         MapNodeTest node = go.GetComponent<MapNodeTest>();
         node.SetParent(parent);
-        node.TypeOfIsland = type;
+        node.typeOfIsland = type;
         
         return node;
     }

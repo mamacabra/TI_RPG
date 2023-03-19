@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum TypeOfIsland
+/*public enum TypeOfIsland
 {
     CommonCombat,
     BossCombat,
@@ -9,7 +9,7 @@ public enum TypeOfIsland
     Camp,
     Initial,
     Final
-}
+}*/
 public class MapNodeTest2 : MonoBehaviour
 {
     [SerializeField] private MapNodeTest2 parent;
