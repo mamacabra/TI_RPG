@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class HudController : MonoBehaviour
 {
-    public static HudController Instance; 
+    public static HudController Instance;
 
     [Header("Turn Combat Panels")]
     [SerializeField] private GameObject playerHUD;
     [SerializeField] private GameObject enemyHUD;
-    
+
     [Header("End Combat Panels")]
     [SerializeField] private GameObject victoryModal;
     [SerializeField] private GameObject defeatModal;
@@ -38,13 +38,13 @@ public class HudController : MonoBehaviour
         HiddenAllPanels();
         enemyHUD.SetActive(true);
     }
-    
+
     public void ShowVictoryModal()
     {
         HiddenAllPanels();
         victoryModal.SetActive(true);
     }
-    
+
     public void ShowDefeatModal()
     {
         HiddenAllPanels();
