@@ -34,12 +34,24 @@ public class CombatState : MonoBehaviour
         ICombatState newState = new EnemyTurnState();
         SetState(newState);
 
+        Character[] enemies = CombatManager.Instance.enemies;
+        Enemy.AttackCharacter(enemies[0]);
+        StartCoroutine(nameof(WaitAttack)); // NOTE: temporary
+        Enemy.AttackCharacter(enemies[1]);
+        StartCoroutine(nameof(WaitAttack)); // NOTE: temporary
+        Enemy.AttackCharacter(enemies[2]);
         StartCoroutine(nameof(EnemyTurnEnd)); // NOTE: temporary
+    }
+
+    private IEnumerator WaitAttack()
+    {
+        yield return new WaitForSeconds(1.0f);
+        SetPlayerTurnState();
     }
 
     private IEnumerator EnemyTurnEnd()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         SetPlayerTurnState();
     }
 }

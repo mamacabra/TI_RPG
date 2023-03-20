@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,14 +31,22 @@ public class Character : MonoBehaviour
         SetupHealthBar();
     }
 
-    public void UseCard(Card card)
+    public void UseRandomCard(Character[] allTargets)
     {
-        List<Character> enemies = new List<Character>();
-        foreach (var enemy in CombatManager.Instance.enemies)
+        int r = Random.Range(0, hand.Count);
+        UseCard(hand[r], allTargets);
+    }
+
+    public void UseCard(Card card, Character[] allTargets)
+    {
+        Debug.Log(card.Name);
+
+        List<Character> targets = new List<Character>();
+        foreach (var target in allTargets)
         {
-            if (enemy.isDead == false) enemies.Add(enemy);
+            if (target.isDead == false) targets.Add(target);
         }
-        int r = Random.Range(0, enemies.Count);
+        int r = Random.Range(0, targets.Count);
 
         if (actionPoints >= card.Cost)
         {
@@ -48,7 +55,7 @@ public class Character : MonoBehaviour
 
             if (card.Damage > 0)
             {
-                enemies[r].Damage(card.Damage);
+                targets[r].Damage(card.Damage);
             }
             if (card.Heal > 0)  Heal(card.Heal);
         }
@@ -92,27 +99,33 @@ public class Character : MonoBehaviour
 
         deck.AddCard(new Card()
         {
-            Name = "Ataque Fraco",
-            Cost = 1,
-            Damage = 1,
-        });
-        deck.AddCard(new Card()
-        {
             Name = "Curar",
             Cost = 2,
             Heal = 2,
         });
         deck.AddCard(new Card()
         {
-            Name = "Ataque Médio",
-            Cost = 2,
-            Damage = 3,
+            Name = "Ataque Fraco",
+            Cost = 1,
+            Damage = 1,
         });
         deck.AddCard(new Card()
         {
-            Name = "Curar Muito",
-            Cost = 3,
-            Heal = 4,
+            Name = "Ataque Fraco 2",
+            Cost = 1,
+            Damage = 2,
+        });
+        deck.AddCard(new Card()
+        {
+            Name = "Ataque Médio",
+            Cost = 2,
+            Damage = 2,
+        });
+        deck.AddCard(new Card()
+        {
+            Name = "Ataque Médio 2",
+            Cost = 2,
+            Damage = 3,
         });
         deck.AddCard(new Card()
         {

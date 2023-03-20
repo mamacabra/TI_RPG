@@ -39,7 +39,7 @@ public class CardBase : MonoBehaviour
         Button button = GetComponent<Button>();
         button.onClick.AddListener(() =>
         {
-            character.UseCard(card);
+            character.UseCard(card, CombatManager.Instance.enemies);
         });
     }
 }
