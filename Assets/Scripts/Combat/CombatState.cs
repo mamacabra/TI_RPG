@@ -45,13 +45,13 @@ public class CombatState : MonoBehaviour
 
     private IEnumerator WaitAttack()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         SetPlayerTurnState();
     }
 
     private IEnumerator EnemyTurnEnd()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
         SetPlayerTurnState();
     }
 }

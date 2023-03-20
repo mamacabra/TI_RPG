@@ -61,6 +61,12 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void ResetActionPoints()
+    {
+        actionPoints = maxActionPoints;
+        UpdateHealthBar();
+    }
+
     public void Damage(int damage = 1)
     {
         health -= damage;
