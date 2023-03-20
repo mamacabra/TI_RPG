@@ -7,13 +7,13 @@ public class MapCanvasController : MonoBehaviour
     [SerializeField] private GameObject StoreOrCampPanel;
     [SerializeField] private GameObject Combat;
     [SerializeField] private GameObject EndGame;
-    
+
     private void OnEnable()
     {
         MapManager.Instance.ShowPanel += ShowPanel;
         MapManager.Instance.ShowCombatPanel += ShowCombatPanel;
         MapManager.Instance.ShowEndGamePanel += ShowEndGamePanel;
-    
+
     }
 
     private void OnDisable()
@@ -32,10 +32,10 @@ public class MapCanvasController : MonoBehaviour
     {
         MapManager.Instance.OnCanClick();
     }
-    
+
     public void ShowCombatPanel(bool state)
     {
-        Combat.SetActive(state);
+        // Combat.SetActive(state);
     }
     public void BackToMapButton()
     {
