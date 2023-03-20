@@ -6,15 +6,15 @@ public class PlayerCards : MonoBehaviour
 
     private void Start()
     {
-        int cardPosition = 0;
+        int cardIndex = 0;
         foreach (var character in CombatManager.Instance.characters)
         {
             foreach (var card in character.hand)
             {
                 GameObject gb = Instantiate(cardPrefab, transform);
                 CardBase cardBase = gb.GetComponent<CardBase>();
-                cardBase.SetupCard(card, cardPosition);
-                cardPosition++;
+                cardBase.Setup(character, card, cardIndex);
+                cardIndex++;
             }
         }
     }

@@ -8,22 +8,23 @@ public class CardBase : MonoBehaviour
     public Text cardDamage;
     public Text cardHeal;
 
-    static Vector3 CardSize = new Vector3(60, 75, 0);
-    static Vector3 CardSpacing = new Vector3(10, 0, 0);
-    static Vector3 CardInitialPosition = new Vector3(-330, -120, 0);
-    static Vector3 Displacement = new Vector3(CardSize.x, 0, 0) + CardSpacing;
+    private static readonly Vector3 CardSize = new Vector3(60, 75, 0);
+    private static readonly Vector3 CardSpacing = new Vector3(10, 0, 0);
+    private static readonly Vector3 CardInitialPosition = new Vector3(-330, -120, 0);
+    private static readonly Vector3 Displacement = new Vector3(CardSize.x, 0, 0) + CardSpacing;
 
-    public void SetupCard(Card card, int position = 0)
+    public void Setup(Character character, Card card, int position = 0)
     {
         SetupCardAttributes(card);
         SetupCardPosition(position);
+        AddClickEvent( character, card);
     }
 
     private void SetupCardAttributes(Card card)
     {
         cardTitle.text = card.Name;
         cardCost.text = "Cost: " + card.Cost.ToString();
-        cardDamage.text = "Damange: " + card.Damage.ToString();
+        cardDamage.text = "Damage: " + card.Damage.ToString();
         cardHeal.text = "Heal: " + card.Heal.ToString();
     }
 
@@ -31,5 +32,14 @@ public class CardBase : MonoBehaviour
     {
         RectTransform rect = GetComponent<RectTransform>();
         rect.localPosition = CardInitialPosition + Displacement * position;
+    }
+
+    private void AddClickEvent(Character character, Card card)
+    {
+        Button button = GetComponent<Button>();
+        button.onClick.AddListener(() =>
+        {
+            character.UseCard(card);
+        });
     }
 }

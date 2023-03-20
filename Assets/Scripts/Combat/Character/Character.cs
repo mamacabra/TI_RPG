@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,12 +8,15 @@ public class Character : MonoBehaviour
     public bool isDead => health <= 0;
 
     [Header("Character Information")]
-    public int health = 5;
-    public int maxHealth = 5;
+    public int health;
+    public int maxHealth = 10;
+    public int actionPoints;
+    public int maxActionPoints = 3;
 
     [Header("Health Bar Objects")]
     public Slider healthBarSlider;
     public Text healthBarCount;
+    public Text actionPointsCount;
 
     [Header("Cards")]
     public List<Card> hand;
@@ -27,6 +30,28 @@ public class Character : MonoBehaviour
     private void Start()
     {
         SetupHealthBar();
+    }
+
+    public void UseCard(Card card)
+    {
+        List<Character> enemies = new List<Character>();
+        foreach (var enemy in CombatManager.Instance.enemies)
+        {
+            if (enemy.isDead == false) enemies.Add(enemy);
+        }
+        int r = Random.Range(0, enemies.Count);
+
+        if (actionPoints >= card.Cost)
+        {
+            actionPoints -= card.Cost;
+            UpdateHealthBar();
+
+            if (card.Damage > 0)
+            {
+                enemies[r].Damage(card.Damage);
+            }
+            if (card.Heal > 0)  Heal(card.Heal);
+        }
     }
 
     public void Damage(int damage = 1)
@@ -50,13 +75,15 @@ public class Character : MonoBehaviour
     {
         healthBarSlider.maxValue = maxHealth;
         healthBarSlider.value = maxHealth;
+        actionPoints = maxActionPoints;
         UpdateHealthBar();
     }
 
     private void UpdateHealthBar()
     {
         healthBarSlider.value = health;
-        healthBarCount.text = health.ToString();
+        healthBarCount.text = "HP: " + health;
+        actionPointsCount.text = "AP: " + actionPoints;
     }
 
     private void SetupDeck()
@@ -85,7 +112,7 @@ public class Character : MonoBehaviour
         {
             Name = "Curar Muito",
             Cost = 3,
-            Damage = 4,
+            Heal = 4,
         });
         deck.AddCard(new Card()
         {
