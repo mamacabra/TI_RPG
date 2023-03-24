@@ -1,8 +1,29 @@
-﻿public class Enemy
+﻿public class Enemy : Character, ICombatStateObserver
 {
-    public static void AttackCharacter(Character enemy)
+    CharacterType type = CharacterType.Hero;
+
+    private void Start()
     {
-        Character[] characters = CombatManager.Instance.characters;
-        enemy.UseRandomCard(characters);
+        CombatState.Instance.AddObserver(this);
+        CharacterCreated();
+    }
+
+    public void Notify(CombatStateType state)
+    {
+        switch (state)
+        {
+            case CombatStateType.PlayerTurn:
+                ResetActionPoints();
+                break;
+            case CombatStateType.EnemyTurn:
+                AttackHero();
+                break;
+        }
+    }
+
+    private void AttackHero()
+    {
+        // Character[] characters = CombatManager.Instance.heroes;
+        // UseRandomCard(characters);
     }
 }

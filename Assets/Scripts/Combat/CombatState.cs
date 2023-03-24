@@ -1,57 +1,40 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using UnityEngine;
+
+public enum CombatStateType
+{
+    Start,
+    PlayerTurn,
+    EnemyTurn,
+    Victory,
+    Defeat,
+}
 
 public class CombatState : MonoBehaviour
 {
-    private ICombatState state;
     public static CombatState Instance;
+
+    [SerializeField] private CombatStateType state;
+    private List<ICombatStateObserver> observers;
 
     private void Awake()
     {
-        if (Instance) Destroy(gameObject);
-        else Instance = this;
+        Instance = this;
+        observers = new List<ICombatStateObserver>();
     }
 
-    private void Start()
+    public void AddObserver(ICombatStateObserver stateObserver)
     {
-        SetPlayerTurnState();
+        observers.Add(stateObserver);
     }
 
-    public void SetState(ICombatState newState)
+    public void SetState(CombatStateType newState)
     {
         state = newState;
-        state?.Enter();
-    }
 
-    public void SetPlayerTurnState()
-    {
-        ICombatState newState = new PlayerTurnState();
-        SetState(newState);
-    }
-
-    public void SetEnemyTurnState()
-    {
-        ICombatState newState = new EnemyTurnState();
-        SetState(newState);
-
-        Character[] enemies = CombatManager.Instance.enemies;
-        Enemy.AttackCharacter(enemies[0]);
-        StartCoroutine(nameof(WaitAttack)); // NOTE: temporary
-        Enemy.AttackCharacter(enemies[1]);
-        StartCoroutine(nameof(WaitAttack)); // NOTE: temporary
-        Enemy.AttackCharacter(enemies[2]);
-        StartCoroutine(nameof(EnemyTurnEnd)); // NOTE: temporary
-    }
-
-    private IEnumerator WaitAttack()
-    {
-        yield return new WaitForSeconds(2.0f);
-        SetPlayerTurnState();
-    }
-
-    private IEnumerator EnemyTurnEnd()
-    {
-        yield return new WaitForSeconds(2.0f);
-        SetPlayerTurnState();
+        foreach (ICombatStateObserver observer in observers)
+        {
+            observer.Notify(state);
+        }
     }
 }

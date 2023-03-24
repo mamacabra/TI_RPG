@@ -1,33 +1,52 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class CombatManager : MonoBehaviour
+public class CombatManager : MonoBehaviour, ICharacterObserver
 {
     public static CombatManager Instance;
 
-    public Character[] characters;
-    public Character[] enemies;
+    public List<Character> heroes;
+    public List<Character> enemies;
 
     private void Awake()
     {
-        if (Instance) Destroy(gameObject);
-        else Instance = this;
+        Instance = this;
     }
 
-    public void CheckWinner()
+    private void Start()
     {
-        int deadCharacters = characters.Count(player => player.isDead);
-        int deadEnemies = enemies.Count(enemy => enemy.isDead);
+        CombatState.Instance.SetState(CombatStateType.Start);
+        CombatState.Instance.SetState(CombatStateType.PlayerTurn);
+    }
 
-        if (deadCharacters == characters.Length)
+    public void CharacterCreated(Character character)
+    {
+        if (character.type == CharacterType.Hero) heroes.Add(character);
+        else enemies.Add(character);
+    }
+
+    public void CharacterUpdated(Character character)
+    {
+        if (character.type == CharacterType.Hero) CheckHeroesDead();
+        else CheckEnemiesDead();
+    }
+
+    private void CheckHeroesDead()
+    {
+        int deadHeroes = heroes.Count(hero => hero.isDead);
+        if (deadHeroes == heroes.Count)
         {
-            ICombatState newState = new DefeatState();
-            CombatState.Instance.SetState(newState);
+            CombatState.Instance.SetState(CombatStateType.Defeat);
         }
-        else if (deadEnemies == enemies.Length)
+    }
+
+    private void CheckEnemiesDead()
+    {
+        int deadEnemies = enemies.Count(enemy => enemy.isDead);
+        if (deadEnemies == enemies.Count)
         {
-            ICombatState newState = new VictoryState();
-            CombatState.Instance.SetState(newState);
+            CombatState.Instance.SetState(CombatStateType.Victory);
         }
     }
 }

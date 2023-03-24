@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class HudController : MonoBehaviour
+public class HudController : MonoBehaviour, ICombatStateObserver
 {
-    public static HudController Instance;
-
     [Header("Turn Combat Panels")]
     [SerializeField] private GameObject playerHUD;
     [SerializeField] private GameObject enemyHUD;
@@ -15,10 +13,29 @@ public class HudController : MonoBehaviour
     [Header("Other Panels")]
     [SerializeField] private GameObject playerCards;
 
-    private void Awake()
+    public void Start()
     {
-        if (Instance) Destroy(gameObject);
-        else Instance = this;
+        HiddenAllPanels();
+        CombatState.Instance.AddObserver(this);
+    }
+
+    public void Notify(CombatStateType state)
+    {
+        switch (state)
+        {
+            case CombatStateType.PlayerTurn:
+                ShowPlayerHUD();
+                break;
+            case CombatStateType.EnemyTurn:
+                ShowEnemyHUD();
+                break;
+            case CombatStateType.Victory:
+                ShowVictoryModal();
+                break;
+            case CombatStateType.Defeat:
+                ShowDefeatModal();
+                break;
+        }
     }
 
     private void HiddenAllPanels()
@@ -32,26 +49,26 @@ public class HudController : MonoBehaviour
         playerCards.SetActive(false);
     }
 
-    public void ShowPlayerHUD()
+    private void ShowPlayerHUD()
     {
         HiddenAllPanels();
         playerHUD.SetActive(true);
         playerCards.SetActive(true);
     }
 
-    public void ShowEnemyHUD()
+    private void ShowEnemyHUD()
     {
         HiddenAllPanels();
         enemyHUD.SetActive(true);
     }
 
-    public void ShowVictoryModal()
+    private void ShowVictoryModal()
     {
         HiddenAllPanels();
         victoryModal.SetActive(true);
     }
 
-    public void ShowDefeatModal()
+    private void ShowDefeatModal()
     {
         HiddenAllPanels();
         defeatModal.SetActive(true);

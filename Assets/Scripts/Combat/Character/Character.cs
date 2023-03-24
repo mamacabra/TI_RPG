@@ -1,46 +1,84 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Character : MonoBehaviour
+public enum CharacterType
 {
+    Hero,
+    Enemy,
+}
+
+public abstract class Character : MonoBehaviour
+{
+    [SerializeField] public CharacterType type;
+
+    [Header("Observers")]
+    [SerializeField] private HealthBar healthBar;
+
     public bool isDead => health <= 0;
 
-    [Header("Character Information")]
+    [Header("Information")]
     public int health;
     public int maxHealth = 10;
     public int actionPoints;
     public int maxActionPoints = 3;
 
-    [Header("Health Bar Objects")]
-    public Slider healthBarSlider;
-    public Text healthBarCount;
-    public Text actionPointsCount;
-
     [Header("Cards")]
-    public List<Card> hand;
+    public List<Card> hand = new List<Card>();
     public Deck deck;
 
-    private void Awake()
+    protected void CharacterCreated()
     {
+        health = maxHealth;
+        actionPoints = maxActionPoints;
+        healthBar.CharacterCreated(this);
+        CombatManager.Instance.CharacterCreated(this);
         SetupDeck();
     }
 
-    private void Start()
+    private void CharacterUpdated()
     {
-        SetupHealthBar();
+        healthBar.CharacterUpdated(this);
+        CombatManager.Instance.CharacterUpdated(this);
     }
 
-    public void UseRandomCard(Character[] allTargets)
+    public void ReceiveDamage(int value = 1)
+    {
+        health -= value;
+        if (health < 0) health = 0;
+
+        CharacterUpdated();
+    }
+
+    public void ReceiveHealing(int value = 1)
+    {
+        health += value;
+        if (health > maxHealth) health = maxHealth;
+
+        CharacterUpdated();
+    }
+
+    public void ConsumeActionPoints(int value = 1)
+    {
+        actionPoints -= value;
+        if (actionPoints < 0) actionPoints = 0;
+
+        CharacterUpdated();
+    }
+
+    public void ResetActionPoints()
+    {
+        actionPoints = maxActionPoints;
+        CharacterUpdated();
+    }
+
+    public void UseRandomCard(List<Character> allTargets)
     {
         int r = Random.Range(0, hand.Count);
         UseCard(hand[r], allTargets);
     }
 
-    public void UseCard(Card card, Character[] allTargets)
+    public void UseCard(Card card, List<Character> allTargets)
     {
-        Debug.Log(card.Name);
-
         List<Character> targets = new List<Character>();
         foreach (var target in allTargets)
         {
@@ -51,52 +89,14 @@ public class Character : MonoBehaviour
         if (actionPoints >= card.Cost)
         {
             actionPoints -= card.Cost;
-            UpdateHealthBar();
+            CharacterUpdated();
 
             if (card.Damage > 0)
             {
-                targets[r].Damage(card.Damage);
+                targets[r].ReceiveDamage(card.Damage);
             }
-            if (card.Heal > 0)  Heal(card.Heal);
+            if (card.Heal > 0)  ReceiveHealing(card.Heal);
         }
-    }
-
-    public void ResetActionPoints()
-    {
-        actionPoints = maxActionPoints;
-        UpdateHealthBar();
-    }
-
-    public void Damage(int damage = 1)
-    {
-        health -= damage;
-        if (health < 0) health = 0;
-
-        UpdateHealthBar();
-        if (health == 0) CombatManager.Instance.CheckWinner();
-    }
-
-    public void Heal(int value = 1)
-    {
-        health += value;
-        if (health > maxHealth) health = maxHealth;
-
-        UpdateHealthBar();
-    }
-
-    private void SetupHealthBar()
-    {
-        healthBarSlider.maxValue = maxHealth;
-        healthBarSlider.value = maxHealth;
-        actionPoints = maxActionPoints;
-        UpdateHealthBar();
-    }
-
-    private void UpdateHealthBar()
-    {
-        healthBarSlider.value = health;
-        healthBarCount.text = "HP: " + health;
-        actionPointsCount.text = "AP: " + actionPoints;
     }
 
     private void SetupDeck()
