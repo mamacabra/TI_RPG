@@ -12,6 +12,8 @@ public class CombatManager : MonoBehaviour, ICharacterObserver
     private void Awake()
     {
         Instance = this;
+        heroes = new List<Character>();
+        enemies = new List<Character>();
     }
 
     private void Start()

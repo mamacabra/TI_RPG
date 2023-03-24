@@ -1,14 +1,13 @@
 ﻿public class Enemy : Character, ICombatStateObserver
 {
-    CharacterType type = CharacterType.Hero;
-
     private void Start()
     {
+        type = CharacterType.Enemy;
         CombatState.Instance.AddObserver(this);
         CharacterCreated();
     }
 
-    public void Notify(CombatStateType state)
+    public void OnCombatStateChanged(CombatStateType state)
     {
         switch (state)
         {

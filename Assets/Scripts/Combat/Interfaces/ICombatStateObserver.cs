@@ -1,4 +1,4 @@
 ﻿public interface ICombatStateObserver
 {
-    public void Notify(CombatStateType state);
+    public void OnCombatStateChanged(CombatStateType state);
 }

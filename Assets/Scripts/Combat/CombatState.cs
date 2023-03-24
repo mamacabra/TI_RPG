@@ -34,7 +34,7 @@ public class CombatState : MonoBehaviour
 
         foreach (ICombatStateObserver observer in observers)
         {
-            observer.Notify(state);
+            observer.OnCombatStateChanged(state);
         }
     }
 }

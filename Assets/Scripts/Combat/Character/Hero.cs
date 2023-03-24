@@ -1,14 +1,13 @@
 ﻿public class Hero : Character, ICombatStateObserver
 {
-    CharacterType type = CharacterType.Hero;
-
     private void Start()
     {
+        type = CharacterType.Hero;
         CombatState.Instance.AddObserver(this);
         CharacterCreated();
     }
 
-    public void Notify(CombatStateType state)
+    public void OnCombatStateChanged(CombatStateType state)
     {
         if (state is CombatStateType.EnemyTurn) ResetActionPoints();
     }

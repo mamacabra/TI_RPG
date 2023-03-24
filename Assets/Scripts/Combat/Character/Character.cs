@@ -9,7 +9,7 @@ public enum CharacterType
 
 public abstract class Character : MonoBehaviour
 {
-    [SerializeField] public CharacterType type;
+    public CharacterType type;
 
     [Header("Observers")]
     [SerializeField] private HealthBar healthBar;

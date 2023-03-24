@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HudController : MonoBehaviour, ICombatStateObserver
+public class CombatHudController : MonoBehaviour, ICombatStateObserver
 {
     [Header("Turn Combat Panels")]
     [SerializeField] private GameObject playerHUD;
@@ -19,58 +19,46 @@ public class HudController : MonoBehaviour, ICombatStateObserver
         CombatState.Instance.AddObserver(this);
     }
 
-    public void Notify(CombatStateType state)
+    public void OnCombatStateChanged(CombatStateType state)
     {
+        HiddenAllPanels();
+
         switch (state)
         {
             case CombatStateType.PlayerTurn:
-                ShowPlayerHUD();
+                ShowPanel(playerHUD);
+                ShowPanel(playerCards);
                 break;
             case CombatStateType.EnemyTurn:
-                ShowEnemyHUD();
+                ShowPanel(enemyHUD);
                 break;
             case CombatStateType.Victory:
-                ShowVictoryModal();
+                ShowPanel(victoryModal);
                 break;
             case CombatStateType.Defeat:
-                ShowDefeatModal();
+                ShowPanel(defeatModal);
                 break;
         }
     }
 
     private void HiddenAllPanels()
     {
-        playerHUD.SetActive(false);
-        enemyHUD.SetActive(false);
+        HiddenPanel(playerHUD);
+        HiddenPanel(enemyHUD);
 
-        victoryModal.SetActive(false);
-        defeatModal.SetActive(false);
+        HiddenPanel(victoryModal);
+        HiddenPanel(defeatModal);
 
-        playerCards.SetActive(false);
+        HiddenPanel(playerCards);
     }
 
-    private void ShowPlayerHUD()
+    private static void ShowPanel(GameObject panel)
     {
-        HiddenAllPanels();
-        playerHUD.SetActive(true);
-        playerCards.SetActive(true);
+        if (panel) panel.SetActive(true);
     }
 
-    private void ShowEnemyHUD()
+    private static void HiddenPanel(GameObject panel)
     {
-        HiddenAllPanels();
-        enemyHUD.SetActive(true);
-    }
-
-    private void ShowVictoryModal()
-    {
-        HiddenAllPanels();
-        victoryModal.SetActive(true);
-    }
-
-    private void ShowDefeatModal()
-    {
-        HiddenAllPanels();
-        defeatModal.SetActive(true);
+        if (panel) panel.SetActive(false);
     }
 }
