@@ -10,13 +10,13 @@ public class HealthBar : MonoBehaviour, ICharacterObserver
     public Text healthBarCount;
     public Text actionPointsCount;
 
-    public void CharacterCreated(Character character)
+    public void OnCharacterCreated(Character character)
     {
         healthBarSlider.maxValue = character.maxHealth;
-        CharacterUpdated(character);
+        OnCharacterUpdated(character);
     }
 
-    public void CharacterUpdated(Character character)
+    public void OnCharacterUpdated(Character character)
     {
         healthBarSlider.value = character.health;
         healthBarCount.text = "HP: " + character.health;

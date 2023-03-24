@@ -1,5 +1,5 @@
 ﻿public interface ICharacterObserver
 {
-    public void CharacterCreated(Character character);
-    public void CharacterUpdated(Character character);
+    public void OnCharacterCreated(Character character);
+    public void OnCharacterUpdated(Character character);
 }

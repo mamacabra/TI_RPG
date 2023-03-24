@@ -30,15 +30,15 @@ public abstract class Character : MonoBehaviour
     {
         health = maxHealth;
         actionPoints = maxActionPoints;
-        healthBar.CharacterCreated(this);
-        CombatManager.Instance.CharacterCreated(this);
+        healthBar.OnCharacterCreated(this);
+        CombatManager.Instance.OnCharacterCreated(this);
         SetupDeck();
     }
 
     private void CharacterUpdated()
     {
-        healthBar.CharacterUpdated(this);
-        CombatManager.Instance.CharacterUpdated(this);
+        healthBar.OnCharacterUpdated(this);
+        CombatManager.Instance.OnCharacterUpdated(this);
     }
 
     public void ReceiveDamage(int value = 1)

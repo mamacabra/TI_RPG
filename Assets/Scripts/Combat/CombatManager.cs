@@ -22,13 +22,13 @@ public class CombatManager : MonoBehaviour, ICharacterObserver
         CombatState.Instance.SetState(CombatStateType.PlayerTurn);
     }
 
-    public void CharacterCreated(Character character)
+    public void OnCharacterCreated(Character character)
     {
         if (character.type == CharacterType.Hero) heroes.Add(character);
         else enemies.Add(character);
     }
 
-    public void CharacterUpdated(Character character)
+    public void OnCharacterUpdated(Character character)
     {
         if (character.type == CharacterType.Hero) CheckHeroesDead();
         else CheckEnemiesDead();
