@@ -859,11 +859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d82ad7eedcd4047afcf4e55117e34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHUD: {fileID: 0}
-  enemyHUD: {fileID: 0}
-  victoryModal: {fileID: 0}
-  defeatModal: {fileID: 0}
-  playerCards: {fileID: 0}
+  playerHUD: {fileID: 477009305}
+  enemyHUD: {fileID: 2142398884}
+  victoryModal: {fileID: 640233359}
+  defeatModal: {fileID: 1921320426}
+  playerCards: {fileID: 397691434}
 --- !u!1 &903421425
 GameObject:
   m_ObjectHideFlags: 0
