@@ -1,14 +1,17 @@
-﻿public class Hero : Character, ICombatStateObserver
+﻿namespace Combat
 {
-    private void Start()
+    public class Hero : Character, ICombatStateObserver
     {
-        type = CharacterType.Hero;
-        CombatState.Instance.AddObserver(this);
-        CharacterCreated();
-    }
+        private void Start()
+        {
+            type = CharacterType.Hero;
+            CombatState.Instance.AddObserver(this);
+            CharacterCreated();
+        }
 
-    public void OnCombatStateChanged(CombatStateType state)
-    {
-        if (state is CombatStateType.EnemyTurn) ResetActionPoints();
+        public void OnCombatStateChanged(CombatStateType state)
+        {
+            if (state is CombatStateType.EnemyTurn) ResetActionPoints();
+        }
     }
 }

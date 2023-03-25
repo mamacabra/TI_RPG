@@ -1,4 +1,7 @@
-﻿public interface ICombatStateObserver
+﻿namespace Combat
 {
-    public void OnCombatStateChanged(CombatStateType state);
+    public interface ICombatStateObserver
+    {
+        public void OnCombatStateChanged(CombatStateType state);
+    }
 }

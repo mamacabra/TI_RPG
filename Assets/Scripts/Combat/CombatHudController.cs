@@ -1,64 +1,67 @@
 using UnityEngine;
 
-public class CombatHudController : MonoBehaviour, ICombatStateObserver
+namespace Combat
 {
-    [Header("Turn Combat Panels")]
-    [SerializeField] private GameObject playerHUD;
-    [SerializeField] private GameObject enemyHUD;
-
-    [Header("End Combat Panels")]
-    [SerializeField] private GameObject victoryModal;
-    [SerializeField] private GameObject defeatModal;
-
-    [Header("Other Panels")]
-    [SerializeField] private GameObject playerCards;
-
-    public void Start()
+    public class CombatHudController : MonoBehaviour, ICombatStateObserver
     {
-        HiddenAllPanels();
-        CombatState.Instance.AddObserver(this);
-    }
+        [Header("Turn Combat Panels")]
+        [SerializeField] private GameObject playerHUD;
+        [SerializeField] private GameObject enemyHUD;
 
-    public void OnCombatStateChanged(CombatStateType state)
-    {
-        HiddenAllPanels();
+        [Header("End Combat Panels")]
+        [SerializeField] private GameObject victoryModal;
+        [SerializeField] private GameObject defeatModal;
 
-        switch (state)
+        [Header("Other Panels")]
+        [SerializeField] private GameObject playerCards;
+
+        public void Start()
         {
-            case CombatStateType.PlayerTurn:
-                ShowPanel(playerHUD);
-                ShowPanel(playerCards);
-                break;
-            case CombatStateType.EnemyTurn:
-                ShowPanel(enemyHUD);
-                break;
-            case CombatStateType.Victory:
-                ShowPanel(victoryModal);
-                break;
-            case CombatStateType.Defeat:
-                ShowPanel(defeatModal);
-                break;
+            HiddenAllPanels();
+            CombatState.Instance.AddObserver(this);
         }
-    }
 
-    private void HiddenAllPanels()
-    {
-        HiddenPanel(playerHUD);
-        HiddenPanel(enemyHUD);
+        public void OnCombatStateChanged(CombatStateType state)
+        {
+            HiddenAllPanels();
 
-        HiddenPanel(victoryModal);
-        HiddenPanel(defeatModal);
+            switch (state)
+            {
+                case CombatStateType.PlayerTurn:
+                    ShowPanel(playerHUD);
+                    ShowPanel(playerCards);
+                    break;
+                case CombatStateType.EnemyTurn:
+                    ShowPanel(enemyHUD);
+                    break;
+                case CombatStateType.Victory:
+                    ShowPanel(victoryModal);
+                    break;
+                case CombatStateType.Defeat:
+                    ShowPanel(defeatModal);
+                    break;
+            }
+        }
 
-        HiddenPanel(playerCards);
-    }
+        private void HiddenAllPanels()
+        {
+            HiddenPanel(playerHUD);
+            HiddenPanel(enemyHUD);
 
-    private static void ShowPanel(GameObject panel)
-    {
-        if (panel) panel.SetActive(true);
-    }
+            HiddenPanel(victoryModal);
+            HiddenPanel(defeatModal);
 
-    private static void HiddenPanel(GameObject panel)
-    {
-        if (panel) panel.SetActive(false);
+            HiddenPanel(playerCards);
+        }
+
+        private static void ShowPanel(GameObject panel)
+        {
+            if (panel) panel.SetActive(true);
+        }
+
+        private static void HiddenPanel(GameObject panel)
+        {
+            if (panel) panel.SetActive(false);
+        }
     }
 }

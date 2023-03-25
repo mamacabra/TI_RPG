@@ -2,53 +2,56 @@
 using System.Linq;
 using UnityEngine;
 
-public class CombatManager : MonoBehaviour, ICharacterObserver
+namespace Combat
 {
-    public static CombatManager Instance;
-
-    public List<Character> heroes;
-    public List<Character> enemies;
-
-    private void Awake()
+    public class CombatManager : MonoBehaviour, ICharacterObserver
     {
-        Instance = this;
-        heroes = new List<Character>();
-        enemies = new List<Character>();
-    }
+        public static CombatManager Instance;
 
-    private void Start()
-    {
-        CombatState.Instance.SetState(CombatStateType.Start);
-        CombatState.Instance.SetState(CombatStateType.PlayerTurn);
-    }
+        public List<Character> heroes;
+        public List<Character> enemies;
 
-    public void OnCharacterCreated(Character character)
-    {
-        if (character.type == CharacterType.Hero) heroes.Add(character);
-        else enemies.Add(character);
-    }
-
-    public void OnCharacterUpdated(Character character)
-    {
-        if (character.type == CharacterType.Hero) CheckHeroesDead();
-        else CheckEnemiesDead();
-    }
-
-    private void CheckHeroesDead()
-    {
-        int deadHeroes = heroes.Count(hero => hero.isDead);
-        if (deadHeroes == heroes.Count)
+        private void Awake()
         {
-            CombatState.Instance.SetState(CombatStateType.Defeat);
+            Instance = this;
+            heroes = new List<Character>();
+            enemies = new List<Character>();
         }
-    }
 
-    private void CheckEnemiesDead()
-    {
-        int deadEnemies = enemies.Count(enemy => enemy.isDead);
-        if (deadEnemies == enemies.Count)
+        private void Start()
         {
-            CombatState.Instance.SetState(CombatStateType.Victory);
+            CombatState.Instance.SetState(CombatStateType.Start);
+            CombatState.Instance.SetState(CombatStateType.PlayerTurn);
+        }
+
+        public void OnCharacterCreated(Character character)
+        {
+            if (character.type == CharacterType.Hero) heroes.Add(character);
+            else enemies.Add(character);
+        }
+
+        public void OnCharacterUpdated(Character character)
+        {
+            if (character.type == CharacterType.Hero) CheckHeroesDead();
+            else CheckEnemiesDead();
+        }
+
+        private void CheckHeroesDead()
+        {
+            int deadHeroes = heroes.Count(hero => hero.isDead);
+            if (deadHeroes == heroes.Count)
+            {
+                CombatState.Instance.SetState(CombatStateType.Defeat);
+            }
+        }
+
+        private void CheckEnemiesDead()
+        {
+            int deadEnemies = enemies.Count(enemy => enemy.isDead);
+            if (deadEnemies == enemies.Count)
+            {
+                CombatState.Instance.SetState(CombatStateType.Victory);
+            }
         }
     }
 }

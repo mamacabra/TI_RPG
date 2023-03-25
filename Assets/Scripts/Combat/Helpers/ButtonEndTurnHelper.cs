@@ -1,37 +1,40 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-enum CharacterTurn
+namespace Combat.Helpers
 {
-    Player,
-    Enemy,
-}
-
-public class ButtonEndTurnHelper : MonoBehaviour
-{
-    [SerializeField] private CharacterTurn characterTurn = CharacterTurn.Player;
-
-    public void Start()
+    enum CharacterTurn
     {
-        AddClickListener();
+        Player,
+        Enemy,
     }
 
-    private void AddClickListener()
+    public class ButtonEndTurnHelper : MonoBehaviour
     {
-        Button button = GetComponent<Button>();
-        button.onClick.AddListener(EndTurn);
-    }
+        [SerializeField] private CharacterTurn characterTurn = CharacterTurn.Player;
 
-    private void EndTurn()
-    {
-        switch (characterTurn)
+        public void Start()
         {
-            case CharacterTurn.Player:
-                CombatState.Instance.SetState(CombatStateType.EnemyTurn);
-                break;
-            case CharacterTurn.Enemy:
-                CombatState.Instance.SetState(CombatStateType.PlayerTurn);
-                break;
+            AddClickListener();
+        }
+
+        private void AddClickListener()
+        {
+            Button button = GetComponent<Button>();
+            button.onClick.AddListener(EndTurn);
+        }
+
+        private void EndTurn()
+        {
+            switch (characterTurn)
+            {
+                case CharacterTurn.Player:
+                    CombatState.Instance.SetState(CombatStateType.EnemyTurn);
+                    break;
+                case CharacterTurn.Enemy:
+                    CombatState.Instance.SetState(CombatStateType.PlayerTurn);
+                    break;
+            }
         }
     }
 }

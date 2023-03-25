@@ -1,5 +1,8 @@
-﻿public interface ICharacterObserver
+﻿namespace Combat
 {
-    public void OnCharacterCreated(Character character);
-    public void OnCharacterUpdated(Character character);
+    public interface ICharacterObserver
+    {
+        public void OnCharacterCreated(Character character);
+        public void OnCharacterUpdated(Character character);
+    }
 }

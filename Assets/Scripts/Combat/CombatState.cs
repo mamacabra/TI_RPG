@@ -1,40 +1,43 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public enum CombatStateType
+namespace Combat
 {
-    Start,
-    PlayerTurn,
-    EnemyTurn,
-    Victory,
-    Defeat,
-}
-
-public class CombatState : MonoBehaviour
-{
-    public static CombatState Instance;
-
-    [SerializeField] private CombatStateType state;
-    private List<ICombatStateObserver> observers;
-
-    private void Awake()
+    public enum CombatStateType
     {
-        Instance = this;
-        observers = new List<ICombatStateObserver>();
+        Start,
+        PlayerTurn,
+        EnemyTurn,
+        Victory,
+        Defeat,
     }
 
-    public void AddObserver(ICombatStateObserver stateObserver)
+    public class CombatState : MonoBehaviour
     {
-        observers.Add(stateObserver);
-    }
+        public static CombatState Instance;
 
-    public void SetState(CombatStateType newState)
-    {
-        state = newState;
+        [SerializeField] private CombatStateType state;
+        private List<ICombatStateObserver> observers;
 
-        foreach (ICombatStateObserver observer in observers)
+        private void Awake()
         {
-            observer.OnCombatStateChanged(state);
+            Instance = this;
+            observers = new List<ICombatStateObserver>();
+        }
+
+        public void AddObserver(ICombatStateObserver stateObserver)
+        {
+            observers.Add(stateObserver);
+        }
+
+        public void SetState(CombatStateType newState)
+        {
+            state = newState;
+
+            foreach (ICombatStateObserver observer in observers)
+            {
+                observer.OnCombatStateChanged(state);
+            }
         }
     }
 }

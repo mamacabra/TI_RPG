@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneHelper : MonoBehaviour
+namespace Combat.Helpers
 {
-    public void BackToMap()
+    public class SceneHelper : MonoBehaviour
     {
-        if (MapManager.Instance) MapManager.Instance.UnloadScenes();
-        else  SceneManager.LoadScene("SampleMap");
+        public void BackToMap()
+        {
+            if (MapManager.Instance) MapManager.Instance.UnloadScenes();
+            else  SceneManager.LoadScene("SampleMap");
+        }
     }
 }
