@@ -11,15 +11,15 @@ namespace Combat
         [SerializeField] private List<Character> heroesGameObject;
         [SerializeField] private List<Character> enemiesGameObject;
 
-        public List<CharacterRefs> Heroes { get; private set; }
-        public List<CharacterRefs> Enemies { get; private set; }
+        public List<CharacterParty> Heroes { get; private set; }
+        public List<CharacterParty> Enemies { get; private set; }
 
         private void Awake()
         {
             Instance = this;
 
-            Heroes = new List<CharacterRefs>();
-            Enemies = new List<CharacterRefs>();
+            Heroes = new List<CharacterParty>();
+            Enemies = new List<CharacterParty>();
         }
 
         private void Start()
@@ -72,15 +72,10 @@ namespace Combat
 
         public void SetCharacterDeck(Character character, Deck deck)
         {
-            CharacterRefs characterRefs = new CharacterRefs()
-            {
-                character = character,
-                deck = deck,
-                hand = deck.Shuffle(),
-            };
+            CharacterParty characterParty = new CharacterParty(character, deck);
 
-            if (character.Type == CharacterType.Hero) Heroes.Add(characterRefs);
-            else Enemies.Add(characterRefs);
+            if (character.Type == CharacterType.Hero) Heroes.Add(characterParty);
+            else Enemies.Add(characterParty);
         }
 
         private void InitFactories()
@@ -89,11 +84,10 @@ namespace Combat
             new DeckFactory(heroesGameObject, enemiesGameObject);
         }
 
-        private static void ShuffleDeck(List<CharacterRefs> characters)
+        private static void ShuffleDeck(List<CharacterParty> characters)
         {
-            foreach (CharacterRefs c in characters)
+            foreach (CharacterParty character in characters)
             {
-                var character = c;
                 character.hand = character.deck.Shuffle();
             }
         }
@@ -106,10 +100,10 @@ namespace Combat
             if (card.Heal > 0) character.ReceiveHealing(card.Heal);
         }
 
-        public static void UseRandomCard(CharacterRefs characterRefs, Character target)
+        public static void UseRandomCard(CharacterParty characterParty, Character target)
         {
-            int r = Random.Range(0, characterRefs.hand.Count);
-            UseCard(characterRefs.character, characterRefs.hand[r], target);
+            int r = Random.Range(0, characterParty.hand.Count);
+            UseCard(characterParty.character, characterParty.hand[r], target);
         }
     }
 }

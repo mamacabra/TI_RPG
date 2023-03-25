@@ -6,18 +6,31 @@ namespace Combat
     {
         public GameObject cardPrefab;
 
-        private void Start()
+        private void OnEnable()
         {
-            int cardIndex = 0;
+            DestroyCards();
+            CreateCards();
+        }
+
+        private void CreateCards()
+        {
+            int i = 0;
             foreach (var hero in CombatManager.Instance.Heroes)
             {
                 foreach (var card in hero.hand)
                 {
-                    GameObject gb = Instantiate(cardPrefab, transform);
-                    CardBase cardBase = gb.GetComponent<CardBase>();
-                    cardBase.Setup(hero.character, card, cardIndex);
-                    cardIndex++;
+                    CardBase cardBase = Instantiate(cardPrefab, transform).GetComponent<CardBase>();
+                    cardBase.Setup(hero.character, card, i);
+                    i++;
                 }
+            }
+        }
+
+        private void DestroyCards()
+        {
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
             }
         }
     }

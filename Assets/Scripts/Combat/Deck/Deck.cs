@@ -24,9 +24,9 @@ namespace Combat
 
             for (int i = 0; i < count; i++)
             {
-                int randomIndex = Random.Range(0, possibleCards.Count);
-                shuffledCards.Add(possibleCards[randomIndex]);
-                possibleCards.RemoveAt(randomIndex);
+                int r = Random.Range(0, possibleCards.Count);
+                shuffledCards.Add(possibleCards[r]);
+                possibleCards.RemoveAt(r);
             }
 
             return shuffledCards;
