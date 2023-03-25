@@ -40,7 +40,7 @@ namespace Combat
                 if (requiredObservers[1] == observer.GetType()) hasCombatHudController = true;
             }
 
-            if (hasCombatManager && hasCombatHudController) SetState(CombatStateType.HeroTurn);
+            if (hasCombatManager && hasCombatHudController) SetState(CombatStateType.Start);
         }
     }
 }

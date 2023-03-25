@@ -57,46 +57,23 @@ namespace Combat
             CharacterUpdated();
         }
 
-        public void ConsumeActionPoints(int value = 1)
+        public bool ConsumeActionPoints(int value = 1)
         {
-            actionPoints -= value;
-            if (actionPoints < 0) actionPoints = 0;
+            bool hasEnough = actionPoints >= value;
+            if (hasEnough)
+            {
+                actionPoints -= value;
+                if (actionPoints < 0) actionPoints = 0;
+                CharacterUpdated();
+            }
 
-            CharacterUpdated();
+            return hasEnough;
         }
 
         public void ResetActionPoints()
         {
             actionPoints = maxActionPoints;
             CharacterUpdated();
-        }
-
-        public void UseRandomCard(List<Character> allTargets)
-        {
-            int r = Random.Range(0, hand.Count);
-            UseCard(hand[r], allTargets);
-        }
-
-        public void UseCard(Card card, List<Character> allTargets)
-        {
-            List<Character> targets = new List<Character>();
-            foreach (var target in allTargets)
-            {
-                if (target.isDead == false) targets.Add(target);
-            }
-            int r = Random.Range(0, targets.Count);
-
-            if (actionPoints >= card.Cost)
-            {
-                actionPoints -= card.Cost;
-                CharacterUpdated();
-
-                if (card.Damage > 0)
-                {
-                    targets[r].ReceiveDamage(card.Damage);
-                }
-                if (card.Heal > 0)  ReceiveHealing(card.Heal);
-            }
         }
     }
 }

@@ -3,15 +3,15 @@ using UnityEngine.UI;
 
 namespace Combat.Helpers
 {
-    enum CharacterTurn
+    internal enum CharacterTurn
     {
-        Player,
+        Hero,
         Enemy,
     }
 
     public class ButtonEndTurnHelper : MonoBehaviour
     {
-        [SerializeField] private CharacterTurn characterTurn = CharacterTurn.Player;
+        [SerializeField] private CharacterTurn characterTurn = CharacterTurn.Hero;
 
         public void Start()
         {
@@ -28,11 +28,11 @@ namespace Combat.Helpers
         {
             switch (characterTurn)
             {
-                case CharacterTurn.Player:
-                    CombatState.Instance.SetState(CombatStateType.EnemyTurn);
+                case CharacterTurn.Hero:
+                    CombatState.Instance.SetState(CombatStateType.HeroDeckShuffle);
                     break;
                 case CharacterTurn.Enemy:
-                    CombatState.Instance.SetState(CombatStateType.HeroTurn);
+                    CombatState.Instance.SetState(CombatStateType.EnemyDeckShuffle);
                     break;
             }
         }

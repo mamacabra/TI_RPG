@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +20,7 @@ namespace Combat
         {
             SetupCardAttributes(card);
             SetupCardPosition(position);
-            AddClickEvent( character, card);
+            AddClickEvent(character, card);
         }
 
         private void SetupCardAttributes(Card card)
@@ -41,7 +42,14 @@ namespace Combat
             Button button = GetComponent<Button>();
             button.onClick.AddListener(() =>
             {
-                character.UseCard(card, CombatManager.Instance.enemiesGameObject);
+                List<Character> targets = new List<Character>();
+                foreach (var target in CombatManager.Instance.Enemies)
+                {
+                    if (target.character.isDead == false) targets.Add(target.character);
+                }
+                int r = Random.Range(0, targets.Count);
+
+                CombatManager.UseCard(character, card, targets[r]);
             });
         }
     }
