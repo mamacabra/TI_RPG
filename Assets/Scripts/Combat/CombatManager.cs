@@ -32,8 +32,7 @@ namespace Combat
             switch (state)
             {
                 case CombatStateType.Start:
-                    new CharacterFactory(heroesGameObject, enemiesGameObject);
-                    new DeckFactory(heroesGameObject, enemiesGameObject);
+                    InitFactories();
                     CombatState.Instance.SetState(CombatStateType.HeroTurn);
                     break;
                 case CombatStateType.HeroDeckShuffle:
@@ -84,6 +83,12 @@ namespace Combat
             else Enemies.Add(characterRefs);
         }
 
+        private void InitFactories()
+        {
+            new CharacterFactory(heroesGameObject, enemiesGameObject);
+            new DeckFactory(heroesGameObject, enemiesGameObject);
+        }
+
         private static void ShuffleDeck(List<CharacterRefs> characters)
         {
             foreach (CharacterRefs c in characters)
@@ -99,6 +104,12 @@ namespace Combat
 
             if (card.Damage > 0) target.ReceiveDamage(card.Damage);
             if (card.Heal > 0) character.ReceiveHealing(card.Heal);
+        }
+
+        public static void UseRandomCard(CharacterRefs characterRefs, Character target)
+        {
+            int r = Random.Range(0, characterRefs.hand.Count);
+            UseCard(characterRefs.character, characterRefs.hand[r], target);
         }
     }
 }

@@ -11,21 +11,7 @@
 
         public void OnCombatStateChanged(CombatStateType state)
         {
-            switch (state)
-            {
-                case CombatStateType.HeroTurn:
-                    ResetActionPoints();
-                    break;
-                case CombatStateType.EnemyTurn:
-                    AttackHero();
-                    break;
-            }
-        }
-
-        private void AttackHero()
-        {
-            // Character[] characters = CombatManager.Instance.heroes;
-            // UseRandomCard(characters);
+            if (state is CombatStateType.EnemyDeckShuffle) ResetActionPoints();
         }
     }
 }

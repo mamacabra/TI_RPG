@@ -11,7 +11,7 @@
 
         public void OnCombatStateChanged(CombatStateType state)
         {
-            if (state is CombatStateType.EnemyTurn) ResetActionPoints();
+            if (state is CombatStateType.HeroDeckShuffle) ResetActionPoints();
         }
     }
 }

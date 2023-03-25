@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 820488975}
   - component: {fileID: 820488979}
   - component: {fileID: 820488978}
+  - component: {fileID: 820488980}
   m_Layer: 0
   m_Name: -- COMBAT --
   m_TagString: Untagged
@@ -866,6 +867,18 @@ MonoBehaviour:
   victoryModal: {fileID: 640233359}
   defeatModal: {fileID: 1921320426}
   playerCards: {fileID: 397691434}
+--- !u!114 &820488980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820488974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc40a2801da4c53b3b8939ffb3d2bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &903421425
 GameObject:
   m_ObjectHideFlags: 0
