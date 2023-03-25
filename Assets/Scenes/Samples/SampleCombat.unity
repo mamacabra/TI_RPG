@@ -845,8 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c62853d4a84ae0b29ea3766d19e93b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroes: []
-  enemies: []
+  heroesGameObject: []
+  enemiesGameObject: []
 --- !u!114 &820488979
 MonoBehaviour:
   m_ObjectHideFlags: 0

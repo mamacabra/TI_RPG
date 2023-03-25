@@ -32,7 +32,7 @@ namespace Combat.Helpers
                     CombatState.Instance.SetState(CombatStateType.EnemyTurn);
                     break;
                 case CharacterTurn.Enemy:
-                    CombatState.Instance.SetState(CombatStateType.PlayerTurn);
+                    CombatState.Instance.SetState(CombatStateType.HeroTurn);
                     break;
             }
         }

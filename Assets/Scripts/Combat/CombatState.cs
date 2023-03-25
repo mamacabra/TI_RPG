@@ -3,15 +3,6 @@ using UnityEngine;
 
 namespace Combat
 {
-    public enum CombatStateType
-    {
-        Start,
-        PlayerTurn,
-        EnemyTurn,
-        Victory,
-        Defeat,
-    }
-
     public class CombatState : MonoBehaviour
     {
         public static CombatState Instance;
@@ -33,6 +24,7 @@ namespace Combat
         public void SetState(CombatStateType newState)
         {
             state = newState;
+            Debug.Log("Combat state changed to: " + state);
 
             foreach (ICombatStateObserver observer in observers)
             {

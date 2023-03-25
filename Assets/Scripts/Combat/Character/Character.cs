@@ -3,28 +3,26 @@ using UnityEngine;
 
 namespace Combat
 {
-    public enum CharacterType
-    {
-        Hero,
-        Enemy,
-    }
-
     public abstract class Character : MonoBehaviour
     {
-        public CharacterType type;
+        public bool isDead => health <= 0;
+        public int Health => health;
+        public int MaxHealth => maxHealth;
+        public int ActionPoints => actionPoints;
+        public int MaxActionPoints => maxActionPoints;
+        public CharacterType Type => type;
 
         [Header("Observers")]
         [SerializeField] private HealthBar healthBar;
 
-        public bool isDead => health <= 0;
-
         [Header("Information")]
-        public int health;
-        public int maxHealth = 10;
-        public int actionPoints;
-        public int maxActionPoints = 3;
+        [SerializeField] private int health;
+        [SerializeField] private int maxHealth = 10;
+        [SerializeField] private int actionPoints;
+        [SerializeField] private int maxActionPoints = 3;
 
-        [Header("Cards")]
+        [SerializeField] protected CharacterType type;
+
         public List<Card> hand = new List<Card>();
         public Deck deck;
 
@@ -32,9 +30,9 @@ namespace Combat
         {
             health = maxHealth;
             actionPoints = maxActionPoints;
+
             healthBar.OnCharacterCreated(this);
             CombatManager.Instance.OnCharacterCreated(this);
-            SetupDeck();
         }
 
         private void CharacterUpdated()
@@ -99,50 +97,6 @@ namespace Combat
                 }
                 if (card.Heal > 0)  ReceiveHealing(card.Heal);
             }
-        }
-
-        private void SetupDeck()
-        {
-            deck = new Deck();
-
-            deck.AddCard(new Card()
-            {
-                Name = "Curar",
-                Cost = 2,
-                Heal = 2,
-            });
-            deck.AddCard(new Card()
-            {
-                Name = "Ataque Fraco",
-                Cost = 1,
-                Damage = 1,
-            });
-            deck.AddCard(new Card()
-            {
-                Name = "Ataque Fraco 2",
-                Cost = 1,
-                Damage = 2,
-            });
-            deck.AddCard(new Card()
-            {
-                Name = "Ataque Médio",
-                Cost = 2,
-                Damage = 2,
-            });
-            deck.AddCard(new Card()
-            {
-                Name = "Ataque Médio 2",
-                Cost = 2,
-                Damage = 3,
-            });
-            deck.AddCard(new Card()
-            {
-                Name = "Ataque FORTE",
-                Cost = 3,
-                Damage = 5,
-            });
-
-            hand = deck.Shuffle();
         }
     }
 }

@@ -5,26 +5,16 @@ namespace Combat
 {
     public class Deck
     {
-        public List<Card> Cards { get; set; }
+        private List<Card> Cards { get; }
 
         public Deck()
         {
             Cards = new List<Card>();
         }
 
-        public Deck(List<Card> cards)
-        {
-            Cards = cards;
-        }
-
         public void AddCard(Card card)
         {
             Cards.Add(card);
-        }
-
-        public void RemoveCard(Card card)
-        {
-            Cards.Remove(card);
         }
 
         public List<Card> Shuffle(int count = 3)

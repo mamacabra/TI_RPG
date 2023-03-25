@@ -14,15 +14,15 @@ namespace Combat
 
         public void OnCharacterCreated(Character character)
         {
-            healthBarSlider.maxValue = character.maxHealth;
+            healthBarSlider.maxValue = character.MaxHealth;
             OnCharacterUpdated(character);
         }
 
         public void OnCharacterUpdated(Character character)
         {
-            healthBarSlider.value = character.health;
-            healthBarCount.text = "HP: " + character.health;
-            actionPointsCount.text = "AP: " + character.actionPoints;
+            healthBarSlider.value = character.Health;
+            healthBarCount.text = "HP: " + character.Health;
+            actionPointsCount.text = "AP: " + character.ActionPoints;
         }
     }
 }

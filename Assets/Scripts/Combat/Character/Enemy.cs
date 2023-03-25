@@ -13,7 +13,7 @@
         {
             switch (state)
             {
-                case CombatStateType.PlayerTurn:
+                case CombatStateType.HeroTurn:
                     ResetActionPoints();
                     break;
                 case CombatStateType.EnemyTurn:

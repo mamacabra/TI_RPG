@@ -24,10 +24,10 @@ namespace Combat
         public void OnCombatStateChanged(CombatStateType state)
         {
             HiddenAllPanels();
-
+Debug.Log("--- HUD COMBAT" + state);
             switch (state)
             {
-                case CombatStateType.PlayerTurn:
+                case CombatStateType.HeroTurn:
                     ShowPanel(playerHUD);
                     ShowPanel(playerCards);
                     break;
@@ -56,12 +56,12 @@ namespace Combat
 
         private static void ShowPanel(GameObject panel)
         {
-            if (panel) panel.SetActive(true);
+            panel.SetActive(true);
         }
 
         private static void HiddenPanel(GameObject panel)
         {
-            if (panel) panel.SetActive(false);
+            panel.SetActive(false);
         }
     }
 }

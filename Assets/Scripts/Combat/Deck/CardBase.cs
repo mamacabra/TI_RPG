@@ -41,7 +41,7 @@ namespace Combat
             Button button = GetComponent<Button>();
             button.onClick.AddListener(() =>
             {
-                character.UseCard(card, CombatManager.Instance.enemies);
+                character.UseCard(card, CombatManager.Instance.enemiesGameObject);
             });
         }
     }
