@@ -1,0 +1,3 @@
+Para trocar a cor dos objetos tem que trocar a cor no material, no base map e no emission
+
+fiz um script com um metodo publico SetColor para poder definir a cor com mais facilidade.
