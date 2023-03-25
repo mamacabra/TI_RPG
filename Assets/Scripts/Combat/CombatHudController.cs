@@ -24,7 +24,7 @@ namespace Combat
         public void OnCombatStateChanged(CombatStateType state)
         {
             HiddenAllPanels();
-Debug.Log("--- HUD COMBAT" + state);
+
             switch (state)
             {
                 case CombatStateType.HeroTurn:

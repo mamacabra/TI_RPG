@@ -27,9 +27,6 @@ namespace Combat
 
             new CharacterFactory(heroesGameObject, enemiesGameObject);
             new DeckFactory(heroesGameObject, enemiesGameObject);
-
-            CombatState.Instance.SetState(CombatStateType.HeroTurn);
-            CombatState.Instance.SetState(CombatStateType.HeroDeckShuffle);
         }
 
         public void OnCombatStateChanged(CombatStateType state)

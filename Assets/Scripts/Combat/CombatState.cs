@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Combat
@@ -9,6 +10,7 @@ namespace Combat
 
         [SerializeField] private CombatStateType state;
         private List<ICombatStateObserver> observers;
+        private readonly Type[] requiredObservers = { typeof(CombatManager), typeof(CombatHudController) };
 
         private void Awake()
         {
@@ -16,20 +18,29 @@ namespace Combat
             observers = new List<ICombatStateObserver>();
         }
 
-        public void AddObserver(ICombatStateObserver stateObserver)
+        public void AddObserver(ICombatStateObserver observer)
         {
-            observers.Add(stateObserver);
+            observers.Add(observer);
+            CheckObserversList();
         }
 
         public void SetState(CombatStateType newState)
         {
             state = newState;
-            Debug.Log("Combat state changed to: " + state);
+            foreach (var observer in observers) observer.OnCombatStateChanged(state);
+        }
 
+        private void CheckObserversList()
+        {
+            bool hasCombatManager = false;
+            bool hasCombatHudController = false;
             foreach (ICombatStateObserver observer in observers)
             {
-                observer.OnCombatStateChanged(state);
+                if (requiredObservers[0] == observer.GetType()) hasCombatManager = true;
+                if (requiredObservers[1] == observer.GetType()) hasCombatHudController = true;
             }
+
+            if (hasCombatManager && hasCombatHudController) SetState(CombatStateType.HeroTurn);
         }
     }
 }
