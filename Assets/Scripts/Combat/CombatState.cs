@@ -26,6 +26,8 @@ namespace Combat
 
         public void SetState(CombatStateType newState)
         {
+            if (state is CombatStateType.Defeat or CombatStateType.Victory) return;
+
             state = newState;
             foreach (var observer in observers) observer.OnCombatStateChanged(state);
         }
