@@ -5,26 +5,20 @@ namespace Combat
 {
     public abstract class Character : MonoBehaviour
     {
-        public bool isDead => health <= 0;
+        [Header("Observers")]
+        [SerializeField] private HealthBar healthBar;
+
+        public bool IsDead => health <= 0;
         public int Health => health;
         public int MaxHealth => maxHealth;
         public int ActionPoints => actionPoints;
         public int MaxActionPoints => maxActionPoints;
-        public CharacterType Type => type;
+        public virtual CharacterType Type { get; }
 
-        [Header("Observers")]
-        [SerializeField] private HealthBar healthBar;
-
-        [Header("Information")]
         [SerializeField] private int health;
         [SerializeField] private int maxHealth = 10;
         [SerializeField] private int actionPoints;
         [SerializeField] private int maxActionPoints = 3;
-
-        [SerializeField] protected CharacterType type;
-
-        public List<Card> hand = new List<Card>();
-        public Deck deck;
 
         protected void CharacterCreated()
         {

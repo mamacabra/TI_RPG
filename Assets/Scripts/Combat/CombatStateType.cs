@@ -2,6 +2,7 @@
 {
     public enum CombatStateType
     {
+        Wait,
         Start,
         CharactersDeckShuffle,
         HeroTurn,

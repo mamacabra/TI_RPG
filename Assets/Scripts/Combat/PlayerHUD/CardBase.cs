@@ -45,7 +45,7 @@ namespace Combat
                 List<Character> targets = new List<Character>();
                 foreach (var target in CombatManager.Instance.Enemies)
                 {
-                    if (target.character.isDead == false) targets.Add(target.character);
+                    if (target.character.IsDead == false) targets.Add(target.character);
                 }
                 int r = Random.Range(0, targets.Count);
 

@@ -22,7 +22,7 @@ namespace Combat
                 List<Character> targets = new List<Character>();
                 foreach (var hero in CombatManager.Instance.Heroes)
                 {
-                    if (hero.character.isDead == false) targets.Add(hero.character);
+                    if (hero.character.IsDead == false) targets.Add(hero.character);
                 }
                 int r = Random.Range(0, targets.Count);
 

@@ -2,9 +2,10 @@
 {
     public class Hero : Character, ICombatStateObserver
     {
+        public override CharacterType Type => CharacterType.Hero;
+
         private void Start()
         {
-            type = CharacterType.Hero;
             CombatState.Instance.AddObserver(this);
             CharacterCreated();
         }

@@ -60,13 +60,13 @@ namespace Combat
 
         private void CheckHeroesDead()
         {
-            int dead = Heroes.FindAll(hero => hero.character.isDead).Count;
+            int dead = Heroes.FindAll(hero => hero.character.IsDead).Count;
             if (dead == Heroes.Count) CombatState.Instance.SetState(CombatStateType.Defeat);
         }
 
         private void CheckEnemiesDead()
         {
-            int dead = Enemies.FindAll(hero => hero.character.isDead).Count;
+            int dead = Enemies.FindAll(hero => hero.character.IsDead).Count;
             if (dead == Enemies.Count) CombatState.Instance.SetState(CombatStateType.Victory);
         }
 

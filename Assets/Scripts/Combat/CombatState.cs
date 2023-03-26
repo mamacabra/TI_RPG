@@ -8,7 +8,7 @@ namespace Combat
     {
         public static CombatState Instance;
 
-        [SerializeField] private CombatStateType state;
+        [SerializeField] private CombatStateType state = CombatStateType.Wait;
         private List<ICombatStateObserver> observers;
         private readonly Type[] requiredObservers = { typeof(CombatManager), typeof(CombatHudController) };
 
@@ -21,7 +21,7 @@ namespace Combat
         public void AddObserver(ICombatStateObserver observer)
         {
             observers.Add(observer);
-            CheckObserversList();
+            if (state == CombatStateType.Wait) CheckRequiredObservers();
         }
 
         public void SetState(CombatStateType newState)
@@ -32,7 +32,7 @@ namespace Combat
             foreach (var observer in observers) observer.OnCombatStateChanged(state);
         }
 
-        private void CheckObserversList()
+        private void CheckRequiredObservers()
         {
             bool hasCombatManager = false;
             bool hasCombatHudController = false;
