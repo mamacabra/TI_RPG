@@ -1083,7 +1083,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244036286
 GameObject:
@@ -1163,7 +1163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244036286}
   m_LocalRotation: {x: -0.38268346, y: -0, z: -0, w: 0.9238795}
-  m_LocalPosition: {x: 0, y: -14.4, z: -16.7}
+  m_LocalPosition: {x: -2.6, y: -14.4, z: -16.7}
   m_LocalScale: {x: 3.333333, y: 3.3333328, z: 3.3333328}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2750,7 +2750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592629252}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0.63}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4549,7 +4549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164337380}
   - component: {fileID: 1164337381}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4867,7 +4867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222625183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4876,7 +4876,7 @@ Transform:
   - {fileID: 1877554459}
   - {fileID: 1796287664}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1222625185
 MonoBehaviour:
@@ -4893,56 +4893,6 @@ MonoBehaviour:
   island: {fileID: 4831487422004311699, guid: 06599f766f0dad94cb17b435f2b768a5, type: 3}
   map: {fileID: 1796287664}
   type: 5
-  parent: []
-  depth: 0
-  lastDepth: 0
---- !u!1 &1240443205
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1240443207}
-  - component: {fileID: 1240443208}
-  m_Layer: 0
-  m_Name: MapGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1240443207
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240443205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1240443208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240443205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d62f7fdc2712bf4091a827d5031d6be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  island: {fileID: 0}
-  map: {fileID: 0}
-  type: 0
   parent: []
   depth: 0
   lastDepth: 0
@@ -6111,7 +6061,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553585062
 GameObject:
@@ -8327,7 +8277,7 @@ RectTransform:
   - {fileID: 174950522}
   - {fileID: 1582373311}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8349,7 +8299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1877554459
 Transform:
   m_ObjectHideFlags: 0
@@ -8752,7 +8702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953018800}
   - component: {fileID: 1953018801}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9654,7 +9604,7 @@ GameObject:
   - component: {fileID: 2112890759}
   - component: {fileID: 2112890761}
   - component: {fileID: 2112890760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10474,7 +10424,7 @@ SphereCollider:
   m_GameObject: {fileID: 4831487422721686759}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -10811,7 +10761,7 @@ GameObject:
   - component: {fileID: 1977489453380337705}
   - component: {fileID: 6054468035036102557}
   - component: {fileID: 2351333273318506114}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11548,7 +11498,6 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982037598931564}
   typeOfIsland: 5
-  depth: 0
   Depth: 0
 --- !u!114 &8084982036931931070
 MonoBehaviour:
@@ -11568,8 +11517,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982037837973349}
   typeOfIsland: 0
-  depth: 6
-  Depth: 0
+  Depth: 6
 --- !u!114 &8084982036934223257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11587,8 +11535,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982038137515579}
   typeOfIsland: 0
-  depth: 3
-  Depth: 0
+  Depth: 3
 --- !u!114 &8084982037116460460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11607,8 +11554,7 @@ MonoBehaviour:
   - {fileID: 8084982038350002880}
   - {fileID: 8084982037147810570}
   typeOfIsland: 0
-  depth: 4
-  Depth: 0
+  Depth: 4
 --- !u!114 &8084982037147810570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11626,8 +11572,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982037343189846}
   typeOfIsland: 0
-  depth: 5
-  Depth: 0
+  Depth: 5
 --- !u!114 &8084982037259511630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11645,8 +11590,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982036931931070}
   typeOfIsland: 2
-  depth: 5
-  Depth: 0
+  Depth: 5
 --- !u!114 &8084982037343189846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11665,8 +11609,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982037546102521}
   typeOfIsland: 0
-  depth: 6
-  Depth: 0
+  Depth: 6
 --- !u!114 &8084982037546102521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11684,8 +11627,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
-  depth: 7
-  Depth: 0
+  Depth: 7
 --- !u!114 &8084982037598931564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11703,8 +11645,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982038648821539}
   typeOfIsland: 3
-  depth: 1
-  Depth: 0
+  Depth: 1
 --- !u!114 &8084982037725995786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11723,8 +11664,7 @@ MonoBehaviour:
   - {fileID: 8084982037116460460}
   - {fileID: 8084982037928765623}
   typeOfIsland: 2
-  depth: 3
-  Depth: 0
+  Depth: 3
 --- !u!114 &8084982037837973349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11742,8 +11682,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
-  depth: 7
-  Depth: 0
+  Depth: 7
 --- !u!114 &8084982037928765623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11761,8 +11700,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982037147810570}
   typeOfIsland: 2
-  depth: 4
-  Depth: 0
+  Depth: 4
 --- !u!114 &8084982038137515579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11781,8 +11719,7 @@ MonoBehaviour:
   - {fileID: 8084982038256117757}
   - {fileID: 8084982037259511630}
   typeOfIsland: 2
-  depth: 4
-  Depth: 0
+  Depth: 4
 --- !u!114 &8084982038251465659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11800,8 +11737,7 @@ MonoBehaviour:
   - {fileID: 8084982037546102521}
   childrens: []
   typeOfIsland: 1
-  depth: 8
-  Depth: 0
+  Depth: 8
 --- !u!114 &8084982038256117757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11819,8 +11755,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982036931931070}
   typeOfIsland: 0
-  depth: 5
-  Depth: 0
+  Depth: 5
 --- !u!114 &8084982038350002880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11838,8 +11773,7 @@ MonoBehaviour:
   childrens:
   - {fileID: 8084982037343189846}
   typeOfIsland: 2
-  depth: 5
-  Depth: 0
+  Depth: 5
 --- !u!114 &8084982038648821539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11858,5 +11792,4 @@ MonoBehaviour:
   - {fileID: 8084982036934223257}
   - {fileID: 8084982037725995786}
   typeOfIsland: 0
-  depth: 2
-  Depth: 0
+  Depth: 2

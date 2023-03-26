@@ -24,7 +24,7 @@ public class MapNodeTest : MonoBehaviour
     public List<MapNodeTest> childrens = new List<MapNodeTest>();
 
     public TypeOfIsland typeOfIsland;
-    [SerializeField] int depth;
+    public int Depth;
 
     private TextMeshPro textTypeOfIsland;
     
@@ -65,9 +65,7 @@ public class MapNodeTest : MonoBehaviour
             lineRenderer2.SetPosition(1, childrens[1].transform.position);
         }
     }
-
-
-    public int Depth;
+    
 
     public void SetParent (MapNodeTest parent)
     {

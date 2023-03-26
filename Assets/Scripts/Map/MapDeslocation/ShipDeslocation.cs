@@ -42,8 +42,8 @@ public class ShipDeslocation : MonoBehaviour
 
     void Navegate(Vector3 pos)
     {
-        Debug.Log("a");
-        transform.DOMove(pos, 2).OnComplete(CheckInsland);
+        Vector3 p = new Vector3(pos.x + 1, pos.y, pos.z);
+        transform.DOMove(p, 2).OnComplete(CheckInsland);
     }
 
     void CheckInsland()

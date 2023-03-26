@@ -47,6 +47,13 @@ public class MapManager : MonoBehaviour
             }
         }
 
+        if (mp.Depth == 0)
+        {
+            lastMp = island.GetComponent<MapNodeTest>();
+            ShipIndex--;
+            return true;
+        }
+
         ShipIndex--;
         return false;
     }
@@ -69,6 +76,10 @@ public class MapManager : MonoBehaviour
             EndGame = true;
             ShowCombatPanel?.Invoke(true);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
+        }
+        else if (lastMp.typeOfIsland == TypeOfIsland.Initial)
+        {
+            OnCanClick();
         }
     }
 
