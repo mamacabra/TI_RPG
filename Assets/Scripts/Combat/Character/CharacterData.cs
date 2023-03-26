@@ -2,13 +2,13 @@
 
 namespace Combat
 {
-    public class CharacterParty
+    public class CharacterData
     {
         public Character character;
         public Deck deck;
         public List<Card> hand;
 
-        public CharacterParty(Character character, Deck deck)
+        public CharacterData(Character character, Deck deck)
         {
             this.character = character;
             this.deck = deck;

@@ -11,15 +11,15 @@ namespace Combat
         [SerializeField] private List<Character> heroesGameObject;
         [SerializeField] private List<Character> enemiesGameObject;
 
-        public List<CharacterParty> Heroes { get; private set; }
-        public List<CharacterParty> Enemies { get; private set; }
+        public List<CharacterData> Heroes { get; private set; }
+        public List<CharacterData> Enemies { get; private set; }
 
         private void Awake()
         {
             Instance = this;
 
-            Heroes = new List<CharacterParty>();
-            Enemies = new List<CharacterParty>();
+            Heroes = new List<CharacterData>();
+            Enemies = new List<CharacterData>();
         }
 
         private void Start()
@@ -74,10 +74,10 @@ namespace Combat
 
         public void SetCharacterDeck(Character character, Deck deck)
         {
-            CharacterParty characterParty = new CharacterParty(character, deck);
+            CharacterData characterData = new CharacterData(character, deck);
 
-            if (character.Type == CharacterType.Hero) Heroes.Add(characterParty);
-            else Enemies.Add(characterParty);
+            if (character.Type == CharacterType.Hero) Heroes.Add(characterData);
+            else Enemies.Add(characterData);
         }
 
         private void InitFactories()
@@ -86,17 +86,17 @@ namespace Combat
             new DeckFactory(heroesGameObject, enemiesGameObject);
         }
 
-        private static void ShuffleDeck(List<CharacterParty> characters)
+        private static void ShuffleDeck(List<CharacterData> characters)
         {
-            foreach (CharacterParty character in characters)
+            foreach (CharacterData character in characters)
             {
                 character.hand = character.deck.Shuffle();
             }
         }
 
-        private static void ResetActionPoints(List<CharacterParty> characters)
+        private static void ResetActionPoints(List<CharacterData> characters)
         {
-            foreach (CharacterParty character in characters)
+            foreach (CharacterData character in characters)
             {
                 character.character.ResetActionPoints();
             }
@@ -110,10 +110,10 @@ namespace Combat
             if (card.Heal > 0) character.ReceiveHealing(card.Heal);
         }
 
-        public static void UseRandomCard(CharacterParty characterParty, Character target)
+        public static void UseRandomCard(CharacterData characterData, Character target)
         {
-            int r = Random.Range(0, characterParty.hand.Count);
-            UseCard(characterParty.character, characterParty.hand[r], target);
+            int r = Random.Range(0, characterData.hand.Count);
+            UseCard(characterData.character, characterData.hand[r], target);
         }
     }
 }
