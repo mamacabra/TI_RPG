@@ -32,6 +32,28 @@ namespace Combat
             foreach (var observer in observers) observer.OnCombatStateChanged(state);
         }
 
+        public void NextState()
+        {
+            switch (state)
+            {
+                case CombatStateType.Start:
+                    SetState(CombatStateType.HeroTurn);
+                    break;
+                case CombatStateType.HeroTurn:
+                    SetState(CombatStateType.HeroDeckShuffle);
+                    break;
+                case CombatStateType.HeroDeckShuffle:
+                    SetState(CombatStateType.EnemyTurn);
+                    break;
+                case CombatStateType.EnemyTurn:
+                    SetState(CombatStateType.EnemyDeckShuffle);
+                    break;
+                case CombatStateType.EnemyDeckShuffle:
+                    SetState(CombatStateType.HeroTurn);
+                    break;
+            }
+        }
+
         private void CheckRequiredObservers()
         {
             bool hasCombatManager = false;

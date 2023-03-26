@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Combat
@@ -15,7 +16,7 @@ namespace Combat
             if (state is CombatStateType.EnemyTurn) AttackHero();
         }
 
-        private static void AttackHero()
+        private void AttackHero()
         {
             foreach (var enemy in CombatManager.Instance.Enemies)
             {
@@ -29,7 +30,13 @@ namespace Combat
                 CombatManager.UseRandomCard(enemy, targets[r]);
             }
 
-            CombatState.Instance.SetState(CombatStateType.EnemyDeckShuffle);
+            StartCoroutine(nameof(WaitSeconds));
+            CombatState.Instance.NextState();
+        }
+
+        private IEnumerator WaitSeconds()
+        {
+            yield return new WaitForSeconds(5.0f);
         }
     }
 }

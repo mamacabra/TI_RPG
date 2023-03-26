@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Combat
@@ -20,7 +19,12 @@ namespace Combat
         [SerializeField] private int actionPoints;
         [SerializeField] private int maxActionPoints = 3;
 
-        protected void CharacterCreated()
+        private void Start()
+        {
+            CharacterCreated();
+        }
+
+        private void CharacterCreated()
         {
             health = maxHealth;
             actionPoints = maxActionPoints;

@@ -24,17 +24,9 @@ namespace Combat.Helpers
             button.onClick.AddListener(EndTurn);
         }
 
-        private void EndTurn()
+        private static void EndTurn()
         {
-            switch (characterTurn)
-            {
-                case CharacterTurn.Hero:
-                    CombatState.Instance.SetState(CombatStateType.HeroDeckShuffle);
-                    break;
-                case CharacterTurn.Enemy:
-                    CombatState.Instance.SetState(CombatStateType.EnemyDeckShuffle);
-                    break;
-            }
+            CombatState.Instance.NextState();
         }
     }
 }

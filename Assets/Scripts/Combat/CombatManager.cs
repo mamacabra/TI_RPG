@@ -33,15 +33,17 @@ namespace Combat
             {
                 case CombatStateType.Start:
                     InitFactories();
-                    CombatState.Instance.SetState(CombatStateType.HeroTurn);
+                    CombatState.Instance.NextState();
                     break;
                 case CombatStateType.HeroDeckShuffle:
                     ShuffleDeck(Heroes);
-                    CombatState.Instance.SetState(CombatStateType.EnemyTurn);
+                    ResetActionPoints(Heroes);
+                    CombatState.Instance.NextState();
                     break;
                 case CombatStateType.EnemyDeckShuffle:
                     ShuffleDeck(Enemies);
-                    CombatState.Instance.SetState(CombatStateType.HeroTurn);
+                    ResetActionPoints(Enemies);
+                    CombatState.Instance.NextState();
                     break;
             }
         }
@@ -89,6 +91,14 @@ namespace Combat
             foreach (CharacterParty character in characters)
             {
                 character.hand = character.deck.Shuffle();
+            }
+        }
+
+        private static void ResetActionPoints(List<CharacterParty> characters)
+        {
+            foreach (CharacterParty character in characters)
+            {
+                character.character.ResetActionPoints();
             }
         }
 
