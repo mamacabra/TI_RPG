@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -28,6 +29,7 @@ public class MapNodeTest : MonoBehaviour
     private TextMeshPro textTypeOfIsland;
     
     private LineRenderer lineRenderer1, lineRenderer2;
+    
 
     private void Awake()
     {
@@ -42,6 +44,8 @@ public class MapNodeTest : MonoBehaviour
         lineRenderer1 = transform.GetChild(0).GetComponent<LineRenderer>();
         lineRenderer2 = transform.GetChild(1).GetComponent<LineRenderer>();
         Line();
+
+        gameObject.name = typeOfIsland.ToString();
     }
     void Line()
     {
@@ -63,22 +67,8 @@ public class MapNodeTest : MonoBehaviour
     }
 
 
-    public int Depth
-    {
-        get
-        {
-            /*MapNodeTest node = parent[0];
+    public int Depth;
 
-            while (node!=null)
-            {
-                depth++;
-                node = node.parent[0];
-            }*/
-
-            return depth;
-        }
-    }
-    
     public void SetParent (MapNodeTest parent)
     {
         this.parent.Add(parent);

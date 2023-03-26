@@ -6,7 +6,61 @@ using Random = UnityEngine.Random;
 
 public class MapGeneratorTest : MonoBehaviour
 {
+    private static MapGeneratorTest instance;
+    public static MapGeneratorTest Instance => instance ? instance : FindObjectOfType<MapGeneratorTest>();
+    private List<GameObject> islands = new List<GameObject>();
+
     [SerializeField] private GameObject island;
+    [SerializeField] private Transform map;
+    public TypeOfIsland type;
+    
+    [SerializeField] List<MapNodeTest> parent = new List<MapNodeTest>();
+    
+    [SerializeField] private int depth = 0;
+    
+    [SerializeField] int lastDepth = 0;
+
+    private Vector3 pos = new Vector3(0, 0, 0);
+
+    public void InstantiateIsland()
+    {
+        if (lastDepth != depth)
+        {
+            pos.z += 2.5f;
+        }
+
+        GameObject i = Instantiate(island, pos, Quaternion.identity, map);
+        islands.Add(i);
+
+        i.name = type.ToString();
+
+        MapNodeTest script = i.GetComponent<MapNodeTest>();
+
+        script.typeOfIsland = type;
+        script.parent = parent;
+
+        foreach (var p in parent)
+            p.childrens.Add(script);
+
+        script.Depth = depth;
+        lastDepth = depth;
+    }
+
+
+    public void ResetAll()
+    {
+        type = TypeOfIsland.Initial;
+        parent.Clear();
+        
+        foreach (var i in islands) DestroyImmediate(i);
+
+        pos = new Vector3(0, 0, 0);
+        islands.Clear();
+        depth = 0;
+        lastDepth = 0;
+    }
+    
+    /*[SerializeField] private GameObject island;
     private const int MaxDepth = 10;
 
     private MapNodeTest root;
@@ -136,5 +190,5 @@ public class MapGeneratorTest : MonoBehaviour
         }
 
         return lastNode;
-    }
+    }*/
 }

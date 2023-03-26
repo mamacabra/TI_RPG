@@ -1069,6 +1069,7 @@ MonoBehaviour:
   ShipIndex: 0
   lastMp: {fileID: 8084982036767327345}
   map: {fileID: 1222625183}
+  EndGame: 0
 --- !u!4 &240763489
 Transform:
   m_ObjectHideFlags: 0
@@ -2749,13 +2750,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592629252}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 3.91}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 244036289}
   m_Father: {fileID: 1222625184}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!136 &592629254
 CapsuleCollider:
@@ -4850,6 +4851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1222625184}
+  - component: {fileID: 1222625185}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -4865,16 +4867,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222625183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -100, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1946289219}
-  - {fileID: 1877554459}
   - {fileID: 592629253}
+  - {fileID: 1877554459}
+  - {fileID: 1796287664}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1222625185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222625183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d62f7fdc2712bf4091a827d5031d6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  island: {fileID: 4831487422004311699, guid: 06599f766f0dad94cb17b435f2b768a5, type: 3}
+  map: {fileID: 1796287664}
+  type: 5
+  parent: []
+  depth: 0
+  lastDepth: 0
 --- !u!1 &1240443205
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,7 +4940,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d62f7fdc2712bf4091a827d5031d6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  island: {fileID: 4831487422004311699, guid: 06599f766f0dad94cb17b435f2b768a5, type: 3}
+  island: {fileID: 0}
+  map: {fileID: 0}
+  type: 0
+  parent: []
+  depth: 0
+  lastDepth: 0
 --- !u!1 &1252803716
 GameObject:
   m_ObjectHideFlags: 0
@@ -7814,6 +7840,37 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!1 &1796287663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796287664}
+  m_Layer: 0
+  m_Name: Map2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796287664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796287663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1222625184}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809733608
 GameObject:
   m_ObjectHideFlags: 0
@@ -8292,7 +8349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1877554459
 Transform:
   m_ObjectHideFlags: 0
@@ -8323,7 +8380,7 @@ Transform:
   - {fileID: 995705195485020333}
   - {fileID: 995705197369802920}
   m_Father: {fileID: 1222625184}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890804714
 GameObject:
@@ -11492,6 +11549,7 @@ MonoBehaviour:
   - {fileID: 8084982037598931564}
   typeOfIsland: 5
   depth: 0
+  Depth: 0
 --- !u!114 &8084982036931931070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11511,6 +11569,7 @@ MonoBehaviour:
   - {fileID: 8084982037837973349}
   typeOfIsland: 0
   depth: 6
+  Depth: 0
 --- !u!114 &8084982036934223257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11529,6 +11588,7 @@ MonoBehaviour:
   - {fileID: 8084982038137515579}
   typeOfIsland: 0
   depth: 3
+  Depth: 0
 --- !u!114 &8084982037116460460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11548,6 +11608,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 0
   depth: 4
+  Depth: 0
 --- !u!114 &8084982037147810570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11566,6 +11627,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 0
   depth: 5
+  Depth: 0
 --- !u!114 &8084982037259511630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11584,6 +11646,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 2
   depth: 5
+  Depth: 0
 --- !u!114 &8084982037343189846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11603,6 +11666,7 @@ MonoBehaviour:
   - {fileID: 8084982037546102521}
   typeOfIsland: 0
   depth: 6
+  Depth: 0
 --- !u!114 &8084982037546102521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11621,6 +11685,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   depth: 7
+  Depth: 0
 --- !u!114 &8084982037598931564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11639,6 +11704,7 @@ MonoBehaviour:
   - {fileID: 8084982038648821539}
   typeOfIsland: 3
   depth: 1
+  Depth: 0
 --- !u!114 &8084982037725995786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11658,6 +11724,7 @@ MonoBehaviour:
   - {fileID: 8084982037928765623}
   typeOfIsland: 2
   depth: 3
+  Depth: 0
 --- !u!114 &8084982037837973349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11676,6 +11743,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   depth: 7
+  Depth: 0
 --- !u!114 &8084982037928765623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11694,6 +11762,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 2
   depth: 4
+  Depth: 0
 --- !u!114 &8084982038137515579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11713,6 +11782,7 @@ MonoBehaviour:
   - {fileID: 8084982037259511630}
   typeOfIsland: 2
   depth: 4
+  Depth: 0
 --- !u!114 &8084982038251465659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11731,6 +11801,7 @@ MonoBehaviour:
   childrens: []
   typeOfIsland: 1
   depth: 8
+  Depth: 0
 --- !u!114 &8084982038256117757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11749,6 +11820,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 0
   depth: 5
+  Depth: 0
 --- !u!114 &8084982038350002880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11767,6 +11839,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 2
   depth: 5
+  Depth: 0
 --- !u!114 &8084982038648821539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11786,3 +11859,4 @@ MonoBehaviour:
   - {fileID: 8084982037725995786}
   typeOfIsland: 0
   depth: 2
+  Depth: 0
