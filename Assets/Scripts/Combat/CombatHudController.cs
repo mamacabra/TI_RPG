@@ -18,7 +18,7 @@ namespace Combat
         public void Start()
         {
             HiddenAllPanels();
-            CombatState.Instance.AddObserver(this);
+            CombatState.Instance.Subscribe(this);
         }
 
         public void OnCombatStateChanged(CombatStateType state)

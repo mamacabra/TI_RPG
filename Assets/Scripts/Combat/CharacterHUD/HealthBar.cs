@@ -14,7 +14,7 @@ namespace Combat
 
         public void OnCharacterCreated(Character character)
         {
-            healthBarSlider.maxValue = character.MaxHealth;
+            healthBarSlider.maxValue = Character.MaxHealth;
             OnCharacterUpdated(character);
         }
 

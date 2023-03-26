@@ -7,17 +7,14 @@ namespace Combat
         [Header("Observers")]
         [SerializeField] private HealthBar healthBar;
 
-        public bool IsDead => health <= 0;
-        public int Health => health;
-        public int MaxHealth => maxHealth;
-        public int ActionPoints => actionPoints;
-        public int MaxActionPoints => maxActionPoints;
-        public virtual CharacterType Type { get; }
+        public bool IsDead => Health <= 0;
 
-        [SerializeField] private int health;
-        [SerializeField] private int maxHealth = 10;
-        [SerializeField] private int actionPoints;
-        [SerializeField] private int maxActionPoints = 3;
+        public int Health { get; private set; }
+        public const int MaxHealth = 10;
+        public int ActionPoints { get; private set; }
+        private int MaxActionPoints = 3;
+
+        public virtual CharacterType Type { get; }
 
         private void Start()
         {
@@ -26,8 +23,8 @@ namespace Combat
 
         private void CharacterCreated()
         {
-            health = maxHealth;
-            actionPoints = maxActionPoints;
+            Health = MaxHealth;
+            ActionPoints = MaxActionPoints;
 
             healthBar.OnCharacterCreated(this);
             CombatManager.Instance.OnCharacterCreated(this);
@@ -41,27 +38,27 @@ namespace Combat
 
         public void ReceiveDamage(int value = 1)
         {
-            health -= value;
-            if (health < 0) health = 0;
+            Health -= value;
+            if (Health < 0) Health = 0;
 
             CharacterUpdated();
         }
 
         public void ReceiveHealing(int value = 1)
         {
-            health += value;
-            if (health > maxHealth) health = maxHealth;
+            Health += value;
+            if (Health > MaxHealth) Health = MaxHealth;
 
             CharacterUpdated();
         }
 
         public bool ConsumeActionPoints(int value = 1)
         {
-            bool hasEnough = actionPoints >= value;
+            bool hasEnough = ActionPoints >= value;
             if (hasEnough)
             {
-                actionPoints -= value;
-                if (actionPoints < 0) actionPoints = 0;
+                ActionPoints -= value;
+                if (ActionPoints < 0) ActionPoints = 0;
                 CharacterUpdated();
             }
 
@@ -70,7 +67,7 @@ namespace Combat
 
         public void ResetActionPoints()
         {
-            actionPoints = maxActionPoints;
+            ActionPoints = MaxActionPoints;
             CharacterUpdated();
         }
     }

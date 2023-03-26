@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Combat
@@ -10,7 +9,6 @@ namespace Combat
 
         [SerializeField] private CombatStateType state = CombatStateType.Wait;
         private List<ICombatStateObserver> observers;
-        private readonly Type[] requiredObservers = { typeof(CombatManager), typeof(CombatHudController) };
 
         private void Awake()
         {
@@ -18,7 +16,7 @@ namespace Combat
             observers = new List<ICombatStateObserver>();
         }
 
-        public void AddObserver(ICombatStateObserver observer)
+        public void Subscribe(ICombatStateObserver observer)
         {
             observers.Add(observer);
             if (state == CombatStateType.Wait) CheckRequiredObservers();
@@ -60,8 +58,8 @@ namespace Combat
             bool hasCombatHudController = false;
             foreach (ICombatStateObserver observer in observers)
             {
-                if (requiredObservers[0] == observer.GetType()) hasCombatManager = true;
-                if (requiredObservers[1] == observer.GetType()) hasCombatHudController = true;
+                if (typeof(CombatManager) == observer.GetType()) hasCombatManager = true;
+                if (typeof(CombatHudController) == observer.GetType()) hasCombatHudController = true;
             }
 
             if (hasCombatManager && hasCombatHudController) SetState(CombatStateType.Start);

@@ -8,7 +8,7 @@ namespace Combat
     {
         public void Start()
         {
-            CombatState.Instance.AddObserver(this);
+            CombatState.Instance.Subscribe(this);
         }
 
         public void OnCombatStateChanged(CombatStateType state)
