@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Combat
 {
-    public class CardBase : MonoBehaviour
+    public class Card2D : MonoBehaviour
     {
         public Text cardTitle;
         public Text cardCost;

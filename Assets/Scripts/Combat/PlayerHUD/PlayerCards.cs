@@ -20,8 +20,8 @@ namespace Combat
                 foreach (var card in hero.hand)
                 {
                     GameObject gameObject = Instantiate(cardPrefab, transform);
-                    CardBase cardBase = gameObject.GetComponent<CardBase>();
-                    cardBase.Setup(hero.character, card, i);
+                    Card3D c = gameObject.GetComponent<Card3D>();
+                    c.Setup(hero.character, card, i);
                     i++;
                 }
             }
