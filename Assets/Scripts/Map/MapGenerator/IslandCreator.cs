@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -6,12 +7,13 @@ using UnityEngine;
 [CustomEditor(typeof(MapGeneratorTest))]
 public class IslandCreator : Editor
 {
-   /* public override void OnInspectorGUI()
+
+    public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
         MapGeneratorTest myScript = (MapGeneratorTest)target;
-        if(GUILayout.Button("Build Object"))
+        if (GUILayout.Button("Build Object"))
         {
             myScript.InstantiateIsland();
         }
@@ -20,6 +22,6 @@ public class IslandCreator : Editor
             myScript.ResetAll();
         }
     }
-    */
-   
+
 }
+#endif
