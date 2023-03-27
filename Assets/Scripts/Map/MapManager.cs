@@ -77,7 +77,7 @@ public class MapManager : MonoBehaviour
             ShowCombatPanel?.Invoke(true);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
         }
-        else if (lastMp.typeOfIsland == TypeOfIsland.Initial)
+        else
         {
             OnCanClick();
         }

@@ -36,12 +36,17 @@ public class ShipDeslocation : MonoBehaviour
                 }
                 Navegate(raycastHit.collider.gameObject.transform.position);
             }
+            else
+            {
+                CanClick();
+            }
         }
     }
     
 
     void Navegate(Vector3 pos)
-    {
+    {   
+        Debug.Log("Aaaaa");
         Vector3 p = new Vector3(pos.x + 1, pos.y, pos.z);
         transform.DOMove(p, 2).OnComplete(CheckInsland);
     }
