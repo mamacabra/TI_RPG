@@ -6,7 +6,7 @@ using UnityEngine;
 [CustomEditor(typeof(MapGeneratorTest))]
 public class IslandCreator : Editor
 {
-    public override void OnInspectorGUI()
+   /* public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
@@ -20,6 +20,6 @@ public class IslandCreator : Editor
             myScript.ResetAll();
         }
     }
-    
+    */
    
 }
