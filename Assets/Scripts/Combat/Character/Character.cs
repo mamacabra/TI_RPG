@@ -12,7 +12,7 @@ namespace Combat
         public int Health { get; private set; }
         public const int MaxHealth = 10;
         public int ActionPoints { get; private set; }
-        private int MaxActionPoints = 3;
+        private const int MaxActionPoints = 3;
 
         public virtual CharacterType Type { get; }
 
@@ -69,6 +69,16 @@ namespace Combat
         {
             ActionPoints = MaxActionPoints;
             CharacterUpdated();
+        }
+
+        private void OnMouseOver()
+        {
+            HandController.Instance.SetTarget(this);
+        }
+
+        private void OnMouseExit()
+        {
+            HandController.Instance.RemoveTarget(this);
         }
     }
 }

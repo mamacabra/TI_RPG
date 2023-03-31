@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 820488979}
   - component: {fileID: 820488978}
   - component: {fileID: 820488980}
+  - component: {fileID: 820488981}
   m_Layer: 0
   m_Name: -- COMBAT --
   m_TagString: Untagged
@@ -865,6 +866,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc40a2801da4c53b3b8939ffb3d2bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &820488981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820488974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90dd2e49bdf4500a857f386b04bc2cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &903421425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9167d6dd42384e47a4a6567042a22f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterTurn: 1
 --- !u!114 &1140173613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,7 +1910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9167d6dd42384e47a4a6567042a22f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterTurn: 0
 --- !u!114 &1754173414
 MonoBehaviour:
   m_ObjectHideFlags: 0
