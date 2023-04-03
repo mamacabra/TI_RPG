@@ -106,8 +106,16 @@ namespace Combat
         {
             if (character.ConsumeActionPoints(card.Cost) == false) return;
 
-            if (card.Damage > 0) target.ReceiveDamage(card.Damage);
-            if (card.Heal > 0) character.ReceiveHealing(card.Heal);
+            if (card.Damage > 0)
+            {
+                target.ReceiveDamage(card.Damage);
+                VFXManager.Instance.PlayDamageVFX(target.transform);
+            }
+            if (card.Heal > 0)
+            {
+                target.ReceiveHealing(card.Heal);
+                VFXManager.Instance.PlayHealingVFX(target.transform);
+            };
         }
 
         public static void UseRandomCard(CharacterData characterData, Character target)
