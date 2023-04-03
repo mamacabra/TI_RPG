@@ -6,6 +6,7 @@ namespace Combat
     public class CombatState : MonoBehaviour
     {
         public static CombatState Instance;
+        public CombatStateType State => state;
 
         [SerializeField] private CombatStateType state = CombatStateType.Wait;
         private List<ICombatStateObserver> observers;
