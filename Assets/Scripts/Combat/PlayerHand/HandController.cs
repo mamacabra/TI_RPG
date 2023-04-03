@@ -8,10 +8,28 @@ namespace Combat
 
         [SerializeField] private Character target;
         [SerializeField] private Card3D selectedCard;
+        [SerializeField] private GameObject vfx;
+
+        public bool HasCardSelected => selectedCard != null;
 
         private void Start()
         {
             Instance = this;
+        }
+
+        private void Update()
+        {
+            if (selectedCard && target)
+            {
+                vfx.SetActive(true);
+                VFXLine line = vfx.GetComponent<VFXLine>();
+                if (line)
+                {
+                    line.SetInitialPoint(selectedCard.transform);
+                    line.SetTargetPoint(target.transform);
+                }
+            }
+            else vfx.SetActive(false);
         }
 
         public void SetTarget(Character target)
