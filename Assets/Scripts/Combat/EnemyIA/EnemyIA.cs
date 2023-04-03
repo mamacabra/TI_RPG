@@ -27,16 +27,19 @@ namespace Combat
                 }
                 int r = Random.Range(0, targets.Count);
 
+                StartCoroutine(WaitSeconds());
                 CombatManager.UseRandomCard(enemy, targets[r]);
             }
 
-            StartCoroutine(nameof(WaitSeconds));
+            StartCoroutine(WaitSeconds(5.0f));
             CombatState.Instance.NextState();
         }
 
-        private IEnumerator WaitSeconds()
+        private static IEnumerator WaitSeconds(float waitTime = 3.0f)
         {
-            yield return new WaitForSeconds(5.0f);
+                    Debug.Log("coroutineB created");
+            yield return new WaitForSeconds(waitTime);
+                    Debug.Log("coroutineB created");
         }
     }
 }
