@@ -23,29 +23,32 @@ public class VFXLine : MonoBehaviour
 
     void Update()
     {
-        curvePoint = new Vector3((initialPoint.transform.position.x + targetPoint.transform.position.x) / 2, curvePoint.y, (initialPoint.transform.position.z + targetPoint.transform.position.z) / 2);
-        curvePoint.y = curve;
-        var pointList = new List<Vector3>();
-
-        for (float ratio = 0; ratio <= 1; ratio += 1 / vertexCount)
+        if (initialPoint != null && targetPoint != null)
         {
-            var tangent1 = Vector3.Lerp(initialPoint.position, curvePoint, ratio);
-            var tangent2 = Vector3.Lerp(curvePoint, targetPoint.position + targetPointOffset, ratio);
-            var curve = Vector3.Lerp(tangent1, tangent2, ratio);
+            curvePoint = new Vector3((initialPoint.transform.position.x + targetPoint.transform.position.x) / 2, curvePoint.y, (initialPoint.transform.position.z + targetPoint.transform.position.z) / 2);
+            curvePoint.y = curve;
+            var pointList = new List<Vector3>();
 
-            pointList.Add(curve);
-        }
+            for (float ratio = 0; ratio <= 1; ratio += 1 / vertexCount)
+            {
+                var tangent1 = Vector3.Lerp(initialPoint.position, curvePoint, ratio);
+                var tangent2 = Vector3.Lerp(curvePoint, targetPoint.position + targetPointOffset, ratio);
+                var curve = Vector3.Lerp(tangent1, tangent2, ratio);
 
-        lineRenderer.positionCount = pointList.Count;
-        lineRenderer.SetPositions(pointList.ToArray());
+                pointList.Add(curve);
+            }
 
-        if (changeAmountOfArrows)
-        {
-            lineRenderer.textureMode = LineTextureMode.RepeatPerSegment;
-        }
-        else
-        {
-            lineRenderer.textureMode = LineTextureMode.Tile;
+            lineRenderer.positionCount = pointList.Count;
+            lineRenderer.SetPositions(pointList.ToArray());
+
+            if (changeAmountOfArrows)
+            {
+                lineRenderer.textureMode = LineTextureMode.RepeatPerSegment;
+            }
+            else
+            {
+                lineRenderer.textureMode = LineTextureMode.Tile;
+            }
         }
     }
     public void SetColor(Color _color)
