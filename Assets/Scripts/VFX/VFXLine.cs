@@ -50,8 +50,9 @@ public class VFXLine : MonoBehaviour
     }
     public void SetColor(Color _color)
     {
-        lineRenderer.material.SetColor("_BaseColor", _color);
-        lineRenderer.material.SetColor("_EmissionColor", _color * 2.5f);
+        // lineRenderer.material.SetColor("_BaseColor", _color);
+        // lineRenderer.material.SetColor("_EmissionColor", _color * 2.5f);
+        lineRenderer.material.SetColor("_Color", _color * 2.5f);
     }
 
     public void SetTargetPoint(Transform _target)

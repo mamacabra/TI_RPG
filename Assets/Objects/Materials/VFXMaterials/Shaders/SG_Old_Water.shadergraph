@@ -23,6 +23,9 @@
         },
         {
             "m_Id": "a246f6da1080432098f2b3a5f0d9549b"
+        },
+        {
+            "m_Id": "aa701e461cd541608af2de3ea237875e"
         }
     ],
     "m_Keywords": [],
@@ -261,20 +264,6 @@
                     "m_Id": "6a6bb3f489d34762acac36e7f83e0bae"
                 },
                 "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "d8cfd8181eb7453584818cff6abef166"
-                },
-                "m_SlotId": 4
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "6a6bb3f489d34762acac36e7f83e0bae"
-                },
-                "m_SlotId": 0
             }
         },
         {
@@ -1335,6 +1324,9 @@
         },
         {
             "m_Id": "a246f6da1080432098f2b3a5f0d9549b"
+        },
+        {
+            "m_Id": "aa701e461cd541608af2de3ea237875e"
         }
     ]
 }
@@ -1886,6 +1878,33 @@
     },
     "m_Labels": [],
     "m_Channel": 0
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "aa701e461cd541608af2de3ea237875e",
+    "m_Guid": {
+        "m_GuidSerialized": "1bbb6313-f601-4328-8c8f-1c9f9bf64108"
+    },
+    "m_Name": "WaterDepth",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "WaterDepth",
+    "m_DefaultReferenceName": "_WaterDepth",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2895242737286716161}
   - component: {fileID: 2895242737286716166}
   - component: {fileID: 2895242737286716160}
-  - component: {fileID: 2895242737286716163}
   m_Layer: 0
   m_Name: PointArrow_VFX
   m_TagString: Untagged
@@ -150,24 +149,5 @@ MonoBehaviour:
   targetPoint: {fileID: 0}
   targetPointOffset: {x: 0, y: -1, z: 0}
   vertexCount: 12
---- !u!95 &2895242737286716163
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2895242737286716167}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dcfad227d3d35914387ff6ffd496cc4a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  changeAmountOfArrows: 0
+  color: {r: 1, g: 1, b: 1, a: 1}
