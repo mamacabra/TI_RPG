@@ -49,16 +49,23 @@ namespace Combat
             });
             deck.AddCard(new Card()
             {
-                Name = "Ataque Médio 2",
+                Name = "Nova Carta",
                 Cost = 2,
-                Damage = 3,
+                Damage = 2,
+                DrawHeroCard = 2,
             });
-            deck.AddCard(new Card()
-            {
-                Name = "Ataque FORTE",
-                Cost = 3,
-                Damage = 5,
-            });
+            // deck.AddCard(new Card()
+            // {
+            //     Name = "Ataque Médio 2",
+            //     Cost = 2,
+            //     Damage = 3,
+            // });
+            // deck.AddCard(new Card()
+            // {
+            //     Name = "Ataque FORTE",
+            //     Cost = 3,
+            //     Damage = 5,
+            // });
 
             return deck;
         }

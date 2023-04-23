@@ -14,5 +14,13 @@ namespace Combat
             this.deck = deck;
             hand = this.deck.Shuffle();
         }
+
+        public void DrawHeroCards(int amount = 1)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                hand.Add(deck.DrawCard(hand));
+            }
+        }
     }
 }

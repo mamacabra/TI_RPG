@@ -116,6 +116,10 @@ namespace Combat
                 target.ReceiveHealing(card.card.Heal);
                 VFXManager.Instance.PlayHealingVFX(target.transform);
             };
+            if (card.card.DrawHeroCard > 0)
+            {
+                member.DrawHeroCards(card.card.DrawHeroCard);
+            }
 
             member.hand.Remove(card.card);
             PlayerCards.Instance.DrawCards();
