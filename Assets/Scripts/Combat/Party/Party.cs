@@ -4,11 +4,11 @@ namespace Combat
 {
     public class Party
     {
-        public List<CharacterData> Members { get; private set; }
+        public List<Member> Members { get; private set; }
 
         private void ShuffleDeck()
         {
-            foreach (CharacterData character in Members)
+            foreach (Member character in Members)
             {
                 character.hand = character.deck.Shuffle();
             }
@@ -16,7 +16,7 @@ namespace Combat
 
         private void ResetActionPoints()
         {
-            foreach (CharacterData character in Members)
+            foreach (Member character in Members)
             {
                 character.character.ResetActionPoints();
             }

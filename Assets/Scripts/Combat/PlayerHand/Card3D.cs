@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace Combat
 {
@@ -14,15 +10,16 @@ namespace Combat
         public Text cardDamage;
         public Text cardHeal;
 
+        public Member member;
         public Character character;
         public Card card;
 
         private static readonly Vector3 CardInitialPosition = new (-7, -1, 0);
         private static readonly Vector3 Displacement = new (2, 0, 0);
 
-        public void Setup(Character character, Card card, int position = 0)
+        public void Setup(Member member, Card card, int position = 0)
         {
-            this.character = character;
+            this.member = member;
             this.card = card;
 
             SetupCardAttributes(card);
@@ -44,7 +41,7 @@ namespace Combat
 
         private void OnMouseUp()
         {
-            HandController.Instance.UseCard();
+            HandController.Instance.UseCard(gameObject);
             // List<Character> targets = new List<Character>();
             // foreach (var target in CombatManager.Instance.Enemies)
             // {

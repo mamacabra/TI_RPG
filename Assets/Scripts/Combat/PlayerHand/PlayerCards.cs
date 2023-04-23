@@ -5,8 +5,19 @@ namespace Combat
     public class PlayerCards : MonoBehaviour
     {
         public GameObject cardPrefab;
+        public static PlayerCards Instance { get; private set; }
+
+        private void Start()
+        {
+            Instance = this;
+        }
 
         private void OnEnable()
+        {
+            DrawCards();
+        }
+
+        public void DrawCards()
         {
             DestroyCards();
             CreateCards();
@@ -21,7 +32,7 @@ namespace Combat
                 {
                     GameObject gameObject = Instantiate(cardPrefab, transform);
                     Card3D c = gameObject.GetComponent<Card3D>();
-                    c.Setup(hero.character, card, i);
+                    c.Setup(hero, card, i);
                     i++;
                 }
             }

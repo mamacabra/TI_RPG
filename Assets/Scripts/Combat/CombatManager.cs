@@ -11,15 +11,15 @@ namespace Combat
         [SerializeField] private List<Character> heroesGameObject;
         [SerializeField] private List<Character> enemiesGameObject;
 
-        public List<CharacterData> Heroes { get; private set; }
-        public List<CharacterData> Enemies { get; private set; }
+        public List<Member> Heroes { get; private set; }
+        public List<Member> Enemies { get; private set; }
 
         private void Awake()
         {
             Instance = this;
 
-            Heroes = new List<CharacterData>();
-            Enemies = new List<CharacterData>();
+            Heroes = new List<Member>();
+            Enemies = new List<Member>();
         }
 
         private void Start()
@@ -74,10 +74,10 @@ namespace Combat
 
         public void SetCharacterDeck(Character character, Deck deck)
         {
-            CharacterData characterData = new CharacterData(character, deck);
+            Member member = new Member(character, deck);
 
-            if (character.Type == CharacterType.Hero) Heroes.Add(characterData);
-            else Enemies.Add(characterData);
+            if (character.Type == CharacterType.Hero) Heroes.Add(member);
+            else Enemies.Add(member);
         }
 
         private void InitFactories()
@@ -86,20 +86,57 @@ namespace Combat
             new DeckFactory(heroesGameObject, enemiesGameObject);
         }
 
-        private static void ShuffleDeck(List<CharacterData> characters)
+        private static void ShuffleDeck(List<Member> members)
         {
-            foreach (CharacterData character in characters)
+            foreach (Member member in members)
             {
-                character.hand = character.deck.Shuffle();
+                member.hand = member.deck.Shuffle();
             }
         }
 
-        private static void ResetActionPoints(List<CharacterData> characters)
+        private static void ResetActionPoints(List<Member> members)
         {
-            foreach (CharacterData character in characters)
+            foreach (Member member in members)
             {
-                character.character.ResetActionPoints();
+                member.character.ResetActionPoints();
             }
+        }
+
+        public static void UseCard(Member member, Card3D card, Character target)
+        {
+            if (member.character.ConsumeActionPoints(card.card.Cost) == false) return;
+
+            if (card.card.Damage > 0)
+            {
+                target.ReceiveDamage(card.card.Damage);
+                VFXManager.Instance.PlayDamageVFX(target.transform);
+            }
+            if (card.card.Heal > 0)
+            {
+                target.ReceiveHealing(card.card.Heal);
+                VFXManager.Instance.PlayHealingVFX(target.transform);
+            };
+
+            member.hand.Remove(card.card);
+            PlayerCards.Instance.DrawCards();
+        }
+
+        public static void UseCard(Character character, Card3D card, Character target)
+        {
+            if (character.ConsumeActionPoints(card.card.Cost) == false) return;
+
+            if (card.card.Damage > 0)
+            {
+                target.ReceiveDamage(card.card.Damage);
+                VFXManager.Instance.PlayDamageVFX(target.transform);
+            }
+            if (card.card.Heal > 0)
+            {
+                target.ReceiveHealing(card.card.Heal);
+                VFXManager.Instance.PlayHealingVFX(target.transform);
+            };
+
+            Destroy(card.gameObject);
         }
 
         public static void UseCard(Character character, Card card, Character target)
@@ -118,10 +155,10 @@ namespace Combat
             };
         }
 
-        public static void UseRandomCard(CharacterData characterData, Character target)
+        public static void UseRandomCard(Member member, Character target)
         {
-            int r = Random.Range(0, characterData.hand.Count);
-            UseCard(characterData.character, characterData.hand[r], target);
+            int r = Random.Range(0, member.hand.Count);
+            UseCard(member.character, member.hand[r], target);
         }
     }
 }
