@@ -6,6 +6,7 @@ namespace Combat
     public class Deck
     {
         private List<Card> Cards { get; }
+        public int CardsCount => Cards.Count;
 
         public Deck()
         {
@@ -24,6 +25,8 @@ namespace Combat
 
             for (int i = 0; i < count; i++)
             {
+                if (possibleCards.Count == 0) break;
+
                 int r = Random.Range(0, possibleCards.Count);
                 shuffledCards.Add(possibleCards[r]);
                 possibleCards.RemoveAt(r);

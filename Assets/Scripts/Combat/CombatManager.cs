@@ -102,67 +102,76 @@ namespace Combat
             }
         }
 
-        public static void UseCard(Member member, Card3D card, Character target)
+        public static void UseCard(Member member, Card3D card, Member target)
         {
             if (member.character.ConsumeActionPoints(card.card.Cost) == false) return;
 
             if (card.card.Damage > 0)
             {
-                target.ReceiveDamage(card.card.Damage);
-                VFXManager.Instance.PlayDamageVFX(target.transform);
+                target.character.ReceiveDamage(card.card.Damage);
+                VFXManager.Instance.PlayDamageVFX(target.character.transform);
             }
             if (card.card.Heal > 0)
             {
-                target.ReceiveHealing(card.card.Heal);
-                VFXManager.Instance.PlayHealingVFX(target.transform);
+                target.character.ReceiveHealing(card.card.Heal);
+                VFXManager.Instance.PlayHealingVFX(target.character.transform);
             };
-            if (card.card.DrawHeroCard > 0)
+            if (card.card.DrawCard > 0)
             {
-                member.DrawHeroCards(card.card.DrawHeroCard);
+                member.DrawRandomCard(card.card.DrawCard);
+            }
+            if (card.card.DropTargetCard > 0)
+            {
+                target.DropRandomCard(card.card.DropTargetCard);
+            }
+            if (card.card.AddEmptyCard)
+            {
+                target.AddEmptyCard();
+                Debug.Log("AddEmptyCard");
             }
 
             member.hand.Remove(card.card);
             PlayerCards.Instance.DrawCards();
         }
 
-        public static void UseCard(Character character, Card3D card, Character target)
+        public static void UseCard(Member member, Card card, Member target)
         {
-            if (character.ConsumeActionPoints(card.card.Cost) == false) return;
-
-            if (card.card.Damage > 0)
-            {
-                target.ReceiveDamage(card.card.Damage);
-                VFXManager.Instance.PlayDamageVFX(target.transform);
-            }
-            if (card.card.Heal > 0)
-            {
-                target.ReceiveHealing(card.card.Heal);
-                VFXManager.Instance.PlayHealingVFX(target.transform);
-            };
-
-            Destroy(card.gameObject);
-        }
-
-        public static void UseCard(Character character, Card card, Character target)
-        {
-            if (character.ConsumeActionPoints(card.Cost) == false) return;
+            if (member.character.ConsumeActionPoints(card.Cost) == false) return;
 
             if (card.Damage > 0)
             {
-                target.ReceiveDamage(card.Damage);
-                VFXManager.Instance.PlayDamageVFX(target.transform);
+                target.character.ReceiveDamage(card.Damage);
+                VFXManager.Instance.PlayDamageVFX(target.character.transform);
             }
             if (card.Heal > 0)
             {
-                target.ReceiveHealing(card.Heal);
-                VFXManager.Instance.PlayHealingVFX(target.transform);
+                target.character.ReceiveHealing(card.Heal);
+                VFXManager.Instance.PlayHealingVFX(target.character.transform);
             };
+            if (card.DrawCard > 0)
+            {
+                member.DrawRandomCard(card.DrawCard);
+                Debug.Log("DrawCard");
+            }
+            if (card.DropTargetCard > 0)
+            {
+                target.DropRandomCard(card.DropTargetCard);
+                Debug.Log("DropTargetCard");
+            }
+            if (card.AddEmptyCard)
+            {
+                target.AddEmptyCard();
+                Debug.Log("AddEmptyCard");
+            }
+
+            member.hand.Remove(card);
+            PlayerCards.Instance.DrawCards();
         }
 
-        public static void UseRandomCard(Member member, Character target)
+        public static void UseRandomCard(Member member, Member target)
         {
             int r = Random.Range(0, member.hand.Count);
-            UseCard(member.character, member.hand[r], target);
+            UseCard(member, member.hand[r], target);
         }
     }
 }

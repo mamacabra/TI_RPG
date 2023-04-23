@@ -57,11 +57,12 @@ namespace Combat
             selectedCard = null;
         }
 
-        public void UseCard(GameObject cardClicked)
+        public void UseCard()
         {
             if (selectedCard && target)
             {
-                CombatManager.UseCard(selectedCard.member, selectedCard, target);
+                Member targetMember = CombatManager.Instance.Enemies.Find(x => x.character == target);
+                CombatManager.UseCard(selectedCard.member, selectedCard, targetMember);
             }
 
             RemoveCard();

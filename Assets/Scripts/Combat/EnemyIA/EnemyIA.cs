@@ -42,12 +42,12 @@ namespace Combat
         //     }
         // }
 
-        private static Character GetRandomHero()
+        private static Member GetRandomHero()
         {
-            List<Character> heroes = new List<Character>();
+            List<Member> heroes = new List<Member>();
             foreach (var hero in CombatManager.Instance.Heroes)
             {
-                if (hero.character.IsDead == false) heroes.Add(hero.character);
+                if (hero.character.IsDead == false) heroes.Add(hero);
             }
             int r = Random.Range(0, heroes.Count);
             return heroes[r];

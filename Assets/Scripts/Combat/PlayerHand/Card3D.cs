@@ -41,7 +41,7 @@ namespace Combat
 
         private void OnMouseUp()
         {
-            HandController.Instance.UseCard(gameObject);
+            HandController.Instance.UseCard();
             // List<Character> targets = new List<Character>();
             // foreach (var target in CombatManager.Instance.Enemies)
             // {

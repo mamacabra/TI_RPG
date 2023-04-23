@@ -6,8 +6,9 @@
         public int Cost { get; set; }
         public int Damage { get; set; }
         public int Heal { get; set; }
-        public int DrawHeroCard { get; set; }
+        public int DrawCard { get; set; }
         public int DrawPartyCard { get; set; }
-        public int DropEnemyCard { get; set; }
+        public int DropTargetCard { get; set; }
+        public bool AddEmptyCard { get; set; }
     }
 }

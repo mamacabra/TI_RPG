@@ -6,20 +6,71 @@ namespace Combat
     {
         public DeckFactory(List<Character> heroes, List<Character> enemies)
         {
-            CreateCharacterDeck(heroes);
-            CreateCharacterDeck(enemies);
-        }
-
-        private static void CreateCharacterDeck(List<Character> characters)
-        {
-            foreach (var character in characters)
+            foreach (var character in heroes)
             {
-                Deck deck = CreateDeck();
+                Deck deck = CreateHeroDeck();
+                CombatManager.Instance.SetCharacterDeck(character, deck);
+            }
+
+            foreach (var character in enemies)
+            {
+                Deck deck = CreateEnemyDeck();
                 CombatManager.Instance.SetCharacterDeck(character, deck);
             }
         }
 
-        private static Deck CreateDeck()
+        private static Deck CreateEnemyDeck()
+        {
+            Deck deck = new Deck();
+
+            deck.AddCard(new Card()
+            {
+                Name = "Remove Carta",
+                Cost = 1,
+                DropTargetCard = 2,
+            });
+            deck.AddCard(new Card()
+            {
+                Name = "Remove Carta",
+                Cost = 1,
+                Damage = 1,
+                AddEmptyCard = true,
+            });
+            deck.AddCard(new Card()
+            {
+                Name = "Ataque Fraco",
+                Cost = 1,
+                Damage = 1,
+            });
+            deck.AddCard(new Card()
+            {
+                Name = "Ataque Fraco",
+                Cost = 1,
+                Damage = 1,
+            });
+            // deck.AddCard(new Card()
+            // {
+            //     Name = "Ataque Fraco",
+            //     Cost = 1,
+            //     Damage = 1,
+            // });
+            // deck.AddCard(new Card()
+            // {
+            //     Name = "Ataque Fraco 2",
+            //     Cost = 1,
+            //     Damage = 2,
+            // });
+            // deck.AddCard(new Card()
+            // {
+            //     Name = "Ataque Médio 2",
+            //     Cost = 2,
+            //     Damage = 3,
+            // });
+
+            return deck;
+        }
+
+        private static Deck CreateHeroDeck()
         {
             Deck deck = new Deck();
 
@@ -52,7 +103,7 @@ namespace Combat
                 Name = "Nova Carta",
                 Cost = 2,
                 Damage = 2,
-                DrawHeroCard = 2,
+                DrawCard = 2,
             });
             // deck.AddCard(new Card()
             // {
