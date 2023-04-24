@@ -11548,6 +11548,7 @@ MonoBehaviour:
   - {fileID: 8084982037598931564}
   typeOfIsland: 5
   Depth: 0
+  combatScene: 
 --- !u!114 &8084982036931931070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11567,6 +11568,7 @@ MonoBehaviour:
   - {fileID: 8084982037837973349}
   typeOfIsland: 0
   Depth: 6
+  combatScene: SampleCombat_cavern_2
 --- !u!114 &8084982036934223257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11585,6 +11587,7 @@ MonoBehaviour:
   - {fileID: 8084982038137515579}
   typeOfIsland: 0
   Depth: 3
+  combatScene: SampleCombat_cavern_1
 --- !u!114 &8084982037116460460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11604,6 +11607,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 0
   Depth: 4
+  combatScene: SampleCombat_cavern_1
 --- !u!114 &8084982037147810570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11622,6 +11626,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 0
   Depth: 5
+  combatScene: SampleCombat_cavern_2
 --- !u!114 &8084982037259511630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11640,6 +11645,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 2
   Depth: 5
+  combatScene: 
 --- !u!114 &8084982037343189846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11659,6 +11665,7 @@ MonoBehaviour:
   - {fileID: 8084982037546102521}
   typeOfIsland: 0
   Depth: 6
+  combatScene: SampleCombat_cavern_2
 --- !u!114 &8084982037546102521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11677,6 +11684,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   Depth: 7
+  combatScene: 
 --- !u!114 &8084982037598931564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11695,6 +11703,7 @@ MonoBehaviour:
   - {fileID: 8084982038648821539}
   typeOfIsland: 3
   Depth: 1
+  combatScene: 
 --- !u!114 &8084982037725995786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11714,6 +11723,7 @@ MonoBehaviour:
   - {fileID: 8084982037928765623}
   typeOfIsland: 2
   Depth: 3
+  combatScene: 
 --- !u!114 &8084982037837973349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11732,6 +11742,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   Depth: 7
+  combatScene: 
 --- !u!114 &8084982037928765623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11750,6 +11761,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 2
   Depth: 4
+  combatScene: 
 --- !u!114 &8084982038137515579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11769,6 +11781,7 @@ MonoBehaviour:
   - {fileID: 8084982037259511630}
   typeOfIsland: 2
   Depth: 4
+  combatScene: 
 --- !u!114 &8084982038251465659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11787,6 +11800,7 @@ MonoBehaviour:
   childrens: []
   typeOfIsland: 1
   Depth: 8
+  combatScene: 
 --- !u!114 &8084982038256117757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11805,6 +11819,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 0
   Depth: 5
+  combatScene: SampleCombat_cavern_2
 --- !u!114 &8084982038350002880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11823,6 +11838,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 2
   Depth: 5
+  combatScene: 
 --- !u!114 &8084982038648821539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11842,3 +11858,4 @@ MonoBehaviour:
   - {fileID: 8084982037725995786}
   typeOfIsland: 0
   Depth: 2
+  combatScene: SampleCombat

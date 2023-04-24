@@ -27,20 +27,22 @@ public class MapNodeTest : MonoBehaviour
     public int Depth;
 
     private TextMeshPro textTypeOfIsland;
-    
+
     private LineRenderer lineRenderer1, lineRenderer2;
-    
+
+    [SerializeField] private string combatScene;
+
 
     private void Awake()
     {
         if (typeOfIsland == TypeOfIsland.Store_Forge_Camp)
         {
             int r = Random.Range(3, 5);
-            typeOfIsland = (TypeOfIsland) r;
+            typeOfIsland = (TypeOfIsland)r;
         }
         textTypeOfIsland = transform.GetChild(2).GetComponent<TextMeshPro>();
         textTypeOfIsland.text = typeOfIsland.ToString();
-        
+
         lineRenderer1 = transform.GetChild(0).GetComponent<LineRenderer>();
         lineRenderer2 = transform.GetChild(1).GetComponent<LineRenderer>();
         Line();
@@ -54,7 +56,7 @@ public class MapNodeTest : MonoBehaviour
             lineRenderer1.enabled = lineRenderer2.enabled = false;
             return;
         }
-        
+
         lineRenderer1.positionCount = 2;
         lineRenderer1.SetPosition(0, transform.position);
         lineRenderer1.SetPosition(1, childrens[0].transform.position);
@@ -65,10 +67,12 @@ public class MapNodeTest : MonoBehaviour
             lineRenderer2.SetPosition(1, childrens[1].transform.position);
         }
     }
-    
 
-    public void SetParent (MapNodeTest parent)
+
+    public void SetParent(MapNodeTest parent)
     {
         this.parent.Add(parent);
     }
+
+    public string GetScene => combatScene;
 }

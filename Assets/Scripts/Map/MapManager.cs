@@ -29,7 +29,7 @@ public class MapManager : MonoBehaviour
             if (ShipIndex == 1)
             {
                 if (mp.parent[0] == lastMp)
-                { 
+                {
                     lastMp = island.GetComponent<MapNodeTest>();
                     return true;
                 }
@@ -65,11 +65,11 @@ public class MapManager : MonoBehaviour
             Time.timeScale = 0;
             ShowPanel?.Invoke(true);
         }
-        else if(lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
+        else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
             //map.SetActive(false);
             ShowCombatPanel?.Invoke(true);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(lastMp.GetScene, LoadSceneMode.Additive);
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
@@ -93,14 +93,14 @@ public class MapManager : MonoBehaviour
 
     public void UnloadScenes()
     {
-        AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync ("SampleCombat");
+        AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(lastMp.GetScene);
         if (EndGame)
         {
             Time.timeScale = 0;
             ShowEndGamePanel?.Invoke();
             return;
         }
-        OnCanClick();       
+        OnCanClick();
         //map.SetActive(true);
     }
 
