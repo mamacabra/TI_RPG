@@ -2,20 +2,18 @@
 
 namespace Combat
 {
-    public class DeckFactory
+    public static class DeckFactory
     {
-        public DeckFactory(List<Character> heroes, List<Character> enemies)
+        public static Deck CreateDeck(CharacterType type)
         {
-            foreach (var character in heroes)
+            switch (type)
             {
-                Deck deck = CreateHeroDeck();
-                CombatManager.Instance.SetCharacterDeck(character, deck);
-            }
-
-            foreach (var character in enemies)
-            {
-                Deck deck = CreateEnemyDeck();
-                CombatManager.Instance.SetCharacterDeck(character, deck);
+                case CharacterType.Hero:
+                    return CreateHeroDeck();
+                case CharacterType.Enemy:
+                    return CreateEnemyDeck();
+                default:
+                    return null;
             }
         }
 

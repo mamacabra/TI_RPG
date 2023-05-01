@@ -19,26 +19,26 @@ namespace Combat
 
         public void DrawCards()
         {
-            DestroyCards();
+            DestroyAllCards();
             CreateCards();
         }
 
         private void CreateCards()
         {
             int i = 0;
-            foreach (var hero in CombatManager.Instance.Heroes)
+            foreach (Member member in CombatManager.Instance.HeroParty.Members)
             {
-                foreach (var card in hero.hand)
+                foreach (Card card in member.Hand)
                 {
-                    GameObject gameObject = Instantiate(cardPrefab, transform);
-                    Card3D c = gameObject.GetComponent<Card3D>();
-                    c.Setup(hero, card, i);
+                    GameObject cardGameObject = Instantiate(cardPrefab, transform);
+                    Card3D c = cardGameObject.GetComponent<Card3D>();
+                    c.Setup(member, card, i);
                     i++;
                 }
             }
         }
 
-        private void DestroyCards()
+        private void DestroyAllCards()
         {
             foreach (Transform child in transform)
             {

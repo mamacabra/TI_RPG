@@ -18,10 +18,12 @@ namespace Combat
 
         private static void AttackHeroes()
         {
-            var enemies = CombatManager.Instance.Enemies;
-            CombatManager.UseRandomCard(enemies[0], GetRandomHero());
-            CombatManager.UseRandomCard(enemies[1], GetRandomHero());
-            CombatManager.UseRandomCard(enemies[2], GetRandomHero());
+            var enemies = CombatManager.Instance.EnemyParty.Members;
+
+            enemies[0].UseRandomCard(GetRandomHero());
+            enemies[1].UseRandomCard(GetRandomHero());
+            enemies[2].UseRandomCard(GetRandomHero());
+
             CombatState.Instance.NextState();
         }
 
@@ -44,13 +46,7 @@ namespace Combat
 
         private static Member GetRandomHero()
         {
-            List<Member> heroes = new List<Member>();
-            foreach (var hero in CombatManager.Instance.Heroes)
-            {
-                if (hero.character.IsDead == false) heroes.Add(hero);
-            }
-            int r = Random.Range(0, heroes.Count);
-            return heroes[r];
+            return CombatManager.Instance.HeroParty.GetRandomMember();
         }
     }
 }

@@ -1,25 +1,46 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace Combat
 {
     public class Party
     {
+        public bool IsDefeated => Members.TrueForAll(member => member.Character.IsDead);
         public List<Member> Members { get; private set; }
 
-        private void ShuffleDeck()
+        public Party(List<Character> characters)
         {
-            foreach (Member character in Members)
+            Members = new List<Member>();
+            foreach (Character character in characters)
             {
-                character.hand = character.deck.Shuffle();
+                Deck deck = DeckFactory.CreateDeck(character.Type);
+                Member member = new Member(character, deck);
+                Members.Add(member);
             }
         }
 
-        private void ResetActionPoints()
+        public void ShuffleDeck()
         {
-            foreach (Member character in Members)
+            foreach (Member member in Members)
             {
-                character.character.ResetActionPoints();
+                member.Hand = member.Deck.Shuffle();
             }
+        }
+
+        public void ResetActionPoints()
+        {
+            foreach (Member member in Members)
+            {
+                member.Character.ResetActionPoints();
+            }
+        }
+
+        public Member GetRandomMember()
+        {
+            List<Member> livingMembers = Members.Where(member => member.Character.IsDead == false).ToList();
+            int r = Random.Range(0, livingMembers.Count);
+            return livingMembers[r];
         }
     }
 }

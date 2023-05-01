@@ -35,7 +35,7 @@ namespace Combat
         {
             switch (state)
             {
-                case CombatStateType.Start:
+                case CombatStateType.PreparationStage:
                     SetState(CombatStateType.HeroTurn);
                     break;
                 case CombatStateType.HeroTurn:
@@ -63,7 +63,7 @@ namespace Combat
                 if (typeof(CombatHudController) == observer.GetType()) hasCombatHudController = true;
             }
 
-            if (hasCombatManager && hasCombatHudController) SetState(CombatStateType.Start);
+            if (hasCombatManager && hasCombatHudController) SetState(CombatStateType.PreparationStage);
         }
     }
 }

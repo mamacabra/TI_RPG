@@ -61,7 +61,7 @@ namespace Combat
         {
             if (selectedCard && target)
             {
-                Member targetMember = CombatManager.Instance.Enemies.Find(x => x.character == target);
+                Member targetMember = CombatManager.Instance.EnemyParty.Members.Find(x => x.Character == target);
                 CombatManager.UseCard(selectedCard.member, selectedCard, targetMember);
             }
 

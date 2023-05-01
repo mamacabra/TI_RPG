@@ -56,12 +56,12 @@ namespace Combat
 
         private static void ShowPanel(GameObject panel)
         {
-            panel.SetActive(true);
+            if (panel) panel.SetActive(true);
         }
 
         private static void HiddenPanel(GameObject panel)
         {
-            panel.SetActive(false);
+            if (panel) panel.SetActive(false);
         }
     }
 }
