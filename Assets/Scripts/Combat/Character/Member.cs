@@ -75,7 +75,7 @@ namespace Combat
             }
 
             Hand.Remove(card);
-            CardHandFactory.Instance.DrawCards();
+            CardHandFactory.Instance.CreateCards();
         }
 
         public void UseRandomCard(Member target)

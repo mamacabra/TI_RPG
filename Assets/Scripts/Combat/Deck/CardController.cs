@@ -6,12 +6,12 @@ namespace Combat
     [RequireComponent(typeof(CardPosition))]
     public class CardController : MonoBehaviour
     {
-        public Member Member { get; private set; }
+        public Member Owner { get; private set; }
         public Card Card { get; private set; }
 
         public void Setup(Member member, Card card, int position)
         {
-            Member = member;
+            Owner = member;
             Card = card;
 
             CardAttributes cardAttributes = GetComponent<CardAttributes>();
@@ -23,7 +23,7 @@ namespace Combat
 
         private void OnMouseDown()
         {
-            TargetController.Instance.SetCard(Member, this);
+            TargetController.Instance.SetCard(this);
         }
 
         private void OnMouseUp()

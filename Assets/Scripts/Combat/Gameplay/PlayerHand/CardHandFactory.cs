@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Combat
 {
@@ -15,7 +14,7 @@ namespace Combat
 
         private void OnEnable()
         {
-            DrawCards();
+            CreateCards();
         }
 
         private void OnDisable()
@@ -23,7 +22,7 @@ namespace Combat
             DestroyAllCards();
         }
 
-        public void DrawCards()
+        public void CreateCards()
         {
             DestroyAllCards();
             InstantiateHandCards();
