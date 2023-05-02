@@ -13,7 +13,7 @@ namespace Combat
 
         private void OnMouseEnter()
         {
-            if (HandController.Instance.HasCardSelected)
+            if (TargetController.Instance.HasCardSelected)
                 ToggleVFX(true);
         }
 

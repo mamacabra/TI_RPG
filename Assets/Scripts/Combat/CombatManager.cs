@@ -7,12 +7,11 @@ namespace Combat
     {
         public static CombatManager Instance;
 
+        [SerializeField] private List<Member> heroes;
         public Party HeroParty { get; private set; }
-        public Party EnemyParty { get; private set; }
 
-        [Header("Characters TEMP")]
-        [SerializeField] private List<Character> heroesGameObject;
-        [SerializeField] private List<Character> enemiesGameObject;
+        [SerializeField] private List<Member> enemies;
+        public Party EnemyParty { get; private set; }
 
         private void Awake()
         {
@@ -30,8 +29,8 @@ namespace Combat
             {
                 case CombatStateType.PreparationStage:
                     // InitFactories();
-                    HeroParty = new Party(heroesGameObject);
-                    EnemyParty = new Party(enemiesGameObject);
+                    HeroParty = new Party(heroes);
+                    EnemyParty = new Party(enemies);
                     CombatState.Instance.NextState();
                     break;
                 case CombatStateType.HeroDeckShuffle:
@@ -60,38 +59,6 @@ namespace Combat
                     CombatState.Instance.SetState(CombatStateType.Victory);
                     break;
             }
-        }
-
-        public static void UseCard(Member member, Card3D card, Member target)
-        {
-            if (member.Character.ConsumeActionPoints(card.card.Cost) == false) return;
-
-            if (card.card.Damage > 0)
-            {
-                target.Character.ReceiveDamage(card.card.Damage);
-                VFXManager.Instance.PlayDamageVFX(target.Character.transform);
-            }
-            if (card.card.Heal > 0)
-            {
-                target.Character.ReceiveHealing(card.card.Heal);
-                VFXManager.Instance.PlayHealingVFX(target.Character.transform);
-            };
-            if (card.card.DrawCard > 0)
-            {
-                member.DrawRandomCard(card.card.DrawCard);
-            }
-            if (card.card.DropTargetCard > 0)
-            {
-                target.DropRandomCard(card.card.DropTargetCard);
-            }
-            if (card.card.AddEmptyCard)
-            {
-                target.AddEmptyCard();
-                Debug.Log("AddEmptyCard");
-            }
-
-            member.Hand.Remove(card.card);
-            PlayerCards.Instance.DrawCards();
         }
     }
 }

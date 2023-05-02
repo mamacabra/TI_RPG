@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Combat
 {
+
     public abstract class Character : MonoBehaviour
     {
         [Header("Observers")]
@@ -69,16 +70,6 @@ namespace Combat
         {
             ActionPoints = MaxActionPoints;
             CharacterUpdated();
-        }
-
-        private void OnMouseOver()
-        {
-            HandController.Instance.SetTarget(this);
-        }
-
-        private void OnMouseExit()
-        {
-            HandController.Instance.RemoveTarget(this);
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Combat
 {
-    public class PlayerCards : MonoBehaviour
+    public class CardHandFactory : MonoBehaviour
     {
         public GameObject cardPrefab;
-        public static PlayerCards Instance { get; private set; }
+        public static CardHandFactory Instance { get; private set; }
 
         private void Start()
         {
@@ -17,13 +18,18 @@ namespace Combat
             DrawCards();
         }
 
+        private void OnDisable()
+        {
+            DestroyAllCards();
+        }
+
         public void DrawCards()
         {
             DestroyAllCards();
-            CreateCards();
+            InstantiateHandCards();
         }
 
-        private void CreateCards()
+        private void InstantiateHandCards()
         {
             int i = 0;
             foreach (Member member in CombatManager.Instance.HeroParty.Members)
@@ -31,8 +37,10 @@ namespace Combat
                 foreach (Card card in member.Hand)
                 {
                     GameObject cardGameObject = Instantiate(cardPrefab, transform);
-                    Card3D c = cardGameObject.GetComponent<Card3D>();
-                    c.Setup(member, card, i);
+
+                    CardController cardController = cardGameObject.GetComponent<CardController>();
+                    cardController.Setup(member, card, i);
+
                     i++;
                 }
             }

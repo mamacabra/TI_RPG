@@ -6,18 +6,13 @@ namespace Combat
 {
     public class Party
     {
+        public List<Member> Members { get; }
         public bool IsDefeated => Members.TrueForAll(member => member.Character.IsDead);
-        public List<Member> Members { get; private set; }
 
-        public Party(List<Character> characters)
+        public Party(List<Member> members)
         {
             Members = new List<Member>();
-            foreach (Character character in characters)
-            {
-                Deck deck = DeckFactory.CreateDeck(character.Type);
-                Member member = new Member(character, deck);
-                Members.Add(member);
-            }
+            foreach (Member member in members) Members.Add(member);
         }
 
         public void ShuffleDeck()
