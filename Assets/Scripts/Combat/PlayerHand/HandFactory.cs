@@ -2,10 +2,10 @@
 
 namespace Combat
 {
-    public class CardHandFactory : MonoBehaviour
+    public class HandFactory : MonoBehaviour
     {
         public GameObject cardPrefab;
-        public static CardHandFactory Instance { get; private set; }
+        public static HandFactory Instance { get; private set; }
 
         private void Start()
         {

@@ -1,6 +1,6 @@
 ﻿namespace Combat
 {
-    public class Hero : Character
+    public class CharacterHero : Character
     {
         public override CharacterType Type => CharacterType.Hero;
     }
