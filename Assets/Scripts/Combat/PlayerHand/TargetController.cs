@@ -16,8 +16,6 @@ namespace Combat
         private Member Owner => card.Owner;
         private Card Card => card.Card;
 
-        public bool HasCardSelected => card != null;
-
         private void Start()
         {
             Instance = this;
@@ -39,6 +37,12 @@ namespace Combat
             {
                 arrowVFX.SetActive(false);
             }
+
+            if (Input.GetMouseButton(1))
+            {
+                RemoveCard();
+                RemoveTarget();
+            }
         }
 
         public void SetTarget(Member target)
@@ -53,25 +57,29 @@ namespace Combat
 
         public void RemoveTarget(Member target)
         {
-            if (this.target == target) this.target = null;
+            if (this.target == target) RemoveTarget();
         }
 
-        public void SetCard(CardController card)
+        public void SetCard(CardController cardController)
         {
-            this.card = card;
+            card = cardController;
+            VFXSelected.SetClickedStriker(card.Owner);
         }
 
         private void RemoveCard()
         {
             card = null;
+            VFXSelected.SetClickedStriker(null);
         }
 
         public void UseCard()
         {
-            if (card && target) Owner.UseCard(Card, target);
-
-            RemoveCard();
-            RemoveTarget();
+            if (card && target)
+            {
+                Owner.UseCard(Card, target);
+                RemoveCard();
+                RemoveTarget();
+            }
         }
     }
 }

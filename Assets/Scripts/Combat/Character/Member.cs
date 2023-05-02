@@ -4,6 +4,8 @@ using UnityEngine;
 namespace Combat
 {
     [RequireComponent(typeof(Character))]
+    [RequireComponent(typeof(Target))]
+    [RequireComponent(typeof(VFXSelected))]
     public class Member : MonoBehaviour
     {
         public Character Character { get; private set; }
@@ -38,13 +40,11 @@ namespace Combat
 
         private void AddEmptyCard()
         {
-            Debug.Log(Deck.CardsCount);
             Deck.AddCard(new Card()
             {
                 Name = "KKKKK",
                 Cost = 1,
             });
-            Debug.Log(Deck.CardsCount);
         }
 
         public void UseCard(Card card, Member target)

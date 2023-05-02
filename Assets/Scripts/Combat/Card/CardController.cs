@@ -21,6 +21,16 @@ namespace Combat
             cardPosition.Setup(position);
         }
 
+        private void OnMouseOver()
+        {
+            VFXSelected.SetHoveredStriker(Owner);
+        }
+
+        private void OnMouseExit()
+        {
+            VFXSelected.SetHoveredStriker(null);
+        }
+
         private void OnMouseDown()
         {
             TargetController.Instance.SetCard(this);

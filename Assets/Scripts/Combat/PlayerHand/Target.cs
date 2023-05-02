@@ -2,29 +2,30 @@ using UnityEngine;
 
 namespace Combat
 {
-    [RequireComponent(typeof(Member))]
     public class Target : MonoBehaviour
     {
-        private Member member;
+        private Member _member;
 
         private void Awake()
         {
-            member = GetComponent<Member>();
+            _member = GetComponent<Member>();
         }
 
         private void OnMouseOver()
         {
-            TargetController.Instance.SetTarget(member);
-        }
-
-        private void OnMouseDown()
-        {
-            TargetController.Instance.SetTarget(member);
+            TargetController.Instance.SetTarget(_member);
+            VFXSelected.SetHoveredTarget(_member);
         }
 
         private void OnMouseExit()
         {
-            TargetController.Instance.RemoveTarget(member);
+            TargetController.Instance.RemoveTarget(_member);
+            VFXSelected.SetHoveredTarget(null);
+        }
+
+        private void OnMouseUp()
+        {
+            TargetController.Instance.UseCard();
         }
     }
 }
