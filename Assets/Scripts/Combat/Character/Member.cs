@@ -5,26 +5,47 @@ namespace Combat
 {
     public class Member : MonoBehaviour
     {
-        public Character Character { get; private set; }
+        public Character Character { get; set; }
         public Deck Deck { get; private set; }
         public List<Card> Hand;
 
-        private void Awake()
+        public void AddCard(CardScriptableObject card)
         {
-            Character = GetComponent<Character>();
-            Deck = DeckFactory.CreateDeck(Character.type);
+            if (card == null) return;
+
+            Deck.AddCard(new Card()
+            {
+                Label = card.label,
+                Description = card.description,
+                Cost = card.cost,
+                ActionPointsReceive = card.receive,
+                Damage = card.damage,
+                Heal = card.heal,
+                DrawCard = card.drawCard,
+                DropTargetCard = card.dropCardOnTargetHand,
+                AddCards = card.addCardOnTargetDeck,
+            });
+        }
+
+        private void AddCards(List<CardScriptableObject> cards)
+        {
+            foreach (CardScriptableObject card in cards) AddCard(card);
+        }
+
+        public void SetupDeck(List<CardScriptableObject> cards)
+        {
+            Deck = new Deck();
+            AddCards(cards);
             Hand = Deck.Shuffle();
         }
 
-        private void DrawRandomCard(int amount = 1)
+        public void DrawCard(int amount = 1)
         {
             for (int i = 0; i < amount; i++)
-            {
                 Hand.Add(Deck.DrawCard(Hand));
-            }
         }
 
-        private void DropRandomCard(int amount = 1)
+        public void DropHandCard(int amount = 1)
         {
             for (int i = 0; i < amount; i++)
             {
@@ -35,42 +56,11 @@ namespace Combat
             }
         }
 
-        private void AddEmptyCard()
-        {
-            Deck.AddCard(new Card()
-            {
-                Name = "KKKKK",
-                Cost = 1,
-            });
-        }
-
         public void UseCard(Card card, Member target)
         {
-            if (Character.ConsumeActionPoints(card.Cost) == false) return;
+            if (Character.HasEnoughActionPoints(card.Cost) == false) return;
 
-            if (card.Damage > 0)
-            {
-                target.Character.ReceiveDamage(card.Damage);
-                VFXManager.Instance.PlayDamageVFX(target.Character.transform);
-            }
-            if (card.Heal > 0)
-            {
-                target.Character.ReceiveHealing(card.Heal);
-                VFXManager.Instance.PlayHealingVFX(target.Character.transform);
-            };
-            if (card.DrawCard > 0)
-            {
-                DrawRandomCard(card.DrawCard);
-            }
-            if (card.DropTargetCard > 0)
-            {
-                target.DropRandomCard(card.DropTargetCard);
-            }
-            if (card.AddEmptyCard)
-            {
-                target.AddEmptyCard();
-            }
-
+            CardBehavior.Use(this, card, target);
             Hand.Remove(card);
             HandFactory.Instance.CreateCards();
         }

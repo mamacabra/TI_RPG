@@ -6,10 +6,9 @@ namespace Combat
 
     public class Character : MonoBehaviour
     {
-        public List<ICharacterObserver> observers;
+        private List<ICharacterObserver> _observers;
 
-        [Header("Attributes")]
-        public CharacterType type = CharacterType.Hero;
+        public CharacterType Type { get; set; }
         public int Health { get; private set; }
         public const int MaxHealth = 10;
         public int ActionPoints { get; private set; }
@@ -17,9 +16,20 @@ namespace Combat
 
         public bool IsDead => Health <= 0;
 
+        private void Awake()
+        {
+            _observers = new List<ICharacterObserver>();
+        }
+
         private void Start()
         {
             CharacterCreated();
+        }
+
+        public void Subscribe(ICharacterObserver observer)
+        {
+            if (observer != null)
+                _observers.Add(observer);
         }
 
         private void CharacterCreated()
@@ -27,12 +37,14 @@ namespace Combat
             Health = MaxHealth;
             ActionPoints = MaxActionPoints;
 
-            foreach (var observer in observers) observer.OnCharacterCreated(this);
+            foreach (var observer in _observers)
+                observer.OnCharacterCreated(this);
         }
 
         private void CharacterUpdated()
         {
-            foreach (var observer in observers) observer.OnCharacterUpdated(this);
+            foreach (var observer in _observers)
+                observer.OnCharacterUpdated(this);
         }
 
         public void ReceiveDamage(int value = 1)
@@ -51,17 +63,22 @@ namespace Combat
             CharacterUpdated();
         }
 
-        public bool ConsumeActionPoints(int value = 1)
+        public bool HasEnoughActionPoints(int value)
         {
-            bool hasEnough = ActionPoints >= value;
-            if (hasEnough)
-            {
-                ActionPoints -= value;
-                if (ActionPoints < 0) ActionPoints = 0;
-                CharacterUpdated();
-            }
+            return ActionPoints >= value;
+        }
 
-            return hasEnough;
+        public void ConsumeActionPoints(int value = 1)
+        {
+            ActionPoints -= value;
+            if (ActionPoints < 0) ActionPoints = 0;
+            CharacterUpdated();
+        }
+
+        public void ReceiveActionPoints(int value = 1)
+        {
+            ActionPoints += value;
+            CharacterUpdated();
         }
 
         public void ResetActionPoints()

@@ -6,7 +6,6 @@ namespace Combat
     public class Deck
     {
         private List<Card> Cards { get; }
-        public int CardsCount => Cards.Count;
 
         public Deck()
         {

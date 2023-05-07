@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7106353503630111263}
   - component: {fileID: 6723352311004593162}
   - component: {fileID: 110021836542710562}
-  - component: {fileID: 2909926433150877958}
   - component: {fileID: 6649583363406379902}
   - component: {fileID: 3594188704730258142}
   - component: {fileID: 1547379607076624535}
@@ -78,20 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddc17cb67267534e89eb8830bade26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
---- !u!114 &2909926433150877958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3249129027000262853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5149a1e30b7ff7d84c6b3723da6b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cards: []
 --- !u!114 &6649583363406379902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +115,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 7337875571501358945}
+  characterType: 1
+  cards:
+  - {fileID: 11400000, guid: 22e74e2f91db9c59498bb21ff15d4eea, type: 2}
+  - {fileID: 11400000, guid: c90a16c52f4aca0cba9e83f0742ef163, type: 2}
+  - {fileID: 11400000, guid: 0804e2c3e64bed2ee8764aca0db8e238, type: 2}
+  - {fileID: 11400000, guid: 193883e3580b8ccf4bc0cec10dc99b0f, type: 2}
+  - {fileID: 11400000, guid: 05d840cca0474f58fa330ce9f6a47ade, type: 2}
 --- !u!1 &3249129028146795574
 GameObject:
   m_ObjectHideFlags: 0

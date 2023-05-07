@@ -12,7 +12,7 @@ namespace Combat
 
         public void Setup(Card card)
         {
-            title.text = card.Name;
+            title.text = card.Label;
             cost.text = "Cost: " + card.Cost;
             damage.text = "Damage: " + card.Damage;
             heal.text = "Heal: " + card.Heal;

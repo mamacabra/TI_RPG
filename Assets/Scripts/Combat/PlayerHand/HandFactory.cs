@@ -33,6 +33,8 @@ namespace Combat
             int i = 0;
             foreach (Member member in CombatManager.Instance.HeroParty.Members)
             {
+                if (member == null || member.Character.IsDead) continue;
+
                 foreach (Card card in member.Hand)
                 {
                     GameObject cardGameObject = Instantiate(cardPrefab, transform);
