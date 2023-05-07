@@ -15,6 +15,7 @@ namespace Combat
         private const int MaxActionPoints = 3;
 
         public bool IsDead => Health <= 0;
+        public bool HasActionPoints => ActionPoints > 0;
 
         private void Awake()
         {

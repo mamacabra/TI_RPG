@@ -33,7 +33,7 @@ namespace Combat
             int i = 0;
             foreach (Member member in CombatManager.Instance.HeroParty.Members)
             {
-                if (member == null || member.Character.IsDead) continue;
+                if (member == null || member.Character.IsDead || member.Character.HasActionPoints == false) continue;
 
                 foreach (Card card in member.Hand)
                 {

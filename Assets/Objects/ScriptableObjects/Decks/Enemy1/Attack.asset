@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: Attack
   m_EditorClassIdentifier: 
-  name: Ataque Fraco
+  label: Attack
   description: "\t\t\t"
   cost: 1
+  receive: 0
   damage: 1
   heal: 0
   drawCard: 0
-  addCardOnTargetDeck: {fileID: 0}
+  addCardOnTargetDeck: []
   dropCardOnTargetHand: 0

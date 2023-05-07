@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: AttackHeavy
   m_EditorClassIdentifier: 
-  name: Ataque Forte
+  label: Attack 2
   description: "\t\t\t"
   cost: 2
+  receive: 0
   damage: 3
   heal: 0
   drawCard: 0
-  addCardOnTargetDeck: {fileID: 0}
+  addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
