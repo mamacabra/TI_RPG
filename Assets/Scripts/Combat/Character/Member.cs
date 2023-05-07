@@ -3,9 +3,6 @@ using UnityEngine;
 
 namespace Combat
 {
-    [RequireComponent(typeof(Character))]
-    [RequireComponent(typeof(Target))]
-    [RequireComponent(typeof(VFXSelected))]
     public class Member : MonoBehaviour
     {
         public Character Character { get; private set; }
@@ -15,7 +12,7 @@ namespace Combat
         private void Awake()
         {
             Character = GetComponent<Character>();
-            Deck = DeckFactory.CreateDeck(Character.Type);
+            Deck = DeckFactory.CreateDeck(Character.type);
             Hand = Deck.Shuffle();
         }
 

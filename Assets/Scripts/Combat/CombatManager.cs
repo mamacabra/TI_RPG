@@ -50,7 +50,7 @@ namespace Combat
 
         public void OnCharacterUpdated(Character character)
         {
-            switch (character.Type)
+            switch (character.type)
             {
                 case CharacterType.Hero when HeroParty.IsDefeated:
                     CombatState.Instance.SetState(CombatStateType.Defeat);

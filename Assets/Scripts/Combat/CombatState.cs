@@ -9,17 +9,17 @@ namespace Combat
         public CombatStateType State => state;
 
         [SerializeField] private CombatStateType state = CombatStateType.Wait;
-        private List<ICombatStateObserver> observers;
+        private List<ICombatStateObserver> _observers;
 
         private void Awake()
         {
             Instance = this;
-            observers = new List<ICombatStateObserver>();
+            _observers = new List<ICombatStateObserver>();
         }
 
         public void Subscribe(ICombatStateObserver observer)
         {
-            observers.Add(observer);
+            _observers.Add(observer);
             if (state == CombatStateType.Wait) CheckRequiredObservers();
         }
 
@@ -28,7 +28,7 @@ namespace Combat
             if (state is CombatStateType.Defeat or CombatStateType.Victory) return;
 
             state = newState;
-            foreach (var observer in observers) observer.OnCombatStateChanged(state);
+            foreach (var observer in _observers) observer.OnCombatStateChanged(state);
         }
 
         public void NextState()
@@ -57,7 +57,7 @@ namespace Combat
         {
             bool hasCombatManager = false;
             bool hasCombatHudController = false;
-            foreach (ICombatStateObserver observer in observers)
+            foreach (ICombatStateObserver observer in _observers)
             {
                 if (typeof(CombatManager) == observer.GetType()) hasCombatManager = true;
                 if (typeof(CombatHudController) == observer.GetType()) hasCombatHudController = true;
