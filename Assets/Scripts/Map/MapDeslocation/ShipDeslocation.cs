@@ -64,6 +64,7 @@ public class ShipDeslocation : MonoBehaviour
         IEnumerator WaitToCheckIsland()
         {
             yield return new WaitUntil(() => Vector3.Distance(p, navMeshAgent.transform.position) <= 0.2f);
+            yield return new WaitForSeconds(0.5f);
             MapManager.Instance.shipArrived = true;
         }
     }
