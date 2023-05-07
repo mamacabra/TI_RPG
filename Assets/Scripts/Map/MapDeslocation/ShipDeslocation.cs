@@ -3,11 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ShipDeslocation : MonoBehaviour
 {
     [SerializeField] LayerMask _layerMask;
+    private NavMeshAgent navMeshAgent;
+    private Camera cam;
     private bool canClick = true;
+
+    private void Start()
+    {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        cam = FindObjectOfType<Camera>();
+    }
 
     private void OnEnable()
     {
@@ -16,7 +25,7 @@ public class ShipDeslocation : MonoBehaviour
 
     private void OnDisable()
     {
-        if(!MapManager.Instance) return;
+        if (!MapManager.Instance) return;
         MapManager.Instance.CanClick -= CanClick;
     }
 
@@ -31,9 +40,10 @@ public class ShipDeslocation : MonoBehaviour
                 bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
                 if (!canNavegate)
                 {
-                    CanClick();                 
+                    CanClick();
                     return;
                 }
+
                 Navegate(raycastHit.collider.gameObject.transform.position);
             }
             else
@@ -42,20 +52,22 @@ public class ShipDeslocation : MonoBehaviour
             }
         }
     }
-    
 
     void Navegate(Vector3 pos)
-    {   
-        Debug.Log("Aaaaa");
+    {
         Vector3 p = new Vector3(pos.x + 1, pos.y, pos.z);
-        transform.DOMove(p, 2).OnComplete(CheckInsland);
+        Vector3 pCam = new Vector3(pos.x, cam.transform.position.y, cam.transform.position.z + 2.75f);
+        navMeshAgent.SetDestination(p);
+        MapManager.Instance.MoveCamera(pCam, pos);
+        
+        StartCoroutine(WaitToCheckIsland());
+        IEnumerator WaitToCheckIsland()
+        {
+            yield return new WaitUntil(() => Vector3.Distance(p, navMeshAgent.transform.position) <= 0.2f);
+            MapManager.Instance.shipArrived = true;
+        }
     }
 
-    void CheckInsland()
-    {
-        MapManager.Instance.CheckIsland();
-    }
-    
     public void CanClick()
     {
         canClick = true;

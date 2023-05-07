@@ -14,11 +14,18 @@ public class MapManager : MonoBehaviour
     public event Action<bool> ShowCombatPanel;
     public event Action ShowEndGamePanel;
 
+    public event Action<Vector3,Vector3> MoveCameraDeslocate;
+    public event Action ZoomCameraIsland;
+    public event Action ResetCameras;
+
     public int ShipIndex = 0;
     [SerializeField] MapNodeTest lastMp;
     [SerializeField] private GameObject map;
 
-    public bool EndGame;
+    [HideInInspector] public bool EndGame;
+    [HideInInspector] public bool shipArrived = false;
+    [HideInInspector] public bool zoomCamOver = false;
+
     public bool CheckIndex(GameObject island)
     {
         ShipIndex++;
@@ -34,6 +41,7 @@ public class MapManager : MonoBehaviour
                     return true;
                 }
             }
+
             foreach (var p in mp.parent)
             {
                 if (p == lastMp)
@@ -58,8 +66,19 @@ public class MapManager : MonoBehaviour
         return false;
     }
 
+    public void MoveCamera(Vector3 pos, Vector3 islandPos)
+    {
+        MoveCameraDeslocate?.Invoke(pos,islandPos);
+    }
+
+    public void ZoomCamera()
+    {
+        ZoomCameraIsland?.Invoke();
+    }
+
     public void CheckIsland()
     {
+        //Fade e camera
         if (lastMp.typeOfIsland == TypeOfIsland.StoreOrForge || lastMp.typeOfIsland == TypeOfIsland.Camp)
         {
             Time.timeScale = 0;
@@ -68,18 +87,30 @@ public class MapManager : MonoBehaviour
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
             //map.SetActive(false);
+            ZoomCamera();
+            StartCoroutine(WaitToCheckIsland(lastMp.GetScene));
             ShowCombatPanel?.Invoke(true);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(lastMp.GetScene, LoadSceneMode.Additive);
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
+            ZoomCamera();
+            StartCoroutine(WaitToCheckIsland("SampleCombat"));
             EndGame = true;
             ShowCombatPanel?.Invoke(true);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
         }
         else
         {
             OnCanClick();
+        }
+
+        IEnumerator WaitToCheckIsland(string scene)
+        {
+            yield return new WaitUntil(() => zoomCamOver);
+            yield return new WaitForSeconds(0.1f);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            zoomCamOver = false;
+            yield return new WaitForSeconds(1f);
+            ResetCameras?.Invoke();
         }
     }
 
@@ -100,6 +131,7 @@ public class MapManager : MonoBehaviour
             ShowEndGamePanel?.Invoke();
             return;
         }
+
         OnCanClick();
         //map.SetActive(true);
     }
