@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
@@ -19,6 +20,10 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject map;
 
     public bool EndGame;
+    
+    public Image backgroundImage;
+    public Animator anim;
+    
     public bool CheckIndex(GameObject island)
     {
         ShipIndex++;
@@ -75,6 +80,7 @@ public class MapManager : MonoBehaviour
         {
             EndGame = true;
             ShowCombatPanel?.Invoke(true);
+            CallScreenFade();
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SampleCombat", LoadSceneMode.Additive);
         }
         else
@@ -106,7 +112,18 @@ public class MapManager : MonoBehaviour
 
     public void RestartGame()
     {
+        CallScreenFade();
         SceneManager.LoadScene("SampleMap");
         Time.timeScale = 1;
+    }
+    public void CallScreenFade()
+    {
+        StartCoroutine(FadeManager());
+    }
+
+    IEnumerator FadeManager()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(()=>backgroundImage.color.a==1.0f);
     }
 }
