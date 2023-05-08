@@ -22,10 +22,5 @@ namespace Combat
             TargetController.Instance.RemoveTarget(_member);
             VFXSelected.SetHoveredTarget(null);
         }
-
-        private void OnMouseUp()
-        {
-            TargetController.Instance.UseCard();
-        }
     }
 }

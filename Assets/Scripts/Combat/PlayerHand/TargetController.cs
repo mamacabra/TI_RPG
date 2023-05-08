@@ -6,18 +6,12 @@ namespace Combat
     {
         public static TargetController Instance { get; private set; }
 
-        [Header("Card and Target")]
-        [SerializeField] private CardController card;
-        [SerializeField] private Member target;
+        public Member Target { get; private set; }
+        private CardController Card { get; set; }
 
         [Header("VFX")]
         [SerializeField] private GameObject arrowVFX;
 
-        public Member Target => target;
-        private Member Owner => card.Owner;
-        private Card Card => card.Card;
-        private bool HasSelectedCard => card != null;
-        public bool HasTarget => target != null;
 
         private void Start()
         {
@@ -26,14 +20,14 @@ namespace Combat
 
         private void Update()
         {
-            if (card && target && arrowVFX)
+            if (Card && Target && arrowVFX)
             {
                 arrowVFX.SetActive(true);
                 VFXLine line = arrowVFX.GetComponent<VFXLine>();
                 if (line)
                 {
-                    line.SetInitialPoint(card.transform);
-                    line.SetTargetPoint(target.transform);
+                    line.SetInitialPoint(Card.transform);
+                    line.SetTargetPoint(Target.transform);
                 }
             }
             else
@@ -50,34 +44,29 @@ namespace Combat
 
         public void SetTarget(Member target)
         {
-            this.target = target;
+            Target = target;
         }
 
         private void RemoveTarget()
         {
-            target = null;
+            Target = null;
         }
 
         public void RemoveTarget(Member target)
         {
-            if (this.target == target) RemoveTarget();
+            if (Target == target) RemoveTarget();
         }
 
         public void SetCard(CardController cardController)
         {
-            card = cardController;
-            VFXSelected.SetClickedStriker(card.Owner);
+            Card = cardController;
+            VFXSelected.SetClickedStriker(Card.Owner);
         }
 
         public void RemoveCard()
         {
-            card = null;
+            Card = null;
             VFXSelected.SetClickedStriker(null);
-        }
-
-        public void UseCard()
-        {
-            card.UseCard();
         }
     }
 }

@@ -5,36 +5,22 @@ namespace Combat
 {
     public class Member : MonoBehaviour
     {
-        public Character Character { get; set; }
         private Deck Deck { get; set; }
-        public List<Card> Hand;
 
-        public void AddCard(CardScriptableObject card)
+        public Character Character { get; set; }
+        public List<Card> Hand { get; private set; }
+
+        public void AddCard(CardScriptableObject cardData)
         {
-            if (card == null) return;
-
-            Deck.AddCard(new Card()
-            {
-                Label = card.label,
-                Description = card.description,
-                Cost = card.cost,
-                ActionPointsReceive = card.receive,
-                Damage = card.damage,
-                Heal = card.heal,
-                DrawCard = card.drawCard,
-                DropTargetCard = card.dropCardOnTargetHand,
-                AddCards = card.addCardOnTargetDeck,
-            });
+            if (cardData == null) return;
+            Deck.AddCard(new Card(cardData));
         }
 
         public void SetupDeck(List<CardScriptableObject> cards)
         {
             Deck = new Deck();
-
-            foreach (CardScriptableObject card in cards)
-                AddCard(card);
-
-            Hand = Deck.Shuffle();
+            foreach (var card in cards) AddCard(card);
+            ShuffleDeck();
         }
 
         public void ShuffleDeck()
@@ -42,22 +28,18 @@ namespace Combat
             Hand = Deck.Shuffle();
         }
 
-        public Card DrawCard()
+        public Card DrawHandCard()
         {
             Card card = Deck.DrawCard(Hand);
             Hand.Add(card);
             return card;
         }
 
-        public void DropHandCard(int amount = 1)
+        public void DropHandCard()
         {
-            for (int i = 0; i < amount; i++)
-            {
-                if (Hand.Count == 0) break;
-
-                int r = Random.Range(0, Hand.Count);
-                Hand.RemoveAt(r);
-            }
+            int r = Random.Range(0, Hand.Count);
+            Card card = Hand[r];
+            Hand.Remove(card);
         }
 
         public void UseRandomCard(Member target)

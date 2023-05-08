@@ -45,15 +45,15 @@ namespace Combat
         {
             for (int i = 0; i < card.DrawCard; i++)
             {
-                Card newCard = striker.DrawCard();
+                Card newCard = striker.DrawHandCard();
                 HandController.Instance.AddCard(striker, newCard);
             }
         }
 
         private static void TargetEffectDropCard(Card card, Member target)
         {
-            if (card.DropTargetCard > 0)
-                target.DropHandCard(card.DropTargetCard);
+            for (int i = 0; i < card.DropTargetCard; i++)
+                target.DropHandCard();
         }
 
         private static void TargetEffectAddCard(Card card, Member target)
