@@ -6,7 +6,7 @@ namespace Combat
     public class Member : MonoBehaviour
     {
         public Character Character { get; set; }
-        public Deck Deck { get; private set; }
+        private Deck Deck { get; set; }
         public List<Card> Hand;
 
         public void AddCard(CardScriptableObject card)
@@ -27,22 +27,26 @@ namespace Combat
             });
         }
 
-        private void AddCards(List<CardScriptableObject> cards)
-        {
-            foreach (CardScriptableObject card in cards) AddCard(card);
-        }
-
         public void SetupDeck(List<CardScriptableObject> cards)
         {
             Deck = new Deck();
-            AddCards(cards);
+
+            foreach (CardScriptableObject card in cards)
+                AddCard(card);
+
             Hand = Deck.Shuffle();
         }
 
-        public void DrawCard(int amount = 1)
+        public void ShuffleDeck()
         {
-            for (int i = 0; i < amount; i++)
-                Hand.Add(Deck.DrawCard(Hand));
+            Hand = Deck.Shuffle();
+        }
+
+        public Card DrawCard()
+        {
+            Card card = Deck.DrawCard(Hand);
+            Hand.Add(card);
+            return card;
         }
 
         public void DropHandCard(int amount = 1)
@@ -56,19 +60,16 @@ namespace Combat
             }
         }
 
-        public void UseCard(Card card, Member target)
-        {
-            if (Character.HasEnoughActionPoints(card.Cost) == false) return;
-
-            CardBehavior.Use(this, card, target);
-            Hand.Remove(card);
-            HandFactory.Instance.CreateCards();
-        }
-
         public void UseRandomCard(Member target)
         {
             int r = Random.Range(0, Hand.Count);
-            UseCard(Hand[r], target);
+            Card card = Hand[r];
+
+            if (Character.HasEnoughActionPoints(card.Cost))
+            {
+                CardBehavior.Use(this, card, target);
+                Hand.Remove(card);
+            }
         }
     }
 }

@@ -13,8 +13,11 @@ namespace Combat
         [Header("VFX")]
         [SerializeField] private GameObject arrowVFX;
 
+        public Member Target => target;
         private Member Owner => card.Owner;
         private Card Card => card.Card;
+        private bool HasSelectedCard => card != null;
+        public bool HasTarget => target != null;
 
         private void Start()
         {
@@ -66,7 +69,7 @@ namespace Combat
             VFXSelected.SetClickedStriker(card.Owner);
         }
 
-        private void RemoveCard()
+        public void RemoveCard()
         {
             card = null;
             VFXSelected.SetClickedStriker(null);
@@ -74,12 +77,7 @@ namespace Combat
 
         public void UseCard()
         {
-            if (card && target)
-            {
-                Owner.UseCard(Card, target);
-                RemoveCard();
-                RemoveTarget();
-            }
+            card.UseCard();
         }
     }
 }

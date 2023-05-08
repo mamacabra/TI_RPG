@@ -18,6 +18,6 @@ MonoBehaviour:
   receive: 0
   damage: 1
   heal: 0
-  drawCard: 2
+  drawCard: 1
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0

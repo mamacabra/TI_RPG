@@ -1247,7 +1247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1013484055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,6 +1262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 1209853840646916433, guid: bd92112902531d74283e3cd45e1cf31d,
     type: 3}
+  cards: []
 --- !u!4 &1013484056
 Transform:
   m_ObjectHideFlags: 0

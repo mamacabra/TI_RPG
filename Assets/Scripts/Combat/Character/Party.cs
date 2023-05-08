@@ -18,17 +18,13 @@ namespace Combat
         public void ShuffleDeck()
         {
             foreach (Member member in Members)
-            {
-                member.Hand = member.Deck.Shuffle();
-            }
+                member.ShuffleDeck();
         }
 
         public void ResetActionPoints()
         {
             foreach (Member member in Members)
-            {
                 member.Character.ResetActionPoints();
-            }
         }
 
         public Member GetRandomMember()

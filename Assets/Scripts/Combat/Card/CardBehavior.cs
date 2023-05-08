@@ -43,8 +43,11 @@ namespace Combat
 
         private static void EffectDrawCard(Member striker, Card card)
         {
-            if (card.DrawCard > 0)
-                striker.DrawCard(card.DrawCard);
+            for (int i = 0; i < card.DrawCard; i++)
+            {
+                Card newCard = striker.DrawCard();
+                HandController.Instance.AddCard(striker, newCard);
+            }
         }
 
         private static void TargetEffectDropCard(Card card, Member target)
