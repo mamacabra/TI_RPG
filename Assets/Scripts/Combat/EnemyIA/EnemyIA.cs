@@ -5,7 +5,7 @@ namespace Combat
 {
     public class EnemyIA : MonoBehaviour, ICombatStateObserver
     {
-        private const float Delay = 0.4f;
+        private const float Delay = 0.6f;
 
         public void Start()
         {
@@ -28,6 +28,7 @@ namespace Combat
             yield return new WaitForSeconds(Delay);
             enemies[2].UseRandomCard(GetRandomHero());
             yield return new WaitForSeconds(Delay * 3);
+
             CombatState.Instance.NextState();
         }
 

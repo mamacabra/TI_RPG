@@ -20,4 +20,4 @@ MonoBehaviour:
   heal: 0
   drawCard: 0
   addCardOnTargetDeck: []
-  dropCardOnTargetHand: 0
+  dropCardOnTargetHand: 1

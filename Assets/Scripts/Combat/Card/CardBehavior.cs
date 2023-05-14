@@ -47,19 +47,26 @@ namespace Combat
             {
                 Card newCard = striker.DrawHandCard();
                 HandController.Instance.AddCard(striker, newCard);
+                VFXManager.Instance.PlayHealingVFX(striker.Character.transform);
             }
         }
 
         private static void TargetEffectDropCard(Card card, Member target)
         {
             for (int i = 0; i < card.DropTargetCard; i++)
+            {
                 target.DropHandCard();
+                VFXManager.Instance.PlayDropCardVFX(target.Character.transform);
+            }
         }
 
         private static void TargetEffectAddCard(Card card, Member target)
         {
             foreach (var cardToAdd in card.AddCards)
+            {
                 target.AddCard(cardToAdd);
+                VFXManager.Instance.PlayAddEnemyCardVFX(target.Character.transform);
+            }
         }
     }
 }
