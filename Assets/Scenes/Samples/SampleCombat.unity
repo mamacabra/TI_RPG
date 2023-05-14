@@ -755,10 +755,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea1d1464cf04c218d27c142fbd46d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageVFX: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7,
+  damageVFX: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   damagePositionVFX: {x: 0, y: 1, z: 0}
-  damageScaleVFX: {x: 2, y: 2, z: 2}
+  damageScaleVFX: {x: 0.6, y: 0.6, z: 0.6}
   healingVFX: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
     type: 3}
   healingPositionVFX: {x: 0, y: 1, z: 0}
@@ -766,11 +766,11 @@ MonoBehaviour:
   dropCardVFX: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55,
     type: 3}
   dropCardPositionVFX: {x: 0, y: 1, z: 0}
-  dropCardScaleVFX: {x: 1, y: 1, z: 1}
+  dropCardScaleVFX: {x: 0.6, y: 0.6, z: 0.6}
   addCardVFX: {fileID: 3432958286849152088, guid: 87ee7299dd44ed747af24dbb91bcd33b,
     type: 3}
   addCardPositionVFX: {x: 0, y: 1, z: 0}
-  addCardScaleVFX: {x: 1, y: 1, z: 1}
+  addCardScaleVFX: {x: 1.5, y: 1.5, z: 1.5}
 --- !u!1 &700472356
 GameObject:
   m_ObjectHideFlags: 0
