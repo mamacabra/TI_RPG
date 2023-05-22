@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShipIndex: 0
-  lastMp: {fileID: 8084982036767327345}
+  lastMp: {fileID: 0}
   map: {fileID: 1222625183}
   EndGame: 0
   shipArrived: 0
@@ -10870,19 +10870,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &2351333273318506114
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831487422721686759}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4831487420873191349
 GameObject:
   m_ObjectHideFlags: 0
@@ -11231,7 +11218,6 @@ GameObject:
   - component: {fileID: 8084982036767327345}
   - component: {fileID: 1977489453380337705}
   - component: {fileID: 6054468035036102557}
-  - component: {fileID: 2351333273318506114}
   - component: {fileID: 8084982036767327346}
   m_Layer: 3
   m_Name: Island
@@ -12249,7 +12235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent:
-  - {fileID: 8084982036767327345}
+  - {fileID: 0}
   childrens:
   - {fileID: 8084982038648821539}
   typeOfIsland: 3
