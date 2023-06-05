@@ -123,9 +123,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RefractionScale: 1
+    - _RefractionScale: 3
     - _RefractionSpeed: 0.5
-    - _RefractionStrength: 50
+    - _RefractionStrength: 5
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
