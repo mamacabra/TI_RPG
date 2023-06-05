@@ -7,8 +7,8 @@ namespace Combat.Helpers
     {
         public void BackToMap()
         {
-            if (MapManager.Instance) MapManager.Instance.UnloadScenes();
-            else  SceneManager.LoadScene("SampleMap");
+            if (MapManager.Instance) MapManager.Instance.UnloadScenes(true);
+            else SceneManager.LoadScene("SampleMap");
         }
     }
 }

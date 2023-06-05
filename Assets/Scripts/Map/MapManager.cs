@@ -14,7 +14,7 @@ public class MapManager : MonoBehaviour
     public event Action<bool> ShowCombatPanel;
     public event Action ShowEndGamePanel;
 
-    public event Action<Vector3,Vector3> MoveCameraDeslocate;
+    public event Action<Vector3, Vector3> MoveCameraDeslocate;
     public event Action ZoomCameraIsland;
     public event Action ResetCameras;
 
@@ -68,7 +68,7 @@ public class MapManager : MonoBehaviour
 
     public void MoveCamera(Vector3 pos, Vector3 islandPos)
     {
-        MoveCameraDeslocate?.Invoke(pos,islandPos);
+        MoveCameraDeslocate?.Invoke(pos, islandPos);
     }
 
     public void ZoomCamera()
@@ -81,7 +81,9 @@ public class MapManager : MonoBehaviour
         //Fade e camera
         if (lastMp.typeOfIsland == TypeOfIsland.StoreOrForge || lastMp.typeOfIsland == TypeOfIsland.Camp)
         {
-            Time.timeScale = 0;
+            // Time.timeScale = 0;
+            ZoomCamera();
+            StartCoroutine(WaitToCheckIsland("SampleInventory"));
             ShowPanel?.Invoke(true);
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
@@ -122,9 +124,9 @@ public class MapManager : MonoBehaviour
         CanClick?.Invoke();
     }
 
-    public void UnloadScenes()
+    public void UnloadScenes(bool isCombatScene)
     {
-        AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(lastMp.GetScene);
+        AsyncOperation asyncUnload = isCombatScene ? SceneManager.UnloadSceneAsync(lastMp.GetScene) : SceneManager.UnloadSceneAsync("SampleInventory");
         if (EndGame)
         {
             Time.timeScale = 0;

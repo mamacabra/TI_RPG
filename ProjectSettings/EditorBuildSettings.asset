@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Samples/SampleCombat_cavern_2.unity
     guid: 940da33c47405d743be3595ffee9efe6
+  - enabled: 1
+    path: Assets/Scenes/Samples/SampleInventory.unity
+    guid: 214179ee65a818e498748057d2ecc366
   m_configObjects: {}

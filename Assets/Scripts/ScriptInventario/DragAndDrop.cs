@@ -42,7 +42,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
         {
             Debug.Log("Object dropped in the drop zone!");
             Destroy(gameObject);
-            
+
         }
         else
         {

@@ -204,55 +204,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189219434}
   m_CullTransparentMesh: 1
---- !u!1 &219775846
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 219775848}
-  - component: {fileID: 219775847}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &219775847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219775846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
---- !u!4 &219775848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219775846}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8992062, y: 2.3851376, z: 26.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274541227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,8 +1061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90dd2e49bdf4500a857f386b04bc2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
-  target: {fileID: 0}
   arrowVFX: {fileID: 1549148566}
 --- !u!114 &537354435
 MonoBehaviour:
@@ -1127,6 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 1209853840646916433, guid: bd92112902531d74283e3cd45e1cf31d,
     type: 3}
+  cards: []
 --- !u!4 &537354436
 Transform:
   m_ObjectHideFlags: 0
@@ -1535,7 +1485,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990544633
 GameObject:
@@ -1909,7 +1859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14e0c5628574a5b9d131080559afe48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
 --- !u!4 &1182561000
 Transform:
   m_ObjectHideFlags: 0
@@ -1927,7 +1876,7 @@ Transform:
   - {fileID: 345380270}
   - {fileID: 1250700816}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212846311
 GameObject:
@@ -2042,7 +1991,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90.365, y: 0, z: 0}
 --- !u!1 &1250700815
 GameObject:
@@ -2091,12 +2040,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageVFX: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7,
     type: 3}
-  damagePositiveVFX: {x: 0, y: 1, z: 0}
+  damagePositionVFX: {x: 0, y: 0, z: 0}
   damageScaleVFX: {x: 2, y: 2, z: 2}
   healingVFX: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
     type: 3}
-  healingPositiveVFX: {x: 0, y: 1, z: 0}
+  healingPositionVFX: {x: 0, y: 0, z: 0}
   healingScaleVFX: {x: 2, y: 2, z: 2}
+  dropCardVFX: {fileID: 0}
+  dropCardPositionVFX: {x: 0, y: 0, z: 0}
+  dropCardScaleVFX: {x: 0, y: 0, z: 0}
+  addCardVFX: {fileID: 0}
+  addCardPositionVFX: {x: 0, y: 0, z: 0}
+  addCardScaleVFX: {x: 0, y: 0, z: 0}
 --- !u!1 &1289384059
 GameObject:
   m_ObjectHideFlags: 0

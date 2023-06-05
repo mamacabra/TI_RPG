@@ -18,7 +18,7 @@ public class MapCanvasController : MonoBehaviour
 
     private void OnDisable()
     {
-        if(!MapManager.Instance) return;
+        if (!MapManager.Instance) return;
         MapManager.Instance.ShowPanel -= ShowPanel;
         MapManager.Instance.ShowCombatPanel -= ShowCombatPanel;
         MapManager.Instance.ShowEndGamePanel -= ShowEndGamePanel;
@@ -37,9 +37,9 @@ public class MapCanvasController : MonoBehaviour
     {
         // Combat.SetActive(state);
     }
-    public void BackToMapButton()
+    public void BackToMapButton(bool isCombatScene)
     {
-        MapManager.Instance.UnloadScenes();
+        MapManager.Instance.UnloadScenes(isCombatScene);
     }
 
     public void ShowEndGamePanel()
