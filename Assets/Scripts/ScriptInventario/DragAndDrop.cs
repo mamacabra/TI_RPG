@@ -41,6 +41,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
         if (dropZoneCollider.bounds.Intersects(new Bounds(rectTransform.position, rectTransform.sizeDelta)))
         {
             Debug.Log("Object dropped in the drop zone!");
+            Destroy(gameObject);
+            
         }
         else
         {
