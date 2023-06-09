@@ -13,7 +13,7 @@ namespace Combat
         [Header("Character Observers")]
         [SerializeField] private HealthBar healthBar;
         [SerializeField] private CharacterType characterType = CharacterType.Hero;
-        [SerializeField] public List<CardScriptableObject> cards;
+        [SerializeField] public ItemScriptableObject[] items = new ItemScriptableObject[4];
 
         private void Start()
         {
@@ -32,8 +32,18 @@ namespace Combat
         {
             Character character = GetComponent<Character>();
             Member member = GetComponent<Member>();
+            List<CardScriptableObject> cards = new List<CardScriptableObject>();
 
             member.Character = character;
+            foreach (ItemScriptableObject item in items)
+            {
+                if (item == null) continue;
+                foreach (CardScriptableObject card in item.cards)
+                {
+                    if (card != null) cards.Add(card);
+                }
+            }
+
             if (cards.Count > 0) member.SetupDeck(cards);
         }
 

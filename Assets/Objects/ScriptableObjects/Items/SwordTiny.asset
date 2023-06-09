@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: SwordTiny
   m_EditorClassIdentifier: 
-  name: 
+  name: Espada Pequena
   description: 
   sprite: {fileID: 0}
   cards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e5726066758c24d73a2ef2bf8671c3d2, type: 2}
+  - {fileID: 11400000, guid: 2c5bc73bbc0a20e3a9a3b30aaf0d8e19, type: 2}
+  - {fileID: 11400000, guid: 22e74e2f91db9c59498bb21ff15d4eea, type: 2}

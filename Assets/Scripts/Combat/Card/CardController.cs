@@ -4,11 +4,19 @@ namespace Combat
 {
     [RequireComponent(typeof(CardAttributes))]
     [RequireComponent(typeof(CardDisplay))]
+    [RequireComponent(typeof(CardVFX))]
     public class CardController : MonoBehaviour
     {
         private Card Card { get; set; }
+        private CardVFX _cardVFX;
+
         public Member Owner { get; private set; }
         public CardDisplay Display { get; private set; }
+
+        private void Start()
+        {
+            _cardVFX = GetComponent<CardVFX>();
+        }
 
         private void Update()
         {
@@ -17,11 +25,13 @@ namespace Combat
 
         private void OnMouseOver()
         {
+            _cardVFX.SetOverMaterial();
             VFXSelected.SetHoveredStriker(Owner);
         }
 
         private void OnMouseExit()
         {
+            _cardVFX.SetDefaultMaterial();
             VFXSelected.SetHoveredStriker(null);
         }
 
