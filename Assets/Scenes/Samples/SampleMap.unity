@@ -1002,9 +1002,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &221255544
 GameObject:
@@ -2353,9 +2353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &423169008
 GameObject:
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423169008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f770adc6c81d5b64186ce26250dbbb83, type: 3}
   m_Name: 
@@ -7118,9 +7118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!4 &1434954241
 Transform:
@@ -7184,9 +7184,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &1443296103
 GameObject:
@@ -8069,9 +8069,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &1626047849
 GameObject:
@@ -10647,9 +10647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &1946289218
 GameObject:
@@ -10926,9 +10926,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &2051423934
 GameObject:
@@ -11353,9 +11353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_x: 0
-  speed_z: 0.1
-  factor_x: 1
-  factor_z: 0.5
+  speed_z: 0
+  factor_x: 0.2
+  factor_z: 0.2
   isParent: 0
 --- !u!1 &2086483913
 GameObject:

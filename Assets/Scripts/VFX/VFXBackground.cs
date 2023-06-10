@@ -17,7 +17,7 @@ public class VFXBackground : MonoBehaviour
     {
         if (!isParent)
         {
-            // speed_x = Random.Range(0.1f, 0.15f);
+            speed_x = Random.Range(0.1f, 0.15f);
             speed_z = Random.Range(0.1f, 0.15f);
         }
         offset_x = this.transform.position.x;
@@ -28,8 +28,8 @@ public class VFXBackground : MonoBehaviour
         if (isParent)
         {
             float x = (Mathf.Sin(Time.time * speed_x) * factor_x) + (offset_x + Camera.main.transform.position.x);
-            float z = (Mathf.Sin(Time.time * speed_z) * factor_z) + (offset_z + Camera.main.transform.position.z);
-            // float z = (offset_z + Camera.main.transform.position.z);
+            // float z = (Mathf.Sin(Time.time * speed_z) * factor_z) + (offset_z + Camera.main.transform.position.z);
+            float z = (offset_z + Camera.main.transform.position.z);
             transform.position = new Vector3(x, this.transform.position.y, z);
         }
         else
