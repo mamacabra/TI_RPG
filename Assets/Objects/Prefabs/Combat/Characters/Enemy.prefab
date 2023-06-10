@@ -116,12 +116,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 7337875571501358945}
   characterType: 1
-  cards:
-  - {fileID: 11400000, guid: 22e74e2f91db9c59498bb21ff15d4eea, type: 2}
-  - {fileID: 11400000, guid: c90a16c52f4aca0cba9e83f0742ef163, type: 2}
-  - {fileID: 11400000, guid: 0804e2c3e64bed2ee8764aca0db8e238, type: 2}
-  - {fileID: 11400000, guid: 193883e3580b8ccf4bc0cec10dc99b0f, type: 2}
-  - {fileID: 11400000, guid: 05d840cca0474f58fa330ce9f6a47ade, type: 2}
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &3249129028146795574
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3249129028146795577
 Transform:
   m_ObjectHideFlags: 0
