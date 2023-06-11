@@ -4,7 +4,6 @@
     {
         Wait,
         PreparationStage,
-        CharactersDeckShuffle,
         HeroTurn,
         HeroDeckShuffle,
         EnemyTurn,
