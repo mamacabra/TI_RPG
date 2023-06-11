@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Combat
@@ -27,9 +28,13 @@ namespace Combat
                 member.Character.ResetActionPoints();
         }
 
+        [CanBeNull]
         public Member GetRandomMember()
         {
             List<Member> livingMembers = Members.Where(member => member.Character.IsDead == false).ToList();
+
+            if (livingMembers.Count == 0) return null;
+
             int r = Random.Range(0, livingMembers.Count);
             return livingMembers[r];
         }

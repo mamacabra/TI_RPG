@@ -50,11 +50,10 @@ namespace Combat
             int r = Random.Range(0, Hand.Count);
             Card card = Hand[r];
 
-            if (Character.HasEnoughActionPoints(card.Cost))
-            {
-                CardBehavior.Use(this, card, target);
-                Hand.Remove(card);
-            }
+            if (Character.HasEnoughActionPoints(card.Cost) == false || target == null) return;
+
+            CardBehavior.Use(this, card, target);
+            Hand.Remove(card);
         }
     }
 }
