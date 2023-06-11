@@ -28,10 +28,13 @@ namespace Combat
             Hand = Deck.Shuffle();
         }
 
-        public Card DrawHandCard()
+        public Card? DrawHandCard()
         {
-            Card card = Deck.DrawCard(Hand);
-            Hand.Add(card);
+            var card = Deck.DrawCard(Hand);
+
+            if (card == null) return null;
+
+            Hand.Add((Card) card);
             return card;
         }
 

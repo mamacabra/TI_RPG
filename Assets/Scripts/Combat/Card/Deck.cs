@@ -34,10 +34,12 @@ namespace Combat
             return shuffledCards;
         }
 
-        public Card DrawCard(List<Card> hand)
+        public Card? DrawCard(List<Card> hand)
         {
             List<Card> possibleCards = new List<Card>(Cards);
             foreach (Card card in hand) possibleCards.Remove(card);
+
+            if (possibleCards.Count == 0) return null;
 
             int r = Random.Range(0, possibleCards.Count);
             return possibleCards[r];

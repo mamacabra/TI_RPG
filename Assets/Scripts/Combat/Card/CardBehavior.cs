@@ -43,11 +43,11 @@ namespace Combat
 
         private static void EffectDrawCard(Member striker, Card card)
         {
+            VFXManager.Instance.PlayHealingVFX(striker.Character.transform);
             for (int i = 0; i < card.DrawCard; i++)
             {
-                Card newCard = striker.DrawHandCard();
-                HandController.Instance.AddCard(striker, newCard);
-                VFXManager.Instance.PlayHealingVFX(striker.Character.transform);
+                var newCard = striker.DrawHandCard();
+                if (newCard != null) HandController.Instance.AddCard(striker, (Card) newCard);
             }
         }
 
