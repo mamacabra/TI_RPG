@@ -22,20 +22,13 @@ namespace Combat
         {
             var enemies = CombatManager.Instance.EnemyParty.Members;
 
-            if (enemies[0] && enemies[0].Character.IsDead == false)
+            foreach (var enemy in enemies)
             {
-                enemies[0].UseRandomCard(GetRandomHero());
-                yield return new WaitForSeconds(Delay);
-            }
-            if (enemies[1] && enemies[1].Character.IsDead == false)
-            {
-                enemies[1].UseRandomCard(GetRandomHero());
-                yield return new WaitForSeconds(Delay);
-            }
-            if (enemies[2] && enemies[2].Character.IsDead == false)
-            {
-                enemies[2].UseRandomCard(GetRandomHero());
-                yield return new WaitForSeconds(Delay);
+                if (enemy && enemy.Character.IsDead == false)
+                {
+                    enemy.UseRandomCard(GetRandomHero());
+                    yield return new WaitForSeconds(Delay);
+                }
             }
 
             yield return new WaitForSeconds(Delay);
