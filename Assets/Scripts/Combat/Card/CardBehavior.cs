@@ -64,6 +64,7 @@ namespace Combat
         {
             foreach (var cardToAdd in card.AddCards)
             {
+                if (cardToAdd is null) continue;
                 target.AddCard(cardToAdd);
                 VFXManager.Instance.PlayAddEnemyCardVFX(target.Character.transform);
             }
