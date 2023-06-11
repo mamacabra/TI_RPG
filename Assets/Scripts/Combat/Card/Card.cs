@@ -6,7 +6,7 @@ namespace Combat
     {
         private CardScriptableObject _originalData;
         public string Label { get; private set; }
-        // public string Description { get; private set; }
+        public string Description { get; private set; }
         public int Cost { get; private set; }
         public int ActionPointsReceive { get; private set; }
         public int Damage { get; private set; }
@@ -21,7 +21,7 @@ namespace Combat
             _originalData = card;
 
             Label = card.label;
-            // Description = card.description;
+            Description = card.description;
             Cost = card.cost;
             ActionPointsReceive = card.receive;
             Damage = card.damage;

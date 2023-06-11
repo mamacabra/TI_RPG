@@ -5,17 +5,71 @@ namespace Combat
 {
     public class CardAttributes : MonoBehaviour
     {
-        public Text title;
-        public Text cost;
-        public Text damage;
-        public Text heal;
+        [Header("Card Texts")]
+        [SerializeField] private Text title;
+        [SerializeField] private Text description;
+
+        [Header("Card Attributes")]
+        [SerializeField] private Text cost;
+        [SerializeField] private Text damage;
+        [SerializeField] private Text heal;
 
         public void Setup(Card card)
         {
             title.text = card.Label;
-            cost.text = "Cost: " + card.Cost;
-            damage.text = "Damage: " + card.Damage;
-            heal.text = "Heal: " + card.Heal;
+            description.text = card.Description;
+            cost.text = card.Cost.ToString();
+
+            SetupDescription(card);
+            SetupAttributes(card);
+        }
+
+        private void SetupDescription(Card card)
+        {
+
+            if (card.Cost > 0)
+            {
+                description.text = "Custo (" + card.Cost + ") pontos de ação. ";
+            }
+
+            if (card.Damage > 0)
+            {
+                description.text += "Causa (" + card.Damage + ") de dano. ";
+            }
+
+            if (card.Heal > 0)
+            {
+                description.text += "Cura (" + card.Heal + ") pontos de vida. ";
+            }
+
+            if (card.ActionPointsReceive > 0)
+            {
+                description.text += "Recebe (" + card.ActionPointsReceive + ") pontos de ação. ";
+            }
+
+            if (card.DrawCard > 0)
+            {
+                description.text += "Saca (" + card.DrawCard + ") cartas. ";
+            }
+
+            if (card.AddCards.Count > 0)
+            {
+                description.text += "Adiciona (" + card.AddCards.Count + ") cartas do alvo. ";
+            }
+
+            if (card.DropTargetCard > 0)
+            {
+                description.text += "Remove (" + card.DropTargetCard + ") cartas do alvo. ";
+            }
+        }
+
+        private void SetupAttributes(Card card)
+        {
+            if (card.Damage != 0) damage.text = card.Damage.ToString();
+            else damage.gameObject.SetActive(false);
+
+            if (card.Heal != 0) heal.text = card.Heal.ToString();
+            else heal.gameObject.SetActive(false);
         }
     }
 }
