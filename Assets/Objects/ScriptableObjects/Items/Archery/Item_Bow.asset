@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
+  m_Name: Item_Bow
+  m_EditorClassIdentifier: 
+  name: Arco
+  description: Contem flechas
+  sprite: {fileID: 0}
+  cards:
+  - {fileID: 11400000, guid: 83ddfe9bcb24f9b41b959d9ad75cb92a, type: 2}
+  - {fileID: 11400000, guid: 83ddfe9bcb24f9b41b959d9ad75cb92a, type: 2}
+  - {fileID: 11400000, guid: aafb4b24594c5374fb3a6ec9457f1264, type: 2}
