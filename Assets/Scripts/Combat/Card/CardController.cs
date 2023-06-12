@@ -4,23 +4,16 @@ namespace Combat
 {
     [RequireComponent(typeof(CardAttributes))]
     [RequireComponent(typeof(CardDisplay))]
-    [RequireComponent(typeof(CardVFX))]
     public class CardController : MonoBehaviour
     {
         private Card Card { get; set; }
         private Member Striker { get; set; }
 
-        private CardVFX _cardVFX;
-
         public CardDisplay Display { get; private set; }
 
         public static CardController ClickedCard { get; private set; }
         public static CardController DraggedCard { get; private set; }
-
-        private void Start()
-        {
-            _cardVFX = GetComponent<CardVFX>();
-        }
+        public static CardController HoveredCard { get; private set; }
 
         private void Update()
         {
@@ -37,13 +30,13 @@ namespace Combat
 
         private void OnMouseOver()
         {
-            _cardVFX.SetOverMaterial();
+            HoveredCard = this;
             CharacterCardSelectedVFX.SetHoveredStriker(Striker);
         }
 
         private void OnMouseExit()
         {
-            _cardVFX.SetDefaultMaterial();
+            HoveredCard = null;
             CharacterCardSelectedVFX.SetHoveredStriker(null);
         }
 
@@ -51,7 +44,6 @@ namespace Combat
         {
             DraggedCard = this;
         }
-
 
         private void OnMouseDown()
         {
@@ -95,6 +87,9 @@ namespace Combat
         {
             ClickedCard = null;
             DraggedCard = null;
+
+            CharacterCardSelectedVFX.SetClickedStriker(null);
+            CharacterCardSelectedVFX.SetHoveredStriker(null);
         }
     }
 }
