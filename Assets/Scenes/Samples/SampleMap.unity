@@ -4334,7 +4334,7 @@ MonoBehaviour:
     tutorial: 1
     arrowActive: 0
     buttonActive: 1
-    text: "Bom jogo, esperamos que consiga passar dos <color=\"red\">DRAG\xD5ES</color>."
+    text: "Bom jogo, esperamos que sobreviva at\xE9 os <color=\"red\">DRAG\xD5ES</color>."
     arrowPosition: {x: 86, y: -40, z: 0}
     arrowRotation: {x: 0, y: 0, z: -90}
   - pauseGame: 0
