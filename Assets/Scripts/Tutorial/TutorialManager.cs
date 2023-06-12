@@ -46,7 +46,7 @@ public class TutorialManager : MonoBehaviour
         index++;
         if (index >= texts.Length)
         {
-            isTutorial = texts[index].tutorial;
+            isTutorial = false;
             this.gameObject.SetActive(false);
         }
         else if (texts[index].text == "")
