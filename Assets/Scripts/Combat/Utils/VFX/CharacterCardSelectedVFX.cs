@@ -2,14 +2,14 @@
 
 namespace Combat
 {
-    public class VFXSelected : MonoBehaviour
+    public class CharacterCardSelectedVFX : MonoBehaviour
     {
         private Member _member;
         public GameObject vfx;
 
+        private static Member _clickedStriker;
         private static Member _hoveredStriker;
         private static Member _hoveredTarget;
-        private static Member _clickedStriker;
 
         private void Start()
         {
@@ -19,7 +19,7 @@ namespace Combat
 
         private void FixedUpdate()
         {
-            if (TargetController.Instance == null) return;
+            if (ArrowVFX.Instance == null) return;
 
             if (_clickedStriker == _member)
             {

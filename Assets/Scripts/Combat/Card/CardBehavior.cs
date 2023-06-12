@@ -31,19 +31,19 @@ namespace Combat
         {
             if (card.Damage <= 0) return;
             target.Character.ReceiveDamage(card.Damage);
-            VFXManager.Instance.PlayDamageVFX(target.Character.transform);
+            AttackVFX.Instance.PlayDamageVFX(target.Character.transform);
         }
 
         private static void ApplyHeal(Member target, Card card)
         {
             if (card.Heal <= 0) return;
             target.Character.ReceiveHealing(card.Heal);
-            VFXManager.Instance.PlayHealingVFX(target.Character.transform);
+            AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
         }
 
         private static void EffectDrawCard(Member striker, Card card)
         {
-            VFXManager.Instance.PlayHealingVFX(striker.Character.transform);
+            AttackVFX.Instance.PlayHealingVFX(striker.Character.transform);
             for (int i = 0; i < card.DrawCard; i++)
             {
                 var newCard = striker.DrawHandCard();
@@ -56,7 +56,7 @@ namespace Combat
             for (int i = 0; i < card.DropTargetCard; i++)
             {
                 target.DropHandCard();
-                VFXManager.Instance.PlayDropCardVFX(target.Character.transform);
+                AttackVFX.Instance.PlayDropCardVFX(target.Character.transform);
             }
         }
 
@@ -66,7 +66,7 @@ namespace Combat
             {
                 if (cardToAdd is null) continue;
                 target.AddCard(cardToAdd);
-                VFXManager.Instance.PlayAddEnemyCardVFX(target.Character.transform);
+                AttackVFX.Instance.PlayAddEnemyCardVFX(target.Character.transform);
             }
         }
     }

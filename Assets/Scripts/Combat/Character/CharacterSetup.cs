@@ -7,7 +7,7 @@ namespace Combat
     [RequireComponent(typeof(Member))]
     [RequireComponent(typeof(Character))]
     [RequireComponent(typeof(Target))]
-    [RequireComponent(typeof(VFXSelected))]
+    [RequireComponent(typeof(CharacterCardSelectedVFX))]
     public class CharacterSetup : MonoBehaviour
     {
         [Header("Character Observers")]

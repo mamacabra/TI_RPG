@@ -5,6 +5,7 @@ namespace Combat
     public class Target : MonoBehaviour
     {
         private Member _member;
+        public static Member HoveredTarget { get; private set; }
 
         private void Awake()
         {
@@ -13,14 +14,14 @@ namespace Combat
 
         private void OnMouseOver()
         {
-            TargetController.Instance.SetTarget(_member);
-            VFXSelected.SetHoveredTarget(_member);
+            HoveredTarget = _member;
+            CharacterCardSelectedVFX.SetHoveredTarget(_member);
         }
 
         private void OnMouseExit()
         {
-            TargetController.Instance.RemoveTarget(_member);
-            VFXSelected.SetHoveredTarget(null);
+            if (HoveredTarget == _member) HoveredTarget = null;
+            CharacterCardSelectedVFX.SetHoveredTarget(null);
         }
     }
 }

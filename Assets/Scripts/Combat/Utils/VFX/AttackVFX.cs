@@ -2,9 +2,9 @@
 
 namespace Combat
 {
-    public class VFXManager : MonoBehaviour
+    public class AttackVFX : MonoBehaviour
     {
-        public static VFXManager Instance { get; private set; }
+        public static AttackVFX Instance { get; private set; }
 
         [Header("Damage VFX")]
         [SerializeField] private GameObject damageVFX;

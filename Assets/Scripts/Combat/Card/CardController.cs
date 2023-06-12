@@ -8,10 +8,14 @@ namespace Combat
     public class CardController : MonoBehaviour
     {
         private Card Card { get; set; }
+        private Member Striker { get; set; }
+
         private CardVFX _cardVFX;
 
-        public Member Owner { get; private set; }
         public CardDisplay Display { get; private set; }
+
+        public static CardController ClickedCard { get; private set; }
+        public static CardController DraggedCard { get; private set; }
 
         private void Start()
         {
@@ -20,34 +24,52 @@ namespace Combat
 
         private void Update()
         {
-            if (Input.GetMouseButtonUp(0)) UseCard();
+            if (Input.GetMouseButtonUp(0) && ClickedCard == this)
+            {
+                UseCard(ClickedCard.Card);
+            }
+
+            if (Input.GetMouseButton(1))
+            {
+                ClearSelectedCards();
+            }
         }
 
         private void OnMouseOver()
         {
             _cardVFX.SetOverMaterial();
-            VFXSelected.SetHoveredStriker(Owner);
+            CharacterCardSelectedVFX.SetHoveredStriker(Striker);
         }
 
         private void OnMouseExit()
         {
             _cardVFX.SetDefaultMaterial();
-            VFXSelected.SetHoveredStriker(null);
+            CharacterCardSelectedVFX.SetHoveredStriker(null);
         }
+
+        private void OnMouseDrag()
+        {
+            DraggedCard = this;
+        }
+
 
         private void OnMouseDown()
         {
-            TargetController.Instance.SetCard(this);
+            CharacterCardSelectedVFX.SetClickedStriker(Striker);
+            ClickedCard = this;
         }
 
         private void OnMouseUp()
         {
-            UseCard();
+            if (DraggedCard == this)
+            {
+                UseCard(DraggedCard.Card);
+            }
         }
 
         public void Setup(Member member, Card card)
         {
-            Owner = member;
+            Striker = member;
             Card = card;
             Display = GetComponent<CardDisplay>();
 
@@ -55,18 +77,24 @@ namespace Combat
             cardAttributes.Setup(card);
         }
 
-        private void UseCard()
+        private void UseCard(Card card)
         {
-            if (!Owner.Character.HasEnoughActionPoints(Card.Cost) || !TargetController.Instance.Target) return;
+            bool hasActionPoints = Striker.Character.HasEnoughActionPoints(card.Cost);
+            Member target = Target.HoveredTarget;
 
-            Member target = TargetController.Instance.Target;
+            if (hasActionPoints == false || target is null) return;
 
-            CardBehavior.Use(Owner, Card, target);
+            CardBehavior.Use(Striker, card, target);
             HandController.Instance.RemoveUsedCard(this);
-            Owner.Hand.Remove(Card);
+            Striker.Hand.Remove(card);
 
-            TargetController.Instance.RemoveCard();
-            TargetController.Instance.RemoveTarget(target);
+            ClearSelectedCards();
+        }
+
+        private static void ClearSelectedCards()
+        {
+            ClickedCard = null;
+            DraggedCard = null;
         }
     }
 }
