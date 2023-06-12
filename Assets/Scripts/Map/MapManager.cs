@@ -85,6 +85,7 @@ public class MapManager : MonoBehaviour
             ZoomCamera();
             StartCoroutine(WaitToCheckIsland("SampleInventory"));
             ShowPanel?.Invoke(true);
+
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
@@ -110,10 +111,15 @@ public class MapManager : MonoBehaviour
             yield return new WaitUntil(() => zoomCamOver);
             yield return new WaitForSeconds(0.1f);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            asyncLoad.completed += delegate { DoNextTutorial(); };
             zoomCamOver = false;
             yield return new WaitForSeconds(1f);
             ResetCameras?.Invoke();
         }
+    }
+    private void DoNextTutorial()
+    {
+        if (TutorialManager.instance.isTutorial) { TutorialManager.instance?.DoNextTutorial(); }
     }
 
     public void OnCanClick()
@@ -127,6 +133,7 @@ public class MapManager : MonoBehaviour
     public void UnloadScenes(bool isCombatScene)
     {
         AsyncOperation asyncUnload = isCombatScene ? SceneManager.UnloadSceneAsync(lastMp.GetScene) : SceneManager.UnloadSceneAsync("SampleInventory");
+        asyncUnload.completed += delegate { DoNextTutorial(); };
         if (EndGame)
         {
             Time.timeScale = 0;
