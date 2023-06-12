@@ -38,7 +38,7 @@ public class TutorialManager : MonoBehaviour
     }
     private void Update()
     {
-        arrow.transform.position += new Vector3(0, Mathf.Sin(Time.time * 5.0f) * 0.1f, 0);
+        arrow.transform.position += new Vector3(0, Mathf.Sin(Time.time * 5.0f) * 0.5f, 0);
     }
 
     public void DoNextTutorial()

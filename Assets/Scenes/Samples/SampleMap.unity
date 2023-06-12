@@ -4289,7 +4289,7 @@ MonoBehaviour:
     arrowActive: 1
     buttonActive: 1
     text: "Este n\xFAmero indica quantos pontos de a\xE7\xE3o cada carta custa."
-    arrowPosition: {x: 86, y: -40, z: 0}
+    arrowPosition: {x: 75, y: -40, z: 0}
     arrowRotation: {x: 0, y: 0, z: -90}
   - pauseGame: 0
     tutorial: 1
@@ -4297,7 +4297,7 @@ MonoBehaviour:
     buttonActive: 1
     text: "Cada personagem possui 3 pontos de a\xE7\xE3o por turno, voc\xEA pode
       verificar quantos pontos de a\xE7\xE3o seus personagens ainda possuem aqui."
-    arrowPosition: {x: -210, y: 280, z: 0}
+    arrowPosition: {x: -190, y: 280, z: 0}
     arrowRotation: {x: 0, y: 0, z: -90}
   - pauseGame: 0
     tutorial: 1
@@ -4305,7 +4305,7 @@ MonoBehaviour:
     buttonActive: 1
     text: "J\xE1 este n\xFAmero indica quanto de dano cada carta ir\xE1 causar em
       seu alvo."
-    arrowPosition: {x: 58, y: -280, z: 0}
+    arrowPosition: {x: 50, y: -250, z: 0}
     arrowRotation: {x: 0, y: 0, z: -90}
   - pauseGame: 0
     tutorial: 1
@@ -4313,7 +4313,7 @@ MonoBehaviour:
     buttonActive: 1
     text: "Voc\xEA pode verificar a vida atual de seus personagens e a de seus inimigos
       aqui."
-    arrowPosition: {x: -283, y: 280, z: 0}
+    arrowPosition: {x: -260, y: 280, z: 0}
     arrowRotation: {x: 0, y: 0, z: -90}
   - pauseGame: 0
     tutorial: 1
@@ -4344,8 +4344,8 @@ MonoBehaviour:
     text: 
     arrowPosition: {x: 86, y: -40, z: 0}
     arrowRotation: {x: 0, y: 0, z: -90}
-  index: -1
-  isTutorial: 1
+  index: 13
+  isTutorial: 0
 --- !u!1 &663530045
 GameObject:
   m_ObjectHideFlags: 0
@@ -12207,7 +12207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -845, y: 400}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970646429
