@@ -6,10 +6,11 @@ using Unity.Mathematics;
 
 public class VFXLine : MonoBehaviour
 {
+    [SerializeField] private Camera camera;
     [SerializeField] private Transform initialPoint;
     [SerializeField] private Vector2 initialPointOffset = new Vector2(0.0f, -2.0f);
     private Vector2 curvePoint;
-    [SerializeField][Range(-5.0f, 5.0f)] private float curve;
+    [SerializeField][Range(0, 1080.0f)] private float curve;
     [SerializeField] private Transform targetPoint;
     [SerializeField] private Vector2 targetPointOffset = new Vector2(0.0f, -2.0f);
     private UILineRenderer lineRenderer;
@@ -28,16 +29,18 @@ public class VFXLine : MonoBehaviour
 
     void Update()
     {
-        if (initialPoint != null && targetPoint != null)
+        if (initialPoint && targetPoint)
         {
-            curvePoint = new Vector2((initialPoint.transform.position.x + targetPoint.transform.position.x) / 2, (initialPoint.transform.position.y + targetPoint.transform.position.y) / 2);
+            Vector3 initialPWorld = camera.WorldToScreenPoint(initialPoint.position);
+            Vector3 targetPWorld = camera.WorldToScreenPoint(targetPoint.position);
+            curvePoint = new Vector2((initialPWorld.x + targetPWorld.x) / 2, (initialPWorld.y + targetPWorld.y) / 2);
             curvePoint.y = curve;
             var pointList = new List<Vector2>();
 
             for (float ratio = 0; ratio <= 1; ratio += 1 / vertexCount)
             {
-                var tangent1 = Vector2.Lerp((Vector2)initialPoint.position + initialPointOffset, curvePoint, ratio);
-                var tangent2 = Vector2.Lerp(curvePoint, (Vector2)targetPoint.position + targetPointOffset, ratio);
+                var tangent1 = Vector2.Lerp((Vector2)initialPWorld + initialPointOffset, curvePoint, ratio);
+                var tangent2 = Vector2.Lerp(curvePoint, (Vector2)targetPWorld + targetPointOffset, ratio);
                 var curve = Vector2.Lerp(tangent1, tangent2, ratio);
 
                 pointList.Add(curve);
@@ -45,32 +48,20 @@ public class VFXLine : MonoBehaviour
 
             lineRenderer.Points = new Vector2[pointList.Count];
             lineRenderer.Points = pointList.ToArray();
-
-            // if (changeAmountOfArrows)
-            // {
-            //     lineRenderer.textureMode = LineTextureMode.RepeatPerSegment;
-            // }
-            // else
-            // {
-            //     lineRenderer.textureMode = LineTextureMode.Tile;
-            // }
         }
-        else if (mousePos)
+        else if (mousePos && initialPoint)
         {
             Vector3 mousePosition = Vector3.zero;
-            float distance;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (plane.Raycast(ray, out distance))
-            {
-                mousePosition = ray.GetPoint(distance);
-            }
-            curvePoint = new Vector2((initialPoint.transform.position.x + mousePosition.x) / 2, (initialPoint.transform.position.y + mousePosition.y) / 2);
+            mousePosition = Input.mousePosition;
+            Vector3 worldSpaceToCanvas = camera.WorldToScreenPoint(initialPoint.position);
+
+            curvePoint = new Vector2((worldSpaceToCanvas.x + mousePosition.x) / 2, (worldSpaceToCanvas.y + mousePosition.y) / 2);
             curvePoint.y = curve;
             var pointList = new List<Vector2>();
 
             for (float ratio = 0; ratio <= 1; ratio += 1 / vertexCount)
             {
-                var tangent1 = Vector2.Lerp((Vector2)initialPoint.position + initialPointOffset, curvePoint, ratio);
+                var tangent1 = Vector2.Lerp((Vector2)worldSpaceToCanvas + initialPointOffset, curvePoint, ratio);
                 var tangent2 = Vector2.Lerp(curvePoint, (Vector2)mousePosition + targetPointOffset, ratio);
                 var curve = Vector2.Lerp(tangent1, tangent2, ratio);
 
@@ -80,8 +71,8 @@ public class VFXLine : MonoBehaviour
             lineRenderer.Points = new Vector2[pointList.Count];
             lineRenderer.Points = pointList.ToArray();
 
-            lineRenderer.material.mainTextureOffset = new Vector2(math.frac(-Time.time), 0);
         }
+        lineRenderer.material.mainTextureOffset = new Vector2(math.frac(-Time.time), 0);
     }
     public void SetColor(Color _color)
     {
