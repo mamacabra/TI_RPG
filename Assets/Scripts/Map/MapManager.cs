@@ -9,6 +9,10 @@ public class MapManager : MonoBehaviour
     private static MapManager instance;
     public static MapManager Instance => instance ? instance : FindObjectOfType<MapManager>();
 
+    [SerializeField] private GameObject currentEventSystem;
+    [SerializeField] private GameObject globalVolume;
+    [SerializeField] private GameObject directionalLight;
+
     public event Action CanClick;
     public event Action<bool> ShowPanel;
     public event Action<bool> ShowCombatPanel;
@@ -109,6 +113,7 @@ public class MapManager : MonoBehaviour
         IEnumerator WaitToCheckIsland(string scene)
         {
             yield return new WaitUntil(() => zoomCamOver);
+            currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
             yield return new WaitForSeconds(0.1f);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             asyncLoad.completed += delegate { DoNextTutorial(); };
@@ -133,7 +138,7 @@ public class MapManager : MonoBehaviour
     public void UnloadScenes(bool isCombatScene)
     {
         AsyncOperation asyncUnload = isCombatScene ? SceneManager.UnloadSceneAsync(lastMp.GetScene) : SceneManager.UnloadSceneAsync("SampleInventory");
-        asyncUnload.completed += delegate { DoNextTutorial(); };
+        asyncUnload.completed += delegate { DoNextTutorial(); currentEventSystem.SetActive(true); globalVolume.SetActive(true); directionalLight.SetActive(true); };
         if (EndGame)
         {
             Time.timeScale = 0;

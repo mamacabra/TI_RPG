@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1683,6 +1683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613d9ed0f53afc047b2767c8bf99e1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEventSystem: {fileID: 1543720866}
+  globalVolume: {fileID: 1668205193}
+  directionalLight: {fileID: 2066466923}
   ShipIndex: 0
   lastMp: {fileID: 0}
   map: {fileID: 1222625183}
@@ -11338,7 +11341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1626797872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11375,7 +11378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
