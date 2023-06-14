@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: Card_SpearStrongAttak
   m_EditorClassIdentifier: 
-  label: FuradaForte
+  label: CutadaForte
   description: 
   cost: 2
   receive: 0

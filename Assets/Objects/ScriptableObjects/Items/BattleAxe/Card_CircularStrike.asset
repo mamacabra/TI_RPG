@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
-  m_Name: Card_SpearWeakStrike
+  m_Name: Card_CircularStrike
   m_EditorClassIdentifier: 
-  label: CutucadaFraca
+  label: Cote Circular
   description: 
-  cost: 1
+  cost: 2
   receive: 0
-  damage: 1
+  damage: 2
   heal: 0
   drawCard: 0
   addCardOnTargetDeck: []
