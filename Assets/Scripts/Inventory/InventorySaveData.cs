@@ -5,11 +5,11 @@ namespace Inventory
     [Serializable]
     public class InventorySaveData
     {
-        public string[] inventory;
+        public string[] items;
 
-        public InventorySaveData(string[] inventory)
+        public InventorySaveData(string[] items)
         {
-            this.inventory = inventory;
+            this.items = items;
         }
     }
 }

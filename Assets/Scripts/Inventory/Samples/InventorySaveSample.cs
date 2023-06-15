@@ -1,16 +1,17 @@
 using Constants;
 using UnityEngine;
+using Utilities;
 
 namespace Inventory.Samples
 {
-    public class StorageSaveFileSample : MonoBehaviour
+    public class InventorySaveSample : MonoBehaviour
     {
         [SerializeField] private string[] inventory = InventoryItems.Initial;
 
         private void OnMouseUp()
         {
             InventorySaveData saveData = new InventorySaveData(inventory);
-            Utils.JsonStorage.SaveFile(saveData, SaveFile.Inventory);
+            JsonStorage.SaveFile(saveData, SaveFile.Inventory);
         }
     }
 }

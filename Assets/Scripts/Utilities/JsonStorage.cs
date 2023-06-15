@@ -1,7 +1,9 @@
+using System;
 using System.IO;
+using Inventory;
 using UnityEngine;
 
-namespace Utils
+namespace Utilities
 {
     public static class JsonStorage
     {
@@ -9,13 +11,25 @@ namespace Utils
         {
             try
             {
-                string contents = JsonUtility.ToJson(data);
-                File.WriteAllText(path, contents);
-                Debug.Log("[Success]: Arquivo JSON salvo com sucesso em: " + path);
+                string json = JsonUtility.ToJson(data);
+                File.WriteAllText(path, json);
             }
-            catch (System.Exception ex)
+            catch (Exception)
             {
-                Debug.Log($"[Exception]: Erro ao salvar arquivo JSON: {ex.Message}");
+                throw new Exception($"[Exception]: Erro ao salvar arquivo JSON: {path}");
+            }
+        }
+
+        public static InventorySaveData LoadFile(string path)
+        {
+            try
+            {
+                string s = File.ReadAllText(path);
+                return JsonUtility.FromJson<InventorySaveData>(s);
+            }
+            catch (Exception)
+            {
+                throw new Exception($"[Exception]: Erro ao carregar arquivo JSON: {path}");
             }
         }
     }

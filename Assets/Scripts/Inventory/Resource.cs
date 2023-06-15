@@ -6,19 +6,6 @@ namespace Inventory
 {
     public static class Resource
     {
-        // public static List<string> GetPathFromObjects(List<ItemScriptableObject> inventory)
-        // {
-        //     List<string> resources = new List<string>();
-        //
-        //     foreach (ItemScriptableObject item in inventory)
-        //     {
-        //         string path = AssetDatabase.GetAssetPath(item);
-        //         resources.Add(path);
-        //     }
-        //
-        //     return resources;
-        // }
-
         public static List<ItemScriptableObject> GetObjectsFromPath(string[] paths)
         {
             List<ItemScriptableObject> inventory = new List<ItemScriptableObject>();
