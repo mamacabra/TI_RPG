@@ -4,14 +4,13 @@ namespace Database
     {
         public static readonly string[] INITIAL =
         {
-            "Items/SwordTiny/Item_SwordTiny",
-            "Items/SwordBig/Item_SwordBig",
+            "Items/Initial/SwordTiny/Item_SwordTiny",
+            "Items/Initial/Ring/Item_Ring",
         };
 
         public static readonly string[] ENEMY_WORM =
         {
-            "Items/SwordTiny/Item_SwordTiny",
-            "Items/SwordBig/Item_SwordBig",
+            "Items/Enemies/Enemy1/Item_SwordTiny",
         };
     }
 }
