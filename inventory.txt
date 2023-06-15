@@ -1,0 +1,1 @@
+{"inventory":["Items/Initial/SwordTiny/Item_SwordTiny","Items/Initial/Ring/Item_Ring"]}

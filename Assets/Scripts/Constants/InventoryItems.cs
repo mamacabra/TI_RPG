@@ -1,14 +1,14 @@
-namespace Database
+namespace Constants
 {
-    public static class InventoryItens
+    public static class InventoryItems
     {
-        public static readonly string[] INITIAL =
+        public static readonly string[] Initial =
         {
             "Items/Initial/SwordTiny/Item_SwordTiny",
             "Items/Initial/Ring/Item_Ring",
         };
 
-        public static readonly string[] ENEMY_WORM =
+        public static readonly string[] EnemyWorm =
         {
             "Items/Enemies/Enemy1/Item_SwordTiny",
         };
