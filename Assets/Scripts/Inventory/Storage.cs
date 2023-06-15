@@ -6,7 +6,7 @@ using Utilities;
 
 namespace Inventory
 {
-    public class Storage
+    public static class Storage
     {
         public static void SaveInventory(string[] items)
         {
