@@ -7,29 +7,19 @@ namespace Inventory.Resource
 {
     public class ResourceSample : MonoBehaviour
     {
-        public TMP_Text textMesh;
-
-        public List<string> paths;
-        public List<ItemScriptableObject> inventory;
-        public List<ItemScriptableObject> inventoryLoaded;
+        [SerializeField] private TMP_Text textMesh;
+        [SerializeField] private List<ItemScriptableObject> inventory;
 
         private void OnMouseUp()
         {
-            // paths = Parser.GetPathFromObjects(inventory);
+            string[] paths = Database.InventoryItens.Initial;
+            inventory = Resource.GetObjectsFromPath(paths);
 
-            paths = new List<string>
-            {
-                "Items/SwordTiny/Item_SwordTiny",
-                "Items/SwordBig/Item_SwordBig",
-            };
-
-            inventoryLoaded = Resource.GetObjectsFromPath(paths);
             textMesh.text = "";
-
-            foreach (var item in inventoryLoaded)
+            foreach (var item in inventory)
             {
-                textMesh.text += item.name + "\n";
                 Debug.Log(item.name);
+                textMesh.text += item.name + "\n";
             }
         }
     }

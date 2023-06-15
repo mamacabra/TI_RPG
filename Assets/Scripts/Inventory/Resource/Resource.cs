@@ -19,7 +19,7 @@ namespace Inventory.Resource
         //     return resources;
         // }
 
-        public static List<ItemScriptableObject> GetObjectsFromPath(List<string> paths)
+        public static List<ItemScriptableObject> GetObjectsFromPath(string[] paths)
         {
             List<ItemScriptableObject> inventory = new List<ItemScriptableObject>();
 
