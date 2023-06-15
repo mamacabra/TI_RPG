@@ -7,6 +7,7 @@ namespace Combat
     {
         public string name;
         [TextArea] public string description;
+        public string resourcePath;
 
         [Space]
         public Sprite sprite;
