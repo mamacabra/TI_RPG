@@ -8,18 +8,31 @@ namespace Inventory
 {
     public static class Storage
     {
-        public static void SaveInventory(string[] items)
+        public static void SaveInventory(string[] pathList, string filePath = Constants.SaveFile.Inventory)
         {
-            InventorySaveData saveData = new InventorySaveData(items);
-            JsonStorage.SaveFile(saveData, Constants.SaveFile.Inventory);
+            InventorySaveData saveData = new InventorySaveData(pathList);
+            JsonStorage.SaveFile(saveData, filePath);
         }
 
-        public static List<ItemScriptableObject> LoadInventory()
+        public static void SaveInventory(List<ItemScriptableObject> items, string filePath = Constants.SaveFile.Inventory)
+        {
+            string[] pathList = new string[items.Count];
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                pathList[i] = items[i].resourcePath;
+            }
+
+            InventorySaveData saveData = new InventorySaveData(pathList);
+            JsonStorage.SaveFile(saveData, filePath);
+        }
+
+        public static List<ItemScriptableObject> LoadInventory(string filePath = Constants.SaveFile.Inventory)
         {
             try
             {
                 // TODO: JsonStorage.LoadFile<InventorySaveData>(Constants.SaveFile.Inventory);
-                InventorySaveData inventorySaveData = JsonStorage.LoadFile(Constants.SaveFile.Inventory);
+                InventorySaveData inventorySaveData = JsonStorage.LoadFile(filePath);
                 return GetItemsFromPath(inventorySaveData.items);
             }
             catch (Exception)
@@ -28,11 +41,11 @@ namespace Inventory
             }
         }
 
-        private static List<ItemScriptableObject> GetItemsFromPath(string[] paths)
+        private static List<ItemScriptableObject> GetItemsFromPath(string[] pathList)
         {
             List<ItemScriptableObject> inventory = new List<ItemScriptableObject>();
 
-            foreach(string path in paths)
+            foreach(string path in pathList)
             {
                 ItemScriptableObject item = Resources.Load<ItemScriptableObject>(path);
 
