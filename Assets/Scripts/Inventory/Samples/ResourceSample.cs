@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using Combat;
+using Constants;
 using TMPro;
 using UnityEngine;
 
-namespace Inventory.Resource
+namespace Inventory.Samples
 {
     public class ResourceSample : MonoBehaviour
     {
@@ -12,7 +13,7 @@ namespace Inventory.Resource
 
         private void OnMouseUp()
         {
-            string[] paths = Database.InventoryItens.Initial;
+            string[] paths = InventoryItems.Initial;
             inventory = Resource.GetObjectsFromPath(paths);
 
             textMesh.text = "";

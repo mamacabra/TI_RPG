@@ -1,6 +1,6 @@
-namespace Database
+namespace Constants
 {
-    public static class InventoryItens
+    public static class InventoryItems
     {
         public static readonly string[] Initial =
         {

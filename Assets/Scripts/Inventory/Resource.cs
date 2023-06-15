@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Combat;
 using UnityEngine;
 
-namespace Inventory.Resource
+namespace Inventory
 {
     public static class Resource
     {

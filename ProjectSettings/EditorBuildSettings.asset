@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Samples/SampleSaveInventory.unity
+    path: Assets/Scenes/Samples/SampleInventoryLoadResource.unity
     guid: 4c770cc08d9ae342a8e317c35068fd10
   - enabled: 1
     path: Assets/Scenes/Samples/SampleMap.unity
