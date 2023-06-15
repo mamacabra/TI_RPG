@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Rig_Human|Idle
+      name: Idle
       takeName: Rig_Human|Idle
       internalID: 1457403244342639174
       firstFrame: 0
-      lastFrame: 80
+      lastFrame: 85
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
