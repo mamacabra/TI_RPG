@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapCanvasController : MonoBehaviour
 {
@@ -33,6 +34,10 @@ public class MapCanvasController : MonoBehaviour
         MapManager.Instance.OnCanClick();
     }
 
+    public void BackToMenu()
+    {
+        Transition.instance.TransitionScenes(SceneNames.Menu, LoadSceneMode.Single, true, false);
+    }
     public void ShowCombatPanel(bool state)
     {
         // Combat.SetActive(state);

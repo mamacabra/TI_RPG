@@ -27,7 +27,7 @@ public class MenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        Transition.instance.TransitionScenes(SceneNames.SampleMap, LoadSceneMode.Single, true);
+        Transition.instance.TransitionScenes(SceneNames.SampleMap, LoadSceneMode.Single, true, false);
     }
     public void SetScreenActive(string p)
     {

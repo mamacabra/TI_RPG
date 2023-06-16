@@ -62,7 +62,7 @@ public class Transition : MonoBehaviour
         transition.DOFade(0, hideTransitionTime).OnComplete(()=>{transition.gameObject.SetActive(false);});
     }
 
-    public void TransitionScenes(SceneNames sceneName,LoadSceneMode mode,bool load)
+    public void TransitionScenes(SceneNames sceneName,LoadSceneMode mode,bool load, bool callAction)
     {
         ShowTransition();
         StartCoroutine(Transition());
@@ -76,11 +76,14 @@ public class Transition : MonoBehaviour
                 yield return null;
             }
 
-            if(load)
-                EndTransitionLoad?.Invoke();
-            else
-                EndTransitionUnload?.Invoke();
-            
+            if (callAction)
+            {
+                if (load)
+                    EndTransitionLoad?.Invoke();
+                else
+                    EndTransitionUnload?.Invoke();
+            }
+
             yield return new WaitForSeconds(hideTransitionTime);
             HideTransition();
         }

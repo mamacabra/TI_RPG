@@ -96,40 +96,47 @@ public class MapManager : MonoBehaviour
 
     public void CheckIsland()
     {
-        //Fade e camera
+        //camera
+        SceneNames n = SceneNames.SampleCombat;
+        Action<bool> action = null;
         if (lastMp.typeOfIsland == TypeOfIsland.StoreOrForge || lastMp.typeOfIsland == TypeOfIsland.Camp)
         {
-            // Time.timeScale = 0;
+           
             ZoomCamera();
-            StartCoroutine(WaitToCheckIsland(SceneNames.SampleInventory));
-            ShowPanel?.Invoke(true);
+          
+           n = SceneNames.SampleInventory;
+           action =  ShowPanel;
 
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
-            //map.SetActive(false);
+           
             ZoomCamera();
-            StartCoroutine(WaitToCheckIsland(lastMp.GetScene));
-            ShowCombatPanel?.Invoke(true);
+           
+            n = lastMp.GetScene;
+            action =  ShowCombatPanel;
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
             ZoomCamera();
-            StartCoroutine(WaitToCheckIsland(SceneNames.SampleCombat));
+           
+            n = SceneNames.SampleCombat;
             EndGame = true;
-            ShowCombatPanel?.Invoke(true);
+            action = ShowCombatPanel;
         }
         else
         {
             OnCanClick();
         }
 
-        IEnumerator WaitToCheckIsland(SceneNames scene)
+        currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
+        Transition.instance.TransitionScenes(n,LoadSceneMode.Additive, true, true);
+
+        StartCoroutine(WaitToShowPanel());
+        IEnumerator WaitToShowPanel()
         {
-            yield return new WaitUntil(() => zoomCamOver);
-            currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
-            //yield return new WaitForSeconds(0.1f);
-            Transition.instance.TransitionScenes(scene,LoadSceneMode.Additive, true);
+            yield return new WaitForSeconds(1f);
+            action?.Invoke(true);
         }
     }
 
@@ -162,7 +169,7 @@ public class MapManager : MonoBehaviour
     public void UnloadScenes(bool isCombatScene)
     {
         SceneNames s = isCombatScene ?lastMp.GetScene : SceneNames.SampleInventory;
-        Transition.instance.TransitionScenes(s,LoadSceneMode.Additive, false);
+        Transition.instance.TransitionScenes(s,LoadSceneMode.Additive, false, true);
        
         
         if (EndGame)
@@ -183,7 +190,7 @@ public class MapManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Transition.instance.TransitionScenes(SceneNames.SampleMap,LoadSceneMode.Single, true);
+        Transition.instance.TransitionScenes(SceneNames.SampleMap,LoadSceneMode.Single, true, false);
         Time.timeScale = 1;
     }
 }
