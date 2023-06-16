@@ -30,7 +30,7 @@ public class MapNodeTest : MonoBehaviour
 
     private LineRenderer lineRenderer1, lineRenderer2;
 
-    [SerializeField] private string combatScene;
+    [SerializeField] private SceneNames combatScene;
 
 
     private void Awake()
@@ -74,5 +74,5 @@ public class MapNodeTest : MonoBehaviour
         this.parent.Add(parent);
     }
 
-    public string GetScene => combatScene;
+    public SceneNames GetScene => combatScene;
 }

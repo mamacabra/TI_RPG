@@ -27,15 +27,25 @@ public class MenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleMap");
+        Transition.instance.TransitionScenes(SceneNames.SampleMap, LoadSceneMode.Single, true);
     }
     public void SetScreenActive(string p)
     {
-        foreach (var s in panels)
-            s.panel.SetActive(false);
+        Transition.instance.ShowTransition();
 
-        GameObject gPanel = panels.Find(c => c.panelName == p).panel;
-        gPanel.SetActive(true);
+        StartCoroutine(WaitToHideTransition());
+        IEnumerator WaitToHideTransition()
+        {
+            yield return new WaitForSeconds(1f);
+            
+            foreach (var s in panels)
+                s.panel.SetActive(false);
+            
+            GameObject gPanel = panels.Find(c => c.panelName == p).panel;
+            gPanel.SetActive(true);
+            
+            Transition.instance.HideTransition();
+        }
     }
     public void QuitGame()
     {
