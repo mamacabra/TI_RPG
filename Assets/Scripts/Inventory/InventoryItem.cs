@@ -6,6 +6,7 @@ using Combat;
 
 public class InventoryItem : MonoBehaviour
 {
+    public int id;
     public Image itemImage;
     public ItemScriptableObject itemSO;
 }

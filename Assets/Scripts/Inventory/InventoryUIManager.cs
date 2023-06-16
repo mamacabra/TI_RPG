@@ -38,23 +38,26 @@ public class InventoryUIManager : MonoBehaviour
 
     [Header("Chest")]
     [SerializeField] List<ItemScriptableObject> chest;
-    [SerializeField] List<ItemScriptableObject> char1;
-    [SerializeField] List<ItemScriptableObject> char2;
-    [SerializeField] List<ItemScriptableObject> char3;
+    [SerializeField] List<ItemScriptableObject> char1 = new();
+    [SerializeField] List<ItemScriptableObject> char2 = new();
+    [SerializeField] List<ItemScriptableObject> char3 = new();
     [SerializeField] List<Button> itensButtons;
 
 
     private void Start()
     {
+        chest = Storage.LoadInventory();
+        char1 = Storage.LoadHeroInventory(1);
+        char2 = Storage.LoadHeroInventory(2);
+        char3 = Storage.LoadHeroInventory(3);
         ScreensSetActive(false);
         CharacterButtonsFunction();
         DeckToggleFunction();
         CharacterSlotFunction();
-        chest = Storage.LoadInventory();
-        CharacterButtons(0);
         LoadChest();
         ItemButtonFunction();
         LoadCards();
+        CharacterButtons(0);
     }
 
     #region  Adding Listeners
@@ -70,6 +73,75 @@ public class InventoryUIManager : MonoBehaviour
         charactersModels[(int)currentCharacter].SetActive(false);
         currentCharacter = (Characters)buttonIndex;
         characterSlot.SetActive(true);
+        switch (currentCharacter)
+        {
+            case Characters.CHARACTER1:
+                {
+                    int i = 0;
+                    foreach (var itemSlot in characterSlots)
+                    {
+                        InventoryItem inventoryItem = itemSlot.GetComponent<InventoryItem>();
+                        if (char1.Count > i)
+                        {
+                            inventoryItem.itemImage.sprite = char1[i].sprite;
+                            inventoryItem.itemSO = char1[i];
+                            inventoryItem.id = i;
+                        }
+                        else
+                        {
+                            inventoryItem.itemImage.sprite = null;
+                            inventoryItem.itemSO = null;
+                            inventoryItem.id = -1;
+                        }
+                        i++;
+                    }
+                    break;
+                }
+            case Characters.CHARACTER2:
+                {
+                    int i = 0;
+                    foreach (var itemSlot in characterSlots)
+                    {
+                        InventoryItem inventoryItem = itemSlot.GetComponent<InventoryItem>();
+                        if (char2.Count > i)
+                        {
+                            inventoryItem.itemImage.sprite = char2[i].sprite;
+                            inventoryItem.itemSO = char2[i];
+                            inventoryItem.id = i;
+                        }
+                        else
+                        {
+                            inventoryItem.itemImage.sprite = null;
+                            inventoryItem.itemSO = null;
+                            inventoryItem.id = -1;
+                        }
+                        i++;
+                    }
+                    break;
+                }
+            case Characters.CHARACTER3:
+                {
+                    int i = 0;
+                    foreach (var itemSlot in characterSlots)
+                    {
+                        InventoryItem inventoryItem = itemSlot.GetComponent<InventoryItem>();
+                        if (char3.Count > i)
+                        {
+                            inventoryItem.itemImage.sprite = char3[i].sprite;
+                            inventoryItem.itemSO = char3[i];
+                            inventoryItem.id = i;
+                        }
+                        else
+                        {
+                            inventoryItem.itemImage.sprite = null;
+                            inventoryItem.itemSO = null;
+                            inventoryItem.id = -1;
+                        }
+                        i++;
+                    }
+                    break;
+                }
+        }
         charactersModels[buttonIndex].SetActive(true);
     }
 
@@ -83,9 +155,40 @@ public class InventoryUIManager : MonoBehaviour
     }
     private void CharacterSlotButtons(Button slot)
     {
+        if (!itemView.activeInHierarchy)
+        {
+            itemView.SetActive(true);
+        }
+        else
+        {
+            InventoryItem item = slot.GetComponent<InventoryItem>();
+            if (item.itemImage.sprite != null)
+            {
+                switch (currentCharacter)
+                {
+                    case Characters.CHARACTER1:
+                        char1.Remove(item.itemSO);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == item.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        item.itemImage.sprite = null;
+                        break;
+                    case Characters.CHARACTER2:
+                        char2.Remove(item.itemSO);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == item.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        item.itemImage.sprite = null;
+                        break;
+                    case Characters.CHARACTER3:
+                        char3.Remove(item.itemSO);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == item.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        item.itemImage.sprite = null;
+                        break;
+                    default: break;
+                }
 
-        itemView.SetActive(true);
+            }
+            LoadCards();
+        }
         currentSlot = slot;
+
     }
 
 
@@ -111,8 +214,34 @@ public class InventoryUIManager : MonoBehaviour
         if (currentSlot)
         {
             InventoryItem inventoryItem = currentSlot.GetComponent<InventoryItem>();
+            if (inventoryItem.itemImage.sprite != null)
+            {
+                switch (currentCharacter)
+                {
+                    case Characters.CHARACTER1:
+                        char1.Remove(inventoryItem.itemSO);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == inventoryItem.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        inventoryItem.itemImage.sprite = null;
+                        break;
+                    case Characters.CHARACTER2:
+                        char2.Remove(inventoryItem.itemSO);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == inventoryItem.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        inventoryItem.itemImage.sprite = null;
+                        break;
+                    case Characters.CHARACTER3:
+                        char3.Remove(inventoryItem.itemSO);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == inventoryItem.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        inventoryItem.itemImage.sprite = null;
+                        break;
+                    default: break;
+                }
+                inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
+                inventoryItem.itemSO = refItem.itemSO;
+                inventoryItem.id = refItem.id;
+            }
             inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
             inventoryItem.itemSO = refItem.itemSO;
+            inventoryItem.id = refItem.id;
             refItem.gameObject.SetActive(false);
 
             switch (currentCharacter)
@@ -147,12 +276,15 @@ public class InventoryUIManager : MonoBehaviour
 
     private void LoadChest()
     {
+        int j = 0;
         foreach (var i in chest)
         {
             InventoryItem item = Instantiate(itemPrefab, itemView.transform.GetChild(0).GetChild(0)).GetComponent<InventoryItem>();
             itensButtons.Add(item.GetComponent<Button>());
             item.itemImage.sprite = i.sprite;
             item.itemSO = i;
+            item.id = j;
+            j++;
         }
     }
     private void LoadCards()

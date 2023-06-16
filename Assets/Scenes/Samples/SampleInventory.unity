@@ -8308,6 +8308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfeeec5af5522e46863e341e9910876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   itemImage: {fileID: 415428899}
   itemSO: {fileID: 0}
 --- !u!1 &8221637711112337128
@@ -8826,6 +8827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfeeec5af5522e46863e341e9910876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   itemImage: {fileID: 70833613}
   itemSO: {fileID: 0}
 --- !u!114 &8221637711728860996
@@ -9422,8 +9424,8 @@ MonoBehaviour:
   - {fileID: 955379161}
   - {fileID: 1679778998}
   characterSlots:
-  - {fileID: 8221637711724704108}
   - {fileID: 8221637711103639951}
+  - {fileID: 8221637711724704108}
   - {fileID: 8221637712236784139}
   currentSlot: {fileID: 0}
   characterSlotsImage:
@@ -9439,6 +9441,9 @@ MonoBehaviour:
   deckView: {fileID: 8221637711814439998}
   deckToggle: {fileID: 8221637710989923758}
   chest: []
+  char1: []
+  char2: []
+  char3: []
   itensButtons: []
 --- !u!114 &8221637712236784132
 MonoBehaviour:
@@ -9576,6 +9581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfeeec5af5522e46863e341e9910876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   itemImage: {fileID: 128934912}
   itemSO: {fileID: 0}
 --- !u!114 &8221637712416812480
