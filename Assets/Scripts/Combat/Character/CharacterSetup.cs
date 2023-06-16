@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Combat
@@ -12,14 +13,32 @@ namespace Combat
     {
         [Header("Character Observers")]
         [SerializeField] private HealthBar healthBar;
+        [SerializeField] private int characterId;
         [SerializeField] private CharacterType characterType = CharacterType.Hero;
+        [SerializeField] private int characterMaxHealth = 10;
+        [SerializeField] private int characterMaxActionPoints = 3;
         [SerializeField] public ItemScriptableObject[] items = new ItemScriptableObject[4];
 
         private void Start()
         {
+            GetInventory();
             SetupBoxCollider();
             SetupMember();
             SetupCharacter();
+        }
+
+        private void GetInventory()
+        {
+            if (characterType != CharacterType.Hero) return;
+
+            List<ItemScriptableObject> inventory = Inventory.Storage.LoadHeroInventory(characterId);
+
+            int i = 0;
+            foreach (var item in inventory.Where(item => item is not null))
+            {
+                items[i] = item;
+                i++;
+            }
         }
 
         private void SetupBoxCollider()
@@ -51,6 +70,8 @@ namespace Combat
         {
             Character character = GetComponent<Character>();
             character.Type = characterType;
+            character.maxHealth = characterMaxHealth;
+            character.maxActionPoints = characterMaxActionPoints;
 
             character.Subscribe(healthBar);
             character.Subscribe(CombatManager.Instance);

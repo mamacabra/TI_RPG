@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Combat
 {
@@ -10,9 +11,9 @@ namespace Combat
 
         public CharacterType Type { get; set; }
         public int Health { get; private set; }
-        public const int MaxHealth = 10;
+        public int maxHealth = 10;
         public int ActionPoints { get; private set; }
-        private const int MaxActionPoints = 3;
+        public int maxActionPoints = 3;
 
         public bool IsDead => Health <= 0;
         public bool HasActionPoints => ActionPoints > 0;
@@ -35,8 +36,8 @@ namespace Combat
 
         private void CharacterCreated()
         {
-            Health = MaxHealth;
-            ActionPoints = MaxActionPoints;
+            Health = maxHealth;
+            ActionPoints = maxActionPoints;
 
             foreach (var observer in _observers)
                 observer.OnCharacterCreated(this);
@@ -59,7 +60,7 @@ namespace Combat
         public void ReceiveHealing(int value = 1)
         {
             Health += value;
-            if (Health > MaxHealth) Health = MaxHealth;
+            if (Health > maxHealth) Health = maxHealth;
 
             CharacterUpdated();
         }
@@ -84,7 +85,7 @@ namespace Combat
 
         public void ResetActionPoints()
         {
-            ActionPoints = MaxActionPoints;
+            ActionPoints = maxActionPoints;
             CharacterUpdated();
         }
     }

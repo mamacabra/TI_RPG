@@ -55,6 +55,25 @@ namespace Inventory
             }
         }
 
+        public static List<ItemScriptableObject> LoadHeroInventory(int heroId = 0, string filePath = Constants.SaveFile.Inventory)
+        {
+            try
+            {
+                InventorySaveData inventorySaveData = JsonStorage.LoadFile<InventorySaveData>(filePath);
+
+                return heroId switch
+                {
+                    1 => GetItemsFromPath(inventorySaveData.itemsHero1),
+                    2 => GetItemsFromPath(inventorySaveData.itemsHero2),
+                    _ => GetItemsFromPath(inventorySaveData.itemsHero3)
+                };
+            }
+            catch (Exception)
+            {
+                return GetItemsFromPath(Constants.InventoryItems.Initial);
+            }
+        }
+
         private static List<ItemScriptableObject> GetItemsFromPath(string[] pathList)
         {
             List<ItemScriptableObject> inventory = new List<ItemScriptableObject>();

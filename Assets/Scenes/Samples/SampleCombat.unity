@@ -201,6 +201,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
+      propertyPath: characterMaxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
       propertyPath: items.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 33fb5c3d4960aca4e97530c78992988b,
@@ -269,6 +274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249129027000262853, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3249129027471702974, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
@@ -2544,6 +2554,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 903421426}
     m_Modifications:
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: characterMaxHealth
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
       propertyPath: items.Array.data[2]
@@ -10033,6 +10048,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
+      propertyPath: characterMaxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
       propertyPath: items.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: a148290bfbc8d954a8e74d735e7a5a98,
@@ -10106,6 +10126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249129027000262853, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3249129027471702974, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
