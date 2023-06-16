@@ -17340,7 +17340,7 @@ MonoBehaviour:
   - {fileID: 8084982037598931564}
   typeOfIsland: 5
   Depth: 0
-  combatScene: 
+  combatScene: 0
 --- !u!208 &8084982036767327346
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17376,7 +17376,7 @@ MonoBehaviour:
   - {fileID: 8084982037837973349}
   typeOfIsland: 0
   Depth: 6
-  combatScene: SampleCombat_cavern_2
+  combatScene: 3
 --- !u!208 &8084982036931931071
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17425,7 +17425,7 @@ MonoBehaviour:
   - {fileID: 8084982038137515579}
   typeOfIsland: 0
   Depth: 3
-  combatScene: SampleCombat_cavern_1
+  combatScene: 3
 --- !u!208 &8084982036934223258
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17475,7 +17475,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 0
   Depth: 4
-  combatScene: SampleCombat_cavern_1
+  combatScene: 4
 --- !u!208 &8084982037116460461
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17524,7 +17524,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 0
   Depth: 5
-  combatScene: SampleCombat_cavern_2
+  combatScene: 4
 --- !u!208 &8084982037147810571
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17573,7 +17573,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 2
   Depth: 5
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982037259511631
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17623,7 +17623,7 @@ MonoBehaviour:
   - {fileID: 8084982037546102521}
   typeOfIsland: 0
   Depth: 6
-  combatScene: SampleCombat_cavern_2
+  combatScene: 4
 --- !u!208 &8084982037343189847
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17672,7 +17672,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   Depth: 7
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982037546102522
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17721,7 +17721,7 @@ MonoBehaviour:
   - {fileID: 8084982038648821539}
   typeOfIsland: 3
   Depth: 1
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982037598931565
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17783,7 +17783,7 @@ MonoBehaviour:
   - {fileID: 8084982037928765623}
   typeOfIsland: 2
   Depth: 3
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982037725995787
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17832,7 +17832,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   Depth: 7
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982037837973350
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17881,7 +17881,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 2
   Depth: 4
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982037928765624
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17931,7 +17931,7 @@ MonoBehaviour:
   - {fileID: 8084982037259511630}
   typeOfIsland: 2
   Depth: 4
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982038137515580
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17980,7 +17980,7 @@ MonoBehaviour:
   childrens: []
   typeOfIsland: 1
   Depth: 8
-  combatScene: 
+  combatScene: 2
 --- !u!208 &8084982038251465660
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18029,7 +18029,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 0
   Depth: 5
-  combatScene: SampleCombat_cavern_2
+  combatScene: 4
 --- !u!208 &8084982038256117758
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18078,7 +18078,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 2
   Depth: 5
-  combatScene: 
+  combatScene: 5
 --- !u!208 &8084982038350002881
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18128,7 +18128,7 @@ MonoBehaviour:
   - {fileID: 8084982037725995786}
   typeOfIsland: 0
   Depth: 2
-  combatScene: SampleCombat
+  combatScene: 2
 --- !u!208 &8084982038648821540
 NavMeshObstacle:
   m_ObjectHideFlags: 0
