@@ -1737,7 +1737,7 @@ PrefabInstance:
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
       propertyPath: characterMaxHealth
-      value: 33
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
