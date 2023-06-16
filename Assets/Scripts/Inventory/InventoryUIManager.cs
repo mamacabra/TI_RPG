@@ -47,9 +47,9 @@ public class InventoryUIManager : MonoBehaviour
     private void Start()
     {
         chest = Storage.LoadInventory();
-        char1 = Storage.LoadHeroInventory(1);
-        char2 = Storage.LoadHeroInventory(2);
-        char3 = Storage.LoadHeroInventory(3);
+        // char1 = Storage.LoadHeroInventory(1);
+        // char2 = Storage.LoadHeroInventory(2);
+        // char3 = Storage.LoadHeroInventory(3);
         ScreensSetActive(false);
         CharacterButtonsFunction();
         DeckToggleFunction();

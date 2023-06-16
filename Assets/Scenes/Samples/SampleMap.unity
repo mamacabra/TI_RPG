@@ -4991,9 +4991,8 @@ MonoBehaviour:
     tutorial: 1
     arrowActive: 1
     buttonActive: 0
-    text: "Esse \xE9 o local onde voc\xEA poder\xE1 montar seu baralho, sentimos
-      muito mas ele ainda est\xE1 em desenvolvimento :/ ent\xE3o voc\xEA n\xE3o conseguira
-      fazer nada de significativo aqui, por enquanto, volte para o mapa."
+    text: "Esse \xE9 o local onde voc\xEA poder\xE1 montar seu baralho, monte como
+      quiser e depois volte para o mapa dica o martelo \xE9 bem forte.."
     arrowPosition: {x: -845, y: 400, z: 0}
     arrowRotation: {x: 0, y: 0, z: 90}
   - pauseGame: 0
