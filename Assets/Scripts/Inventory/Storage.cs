@@ -31,8 +31,7 @@ namespace Inventory
         {
             try
             {
-                // TODO: JsonStorage.LoadFile<InventorySaveData>(Constants.SaveFile.Inventory);
-                InventorySaveData inventorySaveData = JsonStorage.LoadFile(filePath);
+                InventorySaveData inventorySaveData = JsonStorage.LoadFile<InventorySaveData>(filePath);
                 return GetItemsFromPath(inventorySaveData.items);
             }
             catch (Exception)

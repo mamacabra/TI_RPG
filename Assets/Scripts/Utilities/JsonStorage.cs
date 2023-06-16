@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using Inventory;
 using UnityEngine;
 
 namespace Utilities
@@ -20,12 +19,12 @@ namespace Utilities
             }
         }
 
-        public static InventorySaveData LoadFile(string path)
+        public static T LoadFile<T>(string path)
         {
             try
             {
                 string s = File.ReadAllText(path);
-                return JsonUtility.FromJson<InventorySaveData>(s);
+                return JsonUtility.FromJson<T>(s);
             }
             catch (Exception)
             {
