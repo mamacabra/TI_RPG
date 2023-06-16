@@ -2713,6 +2713,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
+      propertyPath: characterId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
+        type: 3}
       propertyPath: items.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 794a508f263e54844bb5f507572656cd,
@@ -2986,6 +2991,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 903421426}
     m_Modifications:
+    - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
+        type: 3}
+      propertyPath: characterId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: items.Array.data[0]

@@ -32,7 +32,7 @@ namespace Combat
             if (characterType != CharacterType.Hero) return;
 
             List<ItemScriptableObject> inventory = Inventory.Storage.LoadHeroInventory(characterId);
-
+            items = new ItemScriptableObject[4];
             int i = 0;
             foreach (var item in inventory.Where(item => item is not null))
             {

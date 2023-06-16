@@ -83,6 +83,7 @@ public class InventoryUIManager : MonoBehaviour
     }
     private void CharacterSlotButtons(Button slot)
     {
+
         itemView.SetActive(true);
         currentSlot = slot;
     }
@@ -112,6 +113,7 @@ public class InventoryUIManager : MonoBehaviour
             InventoryItem inventoryItem = currentSlot.GetComponent<InventoryItem>();
             inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
             inventoryItem.itemSO = refItem.itemSO;
+            refItem.gameObject.SetActive(false);
 
             switch (currentCharacter)
             {
@@ -120,7 +122,25 @@ public class InventoryUIManager : MonoBehaviour
                 case Characters.CHARACTER3: char3.Add(inventoryItem.itemSO); break;
                 default: break;
             }
+            // foreach (var item in chest)
+            // {
+            //     Debug.Log(item.name);
+            // }
+            // foreach (var item in char1)
+            // {
+            //     Debug.Log(item.name);
+            // }
+            // foreach (var item in char2)
+            // {
+            //     Debug.Log(item.name);
+            // }
+            // foreach (var item in char3)
+            // {
+            //     Debug.Log(item.name);
+            // }
+
             Storage.SaveInventory(chest, char1, char2, char3);
+            LoadCards();
         }
     }
     #endregion
@@ -139,7 +159,7 @@ public class InventoryUIManager : MonoBehaviour
     {
         for (int i = 0; i < deckView.transform.GetChild(0).GetChild(0).childCount; i++)
         {
-            Destroy(deckView.transform.GetChild(0).GetChild(0).GetChild(i));
+            Destroy(deckView.transform.GetChild(0).GetChild(0).GetChild(i).gameObject);
         }
         foreach (var i in char1)
         {

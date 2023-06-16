@@ -22,23 +22,23 @@ namespace Inventory
             {
                 pathList[i] = items[i].resourcePath;
             }
-            pathList = new string[itemsHero1.Count];
+            string[] pathList1 = new string[itemsHero1.Count];
             for (int i = 0; i < itemsHero1.Count; i++)
             {
-                pathList[i] = itemsHero1[i].resourcePath;
+                pathList1[i] = itemsHero1[i].resourcePath;
             }
-            pathList = new string[itemsHero2.Count];
+            string[] pathList2 = new string[itemsHero2.Count];
             for (int i = 0; i < itemsHero2.Count; i++)
             {
-                pathList[i] = itemsHero2[i].resourcePath;
+                pathList2[i] = itemsHero2[i].resourcePath;
             }
-            pathList = new string[itemsHero3.Count];
+            string[] pathList3 = new string[itemsHero3.Count];
             for (int i = 0; i < itemsHero3.Count; i++)
             {
-                pathList[i] = itemsHero3[i].resourcePath;
+                pathList3[i] = itemsHero3[i].resourcePath;
             }
 
-            InventorySaveData saveData = new InventorySaveData(pathList);
+            InventorySaveData saveData = new InventorySaveData(pathList, pathList1, pathList2, pathList3);
             JsonStorage.SaveFile(saveData, filePath);
         }
 
