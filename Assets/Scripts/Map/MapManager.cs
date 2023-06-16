@@ -30,6 +30,20 @@ public class MapManager : MonoBehaviour
     [HideInInspector] public bool shipArrived = false;
     [HideInInspector] public bool zoomCamOver = false;
 
+    private void OnEnable()
+    {
+        Transition.instance.EndTransitionLoad += EndTransitionLoad;
+        Transition.instance.EndTransitionUnload += EndTransitionUnload;
+    }
+
+    private void OnDisable()
+    {
+        
+        if(!Transition.instance) return;
+        Transition.instance.EndTransitionLoad -= EndTransitionLoad;
+        Transition.instance.EndTransitionUnload -= EndTransitionUnload;
+    }
+
     public bool CheckIndex(GameObject island)
     {
         ShipIndex++;
@@ -82,46 +96,63 @@ public class MapManager : MonoBehaviour
 
     public void CheckIsland()
     {
-        //Fade e camera
+        //camera
+        SceneNames n = SceneNames.SampleCombat;
+        Action<bool> action = null;
         if (lastMp.typeOfIsland == TypeOfIsland.StoreOrForge || lastMp.typeOfIsland == TypeOfIsland.Camp)
         {
-            // Time.timeScale = 0;
+           
             ZoomCamera();
-            StartCoroutine(WaitToCheckIsland("SampleInventory"));
-            ShowPanel?.Invoke(true);
+          
+           n = SceneNames.SampleInventory;
+           action =  ShowPanel;
 
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
-            //map.SetActive(false);
+           
             ZoomCamera();
-            StartCoroutine(WaitToCheckIsland(lastMp.GetScene));
-            ShowCombatPanel?.Invoke(true);
+           
+            n = lastMp.GetScene;
+            action =  ShowCombatPanel;
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
             ZoomCamera();
-            StartCoroutine(WaitToCheckIsland("SampleCombat"));
+           
+            n = SceneNames.SampleCombat;
             EndGame = true;
-            ShowCombatPanel?.Invoke(true);
+            action = ShowCombatPanel;
         }
         else
         {
             OnCanClick();
         }
 
-        IEnumerator WaitToCheckIsland(string scene)
+        currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
+        Transition.instance.TransitionScenes(n,LoadSceneMode.Additive, true, true);
+
+        StartCoroutine(WaitToShowPanel());
+        IEnumerator WaitToShowPanel()
         {
-            yield return new WaitUntil(() => zoomCamOver);
-            currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
-            yield return new WaitForSeconds(0.1f);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-            asyncLoad.completed += delegate { DoNextTutorial(); };
+            yield return new WaitForSeconds(1f);
+            action?.Invoke(true);
+        }
+    }
+
+    public void EndTransitionLoad()
+    {
+        StartCoroutine(WaitToNextTutorial());
+        IEnumerator WaitToNextTutorial()
+        {
+            DoNextTutorial();
             zoomCamOver = false;
             yield return new WaitForSeconds(1f);
             ResetCameras?.Invoke();
         }
     }
+    
+    
     private void DoNextTutorial()
     {
         if (TutorialManager.instance.isTutorial) { TutorialManager.instance?.DoNextTutorial(); }
@@ -137,8 +168,10 @@ public class MapManager : MonoBehaviour
 
     public void UnloadScenes(bool isCombatScene)
     {
-        AsyncOperation asyncUnload = isCombatScene ? SceneManager.UnloadSceneAsync(lastMp.GetScene) : SceneManager.UnloadSceneAsync("SampleInventory");
-        asyncUnload.completed += delegate { DoNextTutorial(); currentEventSystem.SetActive(true); globalVolume.SetActive(true); directionalLight.SetActive(true); };
+        SceneNames s = isCombatScene ?lastMp.GetScene : SceneNames.SampleInventory;
+        Transition.instance.TransitionScenes(s,LoadSceneMode.Additive, false, true);
+       
+        
         if (EndGame)
         {
             Time.timeScale = 0;
@@ -150,9 +183,14 @@ public class MapManager : MonoBehaviour
         //map.SetActive(true);
     }
 
+    public void EndTransitionUnload()
+    {
+        DoNextTutorial(); currentEventSystem.SetActive(true); globalVolume.SetActive(true); directionalLight.SetActive(true);
+    }
+
     public void RestartGame()
     {
-        SceneManager.LoadScene("SampleMap");
+        Transition.instance.TransitionScenes(SceneNames.SampleMap,LoadSceneMode.Single, true, false);
         Time.timeScale = 1;
     }
 }
