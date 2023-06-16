@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Espada Pequena
   description: 
-  sprite: {fileID: 0}
+  resourcePath: Items/Initial/SwordTiny/Item_SwordTiny
+  sprite: {fileID: 21300000, guid: 789e518168d493d4396ec984b1b5bcb3, type: 3}
   cards:
   - {fileID: 11400000, guid: e5726066758c24d73a2ef2bf8671c3d2, type: 2}
   - {fileID: 11400000, guid: 2c5bc73bbc0a20e3a9a3b30aaf0d8e19, type: 2}
