@@ -8526,10 +8526,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
+      propertyPath: characterMaxHealth
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
       propertyPath: items.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: ab2f1efaa75260f86be70f26d57d1345,
         type: 2}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: characterMaxActionPoints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3249129026970048053, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8599,6 +8609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249129027000262853, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3249129027471702974, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
@@ -18128,6 +18143,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 794a508f263e54844bb5f507572656cd,
         type: 2}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: characterMaxActionPoints
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3249129026970048053, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -44196,10 +44216,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
+      propertyPath: characterMaxHealth
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
       propertyPath: items.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 33fb5c3d4960aca4e97530c78992988b,
         type: 2}
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: characterMaxActionPoints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3249129026970048053, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
