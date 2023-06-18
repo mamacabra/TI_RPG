@@ -48,18 +48,18 @@ public class Transition : MonoBehaviour
 
     private void Start()
     {
-        transition.DOFade(0, 0).OnComplete(()=>{transition.gameObject.SetActive(false);});
+        transition.material.DOFade(0, 0).OnComplete(()=>{transition.gameObject.SetActive(false);});
     }
 
     public void ShowTransition()
     {
         transition.gameObject.SetActive(true);
-        transition.DOFade(1, showTransitionTime);
+        transition.material.DOFade(1, showTransitionTime);
     }
     
     public void HideTransition()
     {
-        transition.DOFade(0, hideTransitionTime).OnComplete(()=>{transition.gameObject.SetActive(false);});
+        transition.material.DOFade(0, hideTransitionTime).OnComplete(()=>{transition.gameObject.SetActive(false);});
     }
 
     public void TransitionScenes(SceneNames sceneName,LoadSceneMode mode,bool load, bool callAction)
