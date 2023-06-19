@@ -29,6 +29,9 @@ public class Transition : MonoBehaviour
 
     public event Action EndTransitionLoad;
     public event Action EndTransitionUnload;
+    
+    //tirar dps, foi so pro teste da prof
+    private bool transitionEnded;
 
     private void Awake()
     {
@@ -48,18 +51,24 @@ public class Transition : MonoBehaviour
 
     private void Start()
     {
+        transitionEnded = false;
         transition.material.DOFade(0, 0).OnComplete(()=>{transition.gameObject.SetActive(false);});
     }
 
     public void ShowTransition()
     {
+        transitionEnded = false;
         transition.gameObject.SetActive(true);
         transition.material.DOFade(1, showTransitionTime);
     }
     
     public void HideTransition()
     {
-        transition.material.DOFade(0, hideTransitionTime).OnComplete(()=>{transition.gameObject.SetActive(false);});
+        transition.material.DOFade(0, hideTransitionTime).OnComplete(() =>
+        {
+            transition.gameObject.SetActive(false);
+            transitionEnded = true;
+        });
     }
 
     public void TransitionScenes(SceneNames sceneName,LoadSceneMode mode,bool load, bool callAction)
