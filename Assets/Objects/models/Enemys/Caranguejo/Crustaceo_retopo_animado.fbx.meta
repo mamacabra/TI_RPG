@@ -3,7 +3,17 @@ guid: 3e28fc4ff018874419a137fed1cbcc6b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Normal_Map
+    second: {fileID: 2100000, guid: 4073d91ad41f3e84aba941c3c630d1c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Normal_Map_armadura
+    second: {fileID: 2100000, guid: 56a4cae08327c9141aab0afc04273880, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -75,7 +85,7 @@ ModelImporter:
     importLights: 1
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
@@ -99,8 +109,8 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
-    normalCalculationMode: 4
+    tangentImportMode: 2
+    normalCalculationMode: 2
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
