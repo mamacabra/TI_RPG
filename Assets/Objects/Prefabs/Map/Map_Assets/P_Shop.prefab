@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6293348376003971054
+--- !u!1 &1075981330661753604
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6637645789530152276}
-  - component: {fileID: 7760401691156992753}
-  - component: {fileID: 5500737313028711995}
+  - component: {fileID: 406863271429904830}
+  - component: {fileID: 3605884014804899355}
+  - component: {fileID: 1580300720599753425}
   m_Layer: 0
-  m_Name: ArvorePiramide1
+  m_Name: P_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6637645789530152276
+--- !u!4 &406863271429904830
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293348376003971054}
-  m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
-  m_LocalPosition: {x: -2.5715, y: 100.513405, z: 17.5312}
+  m_GameObject: {fileID: 1075981330661753604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7760401691156992753
+--- !u!33 &3605884014804899355
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293348376003971054}
-  m_Mesh: {fileID: -4834030454595009727, guid: 081faf22f6be0d34b965f8cef68d4129, type: 3}
---- !u!23 &5500737313028711995
+  m_GameObject: {fileID: 1075981330661753604}
+  m_Mesh: {fileID: 6756416398015742718, guid: 0d630eb93129b984ba4bc796fabe10c2, type: 3}
+--- !u!23 &1580300720599753425
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293348376003971054}
+  m_GameObject: {fileID: 1075981330661753604}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
