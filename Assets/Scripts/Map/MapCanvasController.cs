@@ -44,7 +44,17 @@ public class MapCanvasController : MonoBehaviour
     }
     public void BackToMapButton(bool isCombatScene)
     {
-        MapManager.Instance.UnloadScenes(isCombatScene);
+        if (InventoryUIManager.instance)
+        {
+            if (InventoryUIManager.instance.VerifyCards())
+            {
+                MapManager.Instance.UnloadScenes(isCombatScene);
+            }
+        }
+        else
+        {
+            MapManager.Instance.UnloadScenes(isCombatScene);
+        }
     }
 
     public void ShowEndGamePanel()
