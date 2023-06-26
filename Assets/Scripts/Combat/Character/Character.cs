@@ -23,10 +23,10 @@ namespace Combat
             _observers = new List<ICharacterObserver>();
         }
 
-        private void Start()
-        {
-            CharacterCreated();
-        }
+        // private void Start()
+        // {
+        //     CharacterCreated();
+        // }
 
         public void Subscribe(ICharacterObserver observer)
         {
@@ -34,7 +34,7 @@ namespace Combat
                 _observers.Add(observer);
         }
 
-        private void CharacterCreated()
+        public void CharacterCreated()
         {
             Health = maxHealth;
             ActionPoints = maxActionPoints;

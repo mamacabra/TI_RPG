@@ -75,6 +75,7 @@ namespace Combat
 
             character.Subscribe(healthBar);
             character.Subscribe(CombatManager.Instance);
+            character.CharacterCreated();
         }
     }
 }
