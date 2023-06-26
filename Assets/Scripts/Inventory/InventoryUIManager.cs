@@ -105,13 +105,13 @@ public class InventoryUIManager : MonoBehaviour
                         {
                             inventoryItem.itemImage.sprite = char1[i].sprite;
                             inventoryItem.itemSO = char1[i];
-                            inventoryItem.id = i;
+                            inventoryItem.cardName = char1[i].name;
                         }
                         else
                         {
                             inventoryItem.itemImage.sprite = null;
                             inventoryItem.itemSO = null;
-                            inventoryItem.id = -1;
+                            inventoryItem.cardName = "";
                         }
                         i++;
                     }
@@ -127,13 +127,13 @@ public class InventoryUIManager : MonoBehaviour
                         {
                             inventoryItem.itemImage.sprite = char2[i].sprite;
                             inventoryItem.itemSO = char2[i];
-                            inventoryItem.id = i;
+                            inventoryItem.cardName = char2[i].name;
                         }
                         else
                         {
                             inventoryItem.itemImage.sprite = null;
                             inventoryItem.itemSO = null;
-                            inventoryItem.id = -1;
+                            inventoryItem.cardName = "";
                         }
                         i++;
                     }
@@ -149,13 +149,13 @@ public class InventoryUIManager : MonoBehaviour
                         {
                             inventoryItem.itemImage.sprite = char3[i].sprite;
                             inventoryItem.itemSO = char3[i];
-                            inventoryItem.id = i;
+                            inventoryItem.cardName = char3[i].name;
                         }
                         else
                         {
                             inventoryItem.itemImage.sprite = null;
                             inventoryItem.itemSO = null;
-                            inventoryItem.id = -1;
+                            inventoryItem.cardName = "";
                         }
                         i++;
                     }
@@ -193,7 +193,7 @@ public class InventoryUIManager : MonoBehaviour
                         if ((char1.Count - 1) > 0)
                         {
                             char1.Remove(item.itemSO);
-                            itensButtons.Find(i => i.GetComponent<InventoryItem>().id == item.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                            itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == item.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
                             item.itemImage.sprite = null;
                         }
                         else
@@ -205,7 +205,7 @@ public class InventoryUIManager : MonoBehaviour
                         if ((char2.Count - 1) > 0)
                         {
                             char2.Remove(item.itemSO);
-                            itensButtons.Find(i => i.GetComponent<InventoryItem>().id == item.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                            itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == item.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
                             item.itemImage.sprite = null;
                         }
                         else
@@ -217,7 +217,7 @@ public class InventoryUIManager : MonoBehaviour
                         if ((char3.Count - 1) > 0)
                         {
                             char3.Remove(item.itemSO);
-                            itensButtons.Find(i => i.GetComponent<InventoryItem>().id == item.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                            itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == item.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
                             item.itemImage.sprite = null;
                         }
                         else
@@ -270,28 +270,28 @@ public class InventoryUIManager : MonoBehaviour
                 {
                     case Characters.CHARACTER1:
                         char1.Remove(inventoryItem.itemSO);
-                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == inventoryItem.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
                         inventoryItem.itemImage.sprite = null;
                         break;
                     case Characters.CHARACTER2:
                         char2.Remove(inventoryItem.itemSO);
-                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == inventoryItem.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
                         inventoryItem.itemImage.sprite = null;
                         break;
                     case Characters.CHARACTER3:
                         char3.Remove(inventoryItem.itemSO);
-                        itensButtons.Find(i => i.GetComponent<InventoryItem>().id == inventoryItem.GetComponent<InventoryItem>().id).gameObject.SetActive(true);
+                        itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
                         inventoryItem.itemImage.sprite = null;
                         break;
                     default: break;
                 }
                 inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
                 inventoryItem.itemSO = refItem.itemSO;
-                inventoryItem.id = refItem.id;
+                inventoryItem.cardName = refItem.cardName;
             }
             inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
             inventoryItem.itemSO = refItem.itemSO;
-            inventoryItem.id = refItem.id;
+            inventoryItem.cardName = refItem.cardName;
             refItem.gameObject.SetActive(false);
 
             switch (currentCharacter)
@@ -343,19 +343,17 @@ public class InventoryUIManager : MonoBehaviour
 
     private void LoadChest()
     {
-        int j = 0;
         foreach (var i in chest)
         {
             InventoryItem item = Instantiate(itemPrefab, itemView.transform.GetChild(0).GetChild(0)).GetComponent<InventoryItem>();
             itensButtons.Add(item.GetComponent<Button>());
             item.itemImage.sprite = i.sprite;
             item.itemSO = i;
-            item.id = j;
-            if (char1.Contains(i) || char2.Contains(i) || char3.Contains(i))
-            {
-                item.gameObject.SetActive(false);
-            }
-            j++;
+            item.cardName = i.name;
+            // if (char1.Contains(i) || char2.Contains(i) || char3.Contains(i))
+            // {
+            //     item.gameObject.SetActive(false);
+            // }
         }
     }
     private void LoadCards()
