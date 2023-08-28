@@ -12,6 +12,8 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public ItemScriptableObject itemSO;
     public bool itemSlot;
 
+    public Button button;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!itemSlot)

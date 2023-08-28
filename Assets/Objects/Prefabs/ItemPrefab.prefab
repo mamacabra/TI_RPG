@@ -265,9 +265,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfeeec5af5522e46863e341e9910876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  cardName: 
   itemImage: {fileID: 9019822834635721277}
   itemSO: {fileID: 0}
+  itemSlot: 0
+  button: {fileID: 2596558325683428549}
 --- !u!114 &2596558325683428549
 MonoBehaviour:
   m_ObjectHideFlags: 0

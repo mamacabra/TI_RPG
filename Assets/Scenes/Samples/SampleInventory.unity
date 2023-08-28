@@ -8767,6 +8767,7 @@ MonoBehaviour:
   itemImage: {fileID: 415428899}
   itemSO: {fileID: 0}
   itemSlot: 1
+  button: {fileID: 8221637711103639951}
 --- !u!1 &8221637711112337128
 GameObject:
   m_ObjectHideFlags: 0
@@ -9289,6 +9290,7 @@ MonoBehaviour:
   itemImage: {fileID: 70833613}
   itemSO: {fileID: 0}
   itemSlot: 1
+  button: {fileID: 8221637711724704108}
 --- !u!114 &8221637711728860996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9886,18 +9888,18 @@ MonoBehaviour:
   - {fileID: 955379161}
   - {fileID: 1679778998}
   characterSlots:
-  - {fileID: 8221637711103639951}
-  - {fileID: 8221637711724704108}
-  - {fileID: 8221637712236784139}
+  - {fileID: 8221637711103639952}
+  - {fileID: 8221637711724704109}
+  - {fileID: 8221637712236784140}
   currentSlot: {fileID: 0}
   characterSlotsImage:
   - {fileID: 70833613}
   - {fileID: 415428899}
   - {fileID: 128934912}
   itemView: {fileID: 8221637710926291044}
-  itemPrefab: {fileID: 4098591749116706885, guid: 97cbb6cd3ce4da241aa550e8deedc226,
+  itemPrefab: {fileID: 4887169123967213020, guid: 97cbb6cd3ce4da241aa550e8deedc226,
     type: 3}
-  cardPrefab: {fileID: 4738774627019854598, guid: 5f862446dd4bfbb4d9ce1c5c894e25c9,
+  cardPrefab: {fileID: 3484631597959318798, guid: 5f862446dd4bfbb4d9ce1c5c894e25c9,
     type: 3}
   characterSlot: {fileID: 8221637711112337128}
   cardsPreview: {fileID: 1504598859}
@@ -10050,6 +10052,7 @@ MonoBehaviour:
   itemImage: {fileID: 128934912}
   itemSO: {fileID: 0}
   itemSlot: 1
+  button: {fileID: 8221637712236784139}
 --- !u!114 &8221637712416812480
 MonoBehaviour:
   m_ObjectHideFlags: 0

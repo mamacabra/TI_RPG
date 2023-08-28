@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI.Extensions;
 using UnityEngine;
-using Unity.Mathematics;
+using System;
 
 public class VFXLine : MonoBehaviour
 {
@@ -72,7 +72,7 @@ public class VFXLine : MonoBehaviour
             lineRenderer.Points = pointList.ToArray();
 
         }
-        lineRenderer.material.mainTextureOffset = new Vector2(math.frac(-Time.time), 0);
+        lineRenderer.material.mainTextureOffset = new Vector2(-Time.time - (float)Math.Truncate(Time.time), 0);
     }
     public void SetColor(Color _color)
     {
