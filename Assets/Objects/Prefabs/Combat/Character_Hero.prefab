@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddc17cb67267534e89eb8830bade26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  maxActionPoints: 3
 --- !u!114 &4365047481005768708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4870278787400740746}
+  characterId: 0
   characterType: 0
+  characterMaxHealth: 10
+  characterMaxActionPoints: 3
   items:
   - {fileID: 0}
   - {fileID: 0}
@@ -307,6 +312,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8666624862866306673}
     m_Modifications:
+    - target: {fileID: 248427131681265163, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 992854937504740663, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 992854937504740663, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fd1513ebb17e211439db9ddf1dd66b62,
+        type: 3}
     - target: {fileID: 4859025499316984772, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_Pivot.x
@@ -412,15 +433,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984773, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984773, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4859025499316984775, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984775, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984778, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4859025499316984778, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984779, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4859025499580991472, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
@@ -431,6 +477,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MaxValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025499580991474, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025500472224110, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4859025500472224111, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
@@ -447,12 +503,29 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'HP: 10'
       objectReference: {fileID: 0}
+    - target: {fileID: 4859025500865190922, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025501262516338, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6923806029124590275, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_Text
       value: 'AP: 3'
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9106561769643972416, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4859025499316984773, guid: ff51e3a5ce5216d4298b1a5d2785f3db, type: 3}
+    - {fileID: 4859025499316984778, guid: ff51e3a5ce5216d4298b1a5d2785f3db, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff51e3a5ce5216d4298b1a5d2785f3db, type: 3}
 --- !u!114 &4870278787400740746 stripped
 MonoBehaviour:

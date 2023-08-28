@@ -43600,7 +43600,7 @@ PrefabInstance:
         type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1498710804}
     - target: {fileID: 2380078497135853615, guid: 6c4c2c6286a4b184f9038c5c0f844f5a,
         type: 3}
       propertyPath: mousePos

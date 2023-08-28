@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddc17cb67267534e89eb8830bade26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  maxActionPoints: 3
 --- !u!114 &6649583363406379902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 7337875571501358945}
+  characterId: 0
   characterType: 1
+  characterMaxHealth: 10
+  characterMaxActionPoints: 3
   items:
   - {fileID: 0}
   - {fileID: 0}
@@ -226,6 +231,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3249129027000262852}
     m_Modifications:
+    - target: {fileID: 248427131681265163, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4859025499316984772, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_Pivot.x
@@ -336,6 +346,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984775, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4859025499316984778, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -350,6 +365,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MaxValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025499580991474, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025500472224110, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4859025500472224111, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
@@ -366,10 +391,25 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'HP: 10'
       objectReference: {fileID: 0}
+    - target: {fileID: 4859025500865190922, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859025501262516338, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6923806029124590275, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_Text
       value: 'AP: 3'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106561769643972416, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff51e3a5ce5216d4298b1a5d2785f3db, type: 3}

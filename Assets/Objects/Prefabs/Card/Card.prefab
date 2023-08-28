@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7921508692412813912}
   - component: {fileID: 2566894641213676476}
   - component: {fileID: 1891958371655281311}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7811068925932419927}
   - component: {fileID: 6318526178333587}
   - component: {fileID: 5988738460122039169}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 7962553944795582362}
   - component: {fileID: 7164928021230855394}
   - component: {fileID: 124817352169275082}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 5892210817972250925}
   - component: {fileID: 4780529911540267998}
   - component: {fileID: 3816446411262611512}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 2495223224789387654}
   - component: {fileID: 6337962773146890573}
   - component: {fileID: 5266808146357500615}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 2737534711744573956}
   - component: {fileID: 4447438715092577896}
   - component: {fileID: 7869478189841799432}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 7071171303202763136}
   - component: {fileID: 5819612746511601957}
   - component: {fileID: 8836999551880634528}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 3355050492001765301}
   - component: {fileID: 6579545557524791404}
   - component: {fileID: 5322033276694602224}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 2199257143392034266}
   - component: {fileID: 613241583715841650}
   - component: {fileID: 1366233916502915211}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 6444331351396401685}
   - component: {fileID: 7499582309153194613}
   - component: {fileID: 272993124423357002}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 859580850451881372}
   - component: {fileID: 7489993742698071956}
   - component: {fileID: 8512895985150892014}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 5695098903448048650}
   - component: {fileID: 5908555581384534125}
   - component: {fileID: 1400592677774916989}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
