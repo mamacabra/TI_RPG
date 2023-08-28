@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - DropZone
+  - Island
   layers:
   - Default
   - TransparentFX

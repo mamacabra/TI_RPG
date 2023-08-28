@@ -27,7 +27,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject map;
 
     [HideInInspector] public bool EndGame;
-    [HideInInspector] public bool shipArrived = false;
+     public bool shipArrived = false;
     [HideInInspector] public bool zoomCamOver = false;
 
     private void OnEnable()
@@ -168,6 +168,7 @@ public class MapManager : MonoBehaviour
 
     public void UnloadScenes(bool isCombatScene)
     {
+        Debug.Log("UnloadScenes");
         SceneNames s = isCombatScene ?lastMp.GetScene : SceneNames.SampleInventory;
         Transition.instance.TransitionScenes(s,LoadSceneMode.Additive, false, true);
        
@@ -190,6 +191,7 @@ public class MapManager : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log("RestartGame");
         Transition.instance.TransitionScenes(SceneNames.SampleMap,LoadSceneMode.Single, true, false);
         Time.timeScale = 1;
     }
