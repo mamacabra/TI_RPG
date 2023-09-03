@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class ShipDeslocation : MonoBehaviour
 {
@@ -11,14 +12,13 @@ public class ShipDeslocation : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Camera cam;
     private bool canClick = true;
-    public bool shipIsMoving;
+
+    [SerializeField] private Transform cubeLookAt;
 
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         cam = FindObjectOfType<Camera>();
-
-        shipIsMoving = false;
     }
 
     private void OnEnable()
@@ -40,48 +40,55 @@ public class ShipDeslocation : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             Vector3 pos;
+            bool island = false;
             if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
             {
+                MapManager.Instance.shipArrived = false;
                 if (raycastHit.collider.gameObject.name != "GroundNavMesh")
                 {
-                    pos = raycastHit.collider.gameObject.transform.position;
+                    pos = raycastHit.collider.gameObject.transform.GetChild(0).position;
                     bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
+                    island = true;
                     if (!canNavegate)
                     {
                         CanClick();
                         return;
                     }
-                    
-                    Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z);
-                    MapManager.Instance.MoveCamera(pCam, pos);
                 }
                 else
                 {
                     CanClick();
                     pos = raycastHit.point;
                 }
-              
-                Navegate(pos);
+
+                cubeLookAt.position = pos;
+                Navegate(pos, island);
                 return;
             }
             CanClick();
         }
-
-        if (shipIsMoving)
-        {
-            if (!navMeshAgent.hasPath)
-            {
-                MapManager.Instance.shipArrived = true;
-                shipIsMoving = false;
-            }
-        }
     }
 
-    void Navegate(Vector3 pos)
+    void Navegate(Vector3 pos, bool island)
     {
-        MapManager.Instance.shipArrived = false;
-        shipIsMoving = true;
-        navMeshAgent.SetDestination(pos);
+        transform.DOLocalRotate(cubeLookAt.transform.localPosition, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
+        {
+            navMeshAgent.SetDestination(pos);
+            StartCoroutine(WaitToCheckIsland());
+        });
+        
+        IEnumerator WaitToCheckIsland()
+        {
+            yield return new WaitUntil(() => Vector3.Distance(pos, transform.position) <= 0.2f);
+            yield return new WaitForSeconds(0.5f);
+            MapManager.Instance.shipArrived = true;
+            if (island)
+            {
+                Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y,
+                    cam.transform.position.z);
+                MapManager.Instance.MoveCamera(pCam, pos);
+            }
+        }
     }
 
     public void CanClick()
