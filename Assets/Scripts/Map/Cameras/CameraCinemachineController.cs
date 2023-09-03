@@ -30,16 +30,18 @@ public class CameraCinemachineController : MonoBehaviour
     void MoveCamera(Vector3 pos, Vector3 islandPos)
     {
         currentIslandPos = islandPos;
-        cameraDeslocate.gameObject.SetActive(true);
-        cameraZoomIsland.gameObject.SetActive(false);
-        cameraDeslocate.transform.DOMove(pos,1.25f).SetEase(Ease.Linear).OnComplete( ()=>
+        /*cameraDeslocate.gameObject.SetActive(true);
+        cameraZoomIsland.gameObject.SetActive(false);*/
+        StartCoroutine(WaitToCheckIsland());
+       /* cameraDeslocate.transform.DOMove(currentIslandPos,1.25f).SetEase(Ease.Linear).OnComplete( ()=>
         {
             StartCoroutine(WaitToCheckIsland());
-        });
+        });*/
         IEnumerator WaitToCheckIsland()
         {
-            yield return new WaitUntil(() =>  MapManager.Instance.shipArrived);
-            yield return new WaitForSeconds(0.1f);
+           
+            MapManager.Instance.shipArrived = true;
+            yield return new WaitForSeconds(0.25f);
             //Botar o fade aqui ou durante o "checkIsland"
             MapManager.Instance.CheckIsland();
         }
