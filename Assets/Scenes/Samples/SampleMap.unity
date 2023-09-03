@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17977768, g: 0.2250987, b: 0.30658653, a: 1}
+  m_IndirectSpecularColor: {r: 0.17977792, g: 0.22509903, b: 0.30658698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -325,6 +325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide1_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
@@ -1153,7 +1158,7 @@ GameObject:
   - component: {fileID: 186810692}
   - component: {fileID: 186810694}
   - component: {fileID: 186810693}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,6 +1406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide1_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
@@ -2150,7 +2160,7 @@ GameObject:
   - component: {fileID: 289607358}
   - component: {fileID: 289607360}
   - component: {fileID: 289607359}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,6 +2403,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide3
       objectReference: {fileID: 0}
+    - target: {fileID: 9200815281165935876, guid: 63b74c3849b1e0c4dbac984058d43e2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b74c3849b1e0c4dbac984058d43e2f, type: 3}
 --- !u!4 &289755848 stripped
@@ -2543,6 +2558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide1_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
@@ -2704,6 +2724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide3_2
       objectReference: {fileID: 0}
+    - target: {fileID: 9200815281165935876, guid: 63b74c3849b1e0c4dbac984058d43e2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b74c3849b1e0c4dbac984058d43e2f, type: 3}
 --- !u!4 &326544870 stripped
@@ -2855,6 +2880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Camp
       objectReference: {fileID: 0}
+    - target: {fileID: 1295077670590109251, guid: c16f678383857a34382b76831e2e1a0b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1923840694676360441, guid: c16f678383857a34382b76831e2e1a0b,
         type: 3}
       propertyPath: m_RootOrder
@@ -2924,6 +2954,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.963
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345265196678801701, guid: c16f678383857a34382b76831e2e1a0b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c16f678383857a34382b76831e2e1a0b, type: 3}
@@ -3028,7 +3063,7 @@ GameObject:
   - component: {fileID: 396788323}
   - component: {fileID: 396788325}
   - component: {fileID: 396788324}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3561,7 +3596,7 @@ GameObject:
   - component: {fileID: 423362998}
   - component: {fileID: 423363000}
   - component: {fileID: 423362999}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3733,7 +3768,7 @@ GameObject:
   - component: {fileID: 433982652}
   - component: {fileID: 433982654}
   - component: {fileID: 433982653}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4246,7 +4281,7 @@ GameObject:
   - component: {fileID: 504975566}
   - component: {fileID: 504975568}
   - component: {fileID: 504975567}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4418,6 +4453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
@@ -4791,6 +4831,7 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
+  shipIsMoving: 0
 --- !u!195 &592629258
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5125,6 +5166,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide1_3
       objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
       propertyPath: m_RootOrder
@@ -5415,10 +5461,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.223
       objectReference: {fileID: 0}
+    - target: {fileID: 706013074837523533, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
         type: 3}
       propertyPath: m_Name
       value: P_Shop_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533109266684315783, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bfadc5532c15d4daf2b3f88007f3a7, type: 3}
@@ -5433,7 +5494,7 @@ GameObject:
   - component: {fileID: 713171020}
   - component: {fileID: 713171022}
   - component: {fileID: 713171021}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5674,7 +5735,7 @@ GameObject:
   - component: {fileID: 760556370}
   - component: {fileID: 760556372}
   - component: {fileID: 760556371}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6217,10 +6278,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 706013074837523533, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
         type: 3}
       propertyPath: m_Name
       value: P_Shop_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533109266684315783, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bfadc5532c15d4daf2b3f88007f3a7, type: 3}
@@ -6235,7 +6311,7 @@ GameObject:
   - component: {fileID: 806973300}
   - component: {fileID: 806973302}
   - component: {fileID: 806973301}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6557,10 +6633,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.016
       objectReference: {fileID: 0}
+    - target: {fileID: 706013074837523533, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
         type: 3}
       propertyPath: m_Name
       value: P_Shop_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533109266684315783, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bfadc5532c15d4daf2b3f88007f3a7, type: 3}
@@ -6575,6 +6666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide1_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
@@ -7714,6 +7810,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide1_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
       propertyPath: m_RootOrder
@@ -8362,6 +8463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide3_3
       objectReference: {fileID: 0}
+    - target: {fileID: 9200815281165935876, guid: 63b74c3849b1e0c4dbac984058d43e2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b74c3849b1e0c4dbac984058d43e2f, type: 3}
 --- !u!4 &1163482622 stripped
@@ -8512,7 +8618,7 @@ GameObject:
   - component: {fileID: 1195698949}
   - component: {fileID: 1195698951}
   - component: {fileID: 1195698950}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8750,10 +8856,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 706013074837523533, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
         type: 3}
       propertyPath: m_Name
       value: P_Shop_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075981330661753604, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533109266684315783, guid: f8bfadc5532c15d4daf2b3f88007f3a7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bfadc5532c15d4daf2b3f88007f3a7, type: 3}
@@ -8768,6 +8889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
@@ -9037,6 +9163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArvorePiramide3_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200815281165935876, guid: 63b74c3849b1e0c4dbac984058d43e2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b74c3849b1e0c4dbac984058d43e2f, type: 3}
@@ -9404,9 +9535,9 @@ GameObject:
   - component: {fileID: 1297740717}
   - component: {fileID: 1297740716}
   - component: {fileID: 1297740715}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundNavMesh
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 95
@@ -9501,7 +9632,7 @@ GameObject:
   - component: {fileID: 1327927152}
   - component: {fileID: 1327927154}
   - component: {fileID: 1327927153}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10322,6 +10453,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide3_4
       objectReference: {fileID: 0}
+    - target: {fileID: 9200815281165935876, guid: 63b74c3849b1e0c4dbac984058d43e2f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b74c3849b1e0c4dbac984058d43e2f, type: 3}
 --- !u!4 &1434591124 stripped
@@ -10783,6 +10919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_Graveyard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867297868404197118, guid: a2795103982e244409c912af39e69815,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2795103982e244409c912af39e69815, type: 3}
@@ -11378,6 +11519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_Struct
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220142590049530648, guid: a306e826187c08d48b0bec108075a48d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a306e826187c08d48b0bec108075a48d, type: 3}
@@ -12247,7 +12393,7 @@ GameObject:
   - component: {fileID: 1657244165}
   - component: {fileID: 1657244167}
   - component: {fileID: 1657244166}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12605,7 +12751,7 @@ GameObject:
   - component: {fileID: 1691538461}
   - component: {fileID: 1691538463}
   - component: {fileID: 1691538462}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12978,6 +13124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_Graveyard_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867297868404197118, guid: a2795103982e244409c912af39e69815,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2795103982e244409c912af39e69815, type: 3}
@@ -13597,7 +13748,7 @@ GameObject:
   - component: {fileID: 1809733609}
   - component: {fileID: 1809733611}
   - component: {fileID: 1809733610}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13770,6 +13921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArvorePiramide1_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6293348376003971054, guid: 8d8f44d669960464e8d776187cbfcdd1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6637645789530152276, guid: 8d8f44d669960464e8d776187cbfcdd1,
         type: 3}
       propertyPath: m_RootOrder
@@ -13859,7 +14015,7 @@ GameObject:
   - component: {fileID: 1820337515}
   - component: {fileID: 1820337517}
   - component: {fileID: 1820337516}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14553,6 +14709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_Struct_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220142590049530648, guid: a306e826187c08d48b0bec108075a48d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a306e826187c08d48b0bec108075a48d, type: 3}
@@ -16994,7 +17155,7 @@ GameObject:
   - component: {fileID: 8084982038648821542}
   m_Layer: 3
   m_Name: Island_2
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17016,7 +17177,7 @@ GameObject:
   - component: {fileID: 8084982038350002882}
   m_Layer: 3
   m_Name: Island_11
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17038,7 +17199,7 @@ GameObject:
   - component: {fileID: 8084982038256117759}
   m_Layer: 3
   m_Name: Island_8
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17060,7 +17221,7 @@ GameObject:
   - component: {fileID: 8084982038251465661}
   m_Layer: 3
   m_Name: Island_17
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17082,7 +17243,7 @@ GameObject:
   - component: {fileID: 8084982038137515581}
   m_Layer: 3
   m_Name: Island_7
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17104,7 +17265,7 @@ GameObject:
   - component: {fileID: 8084982037928765625}
   m_Layer: 3
   m_Name: Island_6
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17126,7 +17287,7 @@ GameObject:
   - component: {fileID: 8084982037837973351}
   m_Layer: 3
   m_Name: Island_14
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17148,7 +17309,7 @@ GameObject:
   - component: {fileID: 8084982037725995788}
   m_Layer: 3
   m_Name: Island_4
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17171,7 +17332,7 @@ GameObject:
   - component: {fileID: 8084982037598931567}
   m_Layer: 3
   m_Name: Island_1
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17193,7 +17354,7 @@ GameObject:
   - component: {fileID: 8084982037546102523}
   m_Layer: 3
   m_Name: Island_15
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17215,7 +17376,7 @@ GameObject:
   - component: {fileID: 8084982037343189848}
   m_Layer: 3
   m_Name: Island_12
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17237,7 +17398,7 @@ GameObject:
   - component: {fileID: 8084982037259511632}
   m_Layer: 3
   m_Name: Island_9
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17259,7 +17420,7 @@ GameObject:
   - component: {fileID: 8084982037116460462}
   m_Layer: 3
   m_Name: Island_5
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17281,7 +17442,7 @@ GameObject:
   - component: {fileID: 8084982037147810572}
   m_Layer: 3
   m_Name: Island_10
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17303,7 +17464,7 @@ GameObject:
   - component: {fileID: 8084982036934223259}
   m_Layer: 3
   m_Name: Island_3
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17325,7 +17486,7 @@ GameObject:
   - component: {fileID: 8084982036931931072}
   m_Layer: 3
   m_Name: Island_16
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -17345,7 +17506,7 @@ GameObject:
   - component: {fileID: 8084982036767327346}
   m_Layer: 3
   m_Name: Island
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

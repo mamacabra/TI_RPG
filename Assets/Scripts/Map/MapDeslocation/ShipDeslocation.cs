@@ -11,11 +11,14 @@ public class ShipDeslocation : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Camera cam;
     private bool canClick = true;
+    public bool shipIsMoving;
 
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         cam = FindObjectOfType<Camera>();
+
+        shipIsMoving = false;
     }
 
     private void OnEnable()
@@ -35,19 +38,49 @@ public class ShipDeslocation : MonoBehaviour
         {
             canClick = false;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            Vector3 pos;
             if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
             {
-                Navegate(raycastHit.point);
+                if (raycastHit.collider.gameObject.name != "GroundNavMesh")
+                {
+                    pos = raycastHit.collider.gameObject.transform.position;
+                    bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
+                    if (!canNavegate)
+                    {
+                        CanClick();
+                        return;
+                    }
+                    
+                    Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z);
+                    MapManager.Instance.MoveCamera(pCam, pos);
+                }
+                else
+                {
+                    CanClick();
+                    pos = raycastHit.point;
+                }
+              
+                Navegate(pos);
+                return;
             }
-           
             CanClick();
-            
+        }
+
+        if (shipIsMoving)
+        {
+            if (!navMeshAgent.hasPath)
+            {
+                MapManager.Instance.shipArrived = true;
+                shipIsMoving = false;
+            }
         }
     }
 
     void Navegate(Vector3 pos)
     {
-        
+        MapManager.Instance.shipArrived = false;
+        shipIsMoving = true;
         navMeshAgent.SetDestination(pos);
     }
 
@@ -56,7 +89,7 @@ public class ShipDeslocation : MonoBehaviour
         canClick = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Island") && canClick)
         {
@@ -67,5 +100,5 @@ public class ShipDeslocation : MonoBehaviour
             MapManager.Instance.MoveCamera(pCam, other.transform.position);
             
         }
-    }
+    }*/
 }

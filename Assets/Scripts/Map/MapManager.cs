@@ -181,7 +181,6 @@ public class MapManager : MonoBehaviour
         }
 
         OnCanClick();
-        //map.SetActive(true);
     }
 
     public void EndTransitionUnload()
@@ -191,7 +190,6 @@ public class MapManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Debug.Log("RestartGame");
         Transition.instance.TransitionScenes(SceneNames.SampleMap,LoadSceneMode.Single, true, false);
         Time.timeScale = 1;
     }

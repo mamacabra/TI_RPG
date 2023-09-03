@@ -39,8 +39,8 @@ public class CameraCinemachineController : MonoBehaviour
         });*/
         IEnumerator WaitToCheckIsland()
         {
+            yield return new WaitUntil(()=>MapManager.Instance.shipArrived);
            
-            MapManager.Instance.shipArrived = true;
             yield return new WaitForSeconds(0.25f);
             //Botar o fade aqui ou durante o "checkIsland"
             MapManager.Instance.CheckIsland();
