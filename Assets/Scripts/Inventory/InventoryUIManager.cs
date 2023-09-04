@@ -83,7 +83,7 @@ public class InventoryUIManager : MonoBehaviour
     #region  Adding Listeners
     private void CharacterButtonsFunction()
     {
-        
+
         characterButtons[0].onClick.AddListener(() => { CharacterButtons(0); });
         characterButtons[1].onClick.AddListener(() => { CharacterButtons(1); });
         characterButtons[2].onClick.AddListener(() => { CharacterButtons(2); });
@@ -105,13 +105,15 @@ public class InventoryUIManager : MonoBehaviour
                         InventoryItem inventoryItem = itemSlot;
                         if (char1.Count > i)
                         {
+                            inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                             inventoryItem.itemImage.sprite = char1[i].sprite;
                             inventoryItem.itemSO = char1[i];
                             inventoryItem.cardName = char1[i].name;
                         }
                         else
                         {
-                            inventoryItem.itemImage.sprite = null;
+                            Color colorAlpha = new Color(0, 0, 0, 0);
+                            inventoryItem.itemImage.color = colorAlpha;
                             inventoryItem.itemSO = null;
                             inventoryItem.cardName = "";
                         }
@@ -127,13 +129,15 @@ public class InventoryUIManager : MonoBehaviour
                         InventoryItem inventoryItem = itemSlot;
                         if (char2.Count > i)
                         {
+                            inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                             inventoryItem.itemImage.sprite = char2[i].sprite;
                             inventoryItem.itemSO = char2[i];
                             inventoryItem.cardName = char2[i].name;
                         }
                         else
                         {
-                            inventoryItem.itemImage.sprite = null;
+                            Color colorAlpha = new Color(0, 0, 0, 0);
+                            inventoryItem.itemImage.color = colorAlpha;
                             inventoryItem.itemSO = null;
                             inventoryItem.cardName = "";
                         }
@@ -149,13 +153,15 @@ public class InventoryUIManager : MonoBehaviour
                         InventoryItem inventoryItem = itemSlot;
                         if (char3.Count > i)
                         {
+                            inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                             inventoryItem.itemImage.sprite = char3[i].sprite;
                             inventoryItem.itemSO = char3[i];
                             inventoryItem.cardName = char3[i].name;
                         }
                         else
                         {
-                            inventoryItem.itemImage.sprite = null;
+                            Color colorAlpha = new Color(0, 0, 0, 0);
+                            inventoryItem.itemImage.color = colorAlpha;
                             inventoryItem.itemSO = null;
                             inventoryItem.cardName = "";
                         }
@@ -203,7 +209,8 @@ public class InventoryUIManager : MonoBehaviour
                                 }
                             }
                             item1?.gameObject.SetActive(true);
-                            item.itemImage.sprite = null;
+                            // item.itemImage.sprite = null;
+                            item.itemImage.color = new Color(0, 0, 0, 0);
                         }
                         else
                         {
@@ -224,7 +231,8 @@ public class InventoryUIManager : MonoBehaviour
                                 }
                             }
                             item2?.gameObject.SetActive(true);
-                            item.itemImage.sprite = null;
+                            // item.itemImage.sprite = null;
+                            item.itemImage.color = new Color(0, 0, 0, 0);
                         }
                         else
                         {
@@ -245,7 +253,8 @@ public class InventoryUIManager : MonoBehaviour
                                 }
                             }
                             item3?.gameObject.SetActive(true);
-                            item.itemImage.sprite = null;
+                            // item.itemImage.sprite = null;
+                            item.itemImage.color = new Color(0, 0, 0, 0);
                         }
                         else
                         {
@@ -285,6 +294,7 @@ public class InventoryUIManager : MonoBehaviour
         {
             HideCardsPreview();
             InventoryItem inventoryItem = currentSlot;
+            Color colorAlpha = new Color(0, 0, 0, 0);
             if (inventoryItem.itemImage.sprite != null)
             {
                 switch (currentCharacter)
@@ -302,7 +312,7 @@ public class InventoryUIManager : MonoBehaviour
                         }
                         item1?.gameObject.SetActive(true);
                         //itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
-                        inventoryItem.itemImage.sprite = null;
+                        inventoryItem.itemImage.color = colorAlpha;
                         break;
                     case Characters.CHARACTER2:
                         char2.Remove(inventoryItem.itemSO);
@@ -317,7 +327,7 @@ public class InventoryUIManager : MonoBehaviour
                         }
                         item2?.gameObject.SetActive(true);
                         //itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
-                        inventoryItem.itemImage.sprite = null;
+                        inventoryItem.itemImage.color = colorAlpha;
                         break;
                     case Characters.CHARACTER3:
                         char3.Remove(inventoryItem.itemSO);
@@ -332,10 +342,11 @@ public class InventoryUIManager : MonoBehaviour
                         }
                         item3?.gameObject.SetActive(true);
                         //itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
-                        inventoryItem.itemImage.sprite = null;
+                        inventoryItem.itemImage.color = colorAlpha;
                         break;
                     default: break;
                 }
+                inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                 inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
                 inventoryItem.itemSO = refItem.itemSO;
                 inventoryItem.cardName = refItem.cardName;
