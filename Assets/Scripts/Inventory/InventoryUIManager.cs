@@ -83,12 +83,14 @@ public class InventoryUIManager : MonoBehaviour
     #region  Adding Listeners
     private void CharacterButtonsFunction()
     {
+        
         characterButtons[0].onClick.AddListener(() => { CharacterButtons(0); });
         characterButtons[1].onClick.AddListener(() => { CharacterButtons(1); });
         characterButtons[2].onClick.AddListener(() => { CharacterButtons(2); });
     }
     private void CharacterButtons(int buttonIndex)
     {
+        //AudioManager.audioManager.PlaySoundEffect("Menu/Click");
         itemView.SetActive(false);
         charactersModels[(int)currentCharacter].SetActive(false);
         currentCharacter = (Characters)buttonIndex;
@@ -175,6 +177,7 @@ public class InventoryUIManager : MonoBehaviour
     }
     private void CharacterSlotButtons(InventoryItem slot)
     {
+        //AudioManager.audioManager.PlaySoundEffect("InventoryEffects/SelectSlot");
         if (!itemView.activeInHierarchy)
         {
             itemView.SetActive(true);
@@ -277,6 +280,7 @@ public class InventoryUIManager : MonoBehaviour
     }
     private void ItemButton(InventoryItem refItem)
     {
+        //AudioManager.audioManager.PlaySoundEffect("InventoryEffects/PlaceItem");
         if (currentSlot)
         {
             HideCardsPreview();

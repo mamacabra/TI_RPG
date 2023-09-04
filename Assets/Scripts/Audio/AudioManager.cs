@@ -8,7 +8,18 @@ public class AudioManager : MonoBehaviour
     public bool isPlay;
     public static AudioManager audioManager;
 
+
+
+
     public FMODUnity.EventReference musicTest;
+    /*public FMODUnity.EventReference MenuClick;
+    public FMODUnity.EventReference SelectSlot;
+    public FMODUnity.EventReference PlaceItem;
+    public FMODUnity.EventReference EnterShop;*/
+
+
+
+
 
     private void Awake()
     {
@@ -29,6 +40,12 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(audioManager);
     }
     
+
+    public void PlaySoundEffect(string Effect)
+    {
+        RuntimeManager.PlayOneShot("event:/"+Effect);
+    }
+
     public void PlayBackGroundSong()
     {
         

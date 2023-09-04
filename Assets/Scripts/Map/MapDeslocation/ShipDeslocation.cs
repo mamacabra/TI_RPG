@@ -36,6 +36,7 @@ public class ShipDeslocation : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && canClick)
         {
+            AudioManager.audioManager.PlaySoundEffect("Map/ClickMap");
             canClick = false;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 

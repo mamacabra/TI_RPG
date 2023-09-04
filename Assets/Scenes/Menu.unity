@@ -979,6 +979,18 @@ MonoBehaviour:
           m_StringArgument: Initial_Screen
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8475575249450310349}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: CallSfx
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu/Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &409154586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,6 +1315,18 @@ MonoBehaviour:
           m_StringArgument: Initial_Screen
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8475575249450310349}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: CallSfx
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu/Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &488563484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,6 +1610,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8475575249450310349}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: CallSfx
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu/Click
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &903750429
@@ -2433,6 +2469,18 @@ MonoBehaviour:
           m_StringArgument: Credits_Screen
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8475575249450310349}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: CallSfx
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu/Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1248803883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2799,6 +2847,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8475575249450310349}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: CallSfx
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Menu/Click
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1578077347
@@ -3684,3 +3744,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110520565}
   m_CullTransparentMesh: 1
+--- !u!1001 &8475575249450310348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345325586931377174, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565019193266759096, guid: 546d1daa99497784da3b860a2ac70680,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 546d1daa99497784da3b860a2ac70680, type: 3}
+--- !u!114 &8475575249450310349 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8783653091889626901, guid: 546d1daa99497784da3b860a2ac70680,
+    type: 3}
+  m_PrefabInstance: {fileID: 8475575249450310348}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8cf390ca4fafff4c992d6546df91e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
