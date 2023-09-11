@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18285187, g: 0.22603515, b: 0.2923317, a: 1}
+  m_IndirectSpecularColor: {r: 0.18285164, g: 0.2260347, b: 0.29233104, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1712,7 +1712,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244036286
 GameObject:
@@ -4837,6 +4837,7 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
+  cubeLookAt: {fileID: 0}
 --- !u!195 &592629258
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10975,7 +10976,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553585062
 GameObject:
@@ -12501,7 +12502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1679408021 stripped
 Transform:
@@ -13167,6 +13168,125 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705701326}
   m_CullTransparentMesh: 1
+--- !u!1001 &1734840763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2071444881172404270, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071444881172404273, guid: 3b23da56900cf1946ac730d6d77cc871,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b23da56900cf1946ac730d6d77cc871, type: 3}
 --- !u!1 &1751113630
 GameObject:
   m_ObjectHideFlags: 0
@@ -14121,7 +14241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1825959502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14217,7 +14337,7 @@ RectTransform:
   - {fileID: 967333561}
   - {fileID: 1558968164}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18127,7 +18247,7 @@ MonoBehaviour:
   - {fileID: 8084982037598931564}
   typeOfIsland: 5
   Depth: 0
-  combatScene: 0
+  combatScene: 1
 --- !u!208 &8084982036767327346
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18163,7 +18283,7 @@ MonoBehaviour:
   - {fileID: 8084982037837973349}
   typeOfIsland: 0
   Depth: 6
-  combatScene: 3
+  combatScene: 4
 --- !u!208 &8084982036931931071
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18212,7 +18332,7 @@ MonoBehaviour:
   - {fileID: 8084982038137515579}
   typeOfIsland: 0
   Depth: 3
-  combatScene: 3
+  combatScene: 4
 --- !u!208 &8084982036934223258
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18262,7 +18382,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 0
   Depth: 4
-  combatScene: 4
+  combatScene: 5
 --- !u!208 &8084982037116460461
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18311,7 +18431,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 0
   Depth: 5
-  combatScene: 4
+  combatScene: 5
 --- !u!208 &8084982037147810571
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18360,7 +18480,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 2
   Depth: 5
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982037259511631
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18410,7 +18530,7 @@ MonoBehaviour:
   - {fileID: 8084982037546102521}
   typeOfIsland: 0
   Depth: 6
-  combatScene: 4
+  combatScene: 5
 --- !u!208 &8084982037343189847
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18459,7 +18579,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   Depth: 7
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982037546102522
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18508,7 +18628,7 @@ MonoBehaviour:
   - {fileID: 8084982038648821539}
   typeOfIsland: 3
   Depth: 1
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982037598931565
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18570,7 +18690,7 @@ MonoBehaviour:
   - {fileID: 8084982037928765623}
   typeOfIsland: 2
   Depth: 3
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982037725995787
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18619,7 +18739,7 @@ MonoBehaviour:
   - {fileID: 8084982038251465659}
   typeOfIsland: 2
   Depth: 7
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982037837973350
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18668,7 +18788,7 @@ MonoBehaviour:
   - {fileID: 8084982037147810570}
   typeOfIsland: 2
   Depth: 4
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982037928765624
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18718,7 +18838,7 @@ MonoBehaviour:
   - {fileID: 8084982037259511630}
   typeOfIsland: 2
   Depth: 4
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982038137515580
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18767,7 +18887,7 @@ MonoBehaviour:
   childrens: []
   typeOfIsland: 1
   Depth: 8
-  combatScene: 2
+  combatScene: 3
 --- !u!208 &8084982038251465660
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18816,7 +18936,7 @@ MonoBehaviour:
   - {fileID: 8084982036931931070}
   typeOfIsland: 0
   Depth: 5
-  combatScene: 4
+  combatScene: 5
 --- !u!208 &8084982038256117758
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18865,7 +18985,7 @@ MonoBehaviour:
   - {fileID: 8084982037343189846}
   typeOfIsland: 2
   Depth: 5
-  combatScene: 5
+  combatScene: 6
 --- !u!208 &8084982038350002881
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18915,7 +19035,7 @@ MonoBehaviour:
   - {fileID: 8084982037725995786}
   typeOfIsland: 0
   Depth: 2
-  combatScene: 2
+  combatScene: 3
 --- !u!208 &8084982038648821540
 NavMeshObstacle:
   m_ObjectHideFlags: 0

@@ -40,16 +40,16 @@ public class MapNodeTest : MonoBehaviour
             int r = Random.Range(3, 5);
             typeOfIsland = (TypeOfIsland)r;
         }
-        textTypeOfIsland = transform.GetChild(3).GetComponent<TextMeshPro>();
+        textTypeOfIsland = transform.GetChild(2).GetComponent<TextMeshPro>();
         textTypeOfIsland.text = typeOfIsland.ToString();
 
-       /* lineRenderer1 = transform.GetChild(1).GetComponent<LineRenderer>();
-        lineRenderer2 = transform.GetChild(2).GetComponent<LineRenderer>();
-        Line();*/
+        lineRenderer1 = transform.GetChild(0).GetComponent<LineRenderer>();
+        lineRenderer2 = transform.GetChild(1).GetComponent<LineRenderer>();
+        Line();
 
         gameObject.name = typeOfIsland.ToString();
     }
-   /* void Line()
+   void Line()
     {
         if (childrens.Count < 1)
         {
@@ -59,15 +59,15 @@ public class MapNodeTest : MonoBehaviour
 
         lineRenderer1.positionCount = 2;
         lineRenderer1.SetPosition(0, transform.position);
-        lineRenderer1.SetPosition(1, childrens[1].transform.position);
+        lineRenderer1.SetPosition(1, childrens[0].transform.position);
         if (childrens.Count > 1)
         {
             lineRenderer2.positionCount = 2;
             lineRenderer2.SetPosition(0, transform.position);
-            lineRenderer2.SetPosition(1, childrens[2].transform.position);
+            lineRenderer2.SetPosition(1, childrens[1].transform.position);
         }
     }
-*/
+
 
     public void SetParent(MapNodeTest parent)
     {

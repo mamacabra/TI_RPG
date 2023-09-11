@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public enum SceneNames
 {
     SampleMap,
+    SampleMap1,
     Menu,
     SampleCombat,
     SampleCombat_cavern_1,

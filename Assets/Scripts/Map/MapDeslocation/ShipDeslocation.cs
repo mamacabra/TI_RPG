@@ -13,8 +13,6 @@ public class ShipDeslocation : MonoBehaviour
     private Camera cam;
     private bool canClick = true;
 
-    [SerializeField] private Transform cubeLookAt;
-
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -36,59 +34,40 @@ public class ShipDeslocation : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && canClick)
         {
-            AudioManager.audioManager.PlaySoundEffect("Map/ClickMap");
             canClick = false;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            Vector3 pos;
-            bool island = false;
             if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
             {
-                MapManager.Instance.shipArrived = false;
-                if (raycastHit.collider.gameObject.name != "GroundNavMesh")
-                {
-                    pos = raycastHit.collider.gameObject.transform.GetChild(0).position;
-                    bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
-                    island = true;
-                    if (!canNavegate)
-                    {
-                        CanClick();
-                        return;
-                    }
-                }
-                else
+                bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
+                if (!canNavegate)
                 {
                     CanClick();
-                    pos = raycastHit.point;
+                    return;
                 }
 
-                cubeLookAt.position = pos;
-                Navegate(pos, island);
-                return;
+                Navegate(raycastHit.collider.gameObject.transform.position);
             }
-            CanClick();
+            else
+            {
+                CanClick();
+            }
         }
     }
 
-    void Navegate(Vector3 pos, bool island)
+    void Navegate(Vector3 pos)
     {
-        transform.DOLocalRotate(cubeLookAt.transform.localPosition, 0.5f).SetEase(Ease.OutBack).OnComplete(() =>
-        {
-            navMeshAgent.SetDestination(pos);
-            StartCoroutine(WaitToCheckIsland());
-        });
-        
+        Vector3 p = new Vector3(pos.x + 1, pos.y, pos.z);
+        Vector3 pCam = new Vector3(pos.x, cam.transform.position.y, cam.transform.position.z + 2.75f);
+        navMeshAgent.SetDestination(p);
+        MapManager.Instance.MoveCamera(pCam, pos);
+
+        StartCoroutine(WaitToCheckIsland());
+
         IEnumerator WaitToCheckIsland()
         {
-            yield return new WaitUntil(() => Vector3.Distance(pos, transform.position) <= 0.2f);
+            yield return new WaitUntil(() => Vector3.Distance(p, navMeshAgent.transform.position) <= 0.2f);
             yield return new WaitForSeconds(0.5f);
             MapManager.Instance.shipArrived = true;
-            if (island)
-            {
-                Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y,
-                    cam.transform.position.z);
-                MapManager.Instance.MoveCamera(pCam, pos);
-            }
         }
     }
 
@@ -96,17 +75,4 @@ public class ShipDeslocation : MonoBehaviour
     {
         canClick = true;
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Island") && canClick)
-        {
-            canClick = false;
-            other.GetComponent<MeshCollider>().enabled = false;
-            MapManager.Instance.CheckIndex(other.gameObject);
-            Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z);
-            MapManager.Instance.MoveCamera(pCam, other.transform.position);
-            
-        }
-    }*/
 }
