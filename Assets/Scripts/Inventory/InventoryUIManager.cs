@@ -196,70 +196,70 @@ public class InventoryUIManager : MonoBehaviour
                 switch (currentCharacter)
                 {
                     case Characters.CHARACTER1:
-                        if ((char1.Count - 1) > 0)
+                        // if ((char1.Count - 1) > 0)
+                        // {
+                        char1.Remove(item.itemSO);
+                        InventoryItem item1 = null;
+                        for (int i = 0; i < itensButtons.Count; i++)
                         {
-                            char1.Remove(item.itemSO);
-                            InventoryItem item1 = null;
-                            for (int i = 0; i < itensButtons.Count; i++)
+                            if (itensButtons[i].cardName == item.cardName)
                             {
-                                if (itensButtons[i].cardName == item.cardName)
-                                {
-                                    item1 = itensButtons[i];
-                                    break;
-                                }
+                                item1 = itensButtons[i];
+                                break;
                             }
-                            item1?.gameObject.SetActive(true);
-                            // item.itemImage.sprite = null;
-                            item.itemImage.color = new Color(0, 0, 0, 0);
                         }
-                        else
-                        {
-                            ShowAlert();
-                        }
+                        item1?.gameObject.SetActive(true);
+                        // item.itemImage.sprite = null;
+                        item.itemImage.color = new Color(0, 0, 0, 0);
+                        // }
+                        // else
+                        // {
+                        //     ShowAlert();
+                        // }
                         break;
                     case Characters.CHARACTER2:
-                        if ((char2.Count - 1) > 0)
+                        // if ((char2.Count - 1) > 0)
+                        // {
+                        char2.Remove(item.itemSO);
+                        InventoryItem item2 = null;
+                        for (int i = 0; i < itensButtons.Count; i++)
                         {
-                            char2.Remove(item.itemSO);
-                            InventoryItem item2 = null;
-                            for (int i = 0; i < itensButtons.Count; i++)
+                            if (itensButtons[i].cardName == item.cardName)
                             {
-                                if (itensButtons[i].cardName == item.cardName)
-                                {
-                                    item2 = itensButtons[i];
-                                    break;
-                                }
+                                item2 = itensButtons[i];
+                                break;
                             }
-                            item2?.gameObject.SetActive(true);
-                            // item.itemImage.sprite = null;
-                            item.itemImage.color = new Color(0, 0, 0, 0);
                         }
-                        else
-                        {
-                            ShowAlert();
-                        }
+                        item2?.gameObject.SetActive(true);
+                        // item.itemImage.sprite = null;
+                        item.itemImage.color = new Color(0, 0, 0, 0);
+                        // }
+                        // else
+                        // {
+                        //     ShowAlert();
+                        // }
                         break;
                     case Characters.CHARACTER3:
-                        if ((char3.Count - 1) > 0)
+                        // if ((char3.Count - 1) > 0)
+                        // {
+                        char3.Remove(item.itemSO);
+                        InventoryItem item3 = null;
+                        for (int i = 0; i < itensButtons.Count; i++)
                         {
-                            char3.Remove(item.itemSO);
-                            InventoryItem item3 = null;
-                            for (int i = 0; i < itensButtons.Count; i++)
+                            if (itensButtons[i].cardName == item.cardName)
                             {
-                                if (itensButtons[i].cardName == item.cardName)
-                                {
-                                    item3 = itensButtons[i];
-                                    break;
-                                }
+                                item3 = itensButtons[i];
+                                break;
                             }
-                            item3?.gameObject.SetActive(true);
-                            // item.itemImage.sprite = null;
-                            item.itemImage.color = new Color(0, 0, 0, 0);
                         }
-                        else
-                        {
-                            ShowAlert();
-                        }
+                        item3?.gameObject.SetActive(true);
+                        // item.itemImage.sprite = null;
+                        item.itemImage.color = new Color(0, 0, 0, 0);
+                        // }
+                        // else
+                        // {
+                        //     ShowAlert();
+                        // }
                         break;
                     default: break;
                 }

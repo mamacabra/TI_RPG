@@ -78,5 +78,5 @@ public class MapNodeTest : MonoBehaviour
     }
 
     public SceneNames GetScene => combatScene;
-    
+
 }

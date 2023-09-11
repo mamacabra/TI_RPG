@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18285164, g: 0.2260347, b: 0.29233104, a: 1}
+  m_IndirectSpecularColor: {r: 0.18285187, g: 0.22603515, b: 0.2923317, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13336,7 +13336,6 @@ GameObject:
   - component: {fileID: 1977489453621236603}
   - component: {fileID: 6054468036402179279}
   - component: {fileID: 8084982038648821540}
-  - component: {fileID: 8084982038648821541}
   - component: {fileID: 8084982038648821542}
   - component: {fileID: 8084982038648821543}
   m_Layer: 3
@@ -13513,7 +13512,6 @@ GameObject:
   - component: {fileID: 1977489452532026932}
   - component: {fileID: 6054468035347575168}
   - component: {fileID: 8084982037598931565}
-  - component: {fileID: 8084982037598931566}
   - component: {fileID: 8084982037598931567}
   - component: {fileID: 8084982037598931568}
   m_Layer: 3
@@ -14910,18 +14908,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &8084982037598931566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831487421957157626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb9dde4fd2c56754990fbb7044365805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8084982037598931567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15413,18 +15399,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &8084982038648821541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4831487420873191349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb9dde4fd2c56754990fbb7044365805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8084982038648821542
 BoxCollider:
   m_ObjectHideFlags: 0

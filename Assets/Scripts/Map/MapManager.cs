@@ -28,7 +28,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject map;
 
     [HideInInspector] public bool EndGame;
-     public bool shipArrived = false;
+    public bool shipArrived = false;
     [HideInInspector] public bool zoomCamOver = false;
 
     private void OnEnable()
@@ -39,8 +39,8 @@ public class MapManager : MonoBehaviour
 
     private void OnDisable()
     {
-        
-        if(!Transition.instance) return;
+
+        if (!Transition.instance) return;
         Transition.instance.EndTransitionLoad -= EndTransitionLoad;
         Transition.instance.EndTransitionUnload -= EndTransitionUnload;
     }
@@ -57,6 +57,7 @@ public class MapManager : MonoBehaviour
                 if (mp.parent[0] == lastMp)
                 {
                     lastMp = island.GetComponent<MapNodeTest>();
+                    TutorialManager.instance.DoNextTutorial();
                     return true;
                 }
             }
@@ -70,6 +71,7 @@ public class MapManager : MonoBehaviour
             if (countChildrensAndParents >= 1)
             {
                 lastMp = island.GetComponent<MapNodeTest>();
+                TutorialManager.instance.DoNextTutorial();
                 return true;
             }
         }
@@ -78,6 +80,7 @@ public class MapManager : MonoBehaviour
         {
             lastMp = island.GetComponent<MapNodeTest>();
             ShipIndex--;
+            TutorialManager.instance.DoNextTutorial();
             return true;
         }
 
@@ -94,19 +97,19 @@ public class MapManager : MonoBehaviour
         {
             if (i == 1)
             {
-                if (mp.parent[0] == lastMpHighlight)return true;
+                if (mp.parent[0] == lastMpHighlight) return true;
             }
 
             foreach (var p in mp.parent)
             {
-                if (p == lastMpHighlight)countChildrensAndParents++;
+                if (p == lastMpHighlight) countChildrensAndParents++;
             }
 
-            if (countChildrensAndParents >= 1)return true;
+            if (countChildrensAndParents >= 1) return true;
         }
 
-        if (mp.Depth == 0)return true;
-        
+        if (mp.Depth == 0) return true;
+
         return false;
     }
 
@@ -128,25 +131,25 @@ public class MapManager : MonoBehaviour
         Action<bool> action = null;
         if (lastMp.typeOfIsland == TypeOfIsland.StoreOrForge || lastMp.typeOfIsland == TypeOfIsland.Camp)
         {
-           
+
             ZoomCamera();
-          
-           n = SceneNames.SampleInventory;
-           action =  ShowPanel;
+
+            n = SceneNames.SampleInventory;
+            action = ShowPanel;
 
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
-           
+
             ZoomCamera();
-           
+
             n = lastMp.GetScene;
-            action =  ShowCombatPanel;
+            action = ShowCombatPanel;
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
             ZoomCamera();
-           
+
             n = SceneNames.SampleCombat;
             EndGame = true;
             action = ShowCombatPanel;
@@ -157,7 +160,7 @@ public class MapManager : MonoBehaviour
         }
 
         currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
-        Transition.instance.TransitionScenes(n,LoadSceneMode.Additive, true, true);
+        Transition.instance.TransitionScenes(n, LoadSceneMode.Additive, true, true);
 
         StartCoroutine(WaitToShowPanel());
         IEnumerator WaitToShowPanel()
@@ -178,8 +181,8 @@ public class MapManager : MonoBehaviour
             ResetCameras?.Invoke();
         }
     }
-    
-    
+
+
     private void DoNextTutorial()
     {
         if (TutorialManager.instance.isTutorial) { TutorialManager.instance?.DoNextTutorial(); }
@@ -196,10 +199,10 @@ public class MapManager : MonoBehaviour
     public void UnloadScenes(bool isCombatScene)
     {
         Debug.Log("UnloadScenes");
-        SceneNames s = isCombatScene ?lastMp.GetScene : SceneNames.SampleInventory;
-        Transition.instance.TransitionScenes(s,LoadSceneMode.Additive, false, true);
-       
-        
+        SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory;
+        Transition.instance.TransitionScenes(s, LoadSceneMode.Additive, false, true);
+
+
         if (EndGame)
         {
             Time.timeScale = 0;
@@ -217,7 +220,7 @@ public class MapManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Transition.instance.TransitionScenes(SceneNames.SampleMap,LoadSceneMode.Single, true, false);
+        Transition.instance.TransitionScenes(SceneNames.SampleMap, LoadSceneMode.Single, true, false);
         Time.timeScale = 1;
     }
 }
