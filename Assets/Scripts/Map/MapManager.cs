@@ -24,6 +24,7 @@ public class MapManager : MonoBehaviour
 
     public int ShipIndex = 0;
     [SerializeField] MapNodeTest lastMp;
+    MapNodeTest lastMpHighlight;
     [SerializeField] private GameObject map;
 
     [HideInInspector] public bool EndGame;
@@ -83,6 +84,32 @@ public class MapManager : MonoBehaviour
         ShipIndex--;
         return false;
     }
+    public bool CheckIndexHighlight(GameObject island)
+    {
+        int i = ShipIndex;
+        i++;
+        int countChildrensAndParents = 0;
+        MapNodeTest mp = island.GetComponent<MapNodeTest>();
+        if (mp.Depth == i)
+        {
+            if (i == 1)
+            {
+                if (mp.parent[0] == lastMpHighlight)return true;
+            }
+
+            foreach (var p in mp.parent)
+            {
+                if (p == lastMpHighlight)countChildrensAndParents++;
+            }
+
+            if (countChildrensAndParents >= 1)return true;
+        }
+
+        if (mp.Depth == 0)return true;
+        
+        return false;
+    }
+
 
     public void MoveCamera(Vector3 pos, Vector3 islandPos)
     {

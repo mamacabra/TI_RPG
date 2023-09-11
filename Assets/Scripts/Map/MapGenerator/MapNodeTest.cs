@@ -40,6 +40,7 @@ public class MapNodeTest : MonoBehaviour
             int r = Random.Range(3, 5);
             typeOfIsland = (TypeOfIsland)r;
         }
+
         textTypeOfIsland = transform.GetChild(2).GetComponent<TextMeshPro>();
         textTypeOfIsland.text = typeOfIsland.ToString();
 
@@ -48,8 +49,10 @@ public class MapNodeTest : MonoBehaviour
         Line();
 
         gameObject.name = typeOfIsland.ToString();
+
     }
-   void Line()
+
+    void Line()
     {
         if (childrens.Count < 1)
         {
@@ -75,4 +78,5 @@ public class MapNodeTest : MonoBehaviour
     }
 
     public SceneNames GetScene => combatScene;
+    
 }
