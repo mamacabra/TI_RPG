@@ -11,7 +11,6 @@ public class ShipDeslocation : MonoBehaviour
     [SerializeField] LayerMask _layerMask;
     private NavMeshAgent navMeshAgent;
     private Camera cam;
-    private bool canClick = true;
 
     private void Start()
     {
@@ -32,9 +31,9 @@ public class ShipDeslocation : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canClick)
+        if (Input.GetMouseButtonDown(0) && MapManager.Instance.canClick)
         {
-            canClick = false;
+            MapManager.Instance.canClick = false;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
             {
@@ -73,6 +72,6 @@ public class ShipDeslocation : MonoBehaviour
 
     public void CanClick()
     {
-        canClick = true;
+        MapManager.Instance.canClick = true;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18285187, g: 0.22603515, b: 0.2923317, a: 1}
+  m_IndirectSpecularColor: {r: 0.18285164, g: 0.2260347, b: 0.29233104, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1164,11 +1164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613d9ed0f53afc047b2767c8bf99e1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canClick: 1
   currentEventSystem: {fileID: 1543720866}
   globalVolume: {fileID: 1668205193}
   directionalLight: {fileID: 2066466923}
   ShipIndex: 0
-  lastMp: {fileID: 0}
   map: {fileID: 1222625183}
   EndGame: 0
   shipArrived: 0
@@ -6951,7 +6951,6 @@ Transform:
   - {fileID: 1520931017}
   - {fileID: 592629253}
   - {fileID: 1877554459}
-  - {fileID: 1796287664}
   - {fileID: 1297740714}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -6969,7 +6968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   island: {fileID: 4831487422004311699, guid: 06599f766f0dad94cb17b435f2b768a5, type: 3}
-  map: {fileID: 1796287664}
+  map: {fileID: 0}
   type: 5
   parent: []
   depth: 0
@@ -7442,7 +7441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1222625184}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1297740715
 MeshCollider:
@@ -10462,37 +10461,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!1 &1796287663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1796287664}
-  m_Layer: 0
-  m_Name: Map2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1796287664
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796287663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1222625184}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1809733608
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class SelectionHighLight : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out raycastHit, float.MaxValue,
-                _layerMask)) //Make sure you have EventSystem in the hierarchy before using EventSystem
+                _layerMask) && MapManager.Instance.canClick) //Make sure you have EventSystem in the hierarchy before using EventSystem
         {
             highlightTransform = raycastHit.transform;
             if (highlightTransform.CompareTag("Island"))
@@ -39,6 +39,7 @@ public class SelectionHighLight : MonoBehaviour
                 if (highlight.material != highlightMaterialCorretIsland)
                 {
                     bool correct = MapManager.Instance.CheckIndexHighlight(highlightTransform.gameObject);
+                    Debug.Log(correct);
                     if(correct)
                         highlight.material = highlightMaterialCorretIsland;
                     else

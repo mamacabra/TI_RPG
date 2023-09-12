@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
 {
     private static MapManager instance;
     public static MapManager Instance => instance ? instance : FindObjectOfType<MapManager>();
+    public bool canClick = true;
 
     [SerializeField] private GameObject currentEventSystem;
     [SerializeField] private GameObject globalVolume;
@@ -23,7 +24,7 @@ public class MapManager : MonoBehaviour
     public event Action ResetCameras;
 
     public int ShipIndex = 0;
-    [SerializeField] MapNodeTest lastMp;
+    MapNodeTest lastMp;
     MapNodeTest lastMpHighlight;
     [SerializeField] private GameObject map;
 
@@ -56,7 +57,8 @@ public class MapManager : MonoBehaviour
             {
                 if (mp.parent[0] == lastMp)
                 {
-                    lastMp = island.GetComponent<MapNodeTest>();
+                    lastMp = mp;
+                    lastMpHighlight = mp;
                     TutorialManager.instance.DoNextTutorial();
                     return true;
                 }
@@ -70,7 +72,8 @@ public class MapManager : MonoBehaviour
 
             if (countChildrensAndParents >= 1)
             {
-                lastMp = island.GetComponent<MapNodeTest>();
+                lastMp = mp;
+                lastMpHighlight = mp;
                 TutorialManager.instance.DoNextTutorial();
                 return true;
             }
@@ -78,7 +81,8 @@ public class MapManager : MonoBehaviour
 
         if (mp.Depth == 0)
         {
-            lastMp = island.GetComponent<MapNodeTest>();
+            lastMp = mp;
+            lastMpHighlight = mp;
             ShipIndex--;
             TutorialManager.instance.DoNextTutorial();
             return true;
@@ -95,21 +99,12 @@ public class MapManager : MonoBehaviour
         MapNodeTest mp = island.GetComponent<MapNodeTest>();
         if (mp.Depth == i)
         {
-            if (i == 1)
-            {
-                if (mp.parent[0] == lastMpHighlight) return true;
-            }
+            if (i == 1) if (mp.parent[0] == lastMpHighlight)return true;
 
-            foreach (var p in mp.parent)
-            {
-                if (p == lastMpHighlight) countChildrensAndParents++;
-            }
+            foreach (var p in mp.parent) if (p == lastMpHighlight) countChildrensAndParents++;
 
-            if (countChildrensAndParents >= 1) return true;
+            if (countChildrensAndParents >= 1)return true;
         }
-
-        if (mp.Depth == 0) return true;
-
         return false;
     }
 
