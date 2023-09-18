@@ -16,6 +16,7 @@ public class TutorialManager : MonoBehaviour
         public string text;
         public Vector3 arrowPosition;
         public Vector3 arrowRotation;
+        public bool moveX;
     }
     public static TutorialManager instance;
 
@@ -26,6 +27,7 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private State[] texts;
     [SerializeField] private int index;
+   
 
     public bool isTutorial = true;
 
@@ -38,7 +40,10 @@ public class TutorialManager : MonoBehaviour
     }
     private void Update()
     {
-        arrow.transform.position += new Vector3(0, Mathf.Sin(Time.time * 5.0f) * 0.5f, 0);
+        if(texts[index].moveX)
+            arrow.transform.position += new Vector3(Mathf.Sin(Time.time * 5.0f) * 0.5f, 0, 0);
+        else
+            arrow.transform.position += new Vector3(0, Mathf.Sin(Time.time * 5.0f) * 0.5f, 0);
     }
 
     public void DoNextTutorial()
