@@ -49,7 +49,7 @@ public class Transition : MonoBehaviour
 
     private void Start()
     {
-        transition.DOFade(0, 0).OnComplete(()=>{transition.gameObject.SetActive(false);});
+        //transition.DOFade(0, 0).OnComplete(()=>{transition.gameObject.SetActive(false);});
     }
 
     public void ShowTransition()
