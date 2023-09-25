@@ -23,6 +23,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private RectTransform arrow;
     [SerializeField] private TextMeshProUGUI popUpTxt;
     [SerializeField] private Button confirmBtn;
+    [SerializeField] private RectTransform canvas;
 
 
     [SerializeField] private State[] texts;
@@ -66,7 +67,8 @@ public class TutorialManager : MonoBehaviour
             Time.timeScale = texts[index].pauseGame ? 0.0f : 1.0f;
             arrow.transform.gameObject.SetActive(texts[index].arrowActive);
             confirmBtn.gameObject.SetActive(texts[index].buttonActive);
-            arrow.anchoredPosition3D = texts[index].arrowPosition;
+            Vector2 normalizedPosition = new Vector2(texts[index].arrowPosition.x / 1920f, texts[index].arrowPosition.y/ 1080f);
+            arrow.anchoredPosition = new Vector2(normalizedPosition.x * canvas.rect.width, normalizedPosition.y * canvas.rect.height);
             arrow.rotation = Quaternion.Euler(texts[index].arrowRotation);
             popUpTxt.text = texts[index].text;
         }
