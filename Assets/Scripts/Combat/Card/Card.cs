@@ -16,6 +16,9 @@ namespace Combat
         public int DropTargetCard { get; private set; }
         public List<CardScriptableObject> AddCards { get; private set; }
 
+        public int StatusBleeding { get; private set; }
+        public int StatusPoisoned { get; private set; }
+
         public Card(CardScriptableObject card)
         {
             _originalData = card;
@@ -30,6 +33,9 @@ namespace Combat
             // DrawPartyCard = card.drawPartyCard;
             DropTargetCard = card.dropCardOnTargetHand;
             AddCards = card.addCardOnTargetDeck;
+
+            StatusBleeding = card.statusBleeding;
+            StatusPoisoned = card.statusPoisoned;
         }
     }
 }

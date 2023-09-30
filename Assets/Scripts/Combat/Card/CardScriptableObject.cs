@@ -25,5 +25,9 @@ namespace Combat
         [Header("Target Effects")]
         public List<CardScriptableObject> addCardOnTargetDeck;
         [Range(1, 3)] public int dropCardOnTargetHand;
+
+        [Header("Status Effects")]
+        public int statusBleeding;
+        public int statusPoisoned;
     }
 }

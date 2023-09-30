@@ -9,6 +9,7 @@ namespace Combat
 
             ApplyDamage(target, card);
             ApplyHeal(target, card);
+            ApplyStatus(target, card);
 
             EffectDrawCard(striker, card);
 
@@ -39,6 +40,21 @@ namespace Combat
             if (card.Heal <= 0) return;
             target.Character.ReceiveHealing(card.Heal);
             AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+        }
+
+        private static void ApplyStatus(Member target, Card card)
+        {
+            if (card.StatusBleeding > 0)
+            {
+                target.Character.ReceiveStatus(StatusType.Bleeding);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+
+            if (card.StatusPoisoned > 0)
+            {
+                target.Character.ReceiveStatus(StatusType.Poison);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
         }
 
         private static void EffectDrawCard(Member striker, Card card)

@@ -14,6 +14,7 @@ namespace Combat
         public int maxHealth = 10;
         public int ActionPoints { get; private set; }
         public int maxActionPoints = 3;
+        public List<StatusType> Status { get; } = new();
 
         public bool IsDead => Health <= 0;
         public bool HasActionPoints => ActionPoints > 0;
@@ -62,6 +63,12 @@ namespace Combat
             Health += value;
             if (Health > maxHealth) Health = maxHealth;
 
+            CharacterUpdated();
+        }
+
+        public void ReceiveStatus(StatusType status)
+        {
+            Status.Add(status);
             CharacterUpdated();
         }
 

@@ -21,3 +21,5 @@ MonoBehaviour:
   drawCard: 1
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
+  statusBleeding: 0
+  statusPoisoned: 1

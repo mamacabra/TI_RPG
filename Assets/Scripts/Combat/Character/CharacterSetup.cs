@@ -13,6 +13,7 @@ namespace Combat
     {
         [Header("Character Observers")]
         [SerializeField] private HealthBar healthBar;
+        [SerializeField] private StatusBar statusBar;
         [SerializeField] private int characterId;
         [SerializeField] private CharacterType characterType = CharacterType.Hero;
         [SerializeField] private int characterMaxHealth = 10;
@@ -74,6 +75,7 @@ namespace Combat
             character.maxActionPoints = characterMaxActionPoints;
 
             character.Subscribe(healthBar);
+            character.Subscribe(statusBar);
             character.Subscribe(CombatManager.Instance);
             character.CharacterCreated();
         }
