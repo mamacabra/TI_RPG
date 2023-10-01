@@ -19,7 +19,7 @@ namespace Combat
 
         private void Update()
         {
-            if (Vector3.Distance(transform.position, cardPosition) > 0.1f)
+            if (Vector3.Distance(transform.position, cardPosition) > 0.2f)
             {
                 Vector3 direction = cardPosition - transform.position;
                 transform.position += direction.normalized * (Speed * Time.deltaTime);
