@@ -2,7 +2,18 @@ namespace Combat
 {
     public enum StatusType
     {
-        Bleeding,
+        Bewitch,
+        Bleed,
+        Burn,
+        Confuse,
+        Curse,
+        Freeze,
+        Pierce,
         Poison,
+        Reflect,
+        Stun,
+        Unlucky,
+        Vulnerable,
+        Weak,
     }
 }

@@ -1193,6 +1193,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700472356}
   m_CullTransparentMesh: 1
+--- !u!114 &732988402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 268195889779643335, guid: 53a9462ec3ad2c6479d46790623baa0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5734712641455335333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1810ea97a14d4dac9c9d4822a8af40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &740543587
 GameObject:
   m_ObjectHideFlags: 0
@@ -10442,6 +10454,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 903421426}
     m_Modifications:
+    - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
+        type: 3}
+      propertyPath: statusBar
+      value: 
+      objectReference: {fileID: 732988402}
     - target: {fileID: 1547379607076624535, guid: 53a9462ec3ad2c6479d46790623baa0d,
         type: 3}
       propertyPath: characterMaxHealth

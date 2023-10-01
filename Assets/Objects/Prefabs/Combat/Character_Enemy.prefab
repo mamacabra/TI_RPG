@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 7337875571501358945}
+  statusBar: {fileID: 268195889779643335}
   characterId: 0
   characterType: 1
   characterMaxHealth: 10
@@ -413,6 +414,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff51e3a5ce5216d4298b1a5d2785f3db, type: 3}
+--- !u!114 &268195889779643335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4107933110355352062, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+    type: 3}
+  m_PrefabInstance: {fileID: 4231868366194919993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1810ea97a14d4dac9c9d4822a8af40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7337875571501358945 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6876929766173709656, guid: ff51e3a5ce5216d4298b1a5d2785f3db,

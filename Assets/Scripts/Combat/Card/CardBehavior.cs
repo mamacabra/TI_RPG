@@ -19,7 +19,7 @@ namespace Combat
 
         private static void ConsumeActionPoints(Member striker, Card card)
         {
-            striker.Character.ConsumeActionPoints(card.Cost);
+            striker.Character.ConsumeActionPoints(card.ActionPointsCost);
         }
 
         private static void ReceiveActionPoints(Member striker, Card card)
@@ -44,15 +44,69 @@ namespace Combat
 
         private static void ApplyStatus(Member target, Card card)
         {
-            if (card.StatusBleeding > 0)
+            if (card.Status.Bewitch)
             {
-                target.Character.ReceiveStatus(StatusType.Bleeding);
+                target.Character.ReceiveStatus(StatusType.Bewitch);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
-
-            if (card.StatusPoisoned > 0)
+            if (card.Status.Bleed)
+            {
+                target.Character.ReceiveStatus(StatusType.Bleed);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Burn)
+            {
+                target.Character.ReceiveStatus(StatusType.Burn);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Confuse)
+            {
+                target.Character.ReceiveStatus(StatusType.Confuse);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Curse)
+            {
+                target.Character.ReceiveStatus(StatusType.Curse);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Freeze)
+            {
+                target.Character.ReceiveStatus(StatusType.Freeze);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Pierce)
+            {
+                target.Character.ReceiveStatus(StatusType.Pierce);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Poison)
             {
                 target.Character.ReceiveStatus(StatusType.Poison);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Reflect)
+            {
+                target.Character.ReceiveStatus(StatusType.Reflect);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Stun)
+            {
+                target.Character.ReceiveStatus(StatusType.Stun);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Unlucky)
+            {
+                target.Character.ReceiveStatus(StatusType.Unlucky);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Vulnerable)
+            {
+                target.Character.ReceiveStatus(StatusType.Vulnerable);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+            if (card.Status.Weak)
+            {
+                target.Character.ReceiveStatus(StatusType.Weak);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
         }
@@ -78,7 +132,7 @@ namespace Combat
 
         private static void TargetEffectAddCard(Card card, Member target)
         {
-            foreach (var cardToAdd in card.AddCards)
+            foreach (var cardToAdd in card.AddTargetCard)
             {
                 if (cardToAdd is null) continue;
                 target.AddCard(cardToAdd);

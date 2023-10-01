@@ -26,8 +26,19 @@ namespace Combat
         public List<CardScriptableObject> addCardOnTargetDeck;
         [Range(1, 3)] public int dropCardOnTargetHand;
 
-        [Header("Status Effects")]
-        public int statusBleeding;
-        public int statusPoisoned;
+        [Header("Status")]
+        public bool statusBewitch;
+        public bool statusBleed;
+        public bool statusBurn;
+        public bool statusConfuse;
+        public bool statusCurse;
+        public bool statusFreeze;
+        public bool statusPierce;
+        public bool statusPoison;
+        public bool statusReflect;
+        public bool statusStun;
+        public bool statusUnlucky;
+        public bool statusVulnerable;
+        public bool statusWeak;
     }
 }

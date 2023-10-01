@@ -71,7 +71,7 @@ namespace Combat
 
         private void UseCard(Card card)
         {
-            bool hasActionPoints = Striker.Character.HasEnoughActionPoints(card.Cost);
+            bool hasActionPoints = Striker.Character.HasEnoughActionPoints(card.ActionPointsCost);
             Member target = Target.HoveredTarget;
 
             if (hasActionPoints == false || target is null) return;

@@ -18,7 +18,7 @@ namespace Combat
         {
             title.text = card.Label;
             description.text = card.Description;
-            cost.text = card.Cost.ToString();
+            cost.text = card.ActionPointsCost.ToString();
 
             SetupDescription(card);
             SetupAttributes(card);
@@ -27,9 +27,9 @@ namespace Combat
         private void SetupDescription(Card card)
         {
 
-            if (card.Cost > 0)
+            if (card.ActionPointsCost > 0)
             {
-                description.text = "Custo (" + card.Cost + ") pontos de ação. ";
+                description.text = "Custo (" + card.ActionPointsCost + ") pontos de ação. ";
             }
 
             if (card.Damage > 0)
@@ -52,9 +52,9 @@ namespace Combat
                 description.text += "Saca (" + card.DrawCard + ") cartas. ";
             }
 
-            if (card.AddCards.Count > 0)
+            if (card.AddTargetCard.Count > 0)
             {
-                description.text += "Adiciona (" + card.AddCards.Count + ") cartas do alvo. ";
+                description.text += "Adiciona (" + card.AddTargetCard.Count + ") cartas do alvo. ";
             }
 
             if (card.DropTargetCard > 0)
