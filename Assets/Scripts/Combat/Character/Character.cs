@@ -24,11 +24,6 @@ namespace Combat
             _observers = new List<ICharacterObserver>();
         }
 
-        // private void Start()
-        // {
-        //     CharacterCreated();
-        // }
-
         public void Subscribe(ICharacterObserver observer)
         {
             if (observer != null)
@@ -53,8 +48,12 @@ namespace Combat
         public void ReceiveDamage(int value = 1)
         {
             Health -= value;
-            if (Health < 0) Health = 0;
-
+            if (Health <= 0)
+            {
+                Health = 0;
+                gameObject.SetActive(false);
+            }
+            Target.ClearClickedTarget();
             CharacterUpdated();
         }
 

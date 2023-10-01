@@ -17,7 +17,7 @@ namespace Combat
 
         private void Update()
         {
-            if (Input.GetMouseButtonUp(0) && ClickedCard == this)
+            if (Input.GetMouseButtonUp(0) && ClickedCard == this && Target.ClickedTarget)
             {
                 UseCard(ClickedCard.Card);
             }
@@ -28,35 +28,10 @@ namespace Combat
             }
         }
 
-        private void OnMouseOver()
-        {
-            HoveredCard = this;
-            CharacterCardSelectedVFX.SetHoveredStriker(Striker);
-        }
-
-        private void OnMouseExit()
-        {
-            HoveredCard = null;
-            CharacterCardSelectedVFX.SetHoveredStriker(null);
-        }
-
-        private void OnMouseDrag()
-        {
-            DraggedCard = this;
-        }
-
         private void OnMouseDown()
         {
             CharacterCardSelectedVFX.SetClickedStriker(Striker);
             ClickedCard = this;
-        }
-
-        private void OnMouseUp()
-        {
-            if (DraggedCard == this)
-            {
-                UseCard(DraggedCard.Card);
-            }
         }
 
         public void Setup(Member member, Card card)
@@ -72,7 +47,7 @@ namespace Combat
         private void UseCard(Card card)
         {
             bool hasActionPoints = Striker.Character.HasEnoughActionPoints(card.ActionPointsCost);
-            Member target = Target.HoveredTarget;
+            Member target = Target.ClickedTarget;
 
             if (hasActionPoints == false || target is null) return;
 
