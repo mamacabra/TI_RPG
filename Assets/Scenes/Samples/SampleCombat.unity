@@ -6005,7 +6005,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1397494858906985906}
-  - component: {fileID: 1742671534702837514}
   - component: {fileID: 1742671534702837513}
   m_Layer: 0
   m_Name: Personagem 1 Animacao_1
@@ -6035,22 +6034,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!111 &1742671534702837514
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742671534702837512}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 1457403244342639174, guid: 0c154907ddfb3cf47bfeac256ac7e95e,
-    type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!4 &1744538152767694319
 Transform:
   m_ObjectHideFlags: 0
