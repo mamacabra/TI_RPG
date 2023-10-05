@@ -39,7 +39,7 @@ public class SelectionHighLight : MonoBehaviour
                 if (highlight.material != highlightMaterialCorretIsland)
                 {
                     bool correct = MapManager.Instance.CheckIndexHighlight(highlightTransform.gameObject);
-                    Debug.Log(correct);
+                    //Debug.Log(correct);
                     if(correct)
                         highlight.material = highlightMaterialCorretIsland;
                     else

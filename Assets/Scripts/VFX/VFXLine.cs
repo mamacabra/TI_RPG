@@ -6,7 +6,7 @@ using System;
 
 public class VFXLine : MonoBehaviour
 {
-    [SerializeField] private Camera camera;
+    [SerializeField] private Camera m_Camera;
     [SerializeField] private Transform initialPoint;
     [SerializeField] private Vector2 initialPointOffset = new Vector2(0.0f, -2.0f);
     private Vector2 curvePoint;
@@ -31,8 +31,8 @@ public class VFXLine : MonoBehaviour
     {
         if (initialPoint && targetPoint)
         {
-            Vector3 initialPWorld = camera.WorldToScreenPoint(initialPoint.position);
-            Vector3 targetPWorld = camera.WorldToScreenPoint(targetPoint.position);
+            Vector3 initialPWorld = m_Camera.WorldToScreenPoint(initialPoint.position);
+            Vector3 targetPWorld = m_Camera.WorldToScreenPoint(targetPoint.position);
             curvePoint = new Vector2((initialPWorld.x + targetPWorld.x) / 2, (initialPWorld.y + targetPWorld.y) / 2);
             curvePoint.y = curve;
             var pointList = new List<Vector2>();
@@ -53,7 +53,7 @@ public class VFXLine : MonoBehaviour
         {
             Vector3 mousePosition = Vector3.zero;
             mousePosition = Input.mousePosition;
-            Vector3 worldSpaceToCanvas = camera.WorldToScreenPoint(initialPoint.position);
+            Vector3 worldSpaceToCanvas = m_Camera.WorldToScreenPoint(initialPoint.position);
 
             curvePoint = new Vector2((worldSpaceToCanvas.x + mousePosition.x) / 2, (worldSpaceToCanvas.y + mousePosition.y) / 2);
             curvePoint.y = curve;
