@@ -108,7 +108,7 @@ public class InventoryUIManager : MonoBehaviour
                             inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                             inventoryItem.itemImage.sprite = char1[i].sprite;
                             inventoryItem.itemSO = char1[i];
-                            inventoryItem.cardName = char1[i].name;
+                            inventoryItem.cardName = char1[i].cardName;
                         }
                         else
                         {
@@ -132,7 +132,7 @@ public class InventoryUIManager : MonoBehaviour
                             inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                             inventoryItem.itemImage.sprite = char2[i].sprite;
                             inventoryItem.itemSO = char2[i];
-                            inventoryItem.cardName = char2[i].name;
+                            inventoryItem.cardName = char2[i].cardName;
                         }
                         else
                         {
@@ -156,7 +156,7 @@ public class InventoryUIManager : MonoBehaviour
                             inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
                             inventoryItem.itemImage.sprite = char3[i].sprite;
                             inventoryItem.itemSO = char3[i];
-                            inventoryItem.cardName = char3[i].name;
+                            inventoryItem.cardName = char3[i].cardName;
                         }
                         else
                         {
@@ -395,7 +395,7 @@ public class InventoryUIManager : MonoBehaviour
             itensButtons.Add(item);
             item.itemImage.sprite = i.sprite;
             item.itemSO = i;
-            item.cardName = i.name;
+            item.cardName = i.cardName;
             // if (char1.Contains(i) || char2.Contains(i) || char3.Contains(i))
             // {
             //     item.gameObject.SetActive(false);

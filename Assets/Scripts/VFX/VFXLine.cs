@@ -15,7 +15,6 @@ public class VFXLine : MonoBehaviour
     [SerializeField] private Vector2 targetPointOffset = new Vector2(0.0f, -2.0f);
     private UILineRenderer lineRenderer;
     [SerializeField][Range(2.0f, 100.0f)] private float vertexCount = 12.0f;
-    [SerializeField][Tooltip("To set the amount, change the vertex count value. ps: it might look weird if the line is too long")] private bool changeAmountOfArrows = false;
     [SerializeField] private Color color = Color.white;
     [SerializeField] private bool mousePos = false;
 

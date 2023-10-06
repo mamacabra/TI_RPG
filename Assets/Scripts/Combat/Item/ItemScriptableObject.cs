@@ -5,7 +5,7 @@ namespace Combat
     [CreateAssetMenu(fileName = "Item", menuName = "Item")]
     public class ItemScriptableObject : ScriptableObject
     {
-        public string name;
+        public string cardName;
         [TextArea] public string description;
         public string resourcePath;
 
