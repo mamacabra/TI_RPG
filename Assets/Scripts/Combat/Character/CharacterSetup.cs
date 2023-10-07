@@ -73,6 +73,7 @@ namespace Combat
             character.Type = characterType;
             character.maxHealth = characterMaxHealth;
             character.maxActionPoints = characterMaxActionPoints;
+            character.RandomizePassive();
 
             character.Subscribe(healthBar);
             character.Subscribe(statusBar);

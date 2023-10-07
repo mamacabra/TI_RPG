@@ -4,8 +4,10 @@
     {
         Wait,
         PreparationStage,
+        HeroPassive,
         HeroTurn,
         HeroDeckShuffle,
+        EnemyPassive,
         EnemyTurn,
         EnemyDeckShuffle,
         Victory,

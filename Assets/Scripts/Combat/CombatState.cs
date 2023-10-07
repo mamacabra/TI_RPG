@@ -45,37 +45,45 @@ namespace Combat
             switch (_state)
             {
                 case CombatStateType.PreparationStage:
+                    SetState(CombatStateType.HeroPassive);
+                    break;
+                case CombatStateType.HeroPassive:
                     SetState(CombatStateType.HeroTurn);
                     break;
                 case CombatStateType.HeroTurn:
                     SetState(CombatStateType.HeroDeckShuffle);
                     break;
                 case CombatStateType.HeroDeckShuffle:
+                    SetState(CombatStateType.EnemyPassive);
+                    break;
+                case CombatStateType.EnemyPassive:
                     SetState(CombatStateType.EnemyTurn);
                     break;
                 case CombatStateType.EnemyTurn:
                     SetState(CombatStateType.EnemyDeckShuffle);
                     break;
                 case CombatStateType.EnemyDeckShuffle:
-                    SetState(CombatStateType.HeroTurn);
+                    SetState(CombatStateType.HeroPassive);
                     break;
             }
         }
 
         private void CheckRequiredObservers()
         {
+            bool hasCombatCharacterPassive = false;
             bool hasCombatManager = false;
             bool hasCombatHudController = false;
             bool hasEnemyIa = false;
 
             foreach (ICombatStateObserver observer in _observers)
             {
+                if (typeof(CombatCharacterPassive) == observer.GetType()) hasCombatCharacterPassive = true;
                 if (typeof(CombatManager) == observer.GetType()) hasCombatManager = true;
                 if (typeof(CombatHudController) == observer.GetType()) hasCombatHudController = true;
                 if (typeof(EnemyIA) == observer.GetType()) hasEnemyIa = true;
             }
 
-            if (hasCombatManager && hasCombatHudController && hasEnemyIa) SetState(CombatStateType.PreparationStage);
+            if (hasCombatCharacterPassive && hasCombatManager && hasCombatHudController && hasEnemyIa) SetState(CombatStateType.PreparationStage);
         }
     }
 }
