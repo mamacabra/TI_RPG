@@ -8,7 +8,6 @@ namespace Combat
     public class Character : MonoBehaviour
     {
         private List<ICharacterObserver> _observers;
-
         public CharacterType Type { get; set; }
         public int Health { get; private set; }
         public int maxHealth = 10;
