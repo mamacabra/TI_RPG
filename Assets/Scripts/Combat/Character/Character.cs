@@ -15,8 +15,7 @@ namespace Combat
         public int ActionPoints { get; private set; }
         public int maxActionPoints = 3;
         public List<StatusType> Status { get; } = new();
-        public HeroPassiveType HeroPassive { get; private set; }
-        public EnemyPassiveType EnemyPassive { get; private set; }
+        public PassiveType Passive { get; private set; }
 
         public bool IsDead => Health <= 0;
         public bool HasActionPoints => ActionPoints > 0;
@@ -99,16 +98,10 @@ namespace Combat
 
         public void RandomizePassive()
         {
-            if (Type == CharacterType.Hero)
-            {
-                int count = Enum.GetNames(typeof(HeroPassiveType)).Length;
-                HeroPassive = (HeroPassiveType) Random.Range(0, count);
-            }
-            /*else
-            {
-                int count = Enum.GetNames(typeof(EnemyPassiveType)).Length;
-                EnemyPassive = (EnemyPassiveType) Random.Range(0, 3);
-            }*/
+            if (Type != CharacterType.Hero) return;
+
+            int count = Enum.GetNames(typeof(PassiveType)).Length;
+            Passive = (PassiveType) Random.Range(0, count);
         }
     }
 }

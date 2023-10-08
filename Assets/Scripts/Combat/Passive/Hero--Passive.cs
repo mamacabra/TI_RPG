@@ -1,6 +1,6 @@
 namespace Combat
 {
-    public abstract class HeroElephantPassive : Passive
+    public abstract class HeroBullPassive : Passive
     {
         private const int SelfHealingChance = 20;
         private const int SelfHealingAmount = 2;
@@ -19,13 +19,8 @@ namespace Combat
             bool shouldAllyHealing = CalculateChance(AllyHealingChance);
             if (shouldAllyHealing)
             {
-                Member ally = GetRandomAlly(character);
-                if (ally != null)
-                {
-                    ally.Character.ReceiveHealing(AllyHealingAmount);
-                    AttackVFX.Instance.PlayHealingVFX(character.transform);
-                    AttackVFX.Instance.PlayHealingVFX(ally.Character.transform);
-                }
+                Member member = CombatManager.Instance.HeroParty.GetRandomMember();
+                if (member != null) member.Character.ReceiveHealing(AllyHealingAmount);
             }
         }
     }

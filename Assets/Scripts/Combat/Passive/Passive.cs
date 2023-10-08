@@ -15,5 +15,12 @@ namespace Combat
         {
             return Random.Range(0, 100) < chance;
         }
+
+        protected static Member GetRandomAlly(Character character)
+        {
+            return character.Type == CharacterType.Hero
+                ? CombatManager.Instance.HeroParty.GetRandomMember()
+                : CombatManager.Instance.EnemyParty.GetRandomMember();
+        }
     }
 }

@@ -14,41 +14,45 @@ namespace Combat
             switch (state)
             {
                 case CombatStateType.HeroPassive:
-                    MapHeroPassives();
+                    HeroBeforeTurnPassives();
                     CombatState.Instance.NextState();
                     break;
                 case CombatStateType.EnemyPassive:
-                    ApplyEnemyPassive();
+                    EnemyBeforeTurnPassives();
                     CombatState.Instance.NextState();
                     break;
             }
         }
 
-        private static void MapHeroPassives()
+        private static void HeroBeforeTurnPassives()
         {
             CombatManager.Instance.HeroParty.Members.ForEach(member =>
             {
                 if (member.Character.IsDead) return;
-                ApplyHeroPassive(member.Character, member.Character.HeroPassive);
+                BeforeTurnPassives(member.Character, member.Character.Passive);
             });
         }
 
-        private static void ApplyHeroPassive(Character character, HeroPassiveType passive)
+        private static void EnemyBeforeTurnPassives()
+        {
+            CombatManager.Instance.EnemyParty.Members.ForEach(member =>
+            {
+                if (member.Character.IsDead) return;
+                BeforeTurnPassives(member.Character, member.Character.Passive);
+            });
+        }
+
+        private static void BeforeTurnPassives(Character character, PassiveType passive)
         {
             switch (passive)
             {
-                case HeroPassiveType.Elephant:
+                case PassiveType.Elephant:
                     HeroElephantPassive.OnBeforeTurn(character);
                     break;
-                case HeroPassiveType.Turtle:
+                case PassiveType.Turtle:
                     HeroTurtlePassive.OnBeforeTurn(character);
                     break;
             };
-        }
-
-        private static void ApplyEnemyPassive()
-        {
-
         }
     }
 }
