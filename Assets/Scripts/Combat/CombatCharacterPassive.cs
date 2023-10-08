@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Combat
@@ -29,7 +30,7 @@ namespace Combat
             CombatManager.Instance.HeroParty.Members.ForEach(member =>
             {
                 if (member.Character.IsDead) return;
-                BeforeTurnPassives(member.Character, member.Character.Passive);
+                BeforeTurnPassives(member.Character);
             });
         }
 
@@ -38,19 +39,32 @@ namespace Combat
             CombatManager.Instance.EnemyParty.Members.ForEach(member =>
             {
                 if (member.Character.IsDead) return;
-                BeforeTurnPassives(member.Character, member.Character.Passive);
+                BeforeTurnPassives(member.Character);
             });
         }
 
-        private static void BeforeTurnPassives(Character character, PassiveType passive)
+        private static void BeforeTurnPassives(Character character)
         {
-            switch (passive)
+            switch (character.Passive)
             {
                 case PassiveType.Elephant:
                     HeroElephantPassive.OnBeforeTurn(character);
                     break;
                 case PassiveType.Turtle:
                     HeroTurtlePassive.OnBeforeTurn(character);
+                    break;
+            };
+        }
+
+        public static void Attack(Character character, Action action)
+        {
+            switch (character.Passive)
+            {
+                case PassiveType.Bull:
+                    HeroBullPassive.OnAttack(character, action);
+                    break;
+                default:
+                    action();
                     break;
             };
         }

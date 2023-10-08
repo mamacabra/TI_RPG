@@ -7,7 +7,7 @@ namespace Combat
             ConsumeActionPoints(striker, card);
             ReceiveActionPoints(striker, card);
 
-            ApplyDamage(target, card);
+            ApplyDamage(striker, card, target);
             ApplyHeal(target, card);
             ApplyStatus(target, card);
 
@@ -28,18 +28,30 @@ namespace Combat
                 striker.Character.ReceiveActionPoints(card.ActionPointsReceive);
         }
 
-        private static void ApplyDamage(Member target, Card card)
+        private static void ApplyDamage(Member striker, Card card, Member target)
         {
             if (card.Damage <= 0) return;
-            target.Character.ReceiveDamage(card.Damage);
-            AttackVFX.Instance.PlayDamageVFX(target.Character.transform);
+            CombatCharacterPassive.Attack(striker.Character, Damage);
+            return;
+
+            void Damage()
+            {
+                target.Character.ReceiveDamage(card.Damage);
+                AttackVFX.Instance.PlayDamageVFX(target.Character.transform);
+            }
         }
 
         private static void ApplyHeal(Member target, Card card)
         {
             if (card.Heal <= 0) return;
-            target.Character.ReceiveHealing(card.Heal);
-            AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            CombatCharacterPassive.Attack(target.Character, Heal);
+            return;
+
+            void Heal()
+            {
+                target.Character.ReceiveHealing(card.Heal);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
         }
 
         private static void ApplyStatus(Member target, Card card)

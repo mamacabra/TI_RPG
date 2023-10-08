@@ -2,7 +2,8 @@ namespace Combat
 {
     public enum PassiveType
     {
-        // Bull,
+        Empty,
+        Bull,
         Elephant,
         // Fox,
         // Jaguar,

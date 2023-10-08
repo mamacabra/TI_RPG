@@ -101,7 +101,7 @@ namespace Combat
             if (Type != CharacterType.Hero) return;
 
             int count = Enum.GetNames(typeof(PassiveType)).Length;
-            Passive = (PassiveType) Random.Range(0, count);
+            Passive = (PassiveType) Random.Range(1, count);
         }
     }
 }

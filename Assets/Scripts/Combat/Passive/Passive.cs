@@ -1,4 +1,5 @@
-using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
 
 namespace Combat
 {
@@ -7,6 +8,7 @@ namespace Combat
         public void OnBeforeTurn(Character character) {}
         public void OnAfterTurn(Character character) {}
         public void OnBeforeAttack(Character character) {}
+        public void OnAttack(Character character, Action action) {}
         public void OnAfterAttack(Character character) {}
         public void OnBeforeDefend(Character character) {}
         public void OnAfterDefend(Character character) {}
