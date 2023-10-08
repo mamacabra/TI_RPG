@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Combat
 {
@@ -13,7 +12,6 @@ namespace Combat
                 member.Character.Status.ForEach(status =>
                 {
                     DispatchStatusEffect(member.Character, status.type);
-                    member.Character.CountDownStatus();
                     member.Character.Updated();
                 });
             });
@@ -24,7 +22,10 @@ namespace Combat
             switch (statusType)
             {
                 case StatusType.Bleed:
-                    StatusEffects.ApplyStatusBleed(character);
+                    StatusEffects.ApplyStatusBleed(character, statusType);
+                    break;
+                case StatusType.Weak:
+                    StatusEffects.ApplyStatusWeak(character, statusType);
                     break;
             }
         }

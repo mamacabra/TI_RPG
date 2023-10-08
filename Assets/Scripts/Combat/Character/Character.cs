@@ -87,12 +87,16 @@ namespace Combat
             CharacterUpdated();
         }
 
-        public void CountDownStatus()
+        public void CountDownStatus(StatusType statusType)
         {
             List<StatusData> newStatus = new();
             Status.ForEach(status =>
             {
-                if (status.duration > 1)
+                if (status.type != statusType)
+                {
+                    newStatus.Add(status);
+                }
+                else if (status.type == statusType && status.duration > 1)
                 {
                     newStatus.Add(new StatusData()
                     {
@@ -122,6 +126,12 @@ namespace Combat
         public void ReceiveActionPoints(int value = 1)
         {
             ActionPoints += value;
+            CharacterUpdated();
+        }
+
+        public void ClearActionPoints()
+        {
+            ActionPoints = 0;
             CharacterUpdated();
         }
 
