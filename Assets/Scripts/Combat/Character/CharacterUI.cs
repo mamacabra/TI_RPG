@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Combat.Utils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -79,7 +78,7 @@ namespace Combat
             ClearStatusText();
             foreach (StatusData status in statusList)
             {
-                statusText.text += status.type + "\n";
+                statusText.text += $"{status.type} ({status.duration})\n";
             }
         }
     }

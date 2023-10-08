@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Combat.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,7 +14,7 @@ namespace Combat
         public int maxHealth = 10;
         public int ActionPoints { get; private set; }
         public int maxActionPoints = 3;
-        public List<StatusData> Status { get; } = new();
+        public List<StatusData> Status = new();
         public PassiveType Passive { get; private set; }
 
         public bool IsDead => Health <= 0;
@@ -39,6 +38,11 @@ namespace Combat
 
             foreach (var observer in _observers)
                 observer.OnCharacterCreated(this);
+        }
+
+        public void Updated()
+        {
+            CharacterUpdated();
         }
 
         private void CharacterUpdated()
@@ -80,6 +84,26 @@ namespace Combat
                     break;
             }
 
+            CharacterUpdated();
+        }
+
+        public void CountDownStatus()
+        {
+            List<StatusData> newStatus = new();
+            Status.ForEach(status =>
+            {
+                if (status.duration > 1)
+                {
+                    newStatus.Add(new StatusData()
+                    {
+                        count = status.count,
+                        duration = status.duration - 1,
+                        type = status.type,
+                    });
+                }
+            });
+
+            Status = newStatus;
             CharacterUpdated();
         }
 
