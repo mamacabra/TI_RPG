@@ -1,22 +1,30 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using Combat.Utils;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Combat
 {
-    public class HealthBar : MonoBehaviour, ICharacterObserver
+    public class CharacterUI : MonoBehaviour, ICharacterObserver
     {
-        [Header("Slider")]
-        public Slider healthBarSlider;
-
         [Header("Counters")]
         public Text healthBarCount;
         public Text actionPointsCount;
+
+        [Header("Passive")]
         public TMP_Text characterPassiveName;
+
+        [Header("Status")]
+        public TMP_Text statusText;
+
+        [Header("Slider")]
+        public Slider healthBarSlider;
 
         public void OnCharacterCreated(Character character)
         {
             SetupHealthBar(character.maxHealth);
+            ClearStatusText();
             OnCharacterUpdated(character);
         }
 
@@ -25,6 +33,7 @@ namespace Combat
             SetHealthBar(character.Health);
             SetActionPoints(character.ActionPoints);
             SetPassiveName(character.Passive);
+            SetStatusText(character.Status);
         }
 
         private void SetupHealthBar(int maxHealth)
@@ -55,6 +64,23 @@ namespace Combat
             characterPassiveName.text = passive is not PassiveType.None
                 ? passive.ToString()
                 : "";
+        }
+
+        private void ClearStatusText()
+        {
+            if (!statusText) return;
+            statusText.text = "";
+        }
+
+        private void SetStatusText(List<StatusData> statusList)
+        {
+            if (!statusText) return;
+
+            ClearStatusText();
+            foreach (StatusData status in statusList)
+            {
+                statusText.text += status.type + "\n";
+            }
         }
     }
 }

@@ -234,9 +234,8 @@ GameObject:
   - component: {fileID: 5381968182439820459}
   - component: {fileID: 9138241386318364281}
   - component: {fileID: 1803023056123218565}
-  - component: {fileID: 4107933110355352062}
   m_Layer: 0
-  m_Name: StatusBar
+  m_Name: CharacterStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,19 +357,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4107933110355352062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3254758093757100268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1810ea97a14d4dac9c9d4822a8af40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statusText: {fileID: 1803023056123218565}
 --- !u!1 &4859025499316984775
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,10 +475,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014004879cae4686a6a2571034a5855e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarSlider: {fileID: 4859025499580991472}
   healthBarCount: {fileID: 4859025500865190920}
   actionPointsCount: {fileID: 6923806029124590275}
   characterPassiveName: {fileID: 6264268091287286569}
+  statusText: {fileID: 1803023056123218565}
+  healthBarSlider: {fileID: 4859025499580991472}
 --- !u!1 &4859025499580991474
 GameObject:
   m_ObjectHideFlags: 0

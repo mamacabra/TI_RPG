@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Combat
 {
@@ -11,9 +12,9 @@ namespace Combat
     [RequireComponent(typeof(CharacterCardSelectedVFX))]
     public class CharacterSetup : MonoBehaviour
     {
+        [FormerlySerializedAs("healthBar")]
         [Header("Character Observers")]
-        [SerializeField] private HealthBar healthBar;
-        [SerializeField] private StatusBar statusBar;
+        [SerializeField] private CharacterUI characterUI;
         [SerializeField] private int characterId;
         [SerializeField] private CharacterType characterType = CharacterType.Hero;
         [SerializeField] private int characterMaxHealth = 10;
@@ -75,8 +76,7 @@ namespace Combat
             character.maxActionPoints = characterMaxActionPoints;
             character.RandomizePassive();
 
-            character.Subscribe(healthBar);
-            character.Subscribe(statusBar);
+            character.Subscribe(characterUI);
             character.Subscribe(CombatManager.Instance);
             character.CharacterCreated();
         }
