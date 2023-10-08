@@ -29,13 +29,21 @@ namespace Combat
             CombatManager.Instance.HeroParty.Members.ForEach(member =>
             {
                 if (member.Character.IsDead) return;
-                ApplyHeroPassive(member.Character.HeroPassive);
+                ApplyHeroPassive(member.Character, member.Character.HeroPassive);
             });
         }
 
-        private static void ApplyHeroPassive(HeroPassiveType passive)
+        private static void ApplyHeroPassive(Character character, HeroPassiveType passive)
         {
-            HeroBullPassive.OnBeforeTurn();
+            switch (passive)
+            {
+                case HeroPassiveType.Elephant:
+                    HeroElephantPassive.OnBeforeTurn(character);
+                    break;
+                case HeroPassiveType.Turtle:
+                    HeroTurtlePassive.OnBeforeTurn(character);
+                    break;
+            };
         }
 
         private static void ApplyEnemyPassive()

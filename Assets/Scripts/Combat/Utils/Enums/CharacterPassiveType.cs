@@ -2,14 +2,14 @@ namespace Combat
 {
     public enum HeroPassiveType
     {
-        Bull,
+        // Bull,
         Elephant,
-        Fox,
-        Jaguar,
-        Lynx,
-        Snake,
+        // Fox,
+        // Jaguar,
+        // Lynx,
+        // Snake,
         Turtle,
-        Wolf,
+        // Wolf,
     }
 
     public enum EnemyPassiveType
