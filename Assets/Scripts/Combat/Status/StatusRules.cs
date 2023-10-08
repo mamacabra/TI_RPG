@@ -24,6 +24,9 @@ namespace Combat
                 case StatusType.Bleed:
                     StatusEffects.ApplyStatusBleed(character, statusType);
                     break;
+                case StatusType.Stun:
+                    StatusEffects.ApplyStatusStun(character, statusType);
+                    break;
                 case StatusType.Weak:
                     StatusEffects.ApplyStatusWeak(character, statusType);
                     break;

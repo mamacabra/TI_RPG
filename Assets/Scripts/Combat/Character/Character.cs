@@ -82,6 +82,13 @@ namespace Combat
                         duration = 3,
                     });
                     break;
+                case StatusType.Stun:
+                    Status.Add(new StatusData
+                    {
+                        type = status,
+                        duration = 1,
+                    });
+                    break;
             }
 
             CharacterUpdated();
