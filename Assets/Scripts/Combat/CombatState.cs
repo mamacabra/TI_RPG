@@ -7,7 +7,7 @@ namespace Combat
     {
         public static CombatState Instance;
 
-        [SerializeField] private CombatStateType state = CombatStateType.Wait;
+        private CombatStateType _state = CombatStateType.Wait;
         private Queue<CombatStateType> _stateChanges;
         private List<ICombatStateObserver> _observers;
 
@@ -22,27 +22,27 @@ namespace Combat
         {
             while (_stateChanges.Count != 0)
             {
-                state = _stateChanges.Dequeue();
+                _state = _stateChanges.Dequeue();
                 foreach (var observer in _observers)
-                    observer.OnCombatStateChanged(state);
+                    observer.OnCombatStateChanged(_state);
             }
         }
 
         public void Subscribe(ICombatStateObserver observer)
         {
             _observers.Add(observer);
-            if (state == CombatStateType.Wait) CheckRequiredObservers();
+            if (_state == CombatStateType.Wait) CheckRequiredObservers();
         }
 
         public void SetState(CombatStateType newState)
         {
-            if (state is CombatStateType.Defeat or CombatStateType.Victory) return;
+            if (_state is CombatStateType.Defeat or CombatStateType.Victory) return;
             _stateChanges.Enqueue(newState);
         }
 
         public void NextState()
         {
-            switch (state)
+            switch (_state)
             {
                 case CombatStateType.PreparationStage:
                     SetState(CombatStateType.HeroStatus);
