@@ -1,4 +1,4 @@
-namespace Combat.Utils
+namespace Combat
 {
     public struct StatusData
     {

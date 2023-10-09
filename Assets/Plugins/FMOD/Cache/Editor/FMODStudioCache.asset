@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
@@ -29,7 +29,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/MusicaMapa
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/MusicaMapa
   Guid:
     Data1: 637131818
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Effects.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: Assets/FMODBanks/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Map/ClickMap
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/Map/ClickMap
   Guid:
     Data1: -1914416625
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   EditorBanks:
   - {fileID: 4848115676711782504}
   - {fileID: -4552095655925195364}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Slot/SelectSlot
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/Slot/SelectSlot
   Guid:
     Data1: -332483919
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Slot/PlaceItem
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/Slot/PlaceItem
   Guid:
     Data1: -1558734272
@@ -184,13 +184,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
   lastModified: 638294429590502490
   FileSizes:
-  - Name: 
+  - Name:
     Value: 1014
   Exists: 1
 --- !u!114 &8387537876161706069
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Menu/Click
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/Menu/Click
   Guid:
     Data1: 1734816311

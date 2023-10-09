@@ -45,37 +45,54 @@ namespace Combat
             switch (_state)
             {
                 case CombatStateType.PreparationStage:
+                    SetState(CombatStateType.HeroStatus);
+                    break;
+                case CombatStateType.HeroStatus:
+                    SetState(CombatStateType.HeroPassive);
+                    break;
+                case CombatStateType.HeroPassive:
                     SetState(CombatStateType.HeroTurn);
                     break;
                 case CombatStateType.HeroTurn:
                     SetState(CombatStateType.HeroDeckShuffle);
                     break;
                 case CombatStateType.HeroDeckShuffle:
+                    SetState(CombatStateType.EnemyStatus);
+                    break;
+                case CombatStateType.EnemyStatus:
+                    SetState(CombatStateType.EnemyPassive);
+                    break;
+                case CombatStateType.EnemyPassive:
                     SetState(CombatStateType.EnemyTurn);
                     break;
                 case CombatStateType.EnemyTurn:
                     SetState(CombatStateType.EnemyDeckShuffle);
                     break;
                 case CombatStateType.EnemyDeckShuffle:
-                    SetState(CombatStateType.HeroTurn);
+                    SetState(CombatStateType.HeroStatus);
                     break;
             }
         }
 
         private void CheckRequiredObservers()
         {
+            bool hasCombatCharacterStatus = false;
+            bool hasCombatCharacterPassive = false;
             bool hasCombatManager = false;
             bool hasCombatHudController = false;
             bool hasEnemyIa = false;
 
             foreach (ICombatStateObserver observer in _observers)
             {
+                if (typeof(CombatCharacterStatus) == observer.GetType()) hasCombatCharacterStatus = true;
+                if (typeof(CombatCharacterPassive) == observer.GetType()) hasCombatCharacterPassive = true;
                 if (typeof(CombatManager) == observer.GetType()) hasCombatManager = true;
                 if (typeof(CombatHudController) == observer.GetType()) hasCombatHudController = true;
                 if (typeof(EnemyIA) == observer.GetType()) hasEnemyIa = true;
             }
 
-            if (hasCombatManager && hasCombatHudController && hasEnemyIa) SetState(CombatStateType.PreparationStage);
+            bool shouldSetPreparationState = hasCombatCharacterStatus && hasCombatCharacterPassive && hasCombatManager && hasCombatHudController && hasEnemyIa;
+            if (shouldSetPreparationState) SetState(CombatStateType.PreparationStage);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Combat
             ConsumeActionPoints(striker, card);
             ReceiveActionPoints(striker, card);
 
-            ApplyDamage(target, card);
+            ApplyDamage(striker, card, target);
             ApplyHeal(target, card);
             ApplyStatus(target, card);
 
@@ -28,62 +28,74 @@ namespace Combat
                 striker.Character.ReceiveActionPoints(card.ActionPointsReceive);
         }
 
-        private static void ApplyDamage(Member target, Card card)
+        private static void ApplyDamage(Member striker, Card card, Member target)
         {
             if (card.Damage <= 0) return;
-            target.Character.ReceiveDamage(card.Damage);
-            AttackVFX.Instance.PlayDamageVFX(target.Character.transform);
+            CombatCharacterPassive.Attack(striker.Character, Damage);
+            return;
+
+            void Damage()
+            {
+                target.Character.ReceiveDamage(card.Damage);
+                AttackVFX.Instance.PlayDamageVFX(target.Character.transform);
+            }
         }
 
         private static void ApplyHeal(Member target, Card card)
         {
             if (card.Heal <= 0) return;
-            target.Character.ReceiveHealing(card.Heal);
-            AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            CombatCharacterPassive.Attack(target.Character, Heal);
+            return;
+
+            void Heal()
+            {
+                target.Character.ReceiveHealing(card.Heal);
+                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
         }
 
         private static void ApplyStatus(Member target, Card card)
         {
-            if (card.Status.Bewitch)
-            {
-                target.Character.ReceiveStatus(StatusType.Bewitch);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
+            // if (card.Status.Bewitch)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Bewitch);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
             if (card.Status.Bleed)
             {
                 target.Character.ReceiveStatus(StatusType.Bleed);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
-            if (card.Status.Burn)
-            {
-                target.Character.ReceiveStatus(StatusType.Burn);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
+            // if (card.Status.Burn)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Burn);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
             if (card.Status.Confuse)
             {
                 target.Character.ReceiveStatus(StatusType.Confuse);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
-            if (card.Status.Curse)
-            {
-                target.Character.ReceiveStatus(StatusType.Curse);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
-            if (card.Status.Freeze)
-            {
-                target.Character.ReceiveStatus(StatusType.Freeze);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
-            if (card.Status.Pierce)
-            {
-                target.Character.ReceiveStatus(StatusType.Pierce);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
-            if (card.Status.Poison)
-            {
-                target.Character.ReceiveStatus(StatusType.Poison);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
+            // if (card.Status.Curse)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Curse);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
+            // if (card.Status.Freeze)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Freeze);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
+            // if (card.Status.Pierce)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Pierce);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
+            // if (card.Status.Poison)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Poison);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
             if (card.Status.Reflect)
             {
                 target.Character.ReceiveStatus(StatusType.Reflect);
@@ -92,18 +104,19 @@ namespace Combat
             if (card.Status.Stun)
             {
                 target.Character.ReceiveStatus(StatusType.Stun);
+                target.Character.ClearActionPoints();
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
-            if (card.Status.Unlucky)
-            {
-                target.Character.ReceiveStatus(StatusType.Unlucky);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
-            if (card.Status.Vulnerable)
-            {
-                target.Character.ReceiveStatus(StatusType.Vulnerable);
-                AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
-            }
+            // if (card.Status.Unlucky)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Unlucky);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
+            // if (card.Status.Vulnerable)
+            // {
+            //     target.Character.ReceiveStatus(StatusType.Vulnerable);
+            //     AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            // }
             if (card.Status.Weak)
             {
                 target.Character.ReceiveStatus(StatusType.Weak);
