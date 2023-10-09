@@ -104,6 +104,7 @@ namespace Combat
             if (card.Status.Stun)
             {
                 target.Character.ReceiveStatus(StatusType.Stun);
+                target.Character.ClearActionPoints();
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
             // if (card.Status.Unlucky)
