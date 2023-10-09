@@ -37,7 +37,11 @@ namespace Combat
             {
                 if (member == null || member.Hand == null || member.Character.IsDead || member.Character.HasActionPoints == false) continue;
 
-                foreach (Card card in member.Hand) InstantiateCard(member, card);
+                foreach (Card card in member.Hand)
+                {
+                    if (card.ActionPointsCost > member.Character.ActionPoints) continue;
+                    InstantiateCard(member, card);
+                }
             }
         }
 
@@ -79,6 +83,21 @@ namespace Combat
             cards.Remove(card);
             Destroy(card.gameObject);
             SetupCardsPosition();
+        }
+
+        public void RemoveUnavailableCards()
+        {
+            Debug.Log(cards);
+            Debug.Log(cards.Count);
+            List<CardController> availableCards = new List<CardController>();
+
+            foreach (CardController card in cards)
+            {
+                if (card.IsAvailable) availableCards.Add(card);
+                else Destroy(card.gameObject);
+            }
+
+            cards = availableCards;
         }
     }
 }

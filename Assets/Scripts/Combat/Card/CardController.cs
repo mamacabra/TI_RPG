@@ -10,6 +10,7 @@ namespace Combat
         private Member Striker { get; set; }
 
         public CardDisplay Display { get; private set; }
+        public bool IsAvailable => Striker.Character.HasEnoughActionPoints(Card.ActionPointsCost);
 
         public static CardController ClickedCard { get; private set; }
         public static CardController DraggedCard { get; private set; }
@@ -52,6 +53,7 @@ namespace Combat
             if (hasActionPoints == false || target is null) return;
 
             CardBehavior.Use(Striker, card, target);
+            HandController.Instance.RemoveUnavailableCards();
             HandController.Instance.RemoveUsedCard(this);
             Striker.Hand.Remove(card);
 
