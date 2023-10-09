@@ -165,12 +165,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8360624267685435214}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &551392530508442394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Help_Ilha2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378369330004013450, guid: ac2d04ab5548d6941951a2d459d34e3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

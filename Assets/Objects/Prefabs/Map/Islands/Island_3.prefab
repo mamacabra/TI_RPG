@@ -171,10 +171,10 @@ Transform:
   m_LocalScale: {x: 0.77019, y: 0.77019, z: 0.77019}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2397063774503082386}
   - {fileID: 535574517644332871}
   - {fileID: 2715872133627270822}
   - {fileID: 5803955142257361817}
+  - {fileID: 2397063774503082386}
   - {fileID: 28309043112025241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -462,12 +462,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2423064449624487276}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &8103982623218373436
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Help_Ilha1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555261321576843410, guid: d91aa6698ab35184f968edb8d158553d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4182084913485334981, guid: d91aa6698ab35184f968edb8d158553d,
         type: 3}

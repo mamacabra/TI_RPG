@@ -2693,7 +2693,7 @@ MonoBehaviour:
     type: 2}
   highlightMaterialIncorretIsland: {fileID: 2100000, guid: ad70821204f670b45add7556f910c084,
     type: 2}
-  selectionMaterial: {fileID: 2100000, guid: 40c2904a1c78a7542b953d8d564a5ff2, type: 2}
+  selectionMaterial: {fileID: 2100000, guid: 9cd9d59551c7cd44d87d7702c54b7308, type: 2}
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -7385,6 +7385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8695693017147199025, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
