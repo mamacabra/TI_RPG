@@ -2,9 +2,9 @@ namespace Combat
 {
     public abstract class HeroElephantPassive : Passive
     {
-        private const int SelfHealingChance = 20;
+        private const int SelfHealingChance = 100;
         private const int SelfHealingAmount = 2;
-        private const int AllyHealingChance = 10;
+        private const int AllyHealingChance = 100;
         private const int AllyHealingAmount = 1;
 
         public new static void OnBeforeTurn(Character character)

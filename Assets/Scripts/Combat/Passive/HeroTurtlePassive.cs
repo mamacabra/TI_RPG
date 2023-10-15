@@ -2,8 +2,8 @@ namespace Combat
 {
     public abstract class HeroTurtlePassive : Passive
     {
-        private const int SelfShieldChance = 30;
-        private const int SelfReflectChance = 5;
+        private const int SelfShieldChance = 100;
+        private const int SelfReflectChance = 100;
 
         public new static void OnBeforeTurn(Character character)
         {

@@ -19,7 +19,7 @@ namespace Combat
         {
             cards = new List<CardController>();
             InstantiateCards();
-            // SetupCardsPosition();
+            SetupCardsPosition();
         }
 
         private void OnDisable()

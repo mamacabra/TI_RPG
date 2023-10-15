@@ -1,10 +1,13 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Combat
 {
     public class CombatCharacterPassive : MonoBehaviour, ICombatStateObserver
     {
+        private const float PassiveCoroutineDelay = 0.3f;
+
         private void Start()
         {
             CombatState.Instance.Subscribe(this);
@@ -15,32 +18,38 @@ namespace Combat
             switch (state)
             {
                 case CombatStateType.HeroPassive:
-                    HeroBeforeTurnPassives();
-                    CombatState.Instance.NextState();
+                    StartCoroutine(nameof(HeroBeforeTurnPassives));
                     break;
                 case CombatStateType.EnemyPassive:
-                    EnemyBeforeTurnPassives();
-                    CombatState.Instance.NextState();
+                    StartCoroutine(nameof(EnemyBeforeTurnPassives));
                     break;
             }
         }
 
-        private static void HeroBeforeTurnPassives()
+        private IEnumerator HeroBeforeTurnPassives()
         {
-            CombatManager.Instance.HeroParty.Members.ForEach(member =>
+            foreach (var member in CombatManager.Instance.HeroParty.Members)
             {
-                if (member.Character.IsDead) return;
+                if (member.Character.IsDead) continue;
                 BeforeTurnPassives(member.Character);
-            });
+                yield return new WaitForSeconds(PassiveCoroutineDelay);
+            }
+
+            yield return new WaitForSeconds(PassiveCoroutineDelay);
+            CombatState.Instance.NextState();
         }
 
-        private static void EnemyBeforeTurnPassives()
+        private IEnumerator EnemyBeforeTurnPassives()
         {
-            CombatManager.Instance.EnemyParty.Members.ForEach(member =>
+            foreach (var member in CombatManager.Instance.EnemyParty.Members)
             {
-                if (member.Character.IsDead) return;
+                if (member.Character.IsDead) continue;
                 BeforeTurnPassives(member.Character);
-            });
+                yield return new WaitForSeconds(PassiveCoroutineDelay);
+            };
+
+            yield return new WaitForSeconds(PassiveCoroutineDelay);
+            CombatState.Instance.NextState();
         }
 
         private static void BeforeTurnPassives(Character character)
