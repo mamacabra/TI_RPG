@@ -19,7 +19,7 @@ namespace Combat
         {
             cards = new List<CardController>();
             InstantiateCards();
-            SetupCardsPosition();
+            // SetupCardsPosition();
         }
 
         private void OnDisable()
@@ -87,8 +87,6 @@ namespace Combat
 
         public void RemoveUnavailableCards()
         {
-            Debug.Log(cards);
-            Debug.Log(cards.Count);
             List<CardController> availableCards = new List<CardController>();
 
             foreach (CardController card in cards)

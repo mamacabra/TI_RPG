@@ -6,7 +6,6 @@ namespace Combat
     public class CombatState : MonoBehaviour
     {
         public static CombatState Instance;
-        public bool HasAllObservers { get; private set; } = false;
 
         private CombatStateType _state = CombatStateType.Wait;
         private Queue<CombatStateType> _stateChanges;
@@ -27,11 +26,6 @@ namespace Combat
                 foreach (var observer in _observers)
                     observer.OnCombatStateChanged(_state);
             }
-
-            if (HasAllObservers && CombatManager.Instance.HasAllCharacters && _state == CombatStateType.Wait)
-            {
-                NextState();
-            }
         }
 
         public void Subscribe(ICombatStateObserver observer)
@@ -50,7 +44,7 @@ namespace Combat
         {
             switch (_state)
             {
-                case CombatStateType.Wait:
+                case CombatStateType.PreparationStage:
                     SetState(CombatStateType.HeroStatus);
                     break;
                 case CombatStateType.HeroStatus:
@@ -97,7 +91,8 @@ namespace Combat
                 if (typeof(EnemyIA) == observer.GetType()) hasEnemyIa = true;
             }
 
-            HasAllObservers = hasCombatCharacterStatus && hasCombatCharacterPassive && hasCombatManager && hasCombatHudController && hasEnemyIa;
+            bool hasAllObservers = hasCombatCharacterStatus && hasCombatCharacterPassive && hasCombatManager && hasCombatHudController && hasEnemyIa;
+            if (hasAllObservers) SetState(CombatStateType.PreparationStage);
         }
     }
 }

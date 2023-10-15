@@ -6,7 +6,6 @@ namespace Combat
     public class CombatManager : MonoBehaviour, ICombatStateObserver, ICharacterObserver
     {
         public static CombatManager Instance;
-        public bool HasAllCharacters => HeroParty != null && EnemyParty != null;
 
         [SerializeField] private List<Member> heroes;
         public Party HeroParty { get; private set; }
@@ -28,6 +27,11 @@ namespace Combat
         {
             switch (state)
             {
+                case CombatStateType.PreparationStage:
+                    HeroParty = new Party(heroes);
+                    EnemyParty = new Party(enemies);
+                    CombatState.Instance.NextState();
+                    break;
                 case CombatStateType.HeroDeckShuffle:
                     HeroParty.ShuffleDeck();
                     HeroParty.ResetActionPoints();
@@ -54,17 +58,6 @@ namespace Combat
                     CombatState.Instance.SetState(CombatStateType.Victory);
                     break;
             }
-        }
-
-        public void SetCharacters()
-        {
-            SetCharacters(heroes, enemies);
-        }
-
-        public void SetCharacters(List<Member> heroes, List<Member> enemies)
-        {
-            HeroParty = new Party(heroes);
-            EnemyParty = new Party(enemies);
         }
     }
 }
