@@ -195,16 +195,22 @@ public class MapManager : MonoBehaviour
         Debug.Log("UnloadScenes");
         SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory;
         Transition.instance.TransitionScenes(s, LoadSceneMode.Additive, false, true);
-
+       SaveDeath.Instance.CheckGameOver();
 
         if (EndGame)
         {
-            Time.timeScale = 0;
-            ShowEndGamePanel?.Invoke();
+            GameOver();
             return;
         }
 
         OnCanClick();
+    }
+
+    public void GameOver()
+    {
+        EndGame = true;
+        Time.timeScale = 0;
+        ShowEndGamePanel?.Invoke();
     }
 
     public void EndTransitionUnload()

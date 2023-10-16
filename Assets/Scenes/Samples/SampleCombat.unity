@@ -869,6 +869,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1021194692087637999, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2139579614444017518, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_Name
@@ -889,6 +894,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ab8524c548d7a35093c013cd05c4f9b, type: 2}
+    - target: {fileID: 2786012438610354690, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3419156259648004889, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -904,6 +914,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1498710804}
+    - target: {fileID: 3904126525075804024, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5558163811683817334, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: CharacterIndex

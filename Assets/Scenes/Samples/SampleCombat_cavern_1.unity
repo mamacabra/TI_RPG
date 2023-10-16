@@ -9916,6 +9916,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1021194692087637999, guid: 97147fb1627c0b94dbae24bc28caa037,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2139579614444017518, guid: 97147fb1627c0b94dbae24bc28caa037,
         type: 3}
       propertyPath: m_Name
@@ -9930,6 +9935,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786012438610354690, guid: 97147fb1627c0b94dbae24bc28caa037,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3904126525075804024, guid: 97147fb1627c0b94dbae24bc28caa037,
+        type: 3}
+      propertyPath: isEnemy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5558163811683817334, guid: 97147fb1627c0b94dbae24bc28caa037,
         type: 3}
