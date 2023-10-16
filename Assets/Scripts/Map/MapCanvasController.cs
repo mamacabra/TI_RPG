@@ -61,6 +61,7 @@ public class MapCanvasController : MonoBehaviour
     public void ShowEndGamePanel()
     {
         EndGame.SetActive(true);
+        Transition.instance.HideTransition();
     }
 
     public void RestartGame()
