@@ -854,6 +854,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 227334561371574748, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab8524c548d7a35093c013cd05c4f9b, type: 2}
     - target: {fileID: 834776059143930348, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -879,6 +884,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2733540400859302557, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab8524c548d7a35093c013cd05c4f9b, type: 2}
+    - target: {fileID: 3419156259648004889, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab8524c548d7a35093c013cd05c4f9b, type: 2}
     - target: {fileID: 3635573020657020350, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_Camera
@@ -949,6 +964,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6644101723008917989, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b77f93d80c3383a2a500498efbae27d, type: 2}
     - target: {fileID: 6844103516767539830, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -969,6 +989,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8097604364470211360, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b77f93d80c3383a2a500498efbae27d, type: 2}
     - target: {fileID: 8538481052131989403, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -979,6 +1004,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8862042032040639140, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b77f93d80c3383a2a500498efbae27d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
