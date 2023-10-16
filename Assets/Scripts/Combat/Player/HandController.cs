@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 namespace Combat
@@ -17,9 +18,10 @@ namespace Combat
 
         private void OnEnable()
         {
-            cards = new List<CardController>();
-            InstantiateCards();
-            SetupCardsPosition();
+            StartCoroutine(WaitUntilCombatManagerInstance());
+            // cards = new List<CardController>();
+            // InstantiateCards();
+            // SetupCardsPosition();
         }
 
         private void OnDisable()
@@ -96,6 +98,14 @@ namespace Combat
             }
 
             cards = availableCards;
+        }
+
+        private IEnumerator WaitUntilCombatManagerInstance()
+        {
+            yield return new WaitUntil(() => CombatManager.Instance != null);
+            cards = new List<CardController>();
+            InstantiateCards();
+            SetupCardsPosition();
         }
     }
 }
