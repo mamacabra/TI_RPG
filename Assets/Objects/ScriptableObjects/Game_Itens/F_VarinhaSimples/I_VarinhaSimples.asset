@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: I_VarinhaSimples
   m_EditorClassIdentifier: 
-  name: Varinha Simples
+  cardName: Varinha Simples
   description: Uma varinha magica antiga imbuida em poder de fogo.
   resourcePath: 
   sprite: {fileID: 0}

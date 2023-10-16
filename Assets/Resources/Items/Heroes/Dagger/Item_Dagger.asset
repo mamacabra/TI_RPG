@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_Dagger
   m_EditorClassIdentifier: 
-  name: Dagger
+  cardName: Dagger
   description: 
   resourcePath: Items/Heroes/Dagger/Item_Dagger
   sprite: {fileID: 21300000, guid: 1ff1175d56df9eb4f8cfa0ba429d9254, type: 3}

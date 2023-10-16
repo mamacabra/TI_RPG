@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_Spear
   m_EditorClassIdentifier: 
-  name: Lance
+  cardName: "Lan\xE7a"
   description: Perfume
   resourcePath: Items/Heroes/Spear/Item_Spear
   sprite: {fileID: 21300000, guid: bbceae73b019590439ef5129744308a1, type: 3}

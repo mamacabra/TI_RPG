@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_BigShield
   m_EditorClassIdentifier: 
-  name: "Escud\xE3o"
+  cardName: Escudo
   description: 
-  resourcePath: 
+  resourcePath: Items/Heroes/BigShield/Item_BigShield
   sprite: {fileID: 21300000, guid: 4097dec1e9a0ede4c85bf4caa28e9bcf, type: 3}
   cards:
   - {fileID: 11400000, guid: cf98a4be05acf9c419ff38c7bd53592d, type: 2}

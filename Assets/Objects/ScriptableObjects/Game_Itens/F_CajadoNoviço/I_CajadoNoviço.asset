@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: "I_CajadoNovi\xE7o"
   m_EditorClassIdentifier: 
-  name: "Cajado Novi\xE7o"
+  cardName: "Cajado Novi\xE7o"
   description: Um cajado antigo e poderoso.
   resourcePath: 
   sprite: {fileID: 0}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_Staff
   m_EditorClassIdentifier: 
-  name: Cajado
+  cardName: Cajado
   description: 
-  resourcePath: 
+  resourcePath: Items/Heroes/Staff/Item_Staff
   sprite: {fileID: 21300000, guid: 4ebc70b29cf84034aa52eafdbca3951d, type: 3}
   cards:
   - {fileID: 11400000, guid: ca3575120e291a4469b51d3b25323c73, type: 2}

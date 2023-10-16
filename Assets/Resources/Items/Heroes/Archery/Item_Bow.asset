@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_Bow
   m_EditorClassIdentifier: 
-  name: Arco
+  cardName: Arco
   description: Contem flechas
-  resourcePath: 
+  resourcePath: Items/Heroes/Archery/Item_Bow
   sprite: {fileID: 21300000, guid: c6b96b87adbd25343b9079d963ffb637, type: 3}
   cards:
   - {fileID: 11400000, guid: 83ddfe9bcb24f9b41b959d9ad75cb92a, type: 2}

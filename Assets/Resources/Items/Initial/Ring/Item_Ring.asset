@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_Ring
   m_EditorClassIdentifier: 
-  name: Anel
+  cardName: Anel
   description: 
   resourcePath: Items/Initial/Ring/Item_Ring
   sprite: {fileID: 21300000, guid: e76b30749d6bac4489c3ccf1ccb2c8fc, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: "I_Lan\xE7aDoCa\xE7ador"
   m_EditorClassIdentifier: 
-  name: "Lan\xE7a Do Ca\xE7ador"
+  cardName: "Lan\xE7a do Ca\xE7ador"
   description: "Uma lan\xE7a confiavel feita a m\xE3o por um ca\xE7ador experiente."
   resourcePath: 
   sprite: {fileID: 0}

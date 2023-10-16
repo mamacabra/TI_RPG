@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_Crossbow
   m_EditorClassIdentifier: 
-  name: Balestra
+  cardName: Crossbow
   description: 
-  resourcePath: 
+  resourcePath: Items/Heroes/Crossbow/Item_Crossbow
   sprite: {fileID: 21300000, guid: cfddf38e2d0fcbb40b169564fd58ea23, type: 3}
   cards:
   - {fileID: 11400000, guid: 334011be9cde42346817807cfbd1ead9, type: 2}

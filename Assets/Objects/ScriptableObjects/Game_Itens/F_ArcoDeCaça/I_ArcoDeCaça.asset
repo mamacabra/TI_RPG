@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: "I_ArcoDeCa\xE7a"
   m_EditorClassIdentifier: 
-  name: "Arco De Ca\xE7a"
+  cardName: "Arco de Ca\xE7a"
   description: Um arco pequeno e confiavel.
   resourcePath: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 0c7f2b30efde63b4e85506baea6e3484, type: 3}
   cards:
   - {fileID: 11400000, guid: e2e15d1a7a52a5546b3e63b5c2f739f6, type: 2}
   - {fileID: 0}

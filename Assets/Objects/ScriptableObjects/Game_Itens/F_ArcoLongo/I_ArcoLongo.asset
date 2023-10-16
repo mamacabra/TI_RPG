@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: I_ArcoLongo
   m_EditorClassIdentifier: 
-  name: Arco Longo
+  cardName: Arco Longo
   description: "Um arco poderoso usado por ca\xE7adores de elite."
   resourcePath: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cfddf38e2d0fcbb40b169564fd58ea23, type: 3}
   cards:
   - {fileID: 11400000, guid: 245ecfc9efb38d6479ec76c188fdf8e9, type: 2}
   - {fileID: 11400000, guid: 2c1bd803a321589469b205eda63991f5, type: 2}

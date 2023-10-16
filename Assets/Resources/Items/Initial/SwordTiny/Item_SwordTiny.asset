@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_SwordTiny
   m_EditorClassIdentifier: 
-  name: Espada Pequena
+  cardName: Espada Pequena
   description: 
   resourcePath: Items/Initial/SwordTiny/Item_SwordTiny
   sprite: {fileID: 21300000, guid: 789e518168d493d4396ec984b1b5bcb3, type: 3}

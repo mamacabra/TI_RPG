@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: I_AmuletoDoEquilibrio
   m_EditorClassIdentifier: 
-  name: "Amuleto Do Equil\xEDbrio"
+  cardName: Amuleto do Equilibrio
   description: "Um amuleto poderoso que extrai sua for\xE7a das emo\xE7\xF5es do
     portador."
   resourcePath: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 1d2713099bc326341a179089e982d955, type: 3}
   cards:
   - {fileID: 11400000, guid: 644d1c600fc18b64d800316ef7281001, type: 2}
   - {fileID: 11400000, guid: b0ea6d6a65a9f7845b22ff83e10c83c9, type: 2}

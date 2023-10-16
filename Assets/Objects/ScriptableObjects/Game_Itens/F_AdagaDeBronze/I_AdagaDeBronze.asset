@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: I_AdagaDeBronze
   m_EditorClassIdentifier: 
-  name: Adaga De Bronze
+  cardName: Adaga de Bronze
   description: Uma adaga velha e enferrujada.
   resourcePath: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 54f8589e2ef2f7a4e875a51ae49b1e7b, type: 3}
   cards:
   - {fileID: 11400000, guid: 03ca7f33297ad294bbd5a744bddb53fd, type: 2}
   - {fileID: 0}
