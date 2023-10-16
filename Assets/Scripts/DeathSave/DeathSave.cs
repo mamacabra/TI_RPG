@@ -36,13 +36,9 @@ public class DeathSave
                     stream.Close();
                     return data;
                 }
-                else
-                {
-                  
-                    return null;
-                }
-            
-            
+
+                return null;
+
             }
         }
     }
