@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5219048737331580392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Hover/H1
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Hover/H1
+  Guid:
+    Data1: -1525092422
+    Data2: 1297566212
+    Data3: -55646558
+    Data4: -637532348
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4552095655925195364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,9 +42,36 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638310884086705129
+  lastModified: 638338481226809636
   FileSizes: []
   Exists: 1
+--- !u!114 &-3957539358527979267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Hover/H2
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Hover/H2
+  Guid:
+    Data1: 585542478
+    Data2: 1076342271
+    Data3: 2101314482
+    Data4: 1969628470
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3932736572993475159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,6 +99,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 320000
+--- !u!114 &-2810252714615330507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Distribuir/D2
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Distribuir/D2
+  Guid:
+    Data1: 470613639
+    Data2: 1095223590
+    Data3: 844028321
+    Data4: 1031023799
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1674568966958251392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +141,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Effects.bank
   Name: Effects
   StudioPath: bank:/Effects
-  lastModified: 638310884086505125
+  lastModified: 638338481226399541
   FileSizes: []
   Exists: 1
 --- !u!114 &-1566987625354177945
@@ -112,13 +193,49 @@ MonoBehaviour:
   - {fileID: 2431766580295060479}
   - {fileID: 2342152960044556373}
   - {fileID: -1566987625354177945}
+  - {fileID: 3690342988433052980}
+  - {fileID: 9219796504323941138}
+  - {fileID: 8414093595548128279}
+  - {fileID: 1605264944517941097}
+  - {fileID: -3957539358527979267}
+  - {fileID: -2810252714615330507}
+  - {fileID: 3206109151306118578}
+  - {fileID: -5219048737331580392}
+  - {fileID: 9209336130315582642}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4552095655925195364}
   StringsBanks:
   - {fileID: 4848115676711782504}
-  cacheTime: 638310884086705129
+  cacheTime: 638338481226819622
   cacheVersion: 131605
+--- !u!114 &1605264944517941097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Distribuir/D5
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Distribuir/D5
+  Guid:
+    Data1: -2143228347
+    Data2: 1292442415
+    Data3: -2053994361
+    Data4: -2141872888
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2342152960044556373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +290,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3206109151306118578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Distribuir/D1
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Distribuir/D1
+  Guid:
+    Data1: 1964896428
+    Data2: 1157291474
+    Data3: -1696391520
+    Data4: -2087111089
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3690342988433052980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/ComprarCarta
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/ComprarCarta
+  Guid:
+    Data1: -1016408006
+    Data2: 1125871958
+    Data3: -540561746
+    Data4: 1382492913
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4848115676711782504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,10 +359,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638310884086705129
+  lastModified: 638338481226819622
   FileSizes:
   - Name: 
-    Value: 1014
+    Value: 1390
   Exists: 1
 --- !u!114 &8387537876161706069
 MonoBehaviour:
@@ -211,6 +382,87 @@ MonoBehaviour:
     Data2: 1150926139
     Data3: -535975283
     Data4: 341671686
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8414093595548128279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Distribuir/D4
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Distribuir/D4
+  Guid:
+    Data1: 258786083
+    Data2: 1198813408
+    Data3: 380877746
+    Data4: 1572568335
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9209336130315582642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/Distribuir/D3
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/Distribuir/D3
+  Guid:
+    Data1: 951628258
+    Data2: 1335806952
+    Data3: -595764834
+    Data4: -1616534421
+  Banks:
+  - {fileID: -1674568966958251392}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9219796504323941138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CardsSFX/SelecinarCarta
+  m_EditorClassIdentifier: 
+  Path: event:/CardsSFX/SelecinarCarta
+  Guid:
+    Data1: 1122669048
+    Data2: 1172453324
+    Data3: 1079302051
+    Data4: 1351331878
   Banks:
   - {fileID: -1674568966958251392}
   IsStream: 0
