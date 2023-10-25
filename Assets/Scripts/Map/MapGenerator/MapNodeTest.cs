@@ -26,11 +26,11 @@ public class MapNodeTest : MonoBehaviour
     public TypeOfIsland typeOfIsland;
     public int Depth;
 
-    private TextMeshPro textTypeOfIsland;
-
     private LineRenderer lineRenderer1, lineRenderer2;
 
     [SerializeField] private SceneNames combatScene;
+
+    public MeshRenderer meshRenderer;
 
 
     private void Awake()
@@ -40,9 +40,6 @@ public class MapNodeTest : MonoBehaviour
             int r = Random.Range(3, 5);
             typeOfIsland = (TypeOfIsland)r;
         }
-
-        textTypeOfIsland = transform.GetChild(2).GetComponent<TextMeshPro>();
-        textTypeOfIsland.text = typeOfIsland.ToString();
 
         lineRenderer1 = transform.GetChild(0).GetComponent<LineRenderer>();
         lineRenderer2 = transform.GetChild(1).GetComponent<LineRenderer>();

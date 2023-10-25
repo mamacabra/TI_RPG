@@ -18,6 +18,7 @@ public class MapManager : MonoBehaviour
     public event Action<bool> ShowCombatPanel;
     public event Action ShowEndGamePanel;
 
+    public event Action<bool> ShowMap;
     public event Action<Vector3, Vector3> MoveCameraDeslocate;
     public event Action ZoomCameraIsland;
     public event Action ResetCameras;
@@ -43,6 +44,29 @@ public class MapManager : MonoBehaviour
         if (!Transition.instance) return;
         Transition.instance.EndTransitionLoad -= EndTransitionLoad;
         Transition.instance.EndTransitionUnload -= EndTransitionUnload;
+    }
+
+    private void Start()
+    {
+        ShowMap?.Invoke(true);
+        canClick = false;
+
+        StartCoroutine(WaitToEndAnim());
+        IEnumerator WaitToEndAnim()
+        {
+            yield return new WaitForSeconds(8f);
+            ShowMap?.Invoke(false);
+            ShowInventary();
+            //canClick = true;
+        }
+    }
+    
+    void ShowInventary()
+    {
+        canClick = false;
+        SceneNames n = SceneNames.SampleInventory;
+        Action<bool> action = ShowPanel;
+        StartTransition(n, action);
     }
 
     public bool CheckIndex(GameObject island)
@@ -120,6 +144,7 @@ public class MapManager : MonoBehaviour
 
     public void CheckIsland()
     {
+        
         //camera
         SceneNames n = SceneNames.SampleCombat;
         Action<bool> action = null;
@@ -153,6 +178,11 @@ public class MapManager : MonoBehaviour
             OnCanClick();
         }
 
+        StartTransition(n, action);
+    }
+
+    void StartTransition(SceneNames n, Action<bool> action)
+    {
         currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
         Transition.instance.TransitionScenes(n, LoadSceneMode.Additive, true, true);
 
@@ -193,7 +223,7 @@ public class MapManager : MonoBehaviour
     public void UnloadScenes(bool isCombatScene)
     {
         Debug.Log("UnloadScenes");
-        SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory;
+        SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory; 
         Transition.instance.TransitionScenes(s, LoadSceneMode.Additive, false, true);
        SaveDeath.Instance.CheckGameOver();
 
@@ -202,8 +232,13 @@ public class MapManager : MonoBehaviour
             GameOver();
             return;
         }
-
+        
         OnCanClick();
+
+        if (isCombatScene)
+        {
+            ShowInventary();
+        }
     }
 
     public void GameOver()

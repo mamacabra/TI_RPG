@@ -27,7 +27,8 @@ public class SelectionHighLight : MonoBehaviour
             highlightTransform = raycastHit.transform;
             if (highlightTransform.CompareTag("Island"))
             {
-                highlight = raycastHit.transform.GetComponent<MeshRenderer>();
+                Debug.Log("island");
+                highlight = raycastHit.transform.GetComponent<MapNodeTest>().meshRenderer;
                 if (lastHighlight != null)
                 {
                     if (lastHighlight.material != selectionMaterial)

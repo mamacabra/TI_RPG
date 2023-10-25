@@ -7,11 +7,14 @@ using UnityEngine;
 
 public class CameraCinemachineController : MonoBehaviour
 {
+    [SerializeField] private CinemachineVirtualCamera cameraShowStart;
     [SerializeField]private CinemachineVirtualCamera cameraDeslocate;
     [SerializeField]private CinemachineVirtualCamera cameraZoomIsland;
     private Vector3 currentIslandPos;
     private void OnEnable()
     {
+       
+        MapManager.Instance.ShowMap += ShowMap;
         MapManager.Instance.MoveCameraDeslocate += MoveCamera;
         MapManager.Instance.ZoomCameraIsland += ZoomCamera;
         MapManager.Instance.ResetCameras += Reset;
@@ -19,9 +22,16 @@ public class CameraCinemachineController : MonoBehaviour
     private void OnDisable()
     {
         if(!MapManager.Instance) return;
+        MapManager.Instance.ShowMap -= ShowMap;
         MapManager.Instance.MoveCameraDeslocate -= MoveCamera;
         MapManager.Instance.ZoomCameraIsland -= ZoomCamera;
         MapManager.Instance.ResetCameras -= Reset;
+    }
+
+    public void ShowMap(bool state)
+    {
+        cameraShowStart.gameObject.SetActive(state);
+        cameraDeslocate.gameObject.SetActive(!state);
     }
     void MoveCamera(Vector3 pos, Vector3 islandPos)
     {

@@ -10,6 +10,7 @@ public enum SceneNames
 {
     SampleMap,
     SampleMap1,
+    Map,
     Menu,
     SampleCombat,
     SampleCombat_cavern_1,
