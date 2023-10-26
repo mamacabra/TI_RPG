@@ -155,11 +155,11 @@ MonoBehaviour:
   isPlay: 0
   musicTest:
     Guid:
-      Data1: 637131818
-      Data2: 1105388915
-      Data3: -1437087069
-      Data4: -242335879
-    Path: event:/MusicaMapa
+      Data1: 228755584
+      Data2: 1151512056
+      Data3: -1239872840
+      Data4: -1689549804
+    Path: event:/MusicaTestando
 --- !u!4 &101166305
 Transform:
   m_ObjectHideFlags: 0
