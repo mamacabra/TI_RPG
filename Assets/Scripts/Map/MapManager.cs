@@ -12,8 +12,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject currentEventSystem;
     [SerializeField] private GameObject globalVolume;
     [SerializeField] private GameObject directionalLight;
-
-    public event Action CanClick;
+    
     public event Action<bool> ShowPanel;
     public event Action<bool> ShowCombatPanel;
     public event Action ShowEndGamePanel;
@@ -145,6 +144,8 @@ public class MapManager : MonoBehaviour
     public void CheckIsland()
     {
         
+        Debug.Log("Ship Arrived");
+        Debug.Log(lastMp.name);
         //camera
         SceneNames n = SceneNames.SampleCombat;
         Action<bool> action = null;
@@ -217,7 +218,7 @@ public class MapManager : MonoBehaviour
         Time.timeScale = 1;
         ShowPanel?.Invoke(false);
         ShowCombatPanel?.Invoke(false);
-        CanClick?.Invoke();
+        canClick = true;
     }
 
     public void UnloadScenes(bool isCombatScene)
@@ -238,6 +239,7 @@ public class MapManager : MonoBehaviour
         if (isCombatScene)
         {
             ShowInventary();
+            currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
         }
     }
 

@@ -123,7 +123,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 3a9a93c0982ae6b40a90a5e83acbe824, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ee4fe05d59523bf43b56b9e9a7823509, type: 2}
 --- !u!1001 &14967509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44773690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -262,6 +262,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sea
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235581444280780370, guid: 31ea9d98bdd4f7c4099f94be98f1485a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235581444280780370, guid: 31ea9d98bdd4f7c4099f94be98f1485a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1235581444280780371, guid: 31ea9d98bdd4f7c4099f94be98f1485a,
         type: 3}
@@ -792,7 +802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 645800433}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cenary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +892,7 @@ GameObject:
   - component: {fileID: 1215277471}
   - component: {fileID: 1215277473}
   - component: {fileID: 1215277472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1153,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -1689,7 +1699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594614403063924}
   - component: {fileID: 6468272926272563848}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1706,7 +1716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594614443095669}
   - component: {fileID: 6468272926367153289}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1723,7 +1733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594614101196004}
   - component: {fileID: 6468272926574704152}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594614214630842}
   - component: {fileID: 6468272926622603078}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594613828525513}
   - component: {fileID: 6468272925765162805}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594613887305731}
   - component: {fileID: 6468272925740057343}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1791,7 +1801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594613470518881}
   - component: {fileID: 6468272926133785757}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594613613905431}
   - component: {fileID: 6468272926021848299}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7942594613605323822}
   - component: {fileID: 6468272925996490450}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1898,7 +1908,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -1922,10 +1932,9 @@ GameObject:
   - component: {fileID: 440877762487959888}
   - component: {fileID: 7621794587087202509}
   - component: {fileID: 5640025892309228948}
-  - component: {fileID: 7621794587087202510}
   m_Layer: 3
   m_Name: Island_Base
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3817,7 +3826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2071444880554265144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5622,7 +5631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5258147419012062263}
   - component: {fileID: 9152046148015724235}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5660,10 +5669,9 @@ GameObject:
   - component: {fileID: 2368679491345099538}
   - component: {fileID: 5694660184409211535}
   - component: {fileID: 7531169924971935702}
-  - component: {fileID: 7531169924971935703}
   m_Layer: 3
   m_Name: Island_Base_3
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5680,10 +5688,9 @@ GameObject:
   - component: {fileID: 2368679491318054163}
   - component: {fileID: 5694660184520447118}
   - component: {fileID: 7531169925083029975}
-  - component: {fileID: 7531169925083029976}
   m_Layer: 3
   m_Name: Island_Base_8
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5700,10 +5707,9 @@ GameObject:
   - component: {fileID: 2368679491131048157}
   - component: {fileID: 5694660184735721792}
   - component: {fileID: 7531169924735081497}
-  - component: {fileID: 7531169924735081498}
   m_Layer: 3
   m_Name: Island_Base_6
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5720,10 +5726,9 @@ GameObject:
   - component: {fileID: 2368679491015909763}
   - component: {fileID: 5694660184755177502}
   - component: {fileID: 7531169924781161799}
-  - component: {fileID: 7531169924781161800}
   m_Layer: 3
   m_Name: Island_Base_2
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5740,10 +5745,9 @@ GameObject:
   - component: {fileID: 2368679492932605284}
   - component: {fileID: 5694660185061407993}
   - component: {fileID: 7531169926672681376}
-  - component: {fileID: 7531169926672681377}
   m_Layer: 3
   m_Name: Island_Base_4
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5760,10 +5764,9 @@ GameObject:
   - component: {fileID: 2368679492890722478}
   - component: {fileID: 5694660185019394355}
   - component: {fileID: 7531169926664363114}
-  - component: {fileID: 7531169926664363115}
   m_Layer: 3
   m_Name: Island_Base_9
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5780,10 +5783,9 @@ GameObject:
   - component: {fileID: 2368679492652583241}
   - component: {fileID: 5694660185317597396}
   - component: {fileID: 7531169926415996301}
-  - component: {fileID: 7531169926415996302}
   m_Layer: 3
   m_Name: Island_Base_1
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5800,10 +5802,9 @@ GameObject:
   - component: {fileID: 2368679492677557104}
   - component: {fileID: 5694660185342702317}
   - component: {fileID: 7531169926407669684}
-  - component: {fileID: 7531169926407669685}
   m_Layer: 3
   m_Name: Island_Base_7
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5820,10 +5821,9 @@ GameObject:
   - component: {fileID: 2368679492789486342}
   - component: {fileID: 5694660185450965659}
   - component: {fileID: 7531169926281060290}
-  - component: {fileID: 7531169926281060291}
   m_Layer: 3
   m_Name: Island_Base_5
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5894,7 +5894,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -5972,7 +5972,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6050,7 +6050,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6128,7 +6128,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6206,7 +6206,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6284,7 +6284,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6362,7 +6362,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6440,7 +6440,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6518,7 +6518,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d2bfaff931d44704aa983fd3b5f00fbf,
         type: 3}
@@ -6539,7 +6539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6214274963513660910}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6730,6 +6730,7 @@ MonoBehaviour:
   Depth: 0
   combatScene: 2
   meshRenderer: {fileID: 2108199076}
+  harbor: {fileID: 5152876913662372690}
 --- !u!208 &5694660184409211535
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6740,9 +6741,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6756,9 +6757,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6772,9 +6773,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6788,9 +6789,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6804,9 +6805,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6820,9 +6821,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6836,9 +6837,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6852,9 +6853,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6868,9 +6869,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -6883,7 +6884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5152876913662372690}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7026,12 +7027,17 @@ PrefabInstance:
     - target: {fileID: 268349808740429726, guid: 62d93e1812d1a9945a9af71f43712706,
         type: 3}
       propertyPath: m_Radius
-      value: 0.35
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 268349808740429726, guid: 62d93e1812d1a9945a9af71f43712706,
         type: 3}
       propertyPath: m_BaseOffset
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2456128594381856091, guid: 62d93e1812d1a9945a9af71f43712706,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2726688970949822183, guid: 62d93e1812d1a9945a9af71f43712706,
         type: 3}
@@ -7147,6 +7153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684142345236037364, guid: 62d93e1812d1a9945a9af71f43712706,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8775135852767863106, guid: 62d93e1812d1a9945a9af71f43712706, type: 3}
@@ -8105,7 +8116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8020205367296616110}
   - component: {fileID: 6261472116229092179}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8121,7 +8132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655627595429181}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8137,7 +8148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655627509109859}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8153,7 +8164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655627830192557}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8169,7 +8180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655627803115436}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8185,7 +8196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655627972433848}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8201,7 +8212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655628107767287}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8217,7 +8228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655628116348878}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8233,7 +8244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655628388172250}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8249,7 +8260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8141655628396499984}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Bota a ilha aqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8409,50 +8420,9 @@ MonoBehaviour:
   - {fileID: 7531169925083029975}
   typeOfIsland: 0
   Depth: 3
-  combatScene: 3
+  combatScene: 4
   meshRenderer: {fileID: 1911278802}
---- !u!23 &7531169924735081498
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737016104730}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443827772127}
 --- !u!114 &7531169924781161799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8472,50 +8442,9 @@ MonoBehaviour:
   - {fileID: 7531169926281060290}
   typeOfIsland: 0
   Depth: 2
-  combatScene: 3
+  combatScene: 4
   meshRenderer: {fileID: 1336251062}
---- !u!23 &7531169924781161800
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737095722564}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443842378625}
 --- !u!114 &7531169924971935702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8535,50 +8464,9 @@ MonoBehaviour:
   - {fileID: 7531169924735081497}
   typeOfIsland: 0
   Depth: 2
-  combatScene: 3
+  combatScene: 4
   meshRenderer: {fileID: 1619480378}
---- !u!23 &7531169924971935703
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002736753822933}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657444037345552}
 --- !u!114 &7531169925083029975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8598,50 +8486,9 @@ MonoBehaviour:
   - {fileID: 7531169926664363114}
   typeOfIsland: 0
   Depth: 4
-  combatScene: 2
+  combatScene: 4
   meshRenderer: {fileID: 452041913}
---- !u!23 &7531169925083029976
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002736793590484}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657444144224017}
 --- !u!114 &7531169926281060290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8662,50 +8509,9 @@ MonoBehaviour:
   - {fileID: 7531169925083029975}
   typeOfIsland: 0
   Depth: 3
-  combatScene: 3
+  combatScene: 4
   meshRenderer: {fileID: 2053819855}
---- !u!23 &7531169926281060291
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737727382721}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443196938500}
 --- !u!114 &7531169926407669684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8725,50 +8531,9 @@ MonoBehaviour:
   - {fileID: 7531169926664363114}
   typeOfIsland: 0
   Depth: 4
-  combatScene: 2
+  combatScene: 4
   meshRenderer: {fileID: 1799158775}
---- !u!23 &7531169926407669685
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737614929079}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443355013490}
 --- !u!114 &7531169926415996301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8781,56 +8546,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce55b5c6a2a14fd42a1e9bb00e12d495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: []
+  parent:
+  - {fileID: 0}
   childrens:
   - {fileID: 7531169924781161799}
   - {fileID: 7531169924971935702}
   typeOfIsland: 0
   Depth: 1
-  combatScene: 3
+  combatScene: 4
   meshRenderer: {fileID: 1661811242}
---- !u!23 &7531169926415996302
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737589694094}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443329778507}
 --- !u!114 &7531169926664363114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8849,50 +8574,9 @@ MonoBehaviour:
   childrens: []
   typeOfIsland: 1
   Depth: 5
-  combatScene: 3
+  combatScene: 5
   meshRenderer: {fileID: 845626807}
---- !u!23 &7531169926664363115
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737368328041}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443578178220}
 --- !u!114 &7531169926672681376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8911,50 +8595,9 @@ MonoBehaviour:
   - {fileID: 7531169926407669684}
   typeOfIsland: 0
   Depth: 3
-  combatScene: 3
+  combatScene: 4
   meshRenderer: {fileID: 1818812949}
---- !u!23 &7531169926672681377
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399002737343099555}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  harbor: {fileID: 7008657443620061030}
 --- !u!208 &7621794587087202509
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -8965,54 +8608,12 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.6, y: 0.6, z: 0.6}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!23 &7621794587087202510
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003282839754811031}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &7942594613470518881
 Transform:
   m_ObjectHideFlags: 0
@@ -10252,7 +9853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443842378625}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10268,7 +9869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443827772127}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10284,7 +9885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657444144224017}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10300,7 +9901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657444037345552}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10316,7 +9917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443329778507}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10332,7 +9933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443355013490}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10348,7 +9949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443196938500}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10364,7 +9965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443620061030}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10380,7 +9981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7008657443578178220}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Harbor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10397,7 +9998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624907503380259}
   - component: {fileID: 8080659741370577630}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10414,7 +10015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624907424007805}
   - component: {fileID: 8080659741391344512}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10431,7 +10032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624907216456940}
   - component: {fileID: 8080659741062158609}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10448,7 +10049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624907189017325}
   - component: {fileID: 8080659741156314896}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10465,7 +10066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624906913017527}
   - component: {fileID: 8080659741969267530}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10482,7 +10083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624906904829070}
   - component: {fileID: 8080659741977848179}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10499,7 +10100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624907048215800}
   - component: {fileID: 8080659741834457349}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10516,7 +10117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624906614548304}
   - component: {fileID: 8080659741655626413}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10533,7 +10134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5299624906623005338}
   - component: {fileID: 8080659741714409319}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Line2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

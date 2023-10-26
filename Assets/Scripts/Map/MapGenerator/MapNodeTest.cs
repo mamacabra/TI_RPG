@@ -31,6 +31,7 @@ public class MapNodeTest : MonoBehaviour
     [SerializeField] private SceneNames combatScene;
 
     public MeshRenderer meshRenderer;
+    public Transform harbor;
 
 
     private void Awake()

@@ -18,17 +18,6 @@ public class ShipDeslocation : MonoBehaviour
         cam = FindObjectOfType<Camera>();
     }
 
-    private void OnEnable()
-    {
-        MapManager.Instance.CanClick += CanClick;
-    }
-
-    private void OnDisable()
-    {
-        if (!MapManager.Instance) return;
-        MapManager.Instance.CanClick -= CanClick;
-    }
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && MapManager.Instance.canClick)
@@ -40,23 +29,24 @@ public class ShipDeslocation : MonoBehaviour
                 bool canNavegate = MapManager.Instance.CheckIndex(raycastHit.collider.gameObject);
                 if (!canNavegate)
                 {
-                    CanClick();
+                    MapManager.Instance.canClick = true;
                     return;
                 }
 
-                Navegate(raycastHit.collider.gameObject.transform.position);
+                Navegate(raycastHit.collider.GetComponent<MapNodeTest>().harbor.position);
             }
             else
             {
-                CanClick();
+                MapManager.Instance.canClick = true;
             }
         }
     }
 
     void Navegate(Vector3 pos)
     {
-        Vector3 p = new Vector3(pos.x + 1, pos.y, pos.z);
-        Vector3 pCam = new Vector3(pos.x, cam.transform.position.y, cam.transform.position.z + 2.75f);
+       
+        Vector3 p = new Vector3(pos.x, pos.y, pos.z);
+        Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z + 2.75f);
         navMeshAgent.SetDestination(p);
         MapManager.Instance.MoveCamera(pCam, pos);
 
@@ -64,14 +54,10 @@ public class ShipDeslocation : MonoBehaviour
 
         IEnumerator WaitToCheckIsland()
         {
-            yield return new WaitUntil(() => Vector3.Distance(p, navMeshAgent.transform.position) <= 0.2f);
+            yield return new WaitUntil(() => Vector3.Distance(p, navMeshAgent.transform.position) <= 0.5f);
             yield return new WaitForSeconds(0.5f);
+            Debug.Log("chegou");
             MapManager.Instance.shipArrived = true;
         }
-    }
-
-    public void CanClick()
-    {
-        MapManager.Instance.canClick = true;
     }
 }
