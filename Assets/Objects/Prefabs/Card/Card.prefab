@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 7811068925932419927}
   - component: {fileID: 6318526178333587}
   - component: {fileID: 5988738460122039169}
+  - component: {fileID: 491328216795252273}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -340,6 +341,21 @@ MonoBehaviour:
   meshRenderer: {fileID: 6337962773146890573}
   defaultMaterial: {fileID: 2100000, guid: 0a95999b9656be645be9b4ffa10dce5e, type: 2}
   mouseOverMaterial: {fileID: 2100000, guid: 3d0ad561619f65c4d85f745df7a20e90, type: 2}
+--- !u!114 &491328216795252273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209853840646916433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc404833ed7d8924888ca2cb16ab1466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEffect: CardsSFX/SelecionarCarta
+  HoverEffect: CardsSFX/Hover/H
+  NewCardEffect: CardsSFX/Distribuir/D
 --- !u!1 &1620179958069583183
 GameObject:
   m_ObjectHideFlags: 0
