@@ -18,6 +18,6 @@ public class CardAudio : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        AudioManager.audioManager.PlaySoundEffect(HoverEffect + Random.Range(1,3).ToString());
+        AudioManager.audioManager.PlaySoundEffect(HoverEffect + Random.Range(1,5).ToString());
     }
 }
