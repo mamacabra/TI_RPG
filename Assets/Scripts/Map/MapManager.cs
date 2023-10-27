@@ -81,7 +81,7 @@ public class MapManager : MonoBehaviour
                 {
                     lastMp = mp;
                     lastMpHighlight = mp;
-                    TutorialManager.instance.DoNextTutorial();
+                    //TutorialManager.instance.DoNextTutorial();
                     return true;
                 }
             }
@@ -96,7 +96,7 @@ public class MapManager : MonoBehaviour
             {
                 lastMp = mp;
                 lastMpHighlight = mp;
-                TutorialManager.instance.DoNextTutorial();
+               // TutorialManager.instance.DoNextTutorial();
                 return true;
             }
         }
@@ -106,7 +106,7 @@ public class MapManager : MonoBehaviour
             lastMp = mp;
             lastMpHighlight = mp;
             ShipIndex--;
-            TutorialManager.instance.DoNextTutorial();
+           // TutorialManager.instance.DoNextTutorial();
             return true;
         }
 
@@ -210,7 +210,7 @@ public class MapManager : MonoBehaviour
 
     private void DoNextTutorial()
     {
-        if (TutorialManager.instance.isTutorial) { TutorialManager.instance?.DoNextTutorial(); }
+       // if (TutorialManager.instance.isTutorial) { TutorialManager.instance?.DoNextTutorial(); }
     }
 
     public void OnCanClick()

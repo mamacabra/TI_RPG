@@ -263,6 +263,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_2
       objectReference: {fileID: 0}
+    - target: {fileID: 176350053147029475, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176350053147029475, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3592005077700234561, guid: a61d54343abb742458ae8e473764b895,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -313,11 +323,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5015887284686919187, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a61d54343abb742458ae8e473764b895, type: 3}
+--- !u!23 &128869998 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5058155419637683969, guid: a61d54343abb742458ae8e473764b895,
+    type: 3}
+  m_PrefabInstance: {fileID: 128869997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &210364768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,11 +971,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7456331368433793564, guid: 9ca7f09c9e60d33439d9fd030623c638,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456331368433793564, guid: 9ca7f09c9e60d33439d9fd030623c638,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ca7f09c9e60d33439d9fd030623c638, type: 3}
+--- !u!23 &702662251 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1114620992727513608, guid: 9ca7f09c9e60d33439d9fd030623c638,
+    type: 3}
+  m_PrefabInstance: {fileID: 702662250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &758504124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5640366309944581998, guid: 9ca7f09c9e60d33439d9fd030623c638,
@@ -973,6 +1010,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Island_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166502112008469421, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166502112008469421, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3061151346767854614, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
         type: 3}
@@ -1029,6 +1076,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f38ab3f5a706494c9fbff067b5a51c9, type: 3}
+--- !u!23 &916140377 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5477801710676021753, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 916140376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &985214468
 GameObject:
   m_ObjectHideFlags: 3
@@ -1419,6 +1472,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island
       objectReference: {fileID: 0}
+    - target: {fileID: 235686147622863617, guid: 2cca09de47d21af438c307b54843ca02,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 235686147622863617, guid: 2cca09de47d21af438c307b54843ca02,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307458155402324026, guid: 2cca09de47d21af438c307b54843ca02,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1226873226481327879, guid: d2bfaff931d44704aa983fd3b5f00fbf,
+        type: 3}
     - target: {fileID: 6148303334768092504, guid: 2cca09de47d21af438c307b54843ca02,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1474,6 +1543,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cca09de47d21af438c307b54843ca02, type: 3}
+--- !u!23 &1454364381 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 918440648363631847, guid: 2cca09de47d21af438c307b54843ca02,
+    type: 3}
+  m_PrefabInstance: {fileID: 1454364380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1494533310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1486,6 +1561,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Island_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578427679459678377, guid: d1084d98f28896f4c8a05315fedfb688,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578427679459678377, guid: d1084d98f28896f4c8a05315fedfb688,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3826645317545595074, guid: d1084d98f28896f4c8a05315fedfb688,
         type: 3}
@@ -1542,6 +1627,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1084d98f28896f4c8a05315fedfb688, type: 3}
+--- !u!23 &1494533311 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1122038633549559475, guid: d1084d98f28896f4c8a05315fedfb688,
+    type: 3}
+  m_PrefabInstance: {fileID: 1494533310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520931016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1847,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_5
       objectReference: {fileID: 0}
+    - target: {fileID: 429833725755081735, guid: d11712d9c6ca9a44b9a7dc1e0209c4b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429833725755081735, guid: d11712d9c6ca9a44b9a7dc1e0209c4b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7219712008274146126, guid: d11712d9c6ca9a44b9a7dc1e0209c4b9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1826,6 +1927,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11712d9c6ca9a44b9a7dc1e0209c4b9, type: 3}
+--- !u!23 &1747503396 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7433750897669785738, guid: d11712d9c6ca9a44b9a7dc1e0209c4b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1747503395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1877554458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5931,6 +6038,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_9
       objectReference: {fileID: 0}
+    - target: {fileID: 5037020987072168629, guid: 0771638798799ba4f83a27b20a1694a0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037020987072168629, guid: 0771638798799ba4f83a27b20a1694a0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5602481749578135192, guid: 0771638798799ba4f83a27b20a1694a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5989,6 +6106,12 @@ PrefabInstance:
 --- !u!4 &4332062293395378262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5602481749578135192, guid: 0771638798799ba4f83a27b20a1694a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4332062293395378261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4332062293395378263 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5523671765570874293, guid: 0771638798799ba4f83a27b20a1694a0,
     type: 3}
   m_PrefabInstance: {fileID: 4332062293395378261}
   m_PrefabAsset: {fileID: 0}
@@ -6257,6 +6380,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_7
       objectReference: {fileID: 0}
+    - target: {fileID: 8513494650181087701, guid: 4bff6068ebd0334409a0e5d8bab75660,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513494650181087701, guid: 4bff6068ebd0334409a0e5d8bab75660,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6265,6 +6398,12 @@ PrefabInstance:
 --- !u!4 &5230229331818400361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7796090866742777117, guid: 4bff6068ebd0334409a0e5d8bab75660,
+    type: 3}
+  m_PrefabInstance: {fileID: 5230229331818400360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5230229331818400362 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8368117018343423262, guid: 4bff6068ebd0334409a0e5d8bab75660,
     type: 3}
   m_PrefabInstance: {fileID: 5230229331818400360}
   m_PrefabAsset: {fileID: 0}
@@ -6436,7 +6575,7 @@ MonoBehaviour:
   typeOfIsland: 5
   Depth: 0
   combatScene: 2
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 1454364381}
   harbor: {fileID: 5152876913662372690}
 --- !u!208 &5694660184409211535
 NavMeshObstacle:
@@ -6595,6 +6734,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_8
       objectReference: {fileID: 0}
+    - target: {fileID: 3058511902234724646, guid: 1ddaa3769c5e4d240a935eabeb067e59,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3058511902234724646, guid: 1ddaa3769c5e4d240a935eabeb067e59,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6397375980624394985, guid: 1ddaa3769c5e4d240a935eabeb067e59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6653,6 +6802,12 @@ PrefabInstance:
 --- !u!4 &5807361462940822045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6397375980624394985, guid: 1ddaa3769c5e4d240a935eabeb067e59,
+    type: 3}
+  m_PrefabInstance: {fileID: 5807361462940822044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5807361462940822046 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6246071306035739110, guid: 1ddaa3769c5e4d240a935eabeb067e59,
     type: 3}
   m_PrefabInstance: {fileID: 5807361462940822044}
   m_PrefabAsset: {fileID: 0}
@@ -8202,7 +8357,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 3
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 8376006935260860961}
   harbor: {fileID: 7008657443827772127}
 --- !u!114 &7531169924781161799
 MonoBehaviour:
@@ -8224,7 +8379,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 2
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 128869998}
   harbor: {fileID: 7008657443842378625}
 --- !u!114 &7531169924971935702
 MonoBehaviour:
@@ -8246,7 +8401,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 2
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 916140377}
   harbor: {fileID: 7008657444037345552}
 --- !u!114 &7531169925083029975
 MonoBehaviour:
@@ -8268,7 +8423,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 4
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 5807361462940822046}
   harbor: {fileID: 7008657444144224017}
 --- !u!114 &7531169926281060290
 MonoBehaviour:
@@ -8291,7 +8446,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 3
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 1747503396}
   harbor: {fileID: 7008657443196938500}
 --- !u!114 &7531169926407669684
 MonoBehaviour:
@@ -8313,7 +8468,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 4
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 5230229331818400362}
   harbor: {fileID: 7008657443355013490}
 --- !u!114 &7531169926415996301
 MonoBehaviour:
@@ -8335,7 +8490,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 1
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 702662251}
   harbor: {fileID: 7008657443329778507}
 --- !u!114 &7531169926664363114
 MonoBehaviour:
@@ -8356,7 +8511,7 @@ MonoBehaviour:
   typeOfIsland: 1
   Depth: 5
   combatScene: 5
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 4332062293395378263}
   harbor: {fileID: 7008657443578178220}
 --- !u!114 &7531169926672681376
 MonoBehaviour:
@@ -8377,7 +8532,7 @@ MonoBehaviour:
   typeOfIsland: 0
   Depth: 3
   combatScene: 4
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 1494533311}
   harbor: {fileID: 7008657443620061030}
 --- !u!208 &7621794587087202509
 NavMeshObstacle:
@@ -9688,6 +9843,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_6
       objectReference: {fileID: 0}
+    - target: {fileID: 6103481373901230095, guid: bea43eca42b08844ba7b9d759d029345,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103481373901230095, guid: bea43eca42b08844ba7b9d759d029345,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9696,6 +9861,12 @@ PrefabInstance:
 --- !u!4 &8376006935260860960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3312411981555888271, guid: bea43eca42b08844ba7b9d759d029345,
+    type: 3}
+  m_PrefabInstance: {fileID: 8376006935260860959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8376006935260860961 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8209910288619106988, guid: bea43eca42b08844ba7b9d759d029345,
     type: 3}
   m_PrefabInstance: {fileID: 8376006935260860959}
   m_PrefabAsset: {fileID: 0}
