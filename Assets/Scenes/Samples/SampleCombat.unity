@@ -859,6 +859,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ab8524c548d7a35093c013cd05c4f9b, type: 2}
+    - target: {fileID: 613254424101526902, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 834776059143930348, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1034,6 +1039,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3b77f93d80c3383a2a500498efbae27d, type: 2}
+    - target: {fileID: 9115456296060554321, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
