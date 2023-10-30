@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
+  m_Name: PipaShieldCard
+  m_EditorClassIdentifier: 
+  label: Escudo Pipa
+  description: "Ele \xE9 habilmente confeccionado com materiais resistentes, como
+    a\xE7o temperado ou madeira refor\xE7ada, garantindo uma defesa s\xF3lida em
+    combate."
+  cost: 2
+  receive: 0
+  damage: 0
+  heal: 2
+  drawCard: 0
+  addCardOnTargetDeck: []
+  dropCardOnTargetHand: 0
+  statusBewitch: 0
+  statusBleed: 0
+  statusBurn: 0
+  statusConfuse: 0
+  statusCurse: 0
+  statusFreeze: 0
+  statusPierce: 0
+  statusPoison: 0
+  statusReflect: 0
+  statusStun: 0
+  statusUnlucky: 0
+  statusVulnerable: 0
+  statusWeak: 0

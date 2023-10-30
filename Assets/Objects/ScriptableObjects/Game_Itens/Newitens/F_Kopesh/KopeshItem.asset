@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
+  m_Name: KopeshItem
+  m_EditorClassIdentifier: 
+  cardName: Kopesh
+  description: "Sua l\xE2mina curva \xE9 particularmente eficaz em um aspecto especial
+    do combate: atacar inimigos que empunham escudos defensivos."
+  resourcePath: 
+  sprite: {fileID: 21300000, guid: 3bd7f29c097facf4db8d1e5ed1ec3fa4, type: 3}
+  cards:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
