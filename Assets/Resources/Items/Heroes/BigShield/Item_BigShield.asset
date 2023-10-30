@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Escudo
   description: 
   resourcePath: Items/Heroes/BigShield/Item_BigShield
-  sprite: {fileID: 21300000, guid: 4097dec1e9a0ede4c85bf4caa28e9bcf, type: 3}
+  sprite: {fileID: 21300000, guid: e370b8f17197d5449b67ab1840cd60f0, type: 3}
   cards:
   - {fileID: 11400000, guid: cf98a4be05acf9c419ff38c7bd53592d, type: 2}
   - {fileID: 11400000, guid: 32921183c7a56b542bb88e941b190830, type: 2}
