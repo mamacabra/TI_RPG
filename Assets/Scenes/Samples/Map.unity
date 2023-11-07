@@ -1274,6 +1274,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8141655627803115436}
     m_Modifications:
+    - target: {fileID: 2007597576560404371, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.092
+      objectReference: {fileID: 0}
     - target: {fileID: 2166502112008469421, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
         type: 3}
       propertyPath: m_Name
@@ -1338,6 +1343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214605431871169975, guid: 7f38ab3f5a706494c9fbff067b5a51c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.052
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9850,7 +9860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent:
-  - {fileID: 0}
+  - {fileID: 5640025892309228948}
   childrens:
   - {fileID: 7531169924781161799}
   - {fileID: 7531169924971935702}
