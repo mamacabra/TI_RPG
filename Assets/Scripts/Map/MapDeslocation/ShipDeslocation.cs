@@ -33,7 +33,7 @@ public class ShipDeslocation : MonoBehaviour
                     return;
                 }
 
-                Navegate(raycastHit.collider.GetComponent<MapNodeTest>().harbor.position);
+                Navegate(raycastHit.collider.transform.position,raycastHit.collider.GetComponent<MapNodeTest>().harbor.position);
             }
             else
             {
@@ -42,13 +42,13 @@ public class ShipDeslocation : MonoBehaviour
         }
     }
 
-    void Navegate(Vector3 pos)
+    void Navegate(Vector3 islandPos,Vector3 harborPos)
     {
-       
-        Vector3 p = new Vector3(pos.x, pos.y, pos.z);
-        Vector3 pCam = new Vector3(cam.transform.position.x, cam.transform.position.y, cam.transform.position.z + 2.75f);
+        Vector3 p = harborPos;
+        Vector3 pCam = new Vector3(islandPos.x, cam.transform.position.y, islandPos.z - 5f);
+        Vector3 pCam2 = new Vector3(islandPos.x,islandPos.y, islandPos.z);
         navMeshAgent.SetDestination(p);
-        MapManager.Instance.MoveCamera(pCam, pos);
+        MapManager.Instance.MoveCamera(pCam, pCam2);
 
         StartCoroutine(WaitToCheckIsland());
 
@@ -56,7 +56,6 @@ public class ShipDeslocation : MonoBehaviour
         {
             yield return new WaitUntil(() => Vector3.Distance(p, navMeshAgent.transform.position) <= 0.5f);
             yield return new WaitForSeconds(0.5f);
-            Debug.Log("chegou");
             MapManager.Instance.shipArrived = true;
         }
     }

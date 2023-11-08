@@ -66,6 +66,7 @@ public class MapManager : MonoBehaviour
         SceneNames n = SceneNames.SampleInventory;
         Action<bool> action = ShowPanel;
         StartTransition(n, action);
+        currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
     }
 
     public bool CheckIndex(GameObject island)
@@ -77,13 +78,13 @@ public class MapManager : MonoBehaviour
         {
             if (ShipIndex == 1)
             {
-                if (mp.parent[0] == lastMp)
-                {
+                /*if (mp.parent[0] == lastMp)
+                {*/
                     lastMp = mp;
                     lastMpHighlight = mp;
                     //TutorialManager.instance.DoNextTutorial();
                     return true;
-                }
+                //}
             }
 
             foreach (var p in mp.parent)
@@ -117,11 +118,12 @@ public class MapManager : MonoBehaviour
     {
         int i = ShipIndex;
         i++;
+
         int countChildrensAndParents = 0;
         MapNodeTest mp = island.GetComponent<MapNodeTest>();
         if (mp.Depth == i)
         {
-            if (i == 1) if (mp.parent[0] == lastMpHighlight)return true;
+            if (i == 1) /*if (mp.parent[0] == lastMpHighlight)*/return true;
 
             foreach (var p in mp.parent) if (p == lastMpHighlight) countChildrensAndParents++;
 
@@ -130,7 +132,7 @@ public class MapManager : MonoBehaviour
         return false;
     }
 
-
+ 
     public void MoveCamera(Vector3 pos, Vector3 islandPos)
     {
         MoveCameraDeslocate?.Invoke(pos, islandPos);
@@ -143,9 +145,6 @@ public class MapManager : MonoBehaviour
 
     public void CheckIsland()
     {
-        
-        Debug.Log("Ship Arrived");
-        Debug.Log(lastMp.name);
         //camera
         SceneNames n = SceneNames.SampleCombat;
         Action<bool> action = null;
@@ -191,6 +190,7 @@ public class MapManager : MonoBehaviour
         IEnumerator WaitToShowPanel()
         {
             yield return new WaitForSeconds(1f);
+            currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
             action?.Invoke(true);
         }
     }
@@ -239,7 +239,14 @@ public class MapManager : MonoBehaviour
         if (isCombatScene)
         {
             ShowInventary();
-            currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
+
+            StartCoroutine(WaitToDisable());
+            IEnumerator WaitToDisable()
+            {
+                yield return new WaitForSeconds(1f);
+                currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
+            }
+           
         }
     }
 
