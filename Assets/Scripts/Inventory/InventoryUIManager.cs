@@ -52,7 +52,7 @@ public class InventoryUIManager : MonoBehaviour
         
         for (int i = 0; i < characters.Length; i++){
             characters[i] = new();
-            if(Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i)) characters[i] = _characterInventory;
+            if(Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i+1)) characters[i] = _characterInventory;
         }
         ScreensSetActive(false);
         SetCharacterTogglesFunction();
@@ -133,6 +133,7 @@ public class InventoryUIManager : MonoBehaviour
                 itemRef?.gameObject.SetActive(true);
                 item.itemImage.color = new Color(0, 0, 0, 0);
             }
+            Storage.SaveInventory(InventoryManager.instance.inventoryData.inventory, characters[0], characters[1], characters[2]);
             FillCards();
         }
         currentSlot = slot;
