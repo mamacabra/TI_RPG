@@ -26,7 +26,9 @@ namespace Combat
             {
                 if (enemy && enemy.Character.IsDead == false)
                 {
-                    enemy.UseRandomCard(GetRandomHero());
+                    Card card = enemy.GetRandomCard();
+                    enemy.UseRandomCard(GetRandomHero(), card);
+                    CombatLog.Instance.AddLog($"Inimigo: {card.Label}");
                     yield return new WaitForSeconds(Delay);
                 }
             }

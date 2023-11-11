@@ -15,6 +15,7 @@ namespace Combat
             {
                 action();
                 AttackVFX.Instance.PlayHealingVFX(character.transform);
+                CombatLog.Instance.AddLog($"Passiva: O Touro atacou novamente");
             }
         }
     }

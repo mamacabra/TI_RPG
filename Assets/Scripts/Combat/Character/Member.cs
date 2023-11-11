@@ -45,11 +45,15 @@ namespace Combat
             Hand.Remove(card);
         }
 
-        public void UseRandomCard(Member target)
+        public Card GetRandomCard()
         {
             int r = Random.Range(0, Hand.Count);
             Card card = Hand[r];
+            return card;
+        }
 
+        public void UseRandomCard(Member target, Card card)
+        {
             if (Character.HasEnoughActionPoints(card.ActionPointsCost) == false || target == null) return;
 
             CardBehavior.Use(this, card, target);

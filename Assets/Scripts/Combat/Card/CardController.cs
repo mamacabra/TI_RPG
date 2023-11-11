@@ -53,6 +53,7 @@ namespace Combat
             if (hasActionPoints == false || target is null) return;
 
             CardBehavior.Use(Striker, card, target);
+            CombatLog.Instance.AddLog($"Héroi: {card.Label}");
             HandController.Instance.RemoveUnavailableCards();
             HandController.Instance.RemoveUsedCard(this);
             Striker.Hand.Remove(card);

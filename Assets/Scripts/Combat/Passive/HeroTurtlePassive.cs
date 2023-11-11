@@ -11,12 +11,14 @@ namespace Combat
             if (shouldSelfShield)
             {
                 character.ReceiveStatus(StatusType.Shield);
+                CombatLog.Instance.AddLog($"Passiva: A Tartaruga ganhou um escudo");
             }
 
             bool shouldSelfReflect = CalculateChance(SelfReflectChance);
             if (shouldSelfReflect)
             {
                 character.ReceiveStatus(StatusType.Reflect);
+                CombatLog.Instance.AddLog($"Passiva: A Tartaruga ganhou um escudo de reflexão");
             }
         }
     }

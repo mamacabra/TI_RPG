@@ -59,12 +59,15 @@ namespace Combat
             {
                 case StatusType.Bleed:
                     StatusEffects.ApplyStatusBleed(character, statusType);
+                    CombatLog.Instance.AddLog($"Status: Recebeu Sangramento");
                     break;
                 case StatusType.Stun:
                     StatusEffects.ApplyStatusStun(character, statusType);
+                    CombatLog.Instance.AddLog($"Status: Recebeu Atordoamento");
                     break;
                 case StatusType.Weak:
                     StatusEffects.ApplyStatusWeak(character, statusType);
+                    CombatLog.Instance.AddLog($"Status: Recebeu Fraqueza");
                     break;
             }
         }

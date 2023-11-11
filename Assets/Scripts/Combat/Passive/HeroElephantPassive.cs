@@ -14,6 +14,7 @@ namespace Combat
             {
                 character.ReceiveHealing(SelfHealingAmount);
                 AttackVFX.Instance.PlayHealingVFX(character.transform);
+                CombatLog.Instance.AddLog($"Passiva: O Elefante se curou");
             }
 
             bool shouldAllyHealing = CalculateChance(AllyHealingChance);
@@ -25,6 +26,7 @@ namespace Combat
                     ally.Character.ReceiveHealing(AllyHealingAmount);
                     AttackVFX.Instance.PlayHealingVFX(character.transform);
                     AttackVFX.Instance.PlayHealingVFX(ally.Character.transform);
+                    CombatLog.Instance.AddLog($"Passiva: O Elefante curou um aliado");
                 }
             }
         }
