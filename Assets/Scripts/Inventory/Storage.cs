@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Combat;
 using UnityEngine;
 using Utilities;
@@ -55,6 +56,31 @@ namespace Inventory
             }
         }
 
+        public static bool TryLoadInventory(out List<ItemScriptableObject> inventory, string filePath = Constants.SaveFile.Inventory)
+        {
+            try
+            {
+                InventorySaveData inventorySaveData = JsonStorage.LoadFile<InventorySaveData>(filePath);
+                inventory = GetItemsFromPath(inventorySaveData.items);
+                return true;
+            }
+            catch (Exception)
+            {
+                inventory = new();
+                if(TryGetItemsFromPath(Constants.InventoryItems.InitialItems, out List<ItemScriptableObject> _inventory)) {inventory = _inventory;}
+                return false;
+            }
+        }
+
+        public static bool TryLoadAllItems(out List<ItemScriptableObject> allItems)
+        {
+            bool success = false;
+            allItems = new List<ItemScriptableObject>();
+            if(TryGetItemsFromPath(Constants.InventoryItems.InitialItems, out List<ItemScriptableObject> initialItems)) {allItems = initialItems; success = true;}
+            if(TryGetItemsFromPath(Constants.InventoryItems.HeroesItems, out List<ItemScriptableObject> heroesItems)) {allItems.AddRange(heroesItems); success = true; }
+            return success;
+        }
+
         public static List<ItemScriptableObject> LoadHeroInventory(int heroId = 0, string filePath = Constants.SaveFile.Inventory)
         {
             try
@@ -89,6 +115,14 @@ namespace Inventory
             }
 
             return inventory;
+        }
+
+        private static bool TryGetItemsFromPath(string path, out List<ItemScriptableObject> inventory)
+        {
+            bool success = false;
+            inventory = Resources.LoadAll<ItemScriptableObject>(path).ToList();
+            if(inventory.Count > 0) success = true;
+            return success;
         }
     }
 }

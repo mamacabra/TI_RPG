@@ -7,7 +7,7 @@ using Combat;
 
 public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string cardName;
+    public string itemName;
     public Image itemImage;
     public ItemScriptableObject itemSO;
     public bool itemSlot;

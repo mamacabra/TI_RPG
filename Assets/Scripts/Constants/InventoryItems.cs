@@ -22,5 +22,9 @@ namespace Constants
         {
             "Items/Enemies/Enemy1/Item_SwordTiny",
         };
+
+        public static readonly string HeroesItems = "Items/Heroes/";
+        public static readonly string InitialItems = "Items/Initial/";
+        public static readonly string EnemiesItems = "Items/Enemies/";
     }
 }
