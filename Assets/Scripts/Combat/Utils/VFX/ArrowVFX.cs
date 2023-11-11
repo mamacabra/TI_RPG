@@ -6,46 +6,53 @@ namespace Combat
     {
         public static ArrowVFX Instance { get; private set; }
 
+        private VFXLine _vfxLine;
         [SerializeField] private GameObject arrowVFX;
+
         private Transform _origin;
         private Transform _target;
 
         private void Start()
         {
             Instance = this;
+
+            if (arrowVFX)
+            {
+                _vfxLine = arrowVFX.GetComponent<VFXLine>();
+            }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             GetArrowEdges();
+            SetArrowEdges();
 
-            if (_origin && _target && arrowVFX)
-            {
-                arrowVFX.SetActive(true);
-                SetArrowEdges();
-            }
-            else
-            {
-                arrowVFX.SetActive(false);
-            }
+            // if (arrowVFX && origin && target )
+            // {
+            //     arrowVFX.SetActive(true);
+            //     SetArrowEdges();
+            // }
+            // else
+            // {
+            //     arrowVFX.SetActive(false);
+            // }
         }
 
         private void GetArrowEdges()
         {
-            if (CardController.DraggedCard) _origin = CardController.DraggedCard.transform;
-            else if (CardController.ClickedCard) _origin = CardController.ClickedCard.transform;
-            else _origin = null;
+            _origin = CardController.ClickedCard
+                ? CardController.ClickedCard.transform
+                : null;
 
-            _target = Target.HoveredTarget ? Target.HoveredTarget.transform : null;
+            _target = Target.HoveredTarget
+                ? Target.HoveredTarget.transform
+                : null;
         }
 
         private void SetArrowEdges()
         {
-            VFXLine line = arrowVFX.GetComponent<VFXLine>();
-
-            if (!line) return;
-            line.SetInitialPoint(_origin);
-            line.SetTargetPoint(_target);
+            _vfxLine.SetInitialPoint(_origin);
+            _vfxLine.SetTargetPoint(_target);
         }
     }
 }
