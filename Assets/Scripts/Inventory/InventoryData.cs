@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Combat;
 using UnityEngine;
 using Inventory;
-using UnityEngine.Assertions;
 
 public class InventoryData : ScriptableObject{
     public List<ItemScriptableObject> inventoryData;
@@ -48,7 +47,10 @@ public class InventoryData : ScriptableObject{
         item = new ItemScriptableObject();
         bool find = false;
         E_ItemRarity random_rarity = GetRandomRarity();
-        if(TryGetRandomItemByRarity(random_rarity, out ItemScriptableObject _item)) {item = _item; find = true;}
+        if(TryGetRandomItemByRarity(random_rarity, out ItemScriptableObject _item)) {
+            item = _item;
+            find = true;
+        }
         return find;
     }
     private E_ItemRarity GetRandomRarity(){
@@ -65,6 +67,9 @@ public class InventoryData : ScriptableObject{
         else{
             return E_ItemRarity.LENGENDARY;
         }
+    }
+    public void AddItemToInventory(ItemScriptableObject item){
+        inventory.Add(item);
     }
 }
 

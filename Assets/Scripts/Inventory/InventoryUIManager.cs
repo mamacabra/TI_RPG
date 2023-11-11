@@ -51,8 +51,8 @@ public class InventoryUIManager : MonoBehaviour
         chest = InventoryManager.instance.inventoryData.inventory;
         
         for (int i = 0; i < characters.Length; i++){
-            characters[i] = Storage.LoadHeroInventory(i);
-            //characters[i] = new();
+            characters[i] = new();
+            if(Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i)) characters[i] = _characterInventory;
         }
         ScreensSetActive(false);
         SetCharacterTogglesFunction();
@@ -84,14 +84,9 @@ public class InventoryUIManager : MonoBehaviour
         characterToggles[0].onValueChanged.AddListener((bool toggleValue) => {CharacterToggleClick(0, toggleValue);});
         characterToggles[1].onValueChanged.AddListener((bool toggleValue) => {CharacterToggleClick(1, toggleValue);});
         characterToggles[2].onValueChanged.AddListener((bool toggleValue) => {CharacterToggleClick(2, toggleValue);});
-        // characterToggles[0].onClick.AddListener(() => { CharacterButtons(0); });
-        // characterButtons[1].onClick.AddListener(() => { CharacterButtons(1); });
-        // characterButtons[2].onClick.AddListener(() => { CharacterButtons(2); });
     }
     private void CharacterToggleClick(int index, bool toggleValue){
-        //AudioManager.audioManager.PlaySoundEffect("Menu/Click");
         if(toggleValue){
-            //itemView.SetActive(false);
             charactersModels[(int)currentCharacter].SetActive(false);
             currentCharacter = (Characters)index;
             characterSlot.SetActive(true);
@@ -114,82 +109,6 @@ public class InventoryUIManager : MonoBehaviour
             }
             charactersModels[index].SetActive(true);
         }
-        // switch (currentCharacter)
-        // {
-        //     case Characters.CHARACTER1:
-        //         {
-        //             int i = 0;
-        //             foreach (var itemSlot in characterSlots)
-        //             {
-        //                 InventoryItem inventoryItem = itemSlot;
-        //                 if (char1.Count > i)
-        //                 {
-        //                     inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
-        //                     inventoryItem.itemImage.sprite = char1[i].sprite;
-        //                     inventoryItem.itemSO = char1[i];
-        //                     inventoryItem.cardName = char1[i].cardName;
-        //                 }
-        //                 else
-        //                 {
-        //                     Color colorAlpha = new Color(0, 0, 0, 0);
-        //                     inventoryItem.itemImage.color = colorAlpha;
-        //                     inventoryItem.itemSO = null;
-        //                     inventoryItem.cardName = "";
-        //                 }
-        //                 i++;
-        //             }
-        //             break;
-        //         }
-        //     case Characters.CHARACTER2:
-        //         {
-        //             int i = 0;
-        //             foreach (var itemSlot in characterSlots)
-        //             {
-        //                 InventoryItem inventoryItem = itemSlot;
-        //                 if (char2.Count > i)
-        //                 {
-        //                     inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
-        //                     inventoryItem.itemImage.sprite = char2[i].sprite;
-        //                     inventoryItem.itemSO = char2[i];
-        //                     inventoryItem.cardName = char2[i].cardName;
-        //                 }
-        //                 else
-        //                 {
-        //                     Color colorAlpha = new Color(0, 0, 0, 0);
-        //                     inventoryItem.itemImage.color = colorAlpha;
-        //                     inventoryItem.itemSO = null;
-        //                     inventoryItem.cardName = "";
-        //                 }
-        //                 i++;
-        //             }
-        //             break;
-        //         }
-        //     case Characters.CHARACTER3:
-        //         {
-        //             int i = 0;
-        //             foreach (var itemSlot in characterSlots)
-        //             {
-        //                 InventoryItem inventoryItem = itemSlot;
-        //                 if (char3.Count > i)
-        //                 {
-        //                     inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
-        //                     inventoryItem.itemImage.sprite = char3[i].sprite;
-        //                     inventoryItem.itemSO = char3[i];
-        //                     inventoryItem.cardName = char3[i].cardName;
-        //                 }
-        //                 else
-        //                 {
-        //                     Color colorAlpha = new Color(0, 0, 0, 0);
-        //                     inventoryItem.itemImage.color = colorAlpha;
-        //                     inventoryItem.itemSO = null;
-        //                     inventoryItem.cardName = "";
-        //                 }
-        //                 i++;
-        //             }
-        //             break;
-        //         }
-        // }
-        //charactersModels[buttonIndex].SetActive(true);
     }
     private void SetCharacterSlotFunction(){
         foreach (InventoryItem item in characterSlots){
@@ -197,7 +116,6 @@ public class InventoryUIManager : MonoBehaviour
         }
     }
     private void CharacterSlotClick(InventoryItem slot){
-        //AudioManager.audioManager.PlaySoundEffect("InventoryEffects/SelectSlot");
         if (!itemView.activeInHierarchy){
             itemView.SetActive(true);
         }
@@ -214,76 +132,6 @@ public class InventoryUIManager : MonoBehaviour
                 }
                 itemRef?.gameObject.SetActive(true);
                 item.itemImage.color = new Color(0, 0, 0, 0);
-                // switch (currentCharacter)
-                // {
-                //     case Characters.CHARACTER1:
-                //         // if ((char1.Count - 1) > 0)
-                //         // {
-                //         char1.Remove(item.itemSO);
-                //         InventoryItem item1 = null;
-                //         for (int i = 0; i < itensButtons.Count; i++)
-                //         {
-                //             if (itensButtons[i].itemName == item.itemName)
-                //             {
-                //                 item1 = itensButtons[i];
-                //                 break;
-                //             }
-                //         }
-                //         item1?.gameObject.SetActive(true);
-                //         // item.itemImage.sprite = null;
-                //         item.itemImage.color = new Color(0, 0, 0, 0);
-                //         // }
-                //         // else
-                //         // {
-                //         //     ShowAlert();
-                //         // }
-                //         break;
-                //     case Characters.CHARACTER2:
-                //         // if ((char2.Count - 1) > 0)
-                //         // {
-                //         char2.Remove(item.itemSO);
-                //         InventoryItem item2 = null;
-                //         for (int i = 0; i < itensButtons.Count; i++)
-                //         {
-                //             if (itensButtons[i].itemName == item.itemName)
-                //             {
-                //                 item2 = itensButtons[i];
-                //                 break;
-                //             }
-                //         }
-                //         item2?.gameObject.SetActive(true);
-                //         // item.itemImage.sprite = null;
-                //         item.itemImage.color = new Color(0, 0, 0, 0);
-                //         // }
-                //         // else
-                //         // {
-                //         //     ShowAlert();
-                //         // }
-                //         break;
-                //     case Characters.CHARACTER3:
-                //         // if ((char3.Count - 1) > 0)
-                //         // {
-                //         char3.Remove(item.itemSO);
-                //         InventoryItem item3 = null;
-                //         for (int i = 0; i < itensButtons.Count; i++)
-                //         {
-                //             if (itensButtons[i].itemName == item.itemName)
-                //             {
-                //                 item3 = itensButtons[i];
-                //                 break;
-                //             }
-                //         }
-                //         item3?.gameObject.SetActive(true);
-                //         // item.itemImage.sprite = null;
-                //         item.itemImage.color = new Color(0, 0, 0, 0);
-                //         // }
-                //         // else
-                //         // {
-                //         //     ShowAlert();
-                //         // }
-                //         break;
-                //     default: break;
-                // }
             }
             FillCards();
         }
@@ -297,12 +145,10 @@ public class InventoryUIManager : MonoBehaviour
     }
     private void SetItemButtonFunction(){
         foreach (var itemBtn in itensButtons){
-            // Debug.Log(itemBtn);
             itemBtn.button.onClick.AddListener(() => ItemButtonClick(itemBtn));
         }
     }
     private void ItemButtonClick(InventoryItem refItem){
-        //AudioManager.audioManager.PlaySoundEffect("InventoryEffects/PlaceItem");
         if (currentSlot){
             HideCardsPreview();
             InventoryItem inventoryItem = currentSlot;
@@ -316,55 +162,6 @@ public class InventoryUIManager : MonoBehaviour
                     }
                 }
                 itemRef?.gameObject.SetActive(true);
-                // switch (currentCharacter)
-                // {
-                //     case Characters.CHARACTER1:
-                //         char1.Remove(inventoryItem.itemSO);
-                //         InventoryItem item1 = null;
-                //         for (int i = 0; i < itensButtons.Count; i++)
-                //         {
-                //             if (itensButtons[i].itemName == inventoryItem.itemName)
-                //             {
-                //                 item1 = itensButtons[i];
-                //                 break;
-                //             }
-                //         }
-                //         item1?.gameObject.SetActive(true);
-                //         //itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
-                //         inventoryItem.itemImage.color = colorAlpha;
-                //         break;
-                //     case Characters.CHARACTER2:
-                //         char2.Remove(inventoryItem.itemSO);
-                //         InventoryItem item2 = null;
-                //         for (int i = 0; i < itensButtons.Count; i++)
-                //         {
-                //             if (itensButtons[i].itemName == inventoryItem.itemName)
-                //             {
-                //                 item2 = itensButtons[i];
-                //                 break;
-                //             }
-                //         }
-                //         item2?.gameObject.SetActive(true);
-                //         //itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
-                //         inventoryItem.itemImage.color = colorAlpha;
-                //         break;
-                //     case Characters.CHARACTER3:
-                //         char3.Remove(inventoryItem.itemSO);
-                //         InventoryItem item3 = null;
-                //         for (int i = 0; i < itensButtons.Count; i++)
-                //         {
-                //             if (itensButtons[i].itemName == inventoryItem.itemName)
-                //             {
-                //                 item3 = itensButtons[i];
-                //                 break;
-                //             }
-                //         }
-                //         item3?.gameObject.SetActive(true);
-                //         //itensButtons.Find(i => i.GetComponent<InventoryItem>().cardName == inventoryItem.GetComponent<InventoryItem>().cardName).gameObject.SetActive(true);
-                //         inventoryItem.itemImage.color = colorAlpha;
-                //         break;
-                //     default: break;
-                // }
                 inventoryItem.itemImage.color = new Color(1, 1, 1, 1);
             }
             inventoryItem.itemImage.sprite = refItem.itemImage.sprite;
@@ -373,15 +170,8 @@ public class InventoryUIManager : MonoBehaviour
             refItem.gameObject.SetActive(false);
 
             characters[(int)currentCharacter].Add(inventoryItem.itemSO);
-            // switch (currentCharacter)
-            // {
-            //     case Characters.CHARACTER1: char1.Add(inventoryItem.itemSO); break;
-            //     case Characters.CHARACTER2: char2.Add(inventoryItem.itemSO); break;
-            //     case Characters.CHARACTER3: char3.Add(inventoryItem.itemSO); break;
-            //     default: break;
-            // }
 
-            Storage.SaveInventory(chest, characters[0], characters[2], characters[3]);
+            Storage.SaveInventory(InventoryManager.instance.inventoryData.inventory, characters[0], characters[1], characters[2]);
             FillCards();
         }
     }
@@ -425,30 +215,6 @@ public class InventoryUIManager : MonoBehaviour
                 }
             }
         }
-        // foreach (var i in char1)
-        // {
-        //     foreach (var j in i.cards)
-        //     {
-        //         InventoryCard card = Instantiate(cardPrefab, deckView.transform.GetChild(0).GetChild(0));
-        //         card.Setup(j);
-        //     }
-        // }
-        // foreach (var i in char2)
-        // {
-        //     foreach (var j in i.cards)
-        //     {
-        //         InventoryCard card = Instantiate(cardPrefab, deckView.transform.GetChild(0).GetChild(0));
-        //         card.Setup(j);
-        //     }
-        // }
-        // foreach (var i in char3)
-        // {
-        //     foreach (var j in i.cards)
-        //     {
-        //         InventoryCard card = Instantiate(cardPrefab, deckView.transform.GetChild(0).GetChild(0));
-        //         card.Setup(j);
-        //     }
-        // }
     }
 
     private void ShowAlert(){

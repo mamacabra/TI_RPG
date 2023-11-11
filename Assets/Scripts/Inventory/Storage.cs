@@ -99,6 +99,27 @@ namespace Inventory
                 return GetItemsFromPath(Constants.InventoryItems.Initial);
             }
         }
+        public static bool TryLoadHeroInventory(out List<ItemScriptableObject> items, int heroId = 0, string filePath = Constants.SaveFile.Inventory)
+        {
+            try
+            {
+                InventorySaveData inventorySaveData = JsonStorage.LoadFile<InventorySaveData>(filePath);
+                items = new List<ItemScriptableObject>();
+                switch(heroId)
+                {
+                    case 1: items = GetItemsFromPath(inventorySaveData.itemsHero1); break;
+                    case 2: items = GetItemsFromPath(inventorySaveData.itemsHero2); break;
+                    case 3: items = GetItemsFromPath(inventorySaveData.itemsHero3); break;
+                    default: return false;
+                };
+                return true;
+            }
+            catch (Exception)
+            {
+                items = new List<ItemScriptableObject>();
+                return false;
+            }
+        }
 
         private static List<ItemScriptableObject> GetItemsFromPath(string[] pathList)
         {
