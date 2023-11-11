@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Machado
   description: 
-  resourcePath: Items/Heroes/BattleAxe/Item_BattleAxe
+  resourcePath: Items/Initial/BattleAxe/Item_BattleAxe
+  rarity: 0
   sprite: {fileID: 21300000, guid: 556def944fd02f54c98ac89a1fd817a7, type: 3}
   cards:
   - {fileID: 11400000, guid: 0fb8a19a97d11eb4aa3c0063a25d0a25, type: 2}
