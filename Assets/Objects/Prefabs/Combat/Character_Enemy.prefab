@@ -87,6 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   maxActionPoints: 3
+  CharacterIndex: 0
+  isEnemy: 0
 --- !u!114 &6649583363406379902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +371,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4859025499316984775, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4859025499316984778, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -397,12 +404,12 @@ PrefabInstance:
     - target: {fileID: 4859025500472224111, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859025500472224111, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4859025500865190920, guid: ff51e3a5ce5216d4298b1a5d2785f3db,
         type: 3}
