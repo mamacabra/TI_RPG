@@ -33,7 +33,8 @@ namespace Combat
 
         private void OnMouseDown()
         {
-            ClickedTarget = _member;
+            if (CardController.ClickedCard is not null)
+                ClickedTarget = _member;
         }
 
         private void OnDisable()
