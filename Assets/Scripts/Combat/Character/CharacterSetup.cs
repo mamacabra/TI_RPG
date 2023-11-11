@@ -76,6 +76,10 @@ namespace Combat
             character.maxActionPoints = characterMaxActionPoints;
             character.RandomizePassive();
 
+            characterUI = (characterType == CharacterType.Hero)
+                ?  CharacterHealthBarController.Instance.GetHeroHealthBars()
+                :  CharacterHealthBarController.Instance.GetEnemyHealthBars();
+
             character.Subscribe(characterUI);
             character.Subscribe(CombatManager.Instance);
             character.CharacterCreated();
