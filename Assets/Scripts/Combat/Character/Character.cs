@@ -73,7 +73,6 @@ namespace Combat
                 if (!isEnemy) SaveDeath.Instance.ChangeStatus(this);
                 gameObject.SetActive(false);
             }
-            Target.ClearClickedTarget();
             CharacterUpdated();
         }
 

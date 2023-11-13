@@ -15,6 +15,8 @@ namespace Combat
 
             TargetEffectDropCard(card, target);
             TargetEffectAddCard(card, target);
+
+            Target.ClearClickedTarget();
         }
 
         private static void ConsumeActionPoints(Member striker, Card card)
