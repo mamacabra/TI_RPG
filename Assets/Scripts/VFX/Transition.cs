@@ -15,6 +15,7 @@ public enum SceneNames
     SampleCombat,
     SampleCombat_cavern_1,
     SampleCombat_cavern_2,
+    SampleCombat_forest,
     SampleInventory,
     SampleInventoryLoadResource,
     SampleSaveInventory,

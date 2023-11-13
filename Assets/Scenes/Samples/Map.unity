@@ -9853,7 +9853,7 @@ MonoBehaviour:
   - {fileID: 7531169924735081497}
   typeOfIsland: 0
   Depth: 2
-  combatScene: 4
+  combatScene: 7
   meshRenderer: {fileID: 916140377}
   harbor: {fileID: 7008657444037345552}
 --- !u!114 &7531169925083029975

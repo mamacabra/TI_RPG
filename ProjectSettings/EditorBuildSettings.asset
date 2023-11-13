@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Samples/Map.unity
     guid: 318dd964849fb59448d8ea78e8b23df7
+  - enabled: 1
+    path: Assets/Scenes/Samples/SampleCombat_forest.unity
+    guid: bb66173a636c8d448afe1b75b3a36134
   m_configObjects: {}
