@@ -28,7 +28,7 @@ namespace Combat
 
         private void SetupSprite(Card card)
         {
-            if (card.Thumb)
+            if (card.Thumb && image)
             {
                 image.sprite = card.Thumb;
             }
