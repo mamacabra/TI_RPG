@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Combat
 {
@@ -23,6 +24,7 @@ namespace Combat
     {
         public string Label { get; private set; }
         public string Description { get; private set; }
+        public Sprite Thumb { get; private set; }
 
         public int ActionPointsCost { get; private set; }
         public int ActionPointsReceive { get; private set; }
@@ -39,6 +41,7 @@ namespace Combat
         {
             Label = card.label;
             Description = card.description;
+            Thumb = card.sprite;
 
             ActionPointsCost = card.cost;
             ActionPointsReceive = card.receive;

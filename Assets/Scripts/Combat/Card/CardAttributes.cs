@@ -8,6 +8,7 @@ namespace Combat
         [Header("Card Texts")]
         [SerializeField] private Text title;
         [SerializeField] private Text description;
+        [SerializeField] private Image image;
 
         [Header("Card Attributes")]
         [SerializeField] private Text cost;
@@ -20,8 +21,17 @@ namespace Combat
             description.text = card.Description;
             cost.text = card.ActionPointsCost.ToString();
 
+            SetupSprite(card);
             SetupDescription(card);
             SetupAttributes(card);
+        }
+
+        private void SetupSprite(Card card)
+        {
+            if (card.Thumb)
+            {
+                image.sprite = card.Thumb;
+            }
         }
 
         private void SetupDescription(Card card)

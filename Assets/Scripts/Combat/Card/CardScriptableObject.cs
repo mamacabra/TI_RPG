@@ -9,6 +9,9 @@ namespace Combat
         [Space]
         public string label;
         [TextArea] public string description;
+        
+        [Space]
+        public Sprite sprite;
 
         [Header("Action Points")]
         [Range(-3, 3)] public int cost;
