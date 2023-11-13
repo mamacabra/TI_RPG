@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Samples/SampleInventoryLoadResource.unity
     guid: 4c770cc08d9ae342a8e317c35068fd10
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Samples/SampleMapN\xC3OMEXENESSE.unity"
     guid: b4a6cdd4214c9044cb9a16b4263ba7b5
   - enabled: 1
