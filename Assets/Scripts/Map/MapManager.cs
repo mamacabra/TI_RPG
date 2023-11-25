@@ -148,8 +148,14 @@ public class MapManager : MonoBehaviour
         ZoomCameraIsland?.Invoke();
     }
 
+    [HideInInspector]
+    public int currentIslandDepth;
+    [HideInInspector]
+    public IslandDirection currentIslandDirection;
     public void CheckIsland()
     {
+        currentIslandDepth = lastMp.Depth;
+        currentIslandDirection = lastMp.islandDirection;
         //camera
         SceneNames n = SceneNames.SampleCombat;
         Action<bool> action = null;

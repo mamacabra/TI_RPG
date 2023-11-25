@@ -17,17 +17,24 @@ public enum TypeOfIsland
     Initial,
     Final
 }
+public enum IslandDirection
+{
+    Right,Left,Middle
+}
 
 public class MapNodeTest : MonoBehaviour
 {
     public List<MapNodeTest> parent = new List<MapNodeTest>();
     public List<MapNodeTest> childrens = new List<MapNodeTest>();
 
+    [Header("ID Ilha")]
     public TypeOfIsland typeOfIsland;
     public int Depth;
+    public IslandDirection islandDirection;
 
     private LineRenderer lineRenderer1, lineRenderer2;
 
+    [Header("Misc")]
     [SerializeField] private SceneNames combatScene;
 
     public MeshRenderer meshRenderer;

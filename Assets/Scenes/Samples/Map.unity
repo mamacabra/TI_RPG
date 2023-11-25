@@ -7854,6 +7854,7 @@ MonoBehaviour:
   - {fileID: 7531169926415996301}
   typeOfIsland: 5
   Depth: 0
+  islandDirection: 2
   combatScene: 2
   meshRenderer: {fileID: 1454364381}
   harbor: {fileID: 5152876913662372690}
@@ -9809,6 +9810,7 @@ MonoBehaviour:
   - {fileID: 7531169925083029975}
   typeOfIsland: 0
   Depth: 3
+  islandDirection: 0
   combatScene: 4
   meshRenderer: {fileID: 8376006935260860961}
   harbor: {fileID: 7008657443827772127}
@@ -9831,6 +9833,7 @@ MonoBehaviour:
   - {fileID: 7531169926281060290}
   typeOfIsland: 0
   Depth: 2
+  islandDirection: 1
   combatScene: 4
   meshRenderer: {fileID: 128869998}
   harbor: {fileID: 7008657443842378625}
@@ -9853,6 +9856,7 @@ MonoBehaviour:
   - {fileID: 7531169924735081497}
   typeOfIsland: 0
   Depth: 2
+  islandDirection: 0
   combatScene: 4
   meshRenderer: {fileID: 916140377}
   harbor: {fileID: 7008657444037345552}
@@ -9875,6 +9879,7 @@ MonoBehaviour:
   - {fileID: 7531169926664363114}
   typeOfIsland: 0
   Depth: 4
+  islandDirection: 0
   combatScene: 4
   meshRenderer: {fileID: 5807361462940822046}
   harbor: {fileID: 7008657444144224017}
@@ -9898,6 +9903,7 @@ MonoBehaviour:
   - {fileID: 7531169925083029975}
   typeOfIsland: 0
   Depth: 3
+  islandDirection: 2
   combatScene: 4
   meshRenderer: {fileID: 1747503396}
   harbor: {fileID: 7008657443196938500}
@@ -9920,6 +9926,7 @@ MonoBehaviour:
   - {fileID: 7531169926664363114}
   typeOfIsland: 0
   Depth: 4
+  islandDirection: 1
   combatScene: 4
   meshRenderer: {fileID: 5230229331818400362}
   harbor: {fileID: 7008657443355013490}
@@ -9942,6 +9949,7 @@ MonoBehaviour:
   - {fileID: 7531169924971935702}
   typeOfIsland: 0
   Depth: 1
+  islandDirection: 2
   combatScene: 4
   meshRenderer: {fileID: 702662251}
   harbor: {fileID: 7008657443329778507}
@@ -9963,6 +9971,7 @@ MonoBehaviour:
   childrens: []
   typeOfIsland: 1
   Depth: 5
+  islandDirection: 2
   combatScene: 4
   meshRenderer: {fileID: 4332062293395378263}
   harbor: {fileID: 7008657443578178220}
@@ -9984,6 +9993,7 @@ MonoBehaviour:
   - {fileID: 7531169926407669684}
   typeOfIsland: 0
   Depth: 3
+  islandDirection: 1
   combatScene: 4
   meshRenderer: {fileID: 1494533311}
   harbor: {fileID: 7008657443620061030}
