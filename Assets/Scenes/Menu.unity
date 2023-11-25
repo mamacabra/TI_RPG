@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028386, g: 0.22571427, b: 0.3069231, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3148,11 +3148,13 @@ MonoBehaviour:
   isPlay: 0
   musicTest:
     Guid:
-      Data1: 637131818
-      Data2: 1105388915
-      Data3: -1437087069
-      Data4: -242335879
-    Path: event:/MusicaMapa
+      Data1: 228755584
+      Data2: 1151512056
+      Data3: -1239872840
+      Data4: -1689549804
+    Path: event:/MusicaTestando
+  songType: 0
+  taMudando: 0
 --- !u!4 &1593406192
 Transform:
   m_ObjectHideFlags: 0

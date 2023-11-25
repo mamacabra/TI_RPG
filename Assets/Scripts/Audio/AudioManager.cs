@@ -38,8 +38,9 @@ public class AudioManager : MonoBehaviour
             audioManager = this;
             instance = FMODUnity.RuntimeManager.CreateInstance(musicTest);
             instance.start();
-            SetSong((int)SongName.Map);
+            //SetSong((int)SongName.Map);
         }
+        DontDestroyOnLoad(this);
     }
 
     private void Update()
