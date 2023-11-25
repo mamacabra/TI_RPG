@@ -160,7 +160,6 @@ public class MapManager : MonoBehaviour
 
             n = SceneNames.SampleInventory;
             action = ShowPanel;
-
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.CommonCombat)
         {
@@ -170,7 +169,6 @@ public class MapManager : MonoBehaviour
             n = lastMp.GetScene;
             action = ShowCombatPanel;
             
-            AudioManager.audioManager.SetSong((int)SongName.Combat);
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
@@ -179,7 +177,6 @@ public class MapManager : MonoBehaviour
             n = SceneNames.SampleCombat;
             EndGame = true;
             action = ShowCombatPanel;
-            AudioManager.audioManager.SetSong((int)SongName.Combat);
         }
         else
         {
@@ -235,8 +232,7 @@ public class MapManager : MonoBehaviour
         SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory; 
         Transition.instance.TransitionScenes(s, LoadSceneMode.Additive, false, true);
        SaveDeath.Instance.CheckGameOver();
-
-        if (EndGame)
+       if (EndGame)
         {
             GameOver();
             return;

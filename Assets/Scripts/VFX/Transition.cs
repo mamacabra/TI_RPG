@@ -67,6 +67,15 @@ public class Transition : MonoBehaviour
 
     public void TransitionScenes(SceneNames sceneName,LoadSceneMode mode,bool load, bool callAction)
     {
+
+        if (sceneName == SceneNames.Map || sceneName == SceneNames.Menu ||sceneName == SceneNames.SampleInventory )
+        {
+            AudioManager.audioManager.SetSong((int)SongName.Map);
+        }
+        else
+        {
+            AudioManager.audioManager.SetSong((int)SongName.Combat);
+        }
         ShowTransition();
         StartCoroutine(Transition());
         IEnumerator Transition()
