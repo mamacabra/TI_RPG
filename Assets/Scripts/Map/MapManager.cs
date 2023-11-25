@@ -45,6 +45,11 @@ public class MapManager : MonoBehaviour
         Transition.instance.EndTransitionUnload -= EndTransitionUnload;
     }
 
+
+    public void DisableLight()
+    {
+        currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
+    }
     private void Start()
     {
         ShowMap?.Invoke(true);

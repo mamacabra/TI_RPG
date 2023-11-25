@@ -47,7 +47,10 @@ public class InventoryUIManager : MonoBehaviour
     private void Awake(){
         instance = this;
     }
-    private void Start(){
+    private void Start()
+    {
+        if(MapManager.Instance)
+            MapManager.Instance.DisableLight();
         chest = InventoryManager.instance.inventoryData.inventory;
         
         for (int i = 0; i < characters.Length; i++){
