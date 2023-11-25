@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public bool taMudando;
 
     float aux = 0;
+    private int currentSong = 0;
     private void Awake()
     {
         if (audioManager != null && audioManager != this)
@@ -35,42 +36,14 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            currentSong = 0;
             audioManager = this;
             instance = FMODUnity.RuntimeManager.CreateInstance(musicTest);
             instance.start();
-            //SetSong((int)SongName.Map);
         }
         DontDestroyOnLoad(this);
     }
-
-    private void Update()
-    {
-        
-       /* if(aux != 0 || aux != 1)
-        {
-            if (songType == 1 && aux > 0)
-            {
-                aux -= Time.deltaTime / 2;
-                if (aux < 0)
-                    aux = -0.9f;
-            }
-
-            if (songType == 0 && aux < 1)
-            {
-                aux += Time.deltaTime / 2;
-                if (aux > 1)
-                    aux = 1.1f;
-            }
-
-            Debug.Log(aux);
-            instance.setParameterByName("MapaOuCombate", aux);
-        }    */
-        
-        
-
-    }
-
-
+    
     public void PlaySoundEffect(string Effect)
     {
         RuntimeManager.PlayOneShot("event:/"+Effect);
@@ -78,17 +51,17 @@ public class AudioManager : MonoBehaviour
 
     public void SetSong(int s)
     {
+        if(s == currentSong) return;
+        currentSong = s;
         StartCoroutine(Enume());
 
         IEnumerator Enume()
         {
             float i = 0;
-            
-
 
             float rate = 0.5f;
 
-            if((int)s == 0)
+            if(s == 0)
             {
                 i = 1;
                 while (i > 0)
