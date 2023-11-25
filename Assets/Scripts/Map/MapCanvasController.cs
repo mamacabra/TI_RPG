@@ -37,6 +37,7 @@ public class MapCanvasController : MonoBehaviour
     public void BackToMenu()
     {
         Debug.Log("BackToMenu");
+        AudioManager.audioManager.SetSong((int)SongName.Map);
         Transition.instance.TransitionScenes(SceneNames.Menu, LoadSceneMode.Single, true, false);
     }
     public void ShowCombatPanel(bool state)

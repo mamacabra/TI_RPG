@@ -169,6 +169,8 @@ public class MapManager : MonoBehaviour
 
             n = lastMp.GetScene;
             action = ShowCombatPanel;
+            
+            AudioManager.audioManager.SetSong((int)SongName.Combat);
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
@@ -177,6 +179,7 @@ public class MapManager : MonoBehaviour
             n = SceneNames.SampleCombat;
             EndGame = true;
             action = ShowCombatPanel;
+            AudioManager.audioManager.SetSong((int)SongName.Combat);
         }
         else
         {

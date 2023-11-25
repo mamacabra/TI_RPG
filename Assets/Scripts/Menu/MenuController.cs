@@ -23,6 +23,7 @@ public class MenuController : MonoBehaviour
     private void Start()
     {
         SetScreenActive(firtsScreenToShow);
+        AudioManager.audioManager.SetSong((int)SongName.Map);
     }
 
     public void PlayGame()
