@@ -93,8 +93,8 @@ namespace Inventory
 
                 return heroId switch
                 {
-                    1 => GetItemsFromPath(inventorySaveData.itemsHero1),
-                    2 => GetItemsFromPath(inventorySaveData.itemsHero2),
+                    0 => GetItemsFromPath(inventorySaveData.itemsHero1),
+                    1 => GetItemsFromPath(inventorySaveData.itemsHero2),
                     _ => GetItemsFromPath(inventorySaveData.itemsHero3)
                 };
             }
@@ -111,9 +111,9 @@ namespace Inventory
                 items = new List<ItemScriptableObject>();
                 switch(heroId)
                 {
-                    case 1: items = GetItemsFromPath(inventorySaveData.itemsHero1); break;
-                    case 2: items = GetItemsFromPath(inventorySaveData.itemsHero2); break;
-                    case 3: items = GetItemsFromPath(inventorySaveData.itemsHero3); break;
+                    case 0: items = GetItemsFromPath(inventorySaveData.itemsHero1); break;
+                    case 1: items = GetItemsFromPath(inventorySaveData.itemsHero2); break;
+                    case 2: items = GetItemsFromPath(inventorySaveData.itemsHero3); break;
                     default: return false;
                 };
                 return true;

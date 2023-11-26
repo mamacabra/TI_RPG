@@ -55,11 +55,15 @@ public class InventoryUIManager : MonoBehaviour
             MapManager.Instance.DisableLight();
         chest = InventoryManager.instance.inventoryData.inventory;
 
-        for (int i = 0; i < characters.Length; i++)
-        {
+        var c = SaveDeath.Instance.CharacterSaveData;
+        for (int i = 0; i < characters.Length; i++){
             characters[i] = new();
-            if (Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i + 1))
-                characters[i] = _characterInventory;
+            
+            if (!c[i].isDead){
+                if (Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i)){
+                    characters[i] = _characterInventory;
+                }
+            }
         }
 
         ScreensSetActive(false);
@@ -74,7 +78,6 @@ public class InventoryUIManager : MonoBehaviour
         CharacterToggleClick(0, true);
         if(string.IsNullOrEmpty(characterSlots[0].itemName))CharacterSlotClick(characterSlots[0]);
 
-        var c = SaveDeath.Instance.CharacterSaveData;
         for (int i = 0; i < c.Length; i++)
         {
             if (c[i].isDead)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Inventory;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -71,7 +72,14 @@ namespace Combat
             if (Health <= 0)
             {
                 Health = 0;
-                if (Type == CharacterType.Hero) SaveDeath.Instance.ChangeStatus(this);
+                if (Type == CharacterType.Hero){
+                    SaveDeath.Instance.ChangeStatus(this);
+                    // List<ItemScriptableObject> charItens = Storage.LoadHeroInventory(CharacterIndex);
+                    // for (int i = 0; i < charItens.Count; i++){
+                    //     InventoryManager.instance.inventoryData.inventory.Add(charItens[i]);
+                    // }
+                    
+                }
                 gameObject.SetActive(false);
             }
             if(animator) animator.SetTrigger("TakeDamage");

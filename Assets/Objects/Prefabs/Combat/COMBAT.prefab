@@ -15744,9 +15744,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5339977298777450130}
-  - {fileID: 4136860155360051185}
   - {fileID: 3189814210644845600}
+  - {fileID: 4136860155360051185}
+  - {fileID: 5339977298777450130}
   - {fileID: 1927513728555302046}
   - {fileID: 2503397541271114761}
   - {fileID: 736407159236481508}
@@ -23895,6 +23895,16 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 980729048560640582}
+    - target: {fileID: 868505919546023670, guid: 9c8bc75728a572244802f3d6631a56f7,
+        type: 3}
+      propertyPath: CharacterIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
+        type: 3}
+      propertyPath: characterId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: items.Array.size
@@ -23947,7 +23957,7 @@ PrefabInstance:
     - target: {fileID: 8666624862866306672, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: m_Name
-      value: Hero
+      value: Hero_Bull
       objectReference: {fileID: 0}
     - target: {fileID: 8666624862866306673, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
@@ -24240,6 +24250,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 8571969573517823050}
+    - target: {fileID: 868505919546023670, guid: 9c8bc75728a572244802f3d6631a56f7,
+        type: 3}
+      propertyPath: CharacterIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: characterId
@@ -24292,7 +24307,7 @@ PrefabInstance:
     - target: {fileID: 8666624862866306672, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: m_Name
-      value: Hero_1
+      value: Hero_Elefant
       objectReference: {fileID: 0}
     - target: {fileID: 8666624862866306673, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
@@ -24662,7 +24677,7 @@ PrefabInstance:
     - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: characterId
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4316473974006617453, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
@@ -24711,7 +24726,7 @@ PrefabInstance:
     - target: {fileID: 8666624862866306672, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
       propertyPath: m_Name
-      value: Hero_2
+      value: Hero_Turtle
       objectReference: {fileID: 0}
     - target: {fileID: 8666624862866306673, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
