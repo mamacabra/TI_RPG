@@ -53,7 +53,7 @@ namespace Combat
         private void SetActionPoints(int actionPoints)
         {
             if (actionPointsCount)
-                actionPointsCount.text = "AP: " + actionPoints;
+                actionPointsCount.text = "" + actionPoints;
         }
 
         private void SetPassiveName(PassiveType passive = PassiveType.None)
