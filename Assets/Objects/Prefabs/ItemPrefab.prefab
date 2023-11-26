@@ -31,12 +31,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4098591749116706884}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.063254505, y: 0.06318638}
+  m_AnchorMax: {x: 0.9368137, y: 0.9368137}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 63.2366, y: 63.2366}
+  m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2839354174815925143
 CanvasRenderer:
@@ -108,12 +107,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4098591749116706884}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.06325451, y: 0.06318638}
+  m_AnchorMax: {x: 0.9368137, y: 0.9368137}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 63.2366, y: 63.2366}
+  m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4973261749054843253
 CanvasRenderer:
@@ -143,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3150122119415527721, guid: 252d1f9f9eb6dfe46873735361f596d6,
+  m_Sprite: {fileID: 5740775765791094921, guid: 252d1f9f9eb6dfe46873735361f596d6,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -190,12 +188,11 @@ RectTransform:
   - {fileID: 5163493050081733447}
   - {fileID: 2569708405508347153}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 63.2366, y: 63.2366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4098591749116706905
 CanvasRenderer:
@@ -218,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -268,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfeeec5af5522e46863e341e9910876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: 
+  itemName: 
   itemImage: {fileID: 9019822834635721277}
   itemSO: {fileID: 0}
   itemSlot: 0
