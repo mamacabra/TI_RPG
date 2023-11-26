@@ -48,16 +48,20 @@ public class InventoryUIManager : MonoBehaviour
     private void Awake(){
         instance = this;
     }
+
     private void Start()
     {
-        if(MapManager.Instance)
+        if (MapManager.Instance)
             MapManager.Instance.DisableLight();
         chest = InventoryManager.instance.inventoryData.inventory;
-        
-        for (int i = 0; i < characters.Length; i++){
+
+        for (int i = 0; i < characters.Length; i++)
+        {
             characters[i] = new();
-            if(Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i+1)) characters[i] = _characterInventory;
+            if (Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i + 1))
+                characters[i] = _characterInventory;
         }
+
         ScreensSetActive(false);
         itemView.SetActive(true);
         characterSlot.SetActive(true);
@@ -69,7 +73,18 @@ public class InventoryUIManager : MonoBehaviour
         FillCards();
         CharacterToggleClick(0, true);
         CharacterSlotClick(characterSlots[0]);
+
+        var c = SaveDeath.Instance.CharacterSaveData;
+        for (int i = 0; i < c.Length; i++)
+        {
+            if (c[i].isDead)
+            {
+                charactersModels[i].SetActive(false);
+                characterToggles[i].gameObject.SetActive(false);
+            }
+        }
     }
+
     public bool VerifyCards(){
         bool hasCards = false;
         foreach (var character in characters){
