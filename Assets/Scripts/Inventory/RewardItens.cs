@@ -20,13 +20,14 @@ public class RewardItens : MonoBehaviour
       GetItens();
 
       playButton.SetActive(false);
-      bau.SetActive(true);
+     
 
       StartCoroutine(SetItensAnim());
 
       IEnumerator SetItensAnim()
       {
          if(itensSprite.Count != 0){
+          bau.SetActive(true);
             yield return new WaitForSeconds(1.10f);
             for (int i = 0; i < itensSprite.Count; i++)
             {
