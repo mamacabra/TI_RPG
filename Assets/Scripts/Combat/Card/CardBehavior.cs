@@ -7,8 +7,8 @@ namespace Combat
             ConsumeActionPoints(striker, card);
             ReceiveActionPoints(striker, card);
 
-            ApplyDamage(striker, card, target);
             ApplyHeal(target, card);
+            ApplyDamage(striker, card, target);
             ApplyStatus(target, card);
 
             EffectDrawCard(striker, card);
