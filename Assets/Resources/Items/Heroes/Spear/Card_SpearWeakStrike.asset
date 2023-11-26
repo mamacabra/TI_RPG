@@ -17,7 +17,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: bbceae73b019590439ef5129744308a1, type: 3}
   cost: 1
   receive: 0
-  damage: 1
+  damage: 2
   heal: 0
   drawCard: 0
   addCardOnTargetDeck: []

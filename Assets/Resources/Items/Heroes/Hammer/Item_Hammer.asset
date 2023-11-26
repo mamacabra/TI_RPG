@@ -15,8 +15,7 @@ MonoBehaviour:
   cardName: Martelo
   description: "Hammer (\u2310\u25A0_\u25A0)"
   resourcePath: Items/Heroes/Hammer/Item_Hammer
+  rarity: 0
   sprite: {fileID: 21300000, guid: 643c42ee4c957c44abcac1152d4794f1, type: 3}
   cards:
-  - {fileID: 11400000, guid: 6877c244b7cddae46ba47c55cd01bba6, type: 2}
-  - {fileID: 11400000, guid: 6877c244b7cddae46ba47c55cd01bba6, type: 2}
   - {fileID: 11400000, guid: 6877c244b7cddae46ba47c55cd01bba6, type: 2}

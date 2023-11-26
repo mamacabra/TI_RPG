@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 
   sprite: {fileID: 21300000, guid: 556def944fd02f54c98ac89a1fd817a7, type: 3}
   cost: 2
-  receive: 0
+  receive: 1
   damage: 2
   heal: 0
   drawCard: 0

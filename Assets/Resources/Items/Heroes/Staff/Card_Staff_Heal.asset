@@ -18,7 +18,7 @@ MonoBehaviour:
   cost: 3
   receive: 0
   damage: 0
-  heal: 3
+  heal: 5
   drawCard: 0
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0

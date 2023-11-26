@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: Card_PoisonStike
   m_EditorClassIdentifier: 
-  label: Ataque Envenenado
+  label: Ataque Sangrento
   description: 
   sprite: {fileID: 21300000, guid: 1ff1175d56df9eb4f8cfa0ba429d9254, type: 3}
   cost: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
   statusBewitch: 0
-  statusBleed: 0
+  statusBleed: 1
   statusBurn: 0
   statusConfuse: 0
   statusCurse: 0
