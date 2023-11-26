@@ -57,12 +57,12 @@ public class Transition : MonoBehaviour
     public void ShowTransition()
     {
         transition.gameObject.SetActive(true);
-        transition.DOFade(1, showTransitionTime);
+        transition.DOFade(1, showTransitionTime).SetUpdate(true);
     }
     
     public void HideTransition()
     {
-        transition.DOFade(0, hideTransitionTime).OnComplete(()=>{transition.gameObject.SetActive(false);});
+        transition.DOFade(0, hideTransitionTime).SetUpdate(true).OnComplete(()=>{transition.gameObject.SetActive(false);});
     }
 
     public void TransitionScenes(SceneNames sceneName,LoadSceneMode mode,bool load, bool callAction)
