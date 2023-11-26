@@ -4270,8 +4270,9 @@ GameObject:
   - component: {fileID: 7841804249092211830}
   - component: {fileID: 8513531918193270302}
   - component: {fileID: 3892589405940472370}
-  - component: {fileID: 1893626113050821458}
+  - component: {fileID: 3573309240925726049}
   - component: {fileID: 542260320728966073}
+  - component: {fileID: 1893626113050821458}
   - component: {fileID: 6451707676171275193}
   m_Layer: 0
   m_Name: COMBAT
@@ -4373,7 +4374,7 @@ MonoBehaviour:
   victoryModal: {fileID: 613254424101526902}
   defeatModal: {fileID: 9115456296060554321}
   playerCards: {fileID: 2440558860045095705}
---- !u!114 &1893626113050821458
+--- !u!114 &3573309240925726049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4382,9 +4383,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2139579614444017518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abc40a2801da4c53b3b8939ffb3d2bbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 894c51fe77ad4392a3c0995bd7cd3251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wormLv1: {fileID: 6723352311004593162, guid: 007350069bed4255f8c0ca853a865852, type: 3}
 --- !u!114 &542260320728966073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4401,6 +4403,18 @@ MonoBehaviour:
   - {fileID: 751570677310234313}
   - {fileID: 4584196597486308615}
   - {fileID: 145455236649733115}
+--- !u!114 &1893626113050821458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139579614444017518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc40a2801da4c53b3b8939ffb3d2bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6451707676171275193
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,6 +21,8 @@ namespace Combat
         private void Start()
         {
             CombatState.Instance.Subscribe(this);
+            Debug.Log($"currentIslandDepth: {MapManager.Instance.currentIslandDepth}");
+            Debug.Log($"currentIslandDirection: {MapManager.Instance.currentIslandDirection}");
         }
 
         public void OnCombatStateChanged(CombatStateType state)
@@ -29,7 +31,8 @@ namespace Combat
             {
                 case CombatStateType.PreparationStage:
                     HeroParty = new Party(heroes);
-                    EnemyParty = new Party(enemies);
+                    List<Member> e = CombatFactory.Instance.SpawnEnemies(MapManager.Instance.currentIslandDepth, MapManager.Instance.currentIslandDirection);
+                    EnemyParty = new Party(e);
                     CombatState.Instance.NextState();
                     break;
                 case CombatStateType.HeroDeckShuffle:

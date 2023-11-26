@@ -13,7 +13,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject currentEventSystem;
     [SerializeField] private GameObject globalVolume;
     [SerializeField] private GameObject directionalLight;
-    
+
     public event Action<bool> ShowPanel;
     public event Action<bool> ShowCombatPanel;
     public event Action ShowEndGamePanel;
@@ -31,6 +31,11 @@ public class MapManager : MonoBehaviour
     [HideInInspector] public bool EndGame;
     public bool shipArrived = false;
     [HideInInspector] public bool zoomCamOver = false;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void OnEnable()
     {
@@ -65,7 +70,7 @@ public class MapManager : MonoBehaviour
             //canClick = true;
         }
     }
-    
+
     void ShowInventary()
     {
         canClick = false;
@@ -138,7 +143,7 @@ public class MapManager : MonoBehaviour
         return false;
     }
 
- 
+
     public void MoveCamera(Vector3 pos, Vector3 islandPos)
     {
         MoveCameraDeslocate?.Invoke(pos, islandPos);
@@ -175,7 +180,7 @@ public class MapManager : MonoBehaviour
 
             n = lastMp.GetScene;
             action = ShowCombatPanel;
-            
+
         }
         else if (lastMp.typeOfIsland == TypeOfIsland.BossCombat)
         {
@@ -236,7 +241,7 @@ public class MapManager : MonoBehaviour
     public void UnloadScenes(bool isCombatScene)
     {
         Debug.Log("UnloadScenes");
-        SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory; 
+        SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory;
         Transition.instance.TransitionScenes(s, LoadSceneMode.Additive, false, true);
        SaveDeath.Instance.CheckGameOver();
        if (EndGame)
@@ -244,7 +249,7 @@ public class MapManager : MonoBehaviour
             GameOver();
             return;
         }
-        
+
         OnCanClick();
 
         if (isCombatScene)
@@ -257,7 +262,7 @@ public class MapManager : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 currentEventSystem.SetActive(false); globalVolume.SetActive(false); directionalLight.SetActive(false);
             }
-           
+
         }
     }
 
