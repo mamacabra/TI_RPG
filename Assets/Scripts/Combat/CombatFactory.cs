@@ -21,8 +21,10 @@ namespace Combat
             switch (depth)
             {
                 case 1:
-                    Instantiate(wormLv1, Vector3.zero, Quaternion.identity);
-                    Instantiate(wormLv1, Vector3.zero + Vector3.right * 5, Quaternion.identity);
+                    Member a = Instantiate(wormLv1, Vector3.zero, Quaternion.identity);
+                    Member b = Instantiate(wormLv1, Vector3.zero + Vector3.right * 5, Quaternion.identity);
+                    enemies.Add(a);
+                    enemies.Add(b);
                     break;
                 case 2:
                     if (direction == IslandDirection.Left)

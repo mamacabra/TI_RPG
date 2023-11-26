@@ -21,8 +21,6 @@ namespace Combat
         private void Start()
         {
             CombatState.Instance.Subscribe(this);
-            Debug.Log($"currentIslandDepth: {MapManager.Instance.currentIslandDepth}");
-            Debug.Log($"currentIslandDirection: {MapManager.Instance.currentIslandDirection}");
         }
 
         public void OnCombatStateChanged(CombatStateType state)
@@ -58,6 +56,7 @@ namespace Combat
                     CombatState.Instance.SetState(CombatStateType.Defeat);
                     break;
                 case CharacterType.Enemy when EnemyParty.IsDefeated:
+                    Debug.Log("Enemies defeated");
                     CombatState.Instance.SetState(CombatStateType.Victory);
                     break;
             }
