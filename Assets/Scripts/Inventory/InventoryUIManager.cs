@@ -59,6 +59,8 @@ public class InventoryUIManager : MonoBehaviour
             if(Storage.TryLoadHeroInventory(out List<ItemScriptableObject> _characterInventory, i+1)) characters[i] = _characterInventory;
         }
         ScreensSetActive(false);
+        itemView.SetActive(true);
+        characterSlot.SetActive(true);
         SetCharacterTogglesFunction();
         SetDeckToggleFunction();
         SetCharacterSlotFunction();
@@ -66,6 +68,7 @@ public class InventoryUIManager : MonoBehaviour
         SetItemButtonFunction();
         FillCards();
         CharacterToggleClick(0, true);
+        CharacterSlotClick(characterSlots[0]);
     }
     public bool VerifyCards(){
         bool hasCards = false;
