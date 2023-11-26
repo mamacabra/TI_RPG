@@ -26,24 +26,30 @@ public class RewardItens : MonoBehaviour
 
       IEnumerator SetItensAnim()
       {
-         yield return new WaitForSeconds(1.10f);
-         for (int i = 0; i < itensSprite.Count; i++)
-         {
-            Transform item = itensSprite[i];
+         if(itensSprite.Count != 0){
+            yield return new WaitForSeconds(1.10f);
+            for (int i = 0; i < itensSprite.Count; i++)
+            {
+               Transform item = itensSprite[i];
 
-            item.DOScale(1, 0.75f)
-               .OnStart(() => { item.DOLocalMove(itensSpriteFinalPos[i], 1f).SetEase(Ease.OutBack); })
-               .SetEase(Ease.OutBack);
-            yield return new WaitForSeconds(0.5f);
+               item.DOScale(1, 0.75f)
+                  .OnStart(() => { item.DOLocalMove(itensSpriteFinalPos[i], 1f).SetEase(Ease.OutBack); })
+                  .SetEase(Ease.OutBack);
+               yield return new WaitForSeconds(0.5f);
+            }
+            yield return new WaitForSeconds(1.5f);
+         }
+         else{
+            // Make more things..
          }
 
-         yield return new WaitForSeconds(1.5f);
          playButton.SetActive(true);
       }
 
    }
 
    private int count = 0;
+   private int attenpts = 0;
 
    void GetItens()
    {
@@ -56,6 +62,10 @@ public class RewardItens : MonoBehaviour
             itensSprite[count].GetComponent<Image>().sprite = item.sprite;
             count++;
          }
+         else
+            attenpts++;
+         
+         if(attenpts >= 3) return;
          if(count >=3) return;
          GetItens();
       }
