@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 public class MapManager : MonoBehaviour
 {
@@ -262,6 +263,7 @@ public class MapManager : MonoBehaviour
 
     public void GameOver()
     {
+        JsonStorage.DeleteFile(Constants.SaveFile.Inventory);
         EndGame = true;
         Time.timeScale = 0;
         ShowEndGamePanel?.Invoke();

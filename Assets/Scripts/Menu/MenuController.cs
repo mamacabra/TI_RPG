@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Linq;
+using Inventory;
+using Utilities;
 
 
 [Serializable]
@@ -22,6 +24,7 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
+        JsonStorage.DeleteFile(Constants.SaveFile.Inventory);
         SetScreenActive(firtsScreenToShow);
     }
 

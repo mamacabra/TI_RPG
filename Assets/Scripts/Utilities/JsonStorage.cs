@@ -31,5 +31,20 @@ namespace Utilities
                 throw new Exception($"[Exception]: Erro ao carregar arquivo JSON: {path}");
             }
         }
+      
+        public static void DeleteFile(string path)
+        {
+            try
+            {
+                Debug.Log(path);
+                File.Delete(path);
+                InventoryManager.instance.inventoryData = InventoryData.CreateInstance();
+                
+            }
+            catch (Exception)
+            {
+                throw new Exception($"[Exception]: Erro ao carregar arquivo JSON: {path}");
+            }
+        }
     }
 }

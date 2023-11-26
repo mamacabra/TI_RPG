@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Alabarda
   description: 
-  resourcePath: 
+  resourcePath: Items/Heroes/Halberd/Item_ Halberd
+  rarity: 0
   sprite: {fileID: 21300000, guid: c03fbd6f990a8a54680cdd21777738e1, type: 3}
   cards:
   - {fileID: 11400000, guid: 636590df186660d4292aa7f0ece6daef, type: 2}

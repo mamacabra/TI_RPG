@@ -14,6 +14,10 @@ namespace Inventory
             InventorySaveData saveData = new InventorySaveData(pathList);
             JsonStorage.SaveFile(saveData, filePath);
         }
+        public static void DeleteInventory(string filePath = Constants.SaveFile.Inventory)
+        {
+            JsonStorage.DeleteFile(filePath);
+        }
 
         public static void SaveInventory(List<ItemScriptableObject> items, List<ItemScriptableObject> itemsHero1, List<ItemScriptableObject> itemsHero2, List<ItemScriptableObject> itemsHero3, string filePath = Constants.SaveFile.Inventory)
         {

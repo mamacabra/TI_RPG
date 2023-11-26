@@ -71,5 +71,10 @@ public class InventoryData : ScriptableObject{
     public void AddItemToInventory(ItemScriptableObject item){
         inventory.Add(item);
     }
+
+    public void DeleteArchive()
+    {
+        Storage.DeleteInventory();
+    }
 }
 
