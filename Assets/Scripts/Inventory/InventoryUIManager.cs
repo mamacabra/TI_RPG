@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Inventory;
 using Combat;
+using DG.Tweening;
 using Unity.VisualScripting;
 
 
@@ -139,7 +140,15 @@ public class InventoryUIManager : MonoBehaviour
             Storage.SaveInventory(InventoryManager.instance.inventoryData.inventory, characters[0], characters[1], characters[2]);
             FillCards();
         }
+
+        if (currentSlot != null)
+        {
+            DOTween.Kill(currentSlot.transform);
+            currentSlot.transform.localScale = Vector3.one;
+        }
+
         currentSlot = slot;
+        currentSlot.transform.DOScale(1.1f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.OutBack);
     }
     private void SetDeckToggleFunction(){
         deckToggle.onValueChanged.AddListener( (bool toggleValue) => { DeckToggleClick(toggleValue); });
@@ -154,6 +163,10 @@ public class InventoryUIManager : MonoBehaviour
     }
     private void ItemButtonClick(InventoryItem refItem){
         if (currentSlot){
+            
+            DOTween.Kill(currentSlot.transform);
+            currentSlot.transform.localScale = Vector3.one;
+            currentSlot.transform.DOScale(1.1f, 0.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.OutBack);
             HideCardsPreview();
             InventoryItem inventoryItem = currentSlot;
             if (inventoryItem.itemImage.sprite != null){

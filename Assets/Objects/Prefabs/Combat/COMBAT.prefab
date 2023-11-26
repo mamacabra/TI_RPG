@@ -19041,15 +19041,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 33fb5c3d4960aca4e97530c78992988b,
         type: 2}
-    - target: {fileID: 6888200782324831165, guid: 9c8bc75728a572244802f3d6631a56f7,
+    - target: {fileID: 6888200781240377621, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
-      propertyPath: m_AnchorMax.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6888200782324831165, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888200782324831165, guid: 9c8bc75728a572244802f3d6631a56f7,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8364118568040262905, guid: 9c8bc75728a572244802f3d6631a56f7,
         type: 3}
