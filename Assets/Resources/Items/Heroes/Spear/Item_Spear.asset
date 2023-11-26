@@ -15,7 +15,9 @@ MonoBehaviour:
   cardName: "Lan\xE7a"
   description: Perfume
   resourcePath: Items/Heroes/Spear/Item_Spear
+  rarity: 0
   sprite: {fileID: 21300000, guid: bbceae73b019590439ef5129744308a1, type: 3}
   cards:
+  - {fileID: 11400000, guid: 816228a23431a364f8c7d139df55263c, type: 2}
   - {fileID: 11400000, guid: 816228a23431a364f8c7d139df55263c, type: 2}
   - {fileID: 11400000, guid: f9d53bf7436e2c045818bbddcb571426, type: 2}

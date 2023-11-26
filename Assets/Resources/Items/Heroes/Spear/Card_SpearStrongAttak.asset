@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: CutadaForte
   description: 
+  sprite: {fileID: 21300000, guid: bbceae73b019590439ef5129744308a1, type: 3}
   cost: 2
   receive: 0
   damage: 3
@@ -21,3 +22,16 @@ MonoBehaviour:
   drawCard: 0
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
+  statusBewitch: 0
+  statusBleed: 0
+  statusBurn: 0
+  statusConfuse: 0
+  statusCurse: 0
+  statusFreeze: 0
+  statusPierce: 0
+  statusPoison: 0
+  statusReflect: 0
+  statusStun: 0
+  statusUnlucky: 0
+  statusVulnerable: 0
+  statusWeak: 0

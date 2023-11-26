@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Item_SwordBig
   m_EditorClassIdentifier: 
   cardName: Espada Grande
-  description: 
+  description: Uma espadona...
   resourcePath: Items/Heroes/SwordBig/Item_SwordBig
   rarity: 0
   sprite: {fileID: 21300000, guid: c278ec36abbc540489a08ba8765cd092, type: 3}
   cards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ebce349df80345740b1784befda72eeb, type: 2}
+  - {fileID: 11400000, guid: ebce349df80345740b1784befda72eeb, type: 2}
+  - {fileID: 11400000, guid: 9ca7e00ab72bfe84cb27ea5567be71d7, type: 2}

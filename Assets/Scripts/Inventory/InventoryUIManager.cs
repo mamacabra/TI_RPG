@@ -72,7 +72,7 @@ public class InventoryUIManager : MonoBehaviour
         SetItemButtonFunction();
         FillCards();
         CharacterToggleClick(0, true);
-        CharacterSlotClick(characterSlots[0]);
+        if(string.IsNullOrEmpty(characterSlots[0].itemName))CharacterSlotClick(characterSlots[0]);
 
         var c = SaveDeath.Instance.CharacterSaveData;
         for (int i = 0; i < c.Length; i++)
