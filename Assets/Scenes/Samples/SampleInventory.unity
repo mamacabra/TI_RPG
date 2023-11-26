@@ -10214,6 +10214,7 @@ GameObject:
   - component: {fileID: 8221637710745599868}
   - component: {fileID: 8221637710745599869}
   - component: {fileID: 8221637710745599870}
+  - component: {fileID: 8221637710745599871}
   m_Layer: 5
   m_Name: Char2 - Toggle
   m_TagString: Untagged
@@ -10327,20 +10328,38 @@ MonoBehaviour:
   m_Group: {fileID: 8221637712186026011}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1997128831}
-        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
-        m_MethodName: CallSfx
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Menu/Click
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &8221637710745599871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221637710745599808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8783653091889626901, guid: 546d1daa99497784da3b860a2ac70680,
+            type: 3}
+          m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+          m_MethodName: CallSfx
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Slot/SelectChar
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &8221637710926291042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11032,6 +11051,7 @@ GameObject:
   - component: {fileID: 8221637711583355297}
   - component: {fileID: 8221637711583355302}
   - component: {fileID: 8221637711583355303}
+  - component: {fileID: 8221637711583355304}
   m_Layer: 5
   m_Name: Char1 - Toggle
   m_TagString: Untagged
@@ -11116,20 +11136,38 @@ MonoBehaviour:
   m_Group: {fileID: 8221637712186026011}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1997128831}
-        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
-        m_MethodName: CallSfx
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Menu/Click
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
+--- !u!114 &8221637711583355304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221637711583355301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8783653091889626901, guid: 546d1daa99497784da3b860a2ac70680,
+            type: 3}
+          m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+          m_MethodName: CallSfx
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Slot/SelectChar
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!222 &8221637711677595665
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11639,6 +11677,7 @@ GameObject:
   - component: {fileID: 8221637711933410040}
   - component: {fileID: 8221637711933410041}
   - component: {fileID: 8221637711933410048}
+  - component: {fileID: 8221637711933410049}
   m_Layer: 5
   m_Name: Char3 - Toggle
   m_TagString: Untagged
@@ -11713,20 +11752,38 @@ MonoBehaviour:
   m_Group: {fileID: 8221637712186026011}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1997128831}
-        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
-        m_MethodName: CallSfx
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Menu/Click
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 0
+--- !u!114 &8221637711933410049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221637711933410044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8783653091889626901, guid: 546d1daa99497784da3b860a2ac70680,
+            type: 3}
+          m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+          m_MethodName: CallSfx
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Slot/SelectChar
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &8221637712091922209
 MonoBehaviour:
   m_ObjectHideFlags: 0
