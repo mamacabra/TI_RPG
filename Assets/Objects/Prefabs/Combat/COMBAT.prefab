@@ -5555,9 +5555,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroHealthBars:
-  - {fileID: 8840486090850579884}
-  - {fileID: 6672735327747902318}
   - {fileID: 2224430954962053073}
+  - {fileID: 6672735327747902318}
+  - {fileID: 8840486090850579884}
   enemyHealthBars:
   - {fileID: 2809408482636080367}
   - {fileID: 7328250831881628508}
