@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3594188704730258142}
   - component: {fileID: 1547379607076624535}
   m_Layer: 0
-  m_Name: CE_WormLv1
+  m_Name: CE_Skull-Lv3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   characterMaxHealth: 6
   characterMaxActionPoints: 3
   items:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: dad1bce07436a8120b445d78299884bd, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
