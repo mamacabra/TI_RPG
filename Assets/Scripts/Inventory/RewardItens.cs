@@ -26,10 +26,10 @@ public class RewardItens : MonoBehaviour
 
       IEnumerator SetItensAnim()
       {
-         if(itensSprite.Count != 0){
+         if(itensToReward.Count != 0){
           bau.SetActive(true);
             yield return new WaitForSeconds(1.10f);
-            for (int i = 0; i < itensSprite.Count; i++)
+            for (int i = 0; i < itensToReward.Count; i++)
             {
                Transform item = itensSprite[i];
 
