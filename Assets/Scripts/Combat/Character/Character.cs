@@ -21,6 +21,8 @@ namespace Combat
         public bool IsDead => Health <= 0;
         public bool HasActionPoints => ActionPoints > 0;
 
+        public Animator animator;
+
         private void Awake()
         {
             _observers = new List<ICharacterObserver>();
@@ -73,6 +75,7 @@ namespace Combat
                 if (!isEnemy) SaveDeath.Instance.ChangeStatus(this);
                 gameObject.SetActive(false);
             }
+            if(animator) animator.SetTrigger("TakeDamage");
             CharacterUpdated();
         }
 
@@ -143,6 +146,7 @@ namespace Combat
         {
             ActionPoints -= value;
             if (ActionPoints < 0) ActionPoints = 0;
+            if(animator) animator.SetTrigger("Attack");
             CharacterUpdated();
         }
 

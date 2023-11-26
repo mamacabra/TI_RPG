@@ -51,8 +51,8 @@ namespace Combat
 
         private void SetArrowEdges()
         {
-            _vfxLine.SetInitialPoint(_origin);
-            _vfxLine.SetTargetPoint(_target);
+            //_vfxLine.SetInitialPoint(_origin);
+            //_vfxLine.SetTargetPoint(_target);
         }
     }
 }
