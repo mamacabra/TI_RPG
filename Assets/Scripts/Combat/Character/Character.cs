@@ -17,7 +17,6 @@ namespace Combat
         public PassiveType Passive { get; private set; }
 
         public int CharacterIndex;
-        public bool isEnemy;
         public bool IsDead => Health <= 0;
         public bool HasActionPoints => ActionPoints > 0;
 
@@ -36,7 +35,7 @@ namespace Combat
 
         public void CharacterCreated()
         {
-            if (!isEnemy)
+            if (Type == CharacterType.Hero)
             {
                 if (SaveDeath.Instance.LoadStatus(this))
                 {
@@ -72,7 +71,7 @@ namespace Combat
             if (Health <= 0)
             {
                 Health = 0;
-                if (!isEnemy) SaveDeath.Instance.ChangeStatus(this);
+                if (Type == CharacterType.Hero) SaveDeath.Instance.ChangeStatus(this);
                 gameObject.SetActive(false);
             }
             if(animator) animator.SetTrigger("TakeDamage");
@@ -81,9 +80,9 @@ namespace Combat
 
         public void ReceiveHealing(int value = 1)
         {
-            if (!isEnemy) if(SaveDeath.Instance.LoadStatus(this)) return;
-            
-            
+            if (Type == CharacterType.Hero) if(SaveDeath.Instance.LoadStatus(this)) return;
+
+
             Health += value;
             if (Health > maxHealth) Health = maxHealth;
 
