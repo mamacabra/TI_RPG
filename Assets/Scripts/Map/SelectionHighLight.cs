@@ -35,16 +35,15 @@ public class SelectionHighLight : MonoBehaviour
                         lastHighlight.material = selectionMaterial;
                     }
                 }
-                
+
                 if (highlight.material != highlightMaterialCorretIsland)
                 {
                     bool correct = MapManager.Instance.CheckIndexHighlight(highlightTransform.gameObject);
-                    //Debug.Log(correct);
                     if(correct)
                         highlight.material = highlightMaterialCorretIsland;
                     else
                         highlight.material = highlightMaterialIncorretIsland;
-                    
+
                     lastHighlight = highlight;
                 }
             }

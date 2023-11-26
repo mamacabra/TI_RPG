@@ -240,7 +240,6 @@ public class MapManager : MonoBehaviour
 
     public void UnloadScenes(bool isCombatScene)
     {
-        Debug.Log("UnloadScenes");
         SceneNames s = isCombatScene ? lastMp.GetScene : SceneNames.SampleInventory;
         Transition.instance.TransitionScenes(s, LoadSceneMode.Additive, false, true);
        SaveDeath.Instance.CheckGameOver();

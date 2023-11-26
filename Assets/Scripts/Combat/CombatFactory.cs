@@ -82,11 +82,8 @@ namespace Combat
                         SpawnEnemy(skullLv2, EnemyPosition.Right);
                     }
                     break;
-                case 5:
-                    SpawnEnemy(crawfishLv1, EnemyPosition.Middle);
-                    break;
                 default:
-                    Debug.Log("No enemies to spawn");
+                    SpawnEnemy(crawfishLv1, EnemyPosition.Middle);
                     break;
             }
 
@@ -102,14 +99,11 @@ namespace Combat
                 case EnemyPosition.Left:
                     pos.x = 3;
                     break;
-                case EnemyPosition.Middle:
-                    pos.x = 5;
-                    break;
                 case EnemyPosition.Right:
                     pos.x = 7;
                     break;
                 default:
-                    Debug.LogError("Invalid enemy position");
+                    pos.x = 5;
                     break;
             }
 
@@ -118,7 +112,6 @@ namespace Combat
                 Member e = Instantiate(enemy, pos, Quaternion.identity);
                 enemies.Add(e);
             }
-            else Debug.LogError("Enemy is null");
         }
     }
 }
