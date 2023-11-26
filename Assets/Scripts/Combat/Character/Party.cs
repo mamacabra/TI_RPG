@@ -38,5 +38,12 @@ namespace Combat
             int r = Random.Range(0, livingMembers.Count);
             return livingMembers[r];
         }
+
+        public void DefineStaticPassives()
+        {
+            Members[0].Character.DefinePassive(PassiveType.Bull);
+            Members[1].Character.DefinePassive(PassiveType.Elephant);
+            Members[2].Character.DefinePassive(PassiveType.Turtle);
+        }
     }
 }

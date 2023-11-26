@@ -29,6 +29,7 @@ namespace Combat
             {
                 case CombatStateType.PreparationStage:
                     HeroParty = new Party(heroes);
+                    HeroParty.DefineStaticPassives();
                     enemies = CombatFactory.Instance.SpawnEnemies(MapManager.Instance.currentIslandDepth, MapManager.Instance.currentIslandDirection);
                     EnemyParty = new Party(enemies);
                     CombatState.Instance.NextState();

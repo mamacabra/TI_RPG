@@ -78,7 +78,7 @@ namespace Combat
                     // for (int i = 0; i < charItens.Count; i++){
                     //     InventoryManager.instance.inventoryData.inventory.Add(charItens[i]);
                     // }
-                    
+
                 }
                 gameObject.SetActive(false);
             }
@@ -181,6 +181,11 @@ namespace Combat
 
             int count = Enum.GetNames(typeof(PassiveType)).Length;
             Passive = (PassiveType) Random.Range(1, count);
+        }
+
+        public void DefinePassive(PassiveType passive)
+        {
+            Passive = passive;
         }
     }
 }

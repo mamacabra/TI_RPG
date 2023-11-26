@@ -74,7 +74,6 @@ namespace Combat
             character.Type = characterType;
             character.maxHealth = characterMaxHealth;
             character.maxActionPoints = characterMaxActionPoints;
-            character.RandomizePassive();
 
             characterUI = (characterType == CharacterType.Hero)
                 ?  CharacterHealthBarController.Instance.GetHeroHealthBars()
