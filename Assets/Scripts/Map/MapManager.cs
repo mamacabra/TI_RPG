@@ -281,7 +281,8 @@ public class MapManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Transition.instance.TransitionScenes(SceneNames.SampleMap, LoadSceneMode.Single, true, false);
+        Transition.instance.ResetGame();
+        //Transition.instance.TransitionScenes(SceneNames.SampleMap, LoadSceneMode.Single, true, false);
         Time.timeScale = 1;
     }
 }

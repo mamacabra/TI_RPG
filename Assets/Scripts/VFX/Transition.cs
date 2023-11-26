@@ -100,4 +100,9 @@ public class Transition : MonoBehaviour
             HideTransition();
         }
     }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneNames.Menu.ToString());
+    }
 }
