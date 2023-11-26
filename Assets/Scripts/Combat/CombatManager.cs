@@ -29,7 +29,8 @@ namespace Combat
             {
                 case CombatStateType.PreparationStage:
                     HeroParty = new Party(heroes);
-                    EnemyParty = new Party(enemies);
+                    List<Member> e = CombatFactory.Instance.SpawnEnemies(MapManager.Instance.currentIslandDepth, MapManager.Instance.currentIslandDirection);
+                    EnemyParty = new Party(e);
                     CombatState.Instance.NextState();
                     break;
                 case CombatStateType.HeroDeckShuffle:
@@ -55,6 +56,7 @@ namespace Combat
                     CombatState.Instance.SetState(CombatStateType.Defeat);
                     break;
                 case CharacterType.Enemy when EnemyParty.IsDefeated:
+                    Debug.Log("Enemies defeated");
                     CombatState.Instance.SetState(CombatStateType.Victory);
                     break;
             }
