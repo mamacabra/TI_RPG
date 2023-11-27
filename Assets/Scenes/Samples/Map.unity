@@ -462,6 +462,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5150364365075048075, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150364365075048075, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150364365075048075, guid: a61d54343abb742458ae8e473764b895,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -605,6 +620,8 @@ MonoBehaviour:
   EndGame: 0
   shipArrived: 0
   zoomCamOver: 0
+  currentIslandDepth: 0
+  currentIslandDirection: 0
 --- !u!4 &240763489
 Transform:
   m_ObjectHideFlags: 0
