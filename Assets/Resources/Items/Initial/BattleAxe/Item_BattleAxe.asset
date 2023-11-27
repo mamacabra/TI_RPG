@@ -16,6 +16,6 @@ MonoBehaviour:
   description: 
   resourcePath: Items/Initial/BattleAxe/Item_BattleAxe
   rarity: 0
-  sprite: {fileID: 21300000, guid: 556def944fd02f54c98ac89a1fd817a7, type: 3}
+  sprite: {fileID: 21300000, guid: ef1a8236f289afc4db2c7e33406230a7, type: 3}
   cards:
   - {fileID: 11400000, guid: 62adf40c6d395db44a9ba7eab2a53a6f, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Regenerar
   description: 
-  sprite: {fileID: 21300000, guid: e76b30749d6bac4489c3ccf1ccb2c8fc, type: 3}
+  sprite: {fileID: 21300000, guid: 6b4fcebeb91900b499916cc695deb1b1, type: 3}
   cost: 2
   receive: 0
   damage: 0

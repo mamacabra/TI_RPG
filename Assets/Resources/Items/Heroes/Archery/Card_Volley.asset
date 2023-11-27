@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Rajada de flechas
   description: atira mais que uma flecha
-  sprite: {fileID: 21300000, guid: c6b96b87adbd25343b9079d963ffb637, type: 3}
+  sprite: {fileID: 21300000, guid: 025d7fbc75813e849a2f9e72056673f9, type: 3}
   cost: 2
   receive: 0
   damage: 3

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Flechada
   description: Atira uma flecha
-  sprite: {fileID: 21300000, guid: fc6ec0b0f09e050458575e72975d27bb, type: 3}
+  sprite: {fileID: 21300000, guid: 025d7fbc75813e849a2f9e72056673f9, type: 3}
   cost: 1
   receive: 0
   damage: 2

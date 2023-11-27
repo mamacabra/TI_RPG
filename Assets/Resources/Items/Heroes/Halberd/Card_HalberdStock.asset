@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Cutucada de Alabarda
   description: 
-  sprite: {fileID: 21300000, guid: c03fbd6f990a8a54680cdd21777738e1, type: 3}
+  sprite: {fileID: 21300000, guid: 32760f2b89bcf3145b253ca121c393b6, type: 3}
   cost: 1
   receive: 0
   damage: 2

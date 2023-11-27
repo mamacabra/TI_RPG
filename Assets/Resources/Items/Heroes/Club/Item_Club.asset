@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 
   resourcePath: Items/Heroes/Club/Item_Club
   rarity: 0
-  sprite: {fileID: 21300000, guid: dc038b2ab22c65c4488779487c9dae97, type: 3}
+  sprite: {fileID: 21300000, guid: c7d720902b6d6794f8bf7c3389e5b8eb, type: 3}
   cards:
   - {fileID: 11400000, guid: 2a08a06296a13f2488d4833348f56ef4, type: 2}
   - {fileID: 11400000, guid: f1554e775863166499b734b78d2e10bd, type: 2}
