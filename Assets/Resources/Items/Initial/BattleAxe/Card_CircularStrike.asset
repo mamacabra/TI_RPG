@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: Card_CircularStrike
   m_EditorClassIdentifier: 
-  label: Cote Circular
+  label: Corte Circular
   description: 
   sprite: {fileID: 21300000, guid: 556def944fd02f54c98ac89a1fd817a7, type: 3}
   cost: 2
-  receive: 1
-  damage: 2
+  receive: 0
+  damage: 3
   heal: 0
   drawCard: 0
   addCardOnTargetDeck: []
