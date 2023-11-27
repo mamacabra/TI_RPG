@@ -14,6 +14,8 @@ namespace Combat
 
         [Header("Other Panels")]
         [SerializeField] private GameObject playerCards;
+        [SerializeField] private GameObject heroHealthBars;
+        [SerializeField] private GameObject enemyHealthBars;
 
         public void Start()
         {
@@ -35,9 +37,13 @@ namespace Combat
                     ShowPanel(enemyHUD);
                     break;
                 case CombatStateType.Victory:
+                    HiddenPanel(heroHealthBars);
+                    HiddenPanel(enemyHealthBars);
                     ShowPanel(victoryModal);
                     break;
                 case CombatStateType.Defeat:
+                    HiddenPanel(heroHealthBars);
+                    HiddenPanel(enemyHealthBars);
                     ShowPanel(defeatModal);
                     break;
             }

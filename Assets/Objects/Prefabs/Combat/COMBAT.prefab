@@ -5492,6 +5492,8 @@ MonoBehaviour:
   victoryModal: {fileID: 613254424101526902}
   defeatModal: {fileID: 9115456296060554321}
   playerCards: {fileID: 2440558860045095705}
+  heroHealthBars: {fileID: 7083020336520333836}
+  enemyHealthBars: {fileID: 3823282923134197605}
 --- !u!114 &3573309240925726049
 MonoBehaviour:
   m_ObjectHideFlags: 0
