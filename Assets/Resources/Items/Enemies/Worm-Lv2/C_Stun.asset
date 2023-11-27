@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
-  m_Name: C_Attack
+  m_Name: C_Stun
   m_EditorClassIdentifier: 
-  label: "Cabe\xE7ada"
+  label: Nocaute
   description: 
   sprite: {fileID: 0}
   cost: 3
   receive: 0
-  damage: 4
-  heal: 1
+  damage: 1
+  heal: 0
   drawCard: 0
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   statusPierce: 0
   statusPoison: 0
   statusReflect: 0
-  statusStun: 0
+  statusStun: 1
   statusUnlucky: 0
   statusVulnerable: 0
   statusWeak: 0
