@@ -90,13 +90,16 @@ public class InventoryUIManager : MonoBehaviour
 
     public bool VerifyCards(){
         bool hasCards = false;
+        var c = SaveDeath.Instance.CharacterSaveData;
+        int i = 0;
         foreach (var character in characters){
-            if(character.Count > 0)
+            if(character.Count > 0 || c[i].isDead)
                 hasCards = true;
             else{
                 hasCards = false;
                 break;
             }
+            i++;
         }
         if (!hasCards){
             ShowAlert();
