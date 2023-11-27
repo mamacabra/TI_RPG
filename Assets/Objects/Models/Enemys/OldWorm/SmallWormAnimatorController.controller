@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WormAnimatorController
+  m_Name: SmallWormAnimatorController
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 4781951162920444690, guid: defbddca09a69d04ab4554a5842edd88,
+  m_Motion: {fileID: 9165040992259199400, guid: 09e121e9fa47d2c4b822db13de03088b,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
