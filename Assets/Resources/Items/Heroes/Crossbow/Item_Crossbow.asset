@@ -15,7 +15,8 @@ MonoBehaviour:
   cardName: Crossbow
   description: 
   resourcePath: Items/Heroes/Crossbow/Item_Crossbow
-  sprite: {fileID: 21300000, guid: cfddf38e2d0fcbb40b169564fd58ea23, type: 3}
+  rarity: 0
+  sprite: {fileID: 21300000, guid: 328ce64e2125f024db284cd22f6388d6, type: 3}
   cards:
   - {fileID: 11400000, guid: 334011be9cde42346817807cfbd1ead9, type: 2}
   - {fileID: 11400000, guid: c0cdbb4f5050c7b429220d204698a6b8, type: 2}

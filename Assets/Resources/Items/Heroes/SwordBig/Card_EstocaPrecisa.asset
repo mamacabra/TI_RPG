@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 'Uma boa estocada...
 
 '
-  sprite: {fileID: 21300000, guid: c278ec36abbc540489a08ba8765cd092, type: 3}
+  sprite: {fileID: 21300000, guid: d088ca1c26263ee4ca59ea1284774f2d, type: 3}
   cost: 1
   receive: 0
   damage: 2
