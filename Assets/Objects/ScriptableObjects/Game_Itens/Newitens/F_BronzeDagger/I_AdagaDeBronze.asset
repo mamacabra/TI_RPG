@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Adaga de Bronze
   description: Uma adaga velha e enferrujada.
   resourcePath: 
-  sprite: {fileID: 21300000, guid: 54f8589e2ef2f7a4e875a51ae49b1e7b, type: 3}
+  sprite: {fileID: 21300000, guid: 8af5ec29ac74d1b469e542092a481283, type: 3}
   cards:
   - {fileID: 11400000, guid: 03ca7f33297ad294bbd5a744bddb53fd, type: 2}
   - {fileID: 0}

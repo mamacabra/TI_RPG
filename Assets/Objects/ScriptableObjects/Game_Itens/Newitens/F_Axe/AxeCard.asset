@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: AxeCard
   m_EditorClassIdentifier: 
-  label: 
-  description: 
-  cost: 0
-  receive: 0
-  damage: 0
+  label: Viking Axe
+  description: "Este machado de combate possui uma l\xE2mina ampla e afiada, projetada
+    para causar estragos implac\xE1veis no campo de batalha."
+  cost: 1
+  receive: 1
+  damage: 3
   heal: 0
   drawCard: 0
   addCardOnTargetDeck: []
