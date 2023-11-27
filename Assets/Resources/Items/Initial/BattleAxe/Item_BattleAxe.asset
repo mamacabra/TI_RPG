@@ -19,4 +19,3 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 556def944fd02f54c98ac89a1fd817a7, type: 3}
   cards:
   - {fileID: 11400000, guid: 62adf40c6d395db44a9ba7eab2a53a6f, type: 2}
-  - {fileID: 11400000, guid: 6270bc9d6f8068741bd2c2322e2a62af, type: 2}
