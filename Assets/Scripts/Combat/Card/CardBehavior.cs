@@ -5,7 +5,7 @@ namespace Combat
         public static void Use(Member striker, Card card, Member target)
         {
             ConsumeActionPoints(striker, card);
-            ReceiveActionPoints(striker, card);
+            ReceiveActionPoints(striker, card, target);
 
             ApplyHeal(target, card);
             ApplyDamage(striker, card, target);
@@ -24,10 +24,10 @@ namespace Combat
             striker.Character.ConsumeActionPoints(card.ActionPointsCost);
         }
 
-        private static void ReceiveActionPoints(Member striker, Card card)
+        private static void ReceiveActionPoints(Member striker, Card card, Member target)
         {
             if (card.ActionPointsReceive > 0)
-                striker.Character.ReceiveActionPoints(card.ActionPointsReceive);
+                target.Character.ReceiveActionPoints(card.ActionPointsReceive);
         }
 
         private static void ApplyDamage(Member striker, Card card, Member target)
