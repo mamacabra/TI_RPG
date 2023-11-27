@@ -5494,6 +5494,7 @@ MonoBehaviour:
   playerCards: {fileID: 2440558860045095705}
   heroHealthBars: {fileID: 7083020336520333836}
   enemyHealthBars: {fileID: 3823282923134197605}
+  combatLog: {fileID: 2916196209485553390}
 --- !u!114 &3573309240925726049
 MonoBehaviour:
   m_ObjectHideFlags: 0
