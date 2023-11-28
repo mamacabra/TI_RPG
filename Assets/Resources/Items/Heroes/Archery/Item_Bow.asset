@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Arco
   description: Contem flechas
   resourcePath: Items/Heroes/Archery/Item_Bow
-  rarity: 0
+  rarity: 1
   sprite: {fileID: 21300000, guid: 025d7fbc75813e849a2f9e72056673f9, type: 3}
   cards:
   - {fileID: 11400000, guid: 83ddfe9bcb24f9b41b959d9ad75cb92a, type: 2}
