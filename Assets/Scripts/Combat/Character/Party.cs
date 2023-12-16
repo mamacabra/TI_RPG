@@ -41,9 +41,9 @@ namespace Combat
 
         public void DefineStaticPassives()
         {
-            Members[0].Character.DefinePassive(PassiveType.Bull);
-            Members[1].Character.DefinePassive(PassiveType.Elephant);
-            Members[2].Character.DefinePassive(PassiveType.Turtle);
+            Members[0].Character.DefinePassive(PassiveType.Touro);
+            Members[1].Character.DefinePassive(PassiveType.Elefante);
+            Members[2].Character.DefinePassive(PassiveType.Tartaruga);
         }
     }
 }

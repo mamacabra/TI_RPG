@@ -47,7 +47,7 @@ namespace Combat
                 healthBarSlider.value = health;
 
             if (healthBarCount)
-                healthBarCount.text = "HP: " + health;
+                healthBarCount.text = "VIDA: " + health;
         }
 
         private void SetActionPoints(int actionPoints)

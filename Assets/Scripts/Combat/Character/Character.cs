@@ -101,14 +101,14 @@ namespace Combat
         {
             switch (status)
             {
-                case StatusType.Bleed:
+                case StatusType.Sangramento:
                     Status.Add(new StatusData
                     {
                         type = status,
                         duration = 3,
                     });
                     break;
-                case StatusType.Stun:
+                case StatusType.Atordoar:
                     Status.Add(new StatusData
                     {
                         type = status,

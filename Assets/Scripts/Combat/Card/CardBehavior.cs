@@ -65,7 +65,7 @@ namespace Combat
             // }
             if (card.Status.Bleed)
             {
-                target.Character.ReceiveStatus(StatusType.Bleed);
+                target.Character.ReceiveStatus(StatusType.Sangramento);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
             // if (card.Status.Burn)
@@ -75,7 +75,7 @@ namespace Combat
             // }
             if (card.Status.Confuse)
             {
-                target.Character.ReceiveStatus(StatusType.Confuse);
+                target.Character.ReceiveStatus(StatusType.Confuso);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
             // if (card.Status.Curse)
@@ -100,12 +100,12 @@ namespace Combat
             // }
             if (card.Status.Reflect)
             {
-                target.Character.ReceiveStatus(StatusType.Reflect);
+                target.Character.ReceiveStatus(StatusType.Refletir);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
             if (card.Status.Stun)
             {
-                target.Character.ReceiveStatus(StatusType.Stun);
+                target.Character.ReceiveStatus(StatusType.Atordoar);
                 target.Character.ClearActionPoints();
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
@@ -121,7 +121,7 @@ namespace Combat
             // }
             if (card.Status.Weak)
             {
-                target.Character.ReceiveStatus(StatusType.Weak);
+                target.Character.ReceiveStatus(StatusType.Fraqueza);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
             }
         }

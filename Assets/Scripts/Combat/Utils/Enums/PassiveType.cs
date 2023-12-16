@@ -3,13 +3,13 @@ namespace Combat
     public enum PassiveType
     {
         None,
-        Bull,
-        Elephant,
+        Touro,
+        Elefante,
         // Fox,
         // Jaguar,
         // Lynx,
         // Snake,
-        Turtle,
+        Tartaruga,
         // Wolf,
     }
 }

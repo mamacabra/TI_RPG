@@ -56,10 +56,10 @@ namespace Combat
         {
             switch (character.Passive)
             {
-                case PassiveType.Elephant:
+                case PassiveType.Elefante:
                     HeroElephantPassive.OnBeforeTurn(character);
                     break;
-                case PassiveType.Turtle:
+                case PassiveType.Tartaruga:
                     HeroTurtlePassive.OnBeforeTurn(character);
                     break;
             };
@@ -69,7 +69,7 @@ namespace Combat
         {
             switch (character.Passive)
             {
-                case PassiveType.Bull:
+                case PassiveType.Touro:
                     HeroBullPassive.OnAttack(character, action);
                     break;
                 default:
