@@ -120,7 +120,7 @@ MonoBehaviour:
   maxHealth: 20
   maxActionPoints: 3
   CharacterIndex: 0
-  animator: {fileID: 0}
+  animator: {fileID: 4339021765457276876}
 --- !u!114 &6649583363406379902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +176,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4308291325541024545}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fe7107a9baad0d04fbfd411c1138a098,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe7107a9baad0d04fbfd411c1138a098,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe7107a9baad0d04fbfd411c1138a098,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe7107a9baad0d04fbfd411c1138a098,
         type: 3}
       propertyPath: m_LocalPosition.x
