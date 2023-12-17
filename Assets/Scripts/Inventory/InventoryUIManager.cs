@@ -233,7 +233,7 @@ public class InventoryUIManager : MonoBehaviour
 
     private void FillChest(){
         foreach (var i in chest){
-            InventoryItem item = Instantiate(itemPrefab, itemView.transform.GetChild(0).GetChild(0));
+            InventoryItem item = Instantiate(itemPrefab, itemView.transform.GetChild(1).GetChild(0));
             itensButtons.Add(item);
             item.itemImage.sprite = i.sprite;
             item.itemSO = i;
