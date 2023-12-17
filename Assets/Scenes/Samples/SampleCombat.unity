@@ -15613,6 +15613,82 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &723959380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 723959381}
+  - component: {fileID: 723959383}
+  - component: {fileID: 723959382}
+  m_Layer: 5
+  m_Name: Panel_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &723959381
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723959380}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1504412537708790340}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -280, y: -40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &723959382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723959380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -4007112321258254791, guid: c3cbd015370c5294385a8d880c234850,
+    type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &723959383
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723959380}
+  m_CullTransparentMesh: 1
 --- !u!1 &756092338
 GameObject:
   m_ObjectHideFlags: 0
@@ -22811,12 +22887,18 @@ PrefabInstance:
     - target: {fileID: 4640986195017645480, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_text
-      value: "Voc\xEA ganhou o combate!"
+      value: "Voc\xEA restaurou um pouco do equil\xEDbrio\n<size=60>Continue assim,
+        sua recompensa:</size>"
       objectReference: {fileID: 0}
     - target: {fileID: 4640986195017645480, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_enableWordWrapping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860737484253151239, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 5074908554305970427, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
@@ -23004,6 +23086,10 @@ PrefabInstance:
     - {fileID: 2425487232641879606, guid: d3d13a4d3112140238a5bd7e04fd8496, type: 3}
     - {fileID: 4535381176878029712, guid: d3d13a4d3112140238a5bd7e04fd8496, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4950702193234204168, guid: d3d13a4d3112140238a5bd7e04fd8496,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 723959381}
     - targetCorrespondingSourceObject: {fileID: 4950702193234204168, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       insertIndex: -1
