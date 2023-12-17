@@ -23127,12 +23127,11 @@ MonoBehaviour:
   bau: {fileID: 1516037452}
   itensSprite:
   - {fileID: 2018837458}
-  - {fileID: 143796849}
   - {fileID: 903479093}
   itensSpriteFinalPos:
-  - {x: -100, y: 40, z: 0}
-  - {x: 0, y: 40, z: 0}
-  - {x: 100, y: 40, z: 0}
+  - {x: -50, y: 40, z: 0}
+  - {x: 50, y: 40, z: 0}
+  CardsToGet: 3
 --- !u!4 &1729776006630358442
 Transform:
   m_ObjectHideFlags: 0

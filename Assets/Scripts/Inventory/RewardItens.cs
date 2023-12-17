@@ -17,6 +17,13 @@ public class RewardItens : MonoBehaviour
 
    private void Start()
    {
+      if (MapManager.Instance)
+      {
+         if (MapManager.Instance.ShipIndex >= 3)
+            CardsToGet = 2;
+         else
+            CardsToGet = 1;
+      }
       GetItens();
 
       playButton.SetActive(false);
@@ -52,6 +59,7 @@ public class RewardItens : MonoBehaviour
    private int count = 0;
    private int attenpts = 0;
 
+   public int CardsToGet = 3;
    void GetItens()
    {
       if (InventoryManager.instance)
@@ -66,8 +74,8 @@ public class RewardItens : MonoBehaviour
          else
             attenpts++;
          
-         if(attenpts >= 3) return;
-         if(count >=3) return;
+         if(attenpts >= CardsToGet) return;
+         if(count >=CardsToGet) return;
          GetItens();
       }
    }
