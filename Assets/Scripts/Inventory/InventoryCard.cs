@@ -28,30 +28,30 @@ public class InventoryCard : MonoBehaviour
     private void SetupDescription(CardScriptableObject card)
     {
 
-        if (card.cost > 0)
-        {
-            description.text = "Custo (" + card.cost + ") pontos de ação. ";
-        }
-
-        if (card.damage > 0)
-        {
-            description.text += "Causa (" + card.damage + ") de dano. ";
-        }
-
-        if (card.heal > 0)
-        {
-            description.text += "Cura (" + card.heal + ") pontos de vida. ";
-        }
-
-        if (card.receive > 0)
-        {
-            description.text += "Recebe (" + card.receive + ") pontos de ação. ";
-        }
-
-        if (card.drawCard > 0)
-        {
-            description.text += "Saca (" + card.drawCard + ") cartas. ";
-        }
+        // if (card.cost > 0)
+        // {
+        //     description.text = "Custo (" + card.cost + ") pontos de ação. ";
+        // }
+        //
+        // if (card.damage > 0)
+        // {
+        //     description.text += "Causa (" + card.damage + ") de dano. ";
+        // }
+        //
+        // if (card.heal > 0)
+        // {
+        //     description.text += "Cura (" + card.heal + ") pontos de vida. ";
+        // }
+        //
+        // if (card.receive > 0)
+        // {
+        //     description.text += "Recebe (" + card.receive + ") pontos de ação. ";
+        // }
+        //
+        // if (card.drawCard > 0)
+        // {
+        //     description.text += "Saca (" + card.drawCard + ") cartas. ";
+        // }
 
         if (card.addCardOnTargetDeck.Count > 0)
         {
@@ -61,6 +61,31 @@ public class InventoryCard : MonoBehaviour
         if (card.dropCardOnTargetHand > 0)
         {
             description.text += "Remove (" + card.dropCardOnTargetHand + ") cartas do alvo. ";
+        }
+
+        if (card.statusBleed)
+        {
+            description.text += "Sangramento. \n";
+        }
+
+        if (card.statusConfuse)
+        {
+            description.text += "Confusão. \n";
+        }
+
+        if (card.statusReflect)
+        {
+            description.text += "Reflete. \n";
+        }
+
+        if (card.statusStun)
+        {
+            description.text += "Atordoamento. \n";
+        }
+
+        if (card.statusWeak)
+        {
+            description.text += "Enfraquecimento. \n";
         }
     }
 
