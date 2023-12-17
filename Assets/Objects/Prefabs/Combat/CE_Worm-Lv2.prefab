@@ -195,13 +195,10 @@ MonoBehaviour:
   characterUI: {fileID: 7337875571501358945}
   characterId: 0
   characterType: 1
-  characterMaxHealth: 22
+  characterMaxHealth: 14
   characterMaxActionPoints: 3
   items:
   - {fileID: 11400000, guid: 1bc231223f8a183219ad72c5c3294c74, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!65 &5686519919818839012
 BoxCollider:
   m_ObjectHideFlags: 0

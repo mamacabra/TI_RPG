@@ -17,7 +17,7 @@ namespace Combat
         [SerializeField] private CharacterUI characterUI;
         [SerializeField] private int characterId;
         [SerializeField] private CharacterType characterType = CharacterType.Hero;
-        [SerializeField] private int characterMaxHealth = 10;
+        [SerializeField] private int characterMaxHealth = 20;
         [SerializeField] private int characterMaxActionPoints = 3;
         [SerializeField] public ItemScriptableObject[] items = new ItemScriptableObject[4];
 
