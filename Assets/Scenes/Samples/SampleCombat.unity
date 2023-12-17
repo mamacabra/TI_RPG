@@ -22687,7 +22687,7 @@ PrefabInstance:
     - target: {fileID: 613254424101526902, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 736407159236481508, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
@@ -22883,17 +22883,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640986195017645480, guid: d3d13a4d3112140238a5bd7e04fd8496,
-        type: 3}
-      propertyPath: m_text
-      value: "Voc\xEA restaurou um pouco do equil\xEDbrio\n<size=60>Continue assim,
-        sua recompensa:</size>"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640986195017645480, guid: d3d13a4d3112140238a5bd7e04fd8496,
-        type: 3}
-      propertyPath: m_enableWordWrapping
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4860737484253151239, guid: d3d13a4d3112140238a5bd7e04fd8496,
         type: 3}
