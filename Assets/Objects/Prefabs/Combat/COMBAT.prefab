@@ -5515,7 +5515,7 @@ MonoBehaviour:
     type: 3}
   skullLv3: {fileID: 6723352311004593162, guid: 877dc282f6d4ad752aea9bd6f499ab60,
     type: 3}
-  crawfishLv1: {fileID: 6723352311004593162, guid: 092133a961a66292a8e793ebbfe86c20,
+  crawfishLv1: {fileID: 6723352311004593162, guid: 44b459f9a31974644a09278fe36f1abe,
     type: 3}
 --- !u!114 &542260320728966073
 MonoBehaviour:
