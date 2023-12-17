@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Combat
 {
@@ -6,6 +7,7 @@ namespace Combat
     public class CardVFX : MonoBehaviour
     {
         [SerializeField] private MeshRenderer meshRenderer;
+        [SerializeField] private Image backgroundImage;
         [SerializeField] private Material defaultMaterial;
         [SerializeField] private Material mouseOverMaterial;
 
@@ -15,9 +17,13 @@ namespace Combat
         {
             _cardController = GetComponent<CardController>();
 
-            if (meshRenderer != null && defaultMaterial == null)
+            // if (meshRenderer != null && defaultMaterial == null)
+            // {
+            //     defaultMaterial = meshRenderer.material;
+            // }
+            if (backgroundImage != null && defaultMaterial == null)
             {
-                defaultMaterial = meshRenderer.material;
+                defaultMaterial = backgroundImage.material;
             }
         }
 
@@ -32,17 +38,25 @@ namespace Combat
 
         private void SetOverMaterial()
         {
-            if (meshRenderer is not null)
+            // if (meshRenderer is not null)
+            // {
+            //     meshRenderer.material = mouseOverMaterial;
+            // }
+            if (backgroundImage is not null)
             {
-                meshRenderer.material = mouseOverMaterial;
+                backgroundImage.material = mouseOverMaterial;
             }
         }
 
         private void SetDefaultMaterial()
         {
-            if (meshRenderer is not null)
+            // if (meshRenderer is not null)
+            // {
+            //     meshRenderer.material = defaultMaterial;
+            // }
+            if (backgroundImage is not null)
             {
-                meshRenderer.material = defaultMaterial;
+                backgroundImage.material = defaultMaterial;
             }
         }
     }

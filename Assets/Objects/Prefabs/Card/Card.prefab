@@ -395,8 +395,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 6337962773146890573}
-  defaultMaterial: {fileID: 2100000, guid: 0a95999b9656be645be9b4ffa10dce5e, type: 2}
-  mouseOverMaterial: {fileID: 2100000, guid: 3d0ad561619f65c4d85f745df7a20e90, type: 2}
+  backgroundImage: {fileID: 5908555581384534125}
+  defaultMaterial: {fileID: 0}
+  mouseOverMaterial: {fileID: 2100000, guid: 09a188663e256bc7991bf1223436c9d5, type: 2}
 --- !u!114 &491328216795252273
 MonoBehaviour:
   m_ObjectHideFlags: 0
