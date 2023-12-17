@@ -31,13 +31,15 @@ public class MapCanvasController : MonoBehaviour
     {
         if (show)
         {
+            Time.timeScale = 0;
             menuPopup.transform.localScale = Vector3.zero;
             menuPopup.SetActive(true);
-            menuPopup.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack);
+            menuPopup.transform.DOScale(1, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
         }
         else
         {
-            menuPopup.transform.DOScale(0, 0.25f).OnComplete(() =>
+            Time.timeScale = 1;
+            menuPopup.transform.DOScale(0, 0.25f).SetUpdate(true).OnComplete(() =>
             {
                 menuPopup.transform.localScale = Vector3.zero;
                 menuPopup.SetActive(false);
