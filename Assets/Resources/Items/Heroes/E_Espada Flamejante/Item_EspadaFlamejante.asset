@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_EspadaFlamejante
   m_EditorClassIdentifier: 
-  cardName: Espada Flamejante
+  cardName: Kopesh
   description: 
   resourcePath: Items/Heroes/Hammer/Item_Hammer
   rarity: 2
-  sprite: {fileID: 21300000, guid: 0af05b9eee3029041904934a64024ed1, type: 3}
+  sprite: {fileID: 21300000, guid: 6c0e5e12ce1f47f43ad019a1dc3d38f6, type: 3}
   cards:
   - {fileID: 11400000, guid: 9c0e5f3af8cc6a22991c3a05daf4a228, type: 2}
   - {fileID: 11400000, guid: 9e5fe3e2a47482af99c1d033f2583de5, type: 2}

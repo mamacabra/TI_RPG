@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Rejuvenecer
   description: 
-  sprite: {fileID: 21300000, guid: 0af05b9eee3029041904934a64024ed1, type: 3}
+  sprite: {fileID: 21300000, guid: 869fb4fbb051bc942a5f96a53cda8320, type: 3}
   cost: 1
   receive: 0
   damage: 0

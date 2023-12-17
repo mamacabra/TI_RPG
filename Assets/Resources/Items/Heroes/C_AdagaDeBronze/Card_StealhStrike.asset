@@ -19,6 +19,7 @@ MonoBehaviour:
   receive: 0
   damage: 3
   heal: 0
+  selfHeal: 0
   drawCard: 0
   addCardOnTargetDeck:
   - {fileID: 11400000}
