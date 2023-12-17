@@ -37,20 +37,20 @@ namespace Combat
         private void SetupDescription(Card card)
         {
 
-            if (card.ActionPointsCost > 0)
-            {
-                description.text = "Custo (" + card.ActionPointsCost + ") pontos de ação. ";
-            }
-
-            if (card.Damage > 0)
-            {
-                description.text += "Causa (" + card.Damage + ") de dano. ";
-            }
-
-            if (card.Heal > 0)
-            {
-                description.text += "Cura (" + card.Heal + ") pontos de vida. ";
-            }
+            // if (card.ActionPointsCost > 0)
+            // {
+            //     description.text = "Custo (" + card.ActionPointsCost + ") pontos de ação. ";
+            // }
+            //
+            // if (card.Damage > 0)
+            // {
+            //     description.text += "Causa (" + card.Damage + ") de dano. ";
+            // }
+            //
+            // if (card.Heal > 0)
+            // {
+            //     description.text += "Cura (" + card.Heal + ") pontos de vida. ";
+            // }
 
             if (card.ActionPointsReceive > 0)
             {
@@ -70,6 +70,31 @@ namespace Combat
             if (card.DropTargetCard > 0)
             {
                 description.text += "Remove (" + card.DropTargetCard + ") cartas do alvo. ";
+            }
+
+            if (card.Status.Bleed)
+            {
+                description.text += "Sangramento. \n";
+            }
+
+            if (card.Status.Confuse)
+            {
+                description.text += "Confusão. \n";
+            }
+
+            if (card.Status.Reflect)
+            {
+                description.text += "Reflete. \n";
+            }
+
+            if (card.Status.Stun)
+            {
+                description.text += "Atordoamento. \n";
+            }
+
+            if (card.Status.Weak)
+            {
+                description.text += "Enfraquecimento. \n";
             }
         }
 
