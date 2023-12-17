@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Arco da Lua Eterna
   description: 
-  resourcePath: 
+  resourcePath: Items/Heroes/L_ArcoDaLuaEterna/Item_ArcoDaLuaEterna
   rarity: 3
   sprite: {fileID: 0}
   cards:

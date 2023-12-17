@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Escudo de Ferro
   description: Escudo de Ferro
-  resourcePath: Items/Heroes/BigShield/Item_BigShield
+  resourcePath: Items/Heroes/R_EscudoDeFerro/Item_EscudoDeFerro
   rarity: 1
   sprite: {fileID: 21300000, guid: debc5469796436747abf2bd29c6c428d, type: 3}
   cards:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Adaga de Bronze
   description: 
-  resourcePath: Items/Heroes/Dagger/Item_Dagger
+  resourcePath: Items/Heroes/C_AdagaDeBronze/Item_AdagaDeBronze
   rarity: 0
   sprite: {fileID: 21300000, guid: 078deb72d9719d143bc93d862b06fabc, type: 3}
   cards:

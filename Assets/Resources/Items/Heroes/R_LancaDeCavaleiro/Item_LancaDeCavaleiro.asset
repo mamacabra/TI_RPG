@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: "Lan\xE7a de Cavaleiro"
   description: 
-  resourcePath: Items/Heroes/Crossbow/Item_Crossbow
+  resourcePath: Items/Heroes/R_LancaDeCavaleiro/Item_LancaDeCavaleiro
   rarity: 1
   sprite: {fileID: 21300000, guid: 328ce64e2125f024db284cd22f6388d6, type: 3}
   cards:

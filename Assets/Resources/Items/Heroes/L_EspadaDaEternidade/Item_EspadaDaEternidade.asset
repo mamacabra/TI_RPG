@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Espada da Eternidade
   description: 
-  resourcePath: 
+  resourcePath: Items/Heroes/L_EspadaDaEternidade/Item_EspadaDaEternidade
   rarity: 3
   sprite: {fileID: 0}
   cards:
