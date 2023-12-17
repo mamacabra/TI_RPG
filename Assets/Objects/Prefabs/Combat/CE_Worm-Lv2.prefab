@@ -25,9 +25,9 @@ Transform:
   m_GameObject: {fileID: 450556273012880126}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.225, y: -1.74, z: -10.23}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -3.65, y: -1.16, z: -9.32}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2669041641625117776}
   m_Father: {fileID: 3249129027000262852}
@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6649583363406379902}
   - component: {fileID: 3594188704730258142}
   - component: {fileID: 1547379607076624535}
+  - component: {fileID: 5686519919818839012}
   m_Layer: 0
   m_Name: CE_Worm-Lv2
   m_TagString: Untagged
@@ -124,8 +125,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 3.3053346, y: 1.0641717, z: 1}
+  m_Center: {x: 0.97840834, y: 0.39198494, z: -2}
 --- !u!114 &6723352311004593162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +202,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!65 &5686519919818839012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249129027000262853}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6632687, y: 1.900351, z: 1}
+  m_Center: {x: -0.88074607, y: 1.8748538, z: -2}
 --- !u!1001 &946531247002940535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -672,8 +694,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6410336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6410336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6410336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
         type: 3}
@@ -683,7 +720,7 @@ PrefabInstance:
     - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2927916880751648289, guid: 83b34c68dda0c58458b2f6777565605a,
         type: 3}

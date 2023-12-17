@@ -33,18 +33,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature2|Armature2Action
-      takeName: Armature2|Armature2Action
-      internalID: 9165040992259199400
+      name: ArmatureWorm|Armature2Action
+      takeName: ArmatureWorm|Armature2Action
+      internalID: 5849196405694253443
       firstFrame: 0
-      lastFrame: 18
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -62,11 +62,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature2|ArmatureAction.001
-      takeName: Armature2|ArmatureAction.001
-      internalID: -391058387436197111
+      name: ArmatureWorm|Armature2Action.001
+      takeName: ArmatureWorm|Armature2Action.001
+      internalID: -2305012436301674978
       firstFrame: 0
-      lastFrame: 0
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
