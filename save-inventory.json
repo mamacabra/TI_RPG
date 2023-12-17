@@ -1,1 +1,1 @@
-{"items":["Items/Initial/BattleAxe/Item_BattleAxe","Items/Initial/Ring/Item_Ring","Items/Initial/SwordTiny/Item_SwordTiny"],"itemsHero1":[],"itemsHero2":[],"itemsHero3":[]}
+{"items":["Items/Initial/BattleAxe/Item_BattleAxe","Items/Initial/Ring/Item_Ring","Items/Initial/SwordTiny/Item_SwordTiny"],"itemsHero1":["Items/Initial/Ring/Item_Ring"],"itemsHero2":["Items/Initial/SwordTiny/Item_SwordTiny"],"itemsHero3":["Items/Initial/BattleAxe/Item_BattleAxe"]}

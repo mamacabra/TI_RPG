@@ -43,10 +43,16 @@ public class InventoryData : ScriptableObject{
         }
         return find;
     }
-    public bool TryGetRandomItemPerProbability(out ItemScriptableObject item){
+    public bool TryGetRandomItemPerProbability(out ItemScriptableObject item, int levelDepth){
         item = new ItemScriptableObject();
         bool find = false;
         E_ItemRarity random_rarity = GetRandomRarity();
+
+        if (levelDepth >= 4) random_rarity = E_ItemRarity.LENGENDARY;
+        else if (levelDepth >= 3) random_rarity = E_ItemRarity.EPIC;
+        else if (levelDepth >= 2) random_rarity = E_ItemRarity.RARE;
+        else random_rarity = E_ItemRarity.COMMOM;
+
         if(TryGetRandomItemByRarity(random_rarity, out ItemScriptableObject _item)) {
             item = _item;
             find = true;
@@ -77,4 +83,3 @@ public class InventoryData : ScriptableObject{
         Storage.DeleteInventory();
     }
 }
-

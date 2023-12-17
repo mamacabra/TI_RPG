@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
-  m_Name: Card_AttackHeavy
+  m_Name: Card_BigShieldCard1
   m_EditorClassIdentifier: 
-  label: Corte
+  label: Escudada
   description: 
-  sprite: {fileID: 21300000, guid: 69b01f92af51b2041a26d3ec433361fb, type: 3}
+  sprite: {fileID: 21300000, guid: debc5469796436747abf2bd29c6c428d, type: 3}
   cost: 2
   receive: 0
-  damage: 1
+  damage: 5
   heal: 0
-  drawCard: 1
+  drawCard: 0
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
   statusBewitch: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   statusPierce: 0
   statusPoison: 0
   statusReflect: 0
-  statusStun: 0
+  statusStun: 1
   statusUnlucky: 0
   statusVulnerable: 0
   statusWeak: 0

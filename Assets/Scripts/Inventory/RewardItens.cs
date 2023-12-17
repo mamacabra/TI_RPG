@@ -20,6 +20,8 @@ public class RewardItens : MonoBehaviour
       if (MapManager.Instance)
       {
          if (MapManager.Instance.ShipIndex >= 3)
+            CardsToGet = 3;
+         else if (MapManager.Instance.ShipIndex >= 2)
             CardsToGet = 2;
          else
             CardsToGet = 1;
@@ -27,7 +29,7 @@ public class RewardItens : MonoBehaviour
       GetItens();
 
       playButton.SetActive(false);
-     
+
 
       StartCoroutine(SetItensAnim());
 
@@ -64,7 +66,7 @@ public class RewardItens : MonoBehaviour
    {
       if (InventoryManager.instance)
       {
-         if (InventoryManager.instance.inventoryData.TryGetRandomItemPerProbability(out var item))
+         if (InventoryManager.instance.inventoryData.TryGetRandomItemPerProbability(out var item, MapManager.Instance.ShipIndex))
          {
             itensToReward.Add(item);
             InventoryManager.instance.inventoryData.AddItemToInventory(item);
@@ -73,7 +75,7 @@ public class RewardItens : MonoBehaviour
          }
          else
             attenpts++;
-         
+
          if(attenpts >= CardsToGet) return;
          if(count >=CardsToGet) return;
          GetItens();

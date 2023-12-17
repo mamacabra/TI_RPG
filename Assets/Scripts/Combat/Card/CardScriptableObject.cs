@@ -20,6 +20,7 @@ namespace Combat
         [Header("Stats")]
         [Range(0, 10)] public int damage;
         [Range(0, 10)] public int heal;
+        [Range(0, 10)] public int selfHeal;
 
         [Header("Effects")]
         [Range(0, 3)] public int drawCard;

@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
-  m_Name: Card_AttackHeavy
+  m_Name: Card_01
   m_EditorClassIdentifier: 
-  label: Corte
+  label: Corte Quente
   description: 
-  sprite: {fileID: 21300000, guid: 69b01f92af51b2041a26d3ec433361fb, type: 3}
+  sprite: {fileID: 21300000, guid: 0af05b9eee3029041904934a64024ed1, type: 3}
   cost: 2
   receive: 0
-  damage: 1
+  damage: 6
   heal: 0
-  drawCard: 1
+  selfHeal: 0
+  drawCard: 0
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
   statusBewitch: 0
-  statusBleed: 0
+  statusBleed: 1
   statusBurn: 0
   statusConfuse: 0
   statusCurse: 0

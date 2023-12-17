@@ -7,6 +7,7 @@ namespace Combat
         RARE,
         EPIC,
         LENGENDARY,
+        NONE,
     }
 
     [CreateAssetMenu(fileName = "Item", menuName = "Item")]
