@@ -17,8 +17,9 @@ MonoBehaviour:
   sprite: {fileID: 0}
   cost: 0
   receive: 0
-  damage: 1
+  damage: 2
   heal: 0
+  selfHeal: 0
   drawCard: 0
   addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
