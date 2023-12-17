@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fresnel_VFX_Material_MainTex
+  m_Name: Fresnel_VFX_Material_MainTex_Island_1
   m_Shader: {fileID: -6465566751694194690, guid: b33929129466ace018451405def55b24,
     type: 3}
   m_Parent: {fileID: 0}
@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 16de49ead58e380459e51825e2e1d807, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _mainTex:
@@ -60,12 +60,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _MIN: 0.5
-    - _MIn: 1
-    - _Max: 2
+    - _MIn: 2
+    - _Max: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Speed: 10
-    - _UseMainTex: 1
+    - _UseMainTex: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []

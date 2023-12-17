@@ -28,21 +28,27 @@ public class SelectionHighLight : MonoBehaviour
             if (highlightTransform.CompareTag("Island"))
             {
                 highlight = raycastHit.transform.GetComponent<MapNodeTest>().meshRenderer;
+                Material[] materials = highlight.materials;
                 if (lastHighlight != null)
                 {
-                    if (lastHighlight.material != selectionMaterial)
+                    if (lastHighlight.materials[1] != selectionMaterial)
                     {
-                        lastHighlight.material = selectionMaterial;
+                        materials[1] = selectionMaterial;
+                        lastHighlight.materials = materials;
                     }
                 }
 
-                if (highlight.material != highlightMaterialCorretIsland)
+                if (highlight.materials[1] != highlightMaterialCorretIsland)
                 {
                     bool correct = MapManager.Instance.CheckIndexHighlight(highlightTransform.gameObject);
-                    if(correct)
-                        highlight.material = highlightMaterialCorretIsland;
-                    else
-                        highlight.material = highlightMaterialIncorretIsland;
+                    if(correct){
+                        materials[1] = highlightMaterialCorretIsland;
+                        highlight.materials = materials;
+                    }
+                    else{
+                        materials[1] = highlightMaterialIncorretIsland;
+                        highlight.materials = materials;
+                    }
 
                     lastHighlight = highlight;
                 }
@@ -51,9 +57,11 @@ public class SelectionHighLight : MonoBehaviour
         else
         {
             if (lastHighlight == null) return;
-            if (lastHighlight.material != selectionMaterial)
+            if (lastHighlight.materials[1] != selectionMaterial)
             {
-                lastHighlight.material = selectionMaterial;
+                Material[] materials = lastHighlight.materials;
+                materials[1] = selectionMaterial;
+                lastHighlight.materials = materials;
             }
         }
 
