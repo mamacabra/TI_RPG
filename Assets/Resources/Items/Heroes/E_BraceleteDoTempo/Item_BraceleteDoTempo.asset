@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Bracelete do Tempo
   description: 
-  resourcePath: Items/Heroes/Hammer/Item_Hammer
+  resourcePath: Items/Heroes/E_BraceleteDoTempo/Item_BraceleteDoTempo
   rarity: 2
   sprite: {fileID: 21300000, guid: 869fb4fbb051bc942a5f96a53cda8320, type: 3}
   cards:

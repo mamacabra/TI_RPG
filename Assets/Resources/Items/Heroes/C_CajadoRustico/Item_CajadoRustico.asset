@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Cajado
   description: 
-  resourcePath: Items/Heroes/Staff/Item_Staff
+  resourcePath: Items/Heroes/C_CajadoRustico/Item_CajadoRustico
   rarity: 0
   sprite: {fileID: 21300000, guid: 1044e2c6a0b159a45a74352a38d3f4d6, type: 3}
   cards:

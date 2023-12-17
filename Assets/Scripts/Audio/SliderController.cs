@@ -29,8 +29,8 @@ public class SliderController : MonoBehaviour
     {
         field.text = slider.value.ToString();
         bus.setVolume(slider.value / slider.maxValue);
-        field.transform.rotation = Quaternion.Euler(0, 0, Random.Range(-15f, 15f));
+        /*field.transform.rotation = Quaternion.Euler(0, 0, Random.Range(-15f, 15f));
         float aux = Random.Range(0.5f + slider.value / 250, 0.7f + slider.value / 250);
-        field.transform.localScale = new Vector3(aux, aux, aux);
+        field.transform.localScale = new Vector3(aux, aux, aux);*/
     }
 }

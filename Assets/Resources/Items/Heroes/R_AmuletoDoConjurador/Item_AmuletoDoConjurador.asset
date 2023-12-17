@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Amuleto do Conjurador
   description: 
-  resourcePath: Items/Heroes/Archery/Item_Bow
+  resourcePath: Items/Heroes/R_AmuletoDoConjurador/Item_AmuletoDoConjurador
   rarity: 1
   sprite: {fileID: 21300000, guid: 33d3c6197734f5a418a90a1b39818cae, type: 3}
   cards:

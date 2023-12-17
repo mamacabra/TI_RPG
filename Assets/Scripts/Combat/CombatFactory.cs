@@ -40,13 +40,11 @@ namespace Combat
                     if (direction == IslandDirection.Left)
                     {
                         SpawnEnemy(wormLv1, EnemyPosition.Left);
-                        SpawnEnemy(wormLv2, EnemyPosition.Middle);
                         SpawnEnemy(wormLv2, EnemyPosition.Right);
                     }
                     else
                     {
                         SpawnEnemy(wormLv1, EnemyPosition.Left);
-                        SpawnEnemy(skullLv1, EnemyPosition.Middle);
                         SpawnEnemy(skullLv1, EnemyPosition.Right);
                     }
                     break;

@@ -18,7 +18,7 @@ namespace Combat
         [Range(0, 10)] public int receive;
 
         [Header("Stats")]
-        [Range(0, 10)] public int damage;
+        [Range(0, 20)] public int damage;
         [Range(0, 10)] public int heal;
         [Range(0, 10)] public int selfHeal;
 

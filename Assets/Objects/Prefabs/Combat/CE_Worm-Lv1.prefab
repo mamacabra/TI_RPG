@@ -163,13 +163,10 @@ MonoBehaviour:
   characterUI: {fileID: 7337875571501358945}
   characterId: 0
   characterType: 1
-  characterMaxHealth: 12
+  characterMaxHealth: 6
   characterMaxActionPoints: 3
   items:
   - {fileID: 11400000, guid: 518ebb984478c7ec7abddfa8d26e4f7e, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &946531247002940535
 PrefabInstance:
   m_ObjectHideFlags: 0
