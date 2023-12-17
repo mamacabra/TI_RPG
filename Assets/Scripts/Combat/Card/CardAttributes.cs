@@ -1,19 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Combat
 {
     public class CardAttributes : MonoBehaviour
     {
         [Header("Card Texts")]
-        [SerializeField] private Text title;
-        [SerializeField] private Text description;
+        [SerializeField] private TextMeshProUGUI title;
+        [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private Image image;
 
         [Header("Card Attributes")]
-        [SerializeField] private Text cost;
-        [SerializeField] private Text damage;
-        [SerializeField] private Text heal;
+        [SerializeField] private TextMeshProUGUI cost;
+        [SerializeField] private TextMeshProUGUI damage;
+        [SerializeField] private TextMeshProUGUI heal;
 
         public void Setup(Card card)
         {

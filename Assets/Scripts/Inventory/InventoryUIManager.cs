@@ -245,13 +245,13 @@ public class InventoryUIManager : MonoBehaviour
         }
     }
     private void FillCards(){
-        for (int i = 0; i < deckView.transform.GetChild(0).GetChild(0).childCount; i++){
-            Destroy(deckView.transform.GetChild(0).GetChild(0).GetChild(i).gameObject);
+        for (int i = 0; i < deckView.transform.GetChild(1).GetChild(0).childCount; i++){
+            Destroy(deckView.transform.GetChild(1).GetChild(0).GetChild(i).gameObject);
         }
         foreach (var character in characters){
             foreach (var i in character){
                 foreach (var j in i.cards){
-                    InventoryCard card = Instantiate(cardPrefab, deckView.transform.GetChild(0).GetChild(0));
+                    InventoryCard card = Instantiate(cardPrefab, deckView.transform.GetChild(1).GetChild(0));
                     card.Setup(j);
                 }
             }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Combat;
+using UnityEngine.UI;
 
 public class InventoryCard : MonoBehaviour
 {
     [Header("Card Texts")]
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private Image itemSprite;
 
     [Header("Card Attributes")]
     [SerializeField] private TextMeshProUGUI cost;
@@ -20,6 +22,7 @@ public class InventoryCard : MonoBehaviour
         title.text = card.label;
         description.text = card.description;
         cost.text = card.cost.ToString();
+        itemSprite.sprite = card.sprite;
 
         SetupDescription(card);
         SetupAttributes(card);
@@ -92,9 +95,9 @@ public class InventoryCard : MonoBehaviour
     private void SetupAttributes(CardScriptableObject card)
     {
         if (card.damage != 0) damage.text = card.damage.ToString();
-        else damage.gameObject.SetActive(false);
+        else damage.transform.parent.gameObject.SetActive(false);
 
         if (card.heal != 0) heal.text = card.heal.ToString();
-        else heal.gameObject.SetActive(false);
+        else heal.transform.parent.gameObject.SetActive(false);
     }
 }
