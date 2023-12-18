@@ -19,7 +19,10 @@ namespace Combat
         public void ShuffleDeck()
         {
             foreach (Member member in Members)
+            {
+                if (member.Character.IsDead) continue;
                 member.ShuffleDeck();
+            }
         }
 
         public void ResetActionPoints()
