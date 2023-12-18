@@ -161,7 +161,7 @@ MonoBehaviour:
   characterUI: {fileID: 7337875571501358945}
   characterId: 0
   characterType: 1
-  characterMaxHealth: 20
+  characterMaxHealth: 16
   characterMaxActionPoints: 3
   items:
   - {fileID: 11400000, guid: dad1bce07436a8120b445d78299884bd, type: 2}

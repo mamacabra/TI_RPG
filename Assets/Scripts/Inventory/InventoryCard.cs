@@ -46,15 +46,15 @@ public class InventoryCard : MonoBehaviour
         //     description.text += "Cura (" + card.heal + ") pontos de vida. ";
         // }
         //
-        // if (card.receive > 0)
-        // {
-        //     description.text += "Recebe (" + card.receive + ") pontos de ação. ";
-        // }
-        //
-        // if (card.drawCard > 0)
-        // {
-        //     description.text += "Saca (" + card.drawCard + ") cartas. ";
-        // }
+        if (card.receive > 0)
+        {
+            description.text += "Recebe (" + card.receive + ") pontos de ação. ";
+        }
+
+        if (card.drawCard > 0)
+        {
+            description.text += "Saca (" + card.drawCard + ") cartas. ";
+        }
 
         if (card.addCardOnTargetDeck.Count > 0)
         {

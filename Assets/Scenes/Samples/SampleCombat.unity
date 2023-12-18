@@ -45232,7 +45232,7 @@ MonoBehaviour:
   bau: {fileID: 1516037452}
   itensSprite:
   - {fileID: 2018837458}
-  - {fileID: 903479093}
+  - {fileID: 143796849}
   - {fileID: 903479093}
   itensSpriteFinalPos:
   - {x: -50, y: 40, z: 0}

@@ -31,6 +31,7 @@ namespace Combat
 
         public int Damage { get; private set; }
         public int Heal { get; private set; }
+        public int SelfHeal { get; private set; }
 
         public int DrawCard { get; private set; }
         public int DropTargetCard { get; private set; }
@@ -48,6 +49,7 @@ namespace Combat
 
             Damage = card.damage;
             Heal = card.heal;
+            SelfHeal = card.selfHeal;
 
             DrawCard = card.drawCard;
             DropTargetCard = card.dropCardOnTargetHand;

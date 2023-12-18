@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: Card_01
   m_EditorClassIdentifier: 
-  label: Rejuvenecer
+  label: Rejuvenescer
   description: 
   sprite: {fileID: 21300000, guid: 869fb4fbb051bc942a5f96a53cda8320, type: 3}
   cost: 1

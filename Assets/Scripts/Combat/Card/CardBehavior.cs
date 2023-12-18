@@ -8,6 +8,7 @@ namespace Combat
             ReceiveActionPoints(striker, card, target);
 
             ApplyHeal(target, card);
+            ApplySelfHeal(striker, card);
             ApplyDamage(striker, card, target);
             ApplyStatus(target, card);
 
@@ -53,6 +54,20 @@ namespace Combat
             {
                 target.Character.ReceiveHealing(card.Heal);
                 AttackVFX.Instance.PlayHealingVFX(target.Character.transform);
+            }
+        }
+
+        private static void ApplySelfHeal(Member striker, Card card)
+        {
+            if (card.SelfHeal <= 0) return;
+            CombatCharacterPassive.Attack(striker.Character, SelfHeal);
+            CombatLog.Instance.AddLog($"Héroi: Se curou em {card.SelfHeal}");
+            return;
+
+            void SelfHeal()
+            {
+                striker.Character.ReceiveHealing(card.SelfHeal);
+                AttackVFX.Instance.PlayHealingVFX(striker.Character.transform);
             }
         }
 
