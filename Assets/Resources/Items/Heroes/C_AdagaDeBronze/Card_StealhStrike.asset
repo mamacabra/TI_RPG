@@ -21,8 +21,7 @@ MonoBehaviour:
   heal: 0
   selfHeal: 0
   drawCard: 0
-  addCardOnTargetDeck:
-  - {fileID: 11400000}
+  addCardOnTargetDeck: []
   dropCardOnTargetHand: 0
   statusBewitch: 0
   statusBleed: 1
