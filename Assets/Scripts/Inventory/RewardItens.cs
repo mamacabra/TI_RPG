@@ -21,8 +21,10 @@ public class RewardItens : MonoBehaviour
       {
          if (MapManager.Instance.ShipIndex >= 3)
             CardsToGet = 3;
-         else
+         else if (MapManager.Instance.ShipIndex >= 2)
             CardsToGet = 2;
+         else
+            CardsToGet = 1;
       }
       GetItens();
 
