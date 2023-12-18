@@ -60,6 +60,7 @@ public class MapCanvasController : MonoBehaviour
 
     public void BackToMenu()
     {
+        Time.timeScale = 1;
         AudioManager.audioManager.SetSong((int)SongName.Map);
         Transition.instance.TransitionScenes(SceneNames.Menu, LoadSceneMode.Single, true, false);
     }
