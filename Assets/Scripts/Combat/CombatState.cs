@@ -39,6 +39,9 @@ namespace Combat
             if (_state is CombatStateType.Defeat or CombatStateType.Victory) return;
             _stateChanges.Enqueue(newState);
         }
+        public CombatStateType GetState(){
+            return _state;
+        }
 
         public void NextState()
         {

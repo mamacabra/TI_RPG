@@ -15885,7 +15885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2906b171688d1714bb14d78c1193e0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1.25
 --- !u!1 &609347650
 GameObject:
   m_ObjectHideFlags: 0
@@ -45234,9 +45233,11 @@ MonoBehaviour:
   itensSprite:
   - {fileID: 2018837458}
   - {fileID: 903479093}
+  - {fileID: 903479093}
   itensSpriteFinalPos:
   - {x: -50, y: 40, z: 0}
   - {x: 50, y: 40, z: 0}
+  - {x: 100, y: 40, z: 0}
   CardsToGet: 3
 --- !u!4 &1729776006630358442
 Transform:
