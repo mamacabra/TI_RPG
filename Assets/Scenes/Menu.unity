@@ -1461,8 +1461,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.42313176, b: 0, a: 1}
-  m_Intensity: 200
-  m_Range: 32.5
+  m_Intensity: 50
+  m_Range: 500
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5589,8 +5589,10 @@ MonoBehaviour:
   m_text: "<size=60>Gerenciamento</size>\r\nMarielle Fidelis\r\n\r\n<size=60>Game
     Design</size>\r\nJonathan Bergson \r\nLuan Assis\r\n\r\n<size=60>Programa\xE7\xE3o</size>\r\nMarielle
     Fidelis\r\n<size=30><i>Mapa e interface</size></i>\r\n\r\nRenan R. Moura\r\n<size=30><i>Invent\xE1rio
-    e interface</size></i>\r\n\r\nJonathan Bergson\r\n<size=30><i>Combate e interface</size></i>\r\n\r\n<size=60>UI/UX
-    e HUD</size>\r\nReinaldo Saldanha\r\nMarielle Fidelis\r\n\r\n<size=60>Modelagem
+    e interface</size></i>\r\n\r\nJonathan Bergson\r\n<size=30><i>Combate e interface</size></i>\r\n\r\nLuan
+    Assis\n<size=30><i>Implementa\xE7\xE3o de \xC1udio</size></i>\r\n\n<size=60>UI/UX
+    e HUD</size>\r\nReinaldo Saldanha\r\nMarielle Fidelis\r\n\r\n<size=60>\xC1udio</size>\r\nLuan
+    Assis\n<size=30><i>M\xFAsica e Efeitos Sonoros</size></i>\r\n\n<size=60>Modelagem
     do Cen\xE1rio</size>\r\nGabriel Victor Ribeiro Dias\r\n<size=30><i>Invent\xE1rio</size></i>\r\n\r\nLuan
     Assis\r\n<size=30><i>mapa</size></i>\r\n\r\nRafael Madureira dos Santos\r\n<size=30><i>Combate</size></i>\r\n\r\n<size=60>Modelagem
     de Assets Gerais</size>\r\nGabriel Victor Ribeiro Diasl\r\n<size=30><i>Itens</size></i>\r\n\r\nRafael
@@ -5714,7 +5716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110520566
 RectTransform:
   m_ObjectHideFlags: 0
