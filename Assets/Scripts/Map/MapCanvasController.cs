@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Combat;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -82,6 +84,17 @@ public class MapCanvasController : MonoBehaviour
 
     public void ShowEndGamePanel()
     {
+        if (CombatState.Instance)
+        {
+            if(CombatState.Instance.GetState() == CombatStateType.Defeat){
+                if(EndGame.transform.GetChild(3).TryGetComponent(out TextMeshProUGUI endGameText))
+                    endGameText.text = "Você falhou ao tentar restaurar o equilíbrio do mar.";
+            }
+            else{
+                if(EndGame.transform.GetChild(3).TryGetComponent(out TextMeshProUGUI endGameText))
+                    endGameText.text = "Você restaurou o equilíbrio do mar.";
+            }
+        }
         EndGame.SetActive(true);
         Transition.instance.HideTransition();
     }
