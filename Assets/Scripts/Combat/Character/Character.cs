@@ -186,6 +186,7 @@ namespace Combat
         public void DefinePassive(PassiveType passive)
         {
             Passive = passive;
+            CharacterUpdated();
         }
     }
 }
