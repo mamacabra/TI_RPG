@@ -4,7 +4,7 @@ namespace Combat
 {
     public abstract class HeroBullPassive : Passive
     {
-        private const int SelfDoubleAttackChance = 30;
+        private const int SelfDoubleAttackChance = 40;
 
         public new static void OnAttack(Character character, Action action)
         {
