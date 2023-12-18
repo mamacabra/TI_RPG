@@ -17,6 +17,7 @@ MonoBehaviour:
   resourcePath: Items/Heroes/C_CajadoRustico/Item_CajadoRustico
   rarity: 0
   sprite: {fileID: 21300000, guid: 1044e2c6a0b159a45a74352a38d3f4d6, type: 3}
+  raritySprite: {fileID: 21300000, guid: 04ad70a1d3c1b0242a085216b384fcf2, type: 3}
   cards:
   - {fileID: 11400000, guid: ca3575120e291a4469b51d3b25323c73, type: 2}
   - {fileID: 11400000, guid: 33f84e62c177f3e41847495cadc8364e, type: 2}

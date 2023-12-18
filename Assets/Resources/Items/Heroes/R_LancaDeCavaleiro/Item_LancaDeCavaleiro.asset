@@ -17,5 +17,6 @@ MonoBehaviour:
   resourcePath: Items/Heroes/R_LancaDeCavaleiro/Item_LancaDeCavaleiro
   rarity: 1
   sprite: {fileID: 21300000, guid: d54298e0b91ee564aacb8b1e86a382f1, type: 3}
+  raritySprite: {fileID: 21300000, guid: ccd37f00a4f70c447beb03fa4913d52f, type: 3}
   cards:
   - {fileID: 11400000, guid: c0cdbb4f5050c7b429220d204698a6b8, type: 2}

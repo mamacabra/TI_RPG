@@ -17,5 +17,6 @@ MonoBehaviour:
   resourcePath: Items/Heroes/C_AdagaDeBronze/Item_AdagaDeBronze
   rarity: 0
   sprite: {fileID: 21300000, guid: 078deb72d9719d143bc93d862b06fabc, type: 3}
+  raritySprite: {fileID: 21300000, guid: 04ad70a1d3c1b0242a085216b384fcf2, type: 3}
   cards:
   - {fileID: 11400000, guid: a1ab506cbd3a5c541a73a92b9e26f121, type: 2}

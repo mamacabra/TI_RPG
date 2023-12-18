@@ -17,5 +17,6 @@ MonoBehaviour:
   resourcePath: Items/Heroes/R_AnelDaResistencia/Item_AnelDaResistencia
   rarity: 1
   sprite: {fileID: 21300000, guid: 5f670c06d3d2eac4686a266b9cd6ad8b, type: 3}
+  raritySprite: {fileID: 21300000, guid: ccd37f00a4f70c447beb03fa4913d52f, type: 3}
   cards:
   - {fileID: 11400000, guid: f1554e775863166499b734b78d2e10bd, type: 2}

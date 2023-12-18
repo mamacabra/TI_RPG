@@ -17,6 +17,7 @@ MonoBehaviour:
   resourcePath: Items/Heroes/L_EspadaDaEternidade/Item_EspadaDaEternidade
   rarity: 3
   sprite: {fileID: 21300000, guid: 98e3188d2d3b9ab408e4a65c68b5d5f9, type: 3}
+  raritySprite: {fileID: 21300000, guid: ccd37f00a4f70c447beb03fa4913d52f, type: 3}
   cards:
   - {fileID: 11400000, guid: cb479a1b367605ecebf816a118d9ad82, type: 2}
   - {fileID: 11400000, guid: fa9d6e6f61a9d80d589876fa4e4856e4, type: 2}

@@ -366,6 +366,7 @@ MonoBehaviour:
   title: {fileID: 6765766816631614438}
   description: {fileID: 4808432378526911582}
   image: {fileID: 4149833167063188334}
+  imageBG: {fileID: 5010623387119464247}
   cost: {fileID: 4922343982845600}
   damage: {fileID: 2287632245324137704}
   heal: {fileID: 1751020454726557363}

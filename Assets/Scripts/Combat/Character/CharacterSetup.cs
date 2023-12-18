@@ -61,7 +61,7 @@ namespace Combat
                 if (item == null) continue;
                 foreach (CardScriptableObject card in item.cards)
                 {
-                    if (card != null) cards.Add(card);
+                    if (card != null) {card.spriteBG = item.raritySprite; cards.Add(card); }
                 }
             }
 

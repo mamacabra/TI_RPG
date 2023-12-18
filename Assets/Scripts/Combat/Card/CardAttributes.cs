@@ -10,6 +10,7 @@ namespace Combat
         [SerializeField] private TextMeshProUGUI title;
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private Image image;
+        [SerializeField] private Image imageBG;
 
         [Header("Card Attributes")]
         [SerializeField] private TextMeshProUGUI cost;
@@ -32,6 +33,10 @@ namespace Combat
             if (card.Thumb && image)
             {
                 image.sprite = card.Thumb;
+            }
+            if (card.ThumbBG && imageBG)
+            {
+                imageBG.sprite = card.ThumbBG;
             }
         }
 

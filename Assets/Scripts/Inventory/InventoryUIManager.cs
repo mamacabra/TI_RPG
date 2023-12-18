@@ -220,7 +220,7 @@ public class InventoryUIManager : MonoBehaviour
         cardsPreview.SetActive(true);
         foreach (var cardObj in item.cards){
             InventoryCard card = Instantiate(cardPrefab, cardsPreview.transform.GetChild(0));
-            card.Setup(cardObj);
+            card.Setup(cardObj, item);
         }
     }
     public void HideCardsPreview(){
@@ -252,7 +252,7 @@ public class InventoryUIManager : MonoBehaviour
             foreach (var i in character){
                 foreach (var j in i.cards){
                     InventoryCard card = Instantiate(cardPrefab, deckView.transform.GetChild(1).GetChild(0));
-                    card.Setup(j);
+                    card.Setup(j, i);
                 }
             }
         }

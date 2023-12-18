@@ -11,18 +11,27 @@ public class InventoryCard : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private Image itemSprite;
+    [SerializeField] private Image itemRaritySprite;
 
     [Header("Card Attributes")]
     [SerializeField] private TextMeshProUGUI cost;
     [SerializeField] private TextMeshProUGUI damage;
     [SerializeField] private TextMeshProUGUI heal;
 
-    public void Setup(CardScriptableObject card)
+    public void Setup(CardScriptableObject card, ItemScriptableObject item)
     {
         title.text = card.label;
         description.text = card.description;
         cost.text = card.cost.ToString();
-        itemSprite.sprite = card.sprite;
+        itemSprite.sprite = item.sprite;
+        switch (item.rarity)
+        {
+            case E_ItemRarity.COMMOM: itemRaritySprite.sprite = item.raritySprite; break;
+            case E_ItemRarity.RARE:   itemRaritySprite.sprite = item.raritySprite; break;
+            case E_ItemRarity.EPIC:   itemRaritySprite.sprite = item.raritySprite; break;
+            case E_ItemRarity.LENGENDARY: itemRaritySprite.sprite = item.raritySprite; break;
+            default: itemRaritySprite.sprite = null; break;
+        }
 
         SetupDescription(card);
         SetupAttributes(card);

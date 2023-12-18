@@ -19,6 +19,7 @@ namespace Combat
         public E_ItemRarity rarity;
         [Space]
         public Sprite sprite;
+        public Sprite raritySprite;
 
         public CardScriptableObject[] cards = new CardScriptableObject[3];
     }

@@ -12,6 +12,7 @@ namespace Combat
 
         [Space]
         public Sprite sprite;
+        public Sprite spriteBG;
 
         [Header("Action Points")]
         [Range(-3, 3)] public int cost;
