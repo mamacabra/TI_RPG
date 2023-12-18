@@ -13,6 +13,11 @@ namespace Combat
         [SerializeField] private List<Member> enemies;
         public Party EnemyParty { get; private set; }
 
+        public Sprite BG_Common;
+        public Sprite BG_Rare;
+        public Sprite BG_Epic;
+        public Sprite BG_Legendary;
+
         private void Awake()
         {
             Instance = this;
