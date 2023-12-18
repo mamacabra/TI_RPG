@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "Interven\xE7\xE3o Divina"
   description: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cad3b57d9de56f741a858b7930de41a2, type: 3}
   cost: 2
   receive: 3
   damage: 0

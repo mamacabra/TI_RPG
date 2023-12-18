@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b8216dba71b1f55bf9b75141f55a00, type: 3}
   m_Name: Item_ColarDoDestino
   m_EditorClassIdentifier: 
-  cardName: Colar do Destino
+  cardName: Escudo Runico
   description: 
   resourcePath: Items/Heroes/E_ColarDoDestino/Item_ColarDoDestino
   rarity: 2
-  sprite: {fileID: 21300000, guid: cad3b57d9de56f741a858b7930de41a2, type: 3}
+  sprite: {fileID: 21300000, guid: 9d4a2a396f5c9814ea5d1b1ce8085d00, type: 3}
   cards:
   - {fileID: 11400000, guid: 14d2d161ea4d15037981379ec56e48fa, type: 2}
   - {fileID: 11400000, guid: 7f7bfbb0f3f626505b3dd7a247fc4fd1, type: 2}

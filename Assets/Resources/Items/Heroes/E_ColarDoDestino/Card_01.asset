@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "Refor\xE7o"
   description: 
-  sprite: {fileID: 21300000, guid: cad3b57d9de56f741a858b7930de41a2, type: 3}
+  sprite: {fileID: 21300000, guid: 9d4a2a396f5c9814ea5d1b1ce8085d00, type: 3}
   cost: 2
   receive: 4
   damage: 0
