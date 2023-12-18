@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9ffd62474a18523b207b7aabac9ee7, type: 3}
   m_Name: Card_GolpePerpetuo
   m_EditorClassIdentifier: 
-  label: Golpe Perpetuo
+  label: Dardo Perpetuo
   description: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 98e3188d2d3b9ab408e4a65c68b5d5f9, type: 3}
   cost: 3
   receive: 0
   damage: 12

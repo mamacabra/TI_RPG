@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 
   resourcePath: Items/Heroes/L_ColarDaDivindade/Item_ColarDaDivindade
   rarity: 3
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: cad3b57d9de56f741a858b7930de41a2, type: 3}
   cards:
   - {fileID: 11400000, guid: 0f43bed4d34a410e08ec1ef9499c5b26, type: 2}
   - {fileID: 11400000, guid: c0c6da247a67e8ec69f9390aa936857f, type: 2}

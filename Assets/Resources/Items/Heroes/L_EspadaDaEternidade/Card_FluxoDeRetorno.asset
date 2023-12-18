@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Fluxo De Retorno
   description: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 98e3188d2d3b9ab408e4a65c68b5d5f9, type: 3}
   cost: 1
   receive: 2
   damage: 2
